@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "AI 前沿信息收集与摘要 agent：每周两次采集周中报，周日汇总周报，为 AI 应用岗持续积累弹药"
 requires-python = ">=3.12"
 # 运行时依赖按施工阶段逐步加入（P1 起），P0 保持为空
-dependencies = []
+dependencies = [
+    "pydantic>=2.13.4",
+    "pyyaml>=6.0.3",
+]
 
 [dependency-groups]
 dev = [
