@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Example AI Blog</title>
+    <item>
+      <title>Introducing TestModel-2</title>
+      <link>https://example.com/news/testmodel-2?utm_source=rss</link>
+      <pubDate>Fri, 10 Jul 2026 08:00:00 GMT</pubDate>
+      <description>&lt;p&gt;A &lt;b&gt;new model&lt;/b&gt; with better tool use.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Engineering deep dive: context caching</title>
+      <link>https://example.com/news/context-caching</link>
+      <pubDate>Wed, 08 Jul 2026 12:30:00 GMT</pubDate>
+      <description>How we cut latency by 40%.</description>
+    </item>
+    <item>
+      <title>No date entry</title>
+      <link>https://example.com/news/no-date</link>
+      <description>Entry without pubDate.</description>
+    </item>
+  </channel>
+</rss>

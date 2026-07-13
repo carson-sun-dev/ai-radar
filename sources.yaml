@@ -15,16 +15,21 @@ sources:
     collector: rss
     url: https://openai.com/news/rss.xml
 
+  # via_jina：直抓虽 200 但标题是嵌套元素拼接的垃圾（2026-07 实测），Jina 的干净且带日期
   - id: anthropic-news
     org: Anthropic
     collector: web
     url: https://www.anthropic.com/news
+    link_prefix: https://www.anthropic.com/news/
+    via_jina: true
 
   # engineering blog 单独成源：对应用岗价值最高的一路，不与产品新闻混排
   - id: anthropic-engineering
     org: Anthropic
     collector: web
     url: https://www.anthropic.com/engineering
+    link_prefix: https://www.anthropic.com/engineering/
+    via_jina: true
 
   - id: deepmind-blog
     org: Google DeepMind
@@ -43,10 +48,9 @@ sources:
     url: https://huggingface.co/api/daily_papers
     max_items: 30
 
-  - id: langchain-blog
-    org: LangChain
-    collector: rss
-    url: https://blog.langchain.dev/rss/
+  # langchain-blog 暂下线：Ghost 博客（blog.langchain.dev）已迁入 www.langchain.com/blog
+  # 且不再提供 RSS，列表页纯 JS 卡片连 Jina 都提不到链接（2026-07 实测）。
+  # 版本动态由 langgraph-releases 兜底，工程内容暂靠 HF blog / Anthropic engineering 补位。
 
   - id: langgraph-releases
     org: LangChain
@@ -59,15 +63,13 @@ sources:
     collector: github
     github_org: deepseek-ai
 
-  - id: deepseek-news
-    org: DeepSeek
-    collector: web
-    url: https://api-docs.deepseek.com/news
+  # deepseek-news（api-docs.deepseek.com/news）暂下线：Docusaurus 重度 JS 化，
+  # 直抓与 Jina 均提不到稳定的文章链接（2026-07 实测）。动态由 deepseek-github 兜底，
+  # P10 校准期再攻官网页面。
 
-  - id: qwen-blog
-    org: Qwen
-    collector: rss
-    url: https://qwenlm.github.io/blog/index.xml
+  # qwen-blog 暂下线：qwenlm.github.io 2025-09 起停更，新站 qwen.ai/blog 是纯 JS
+  # 渲染（/blog/rss 返回 SPA HTML，列表页 Jina 也提不到链接，2026-07 实测）。
+  # 动态由 qwen-github 兜底；后续可考虑加 HF org 模型发布源补位。
 
   - id: qwen-github
     org: Qwen
@@ -79,15 +81,17 @@ sources:
     collector: github
     github_org: zai-org
 
-  - id: glm-news
-    org: GLM
-    collector: web
-    url: https://z.ai/blog
+  # glm-news（z.ai/blog）暂下线：2026-07 实测 404，新入口未找到稳定地址。
+  # 动态由 glm-github 兜底，P10 校准期再补。
 
+  # 文章是 /en/<slug> 平铺结构（不在 /blog/ 下），prefix 放宽到 /en/，
+  # 混进的少量导航页交给打分节点淘汰
   - id: seed-research
     org: 字节 Seed
     collector: web
-    url: https://seed.bytedance.com/research
+    url: https://seed.bytedance.com/en/blog
+    link_prefix: https://seed.bytedance.com/en/
+    via_jina: true
 
   - id: kimi-github
     org: Kimi

@@ -1,0 +1,18 @@
+[
+  {
+    "full_name": "deepseek-ai/DeepSeek-V4-Lite",
+    "html_url": "https://github.com/deepseek-ai/DeepSeek-V4-Lite",
+    "created_at": "2026-07-10T03:00:00Z",
+    "description": "Lightweight variant of DeepSeek-V4",
+    "fork": false,
+    "stargazers_count": 2100
+  },
+  {
+    "full_name": "deepseek-ai/forked-tool",
+    "html_url": "https://github.com/deepseek-ai/forked-tool",
+    "created_at": "2026-07-09T00:00:00Z",
+    "description": "a fork, should be skipped",
+    "fork": true,
+    "stargazers_count": 5
+  }
+]

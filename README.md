@@ -40,7 +40,7 @@ eval/             # golden.jsonl 与回归脚本
 
 - [x] P0 仓库与骨架
 - [x] P1 数据层（模型 / sources.yaml / 水位线与去重）
-- [ ] P2 采集器 ×4
+- [x] P2 采集器 ×4
 - [ ] P3 LLM 层（方舟客户端 / 工具 schema / 打分 prompt）
 - [ ] P4 最小闭环（周中报真实产出）
 - [ ] P5 观测与规则校验（LangSmith）
