@@ -1,0 +1,24 @@
+# CI：PR 的必需检查（main 的 ruleset 要求本 job 通过才能合并）
+# 注意：与定时采集 workflow（collect.yml / weekly.yml，P4 起加入）分开，职责不混
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # setup-uv 会读取 .python-version 自动安装对应 Python，并缓存依赖
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - name: 安装依赖
+        run: uv sync
+      - name: Lint（ruff）
+        run: uv run ruff check .
+      - name: 单元测试（pytest）
+        run: uv run pytest

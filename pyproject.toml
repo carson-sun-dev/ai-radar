@@ -1,0 +1,26 @@
+[project]
+name = "ai-radar"
+version = "0.1.0"
+description = "AI 前沿信息收集与摘要 agent：每周两次采集周中报，周日汇总周报，为 AI 应用岗持续积累弹药"
+requires-python = ">=3.12"
+# 运行时依赖按施工阶段逐步加入（P1 起），P0 保持为空
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8",
+    "pytest>=8",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+# E/F 基础错误、I import 排序、UP 现代语法、B 常见陷阱
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# src 不作为安装包分发（本项目是应用不是库），直接把仓库根加进 sys.path
+pythonpath = ["."]
