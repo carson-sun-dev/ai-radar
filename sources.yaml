@@ -1,0 +1,105 @@
+# 信息源配置（设计纪要第四节定案：10 家机构 + arXiv 论文通道）
+# 加源 = 加一段；collector 决定用哪个采集器，字段要求见 src/config.py
+# web 类源的具体 URL 在 P2 实现采集器时逐一实测校准（页面结构可能变化）
+
+defaults:
+  timeout_seconds: 30
+  max_retries: 3
+  backoff_base_seconds: 5
+  backoff_factor: 3 # 重试间隔 5s → 15s → 45s
+
+sources:
+  # ============ 国际 ============
+  - id: openai-news
+    org: OpenAI
+    collector: rss
+    url: https://openai.com/news/rss.xml
+
+  - id: anthropic-news
+    org: Anthropic
+    collector: web
+    url: https://www.anthropic.com/news
+
+  # engineering blog 单独成源：对应用岗价值最高的一路，不与产品新闻混排
+  - id: anthropic-engineering
+    org: Anthropic
+    collector: web
+    url: https://www.anthropic.com/engineering
+
+  - id: deepmind-blog
+    org: Google DeepMind
+    collector: rss
+    url: https://deepmind.google/blog/rss.xml
+
+  - id: hf-blog
+    org: Hugging Face
+    collector: rss
+    url: https://huggingface.co/blog/feed.xml
+
+  # Daily Papers 双重角色：论文来源 + 打分信号（上榜 = 人工精选背书）
+  - id: hf-daily-papers
+    org: Hugging Face
+    collector: hf_papers
+    url: https://huggingface.co/api/daily_papers
+    max_items: 30
+
+  - id: langchain-blog
+    org: LangChain
+    collector: rss
+    url: https://blog.langchain.dev/rss/
+
+  - id: langgraph-releases
+    org: LangChain
+    collector: github
+    repo: langchain-ai/langgraph
+
+  # ============ 国内 ============
+  - id: deepseek-github
+    org: DeepSeek
+    collector: github
+    github_org: deepseek-ai
+
+  - id: deepseek-news
+    org: DeepSeek
+    collector: web
+    url: https://api-docs.deepseek.com/news
+
+  - id: qwen-blog
+    org: Qwen
+    collector: rss
+    url: https://qwenlm.github.io/blog/index.xml
+
+  - id: qwen-github
+    org: Qwen
+    collector: github
+    github_org: QwenLM
+
+  - id: glm-github
+    org: GLM
+    collector: github
+    github_org: zai-org
+
+  - id: glm-news
+    org: GLM
+    collector: web
+    url: https://z.ai/blog
+
+  - id: seed-research
+    org: 字节 Seed
+    collector: web
+    url: https://seed.bytedance.com/research
+
+  - id: kimi-github
+    org: Kimi
+    collector: github
+    github_org: MoonshotAI
+
+  # ============ 论文通道 ============
+  # 检索式收紧到岗位面（设计纪要第四节），单次上限 20 防打分池爆炸
+  - id: arxiv-papers
+    org: arXiv
+    collector: arxiv
+    query: >-
+      cat:cs.CL AND (all:"retrieval-augmented" OR all:"RAG" OR all:"LLM agent"
+      OR all:"tool use" OR all:"context compression" OR all:"KV cache")
+    max_items: 20
