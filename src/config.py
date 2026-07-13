@@ -39,6 +39,11 @@ class SourceConfig(BaseModel):
     repo: str | None = None  # github：跟单仓库的 releases（如 langchain-ai/langgraph）
     github_org: str | None = None  # github：跟整个 org 的新 release/新仓库
     query: str | None = None  # arxiv：检索式
+    # web：文章链接必须以此前缀开头（过滤导航/页脚链接）；缺省用 url 本身
+    link_prefix: str | None = None
+    # web：跳过直抓、直接走 Jina Reader。适用于 JS 渲染重的站点——直抓虽可能 200，
+    # 但正文/标题是嵌套元素拼出的垃圾（2026-07 实测 Anthropic、Seed 均如此）
+    via_jina: bool = False
     max_items: int = 50  # 单次采集上限：防止某源异常（如改版后全量重发）刷爆打分池
 
     @model_validator(mode="after")

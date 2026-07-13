@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ArXiv Query Results</title>
+  <entry>
+    <id>http://arxiv.org/abs/2607.01234v1</id>
+    <title>LightRAG-Next: Simple and
+      Fast Retrieval</title>
+    <summary>We propose a graph-based
+      retrieval method that is simple and fast.</summary>
+    <published>2026-07-09T17:55:00Z</published>
+    <link href="http://arxiv.org/abs/2607.01234v1" rel="alternate" type="text/html"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.05678v1</id>
+    <title>KV Cache Compression for Long-Context Agents</title>
+    <summary>A 4x compression scheme with no quality loss.</summary>
+    <published>2026-07-08T09:12:00Z</published>
+    <link href="http://arxiv.org/abs/2607.05678v1" rel="alternate" type="text/html"/>
+  </entry>
+</feed>

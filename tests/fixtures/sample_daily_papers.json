@@ -1,0 +1,26 @@
+[
+  {
+    "publishedAt": "2026-07-10T01:00:00Z",
+    "paper": {
+      "id": "2607.01234",
+      "title": "LightRAG-Next: Simple and Fast Retrieval",
+      "summary": "We propose a graph-based retrieval method.",
+      "publishedAt": "2026-07-09T18:00:00Z",
+      "upvotes": 87
+    }
+  },
+  {
+    "publishedAt": "2026-07-10T01:00:00Z",
+    "paper": {
+      "id": "2607.09999",
+      "title": "Agentic Evaluation Benchmarks",
+      "summary": "A benchmark suite for agent evaluation.",
+      "publishedAt": "2026-07-09T12:00:00Z",
+      "upvotes": 12
+    }
+  },
+  {
+    "publishedAt": "2026-07-10T01:00:00Z",
+    "note": "malformed row without paper field, must be skipped"
+  }
+]
