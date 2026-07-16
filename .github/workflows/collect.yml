@@ -30,6 +30,13 @@ jobs:
           ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
           # GitHub 采集器带 token 防共享 runner 出口 IP 的限流
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # LangSmith 可观测（P5）：secret 未配置时表达式为 false → 客户端不启用，无害
+          LANGSMITH_TRACING: ${{ secrets.LANGSMITH_API_KEY != '' }}
+          LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+          LANGSMITH_PROJECT: ai-radar
+          # flash 牌价（仓库 Variables 配置，非密钥）：配置后尾注成本从上限估变实测值
+          ARK_PRICE_IN_FLASH: ${{ vars.ARK_PRICE_IN_FLASH }}
+          ARK_PRICE_OUT_FLASH: ${{ vars.ARK_PRICE_OUT_FLASH }}
         run: uv run python -m src.pipeline.midweek
 
       - name: 提交报告与状态（bot 直推 main）

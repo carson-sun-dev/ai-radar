@@ -21,10 +21,14 @@ class Settings:
     # 方舟模型 ID 带版本后缀（/models 接口实测）；环境变量可覆盖，升级版本改 .env/Secrets
     score_model: str = "deepseek-v4-flash-260425"
     deepread_model: str = "deepseek-v4-pro-260425"
-    # 计价（元/百万 tokens）：默认按 pro 牌价对全部用量做上限估算（flash 实际更低），
-    # 报告尾注会注明是上限；P5 接 LangSmith 后有精确值
+    # 计价（元/百万 tokens）：pro 牌价固定；flash 牌价随批价/活动变动，交给环境变量，
+    # 未配置时 flash 用量按 pro 价算（保持「上限估」语义），尾注如实标注估算还是实测价
     price_in: float = 12.0
     price_out: float = 24.0
+    price_in_flash: float | None = None
+    price_out_flash: float | None = None
+    # 方舟隐式缓存命中的输入计价（1 元/M vs 12 元/M，见 schemas.py 批量打分注释）
+    price_cached: float = 1.0
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -39,4 +43,13 @@ class Settings:
             deepread_model=os.environ.get("ARK_DEEPREAD_MODEL", cls.deepread_model),
             price_in=float(os.environ.get("ARK_PRICE_IN", cls.price_in)),
             price_out=float(os.environ.get("ARK_PRICE_OUT", cls.price_out)),
+            price_in_flash=_optional_float("ARK_PRICE_IN_FLASH"),
+            price_out_flash=_optional_float("ARK_PRICE_OUT_FLASH"),
+            price_cached=float(os.environ.get("ARK_PRICE_CACHED", cls.price_cached)),
         )
+
+
+def _optional_float(name: str) -> float | None:
+    # Actions 里未配置的 vars 注入为空字符串而不是缺失，float("") 会崩，统一按未配置处理
+    value = os.environ.get(name, "").strip()
+    return float(value) if value else None

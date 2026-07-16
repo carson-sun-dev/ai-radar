@@ -106,6 +106,7 @@ class ReportMeta(BaseModel):
     tags: list[str] = Field(default_factory=list)
     item_count: int = 0
     sources_failed: list[str] = Field(default_factory=list)  # 尾注「本期 X 源缺失」的数据来源
-    # 成本实测（设计纪要第 15 节）：从 LangSmith trace 汇总，印进尾注
+    # 成本/耗时实测（设计纪要第 15 节）：客户端分模型账本汇总，印进尾注
     tokens_used: int = 0
     cost_cny: float = 0.0
+    duration_seconds: float | None = None

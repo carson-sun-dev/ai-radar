@@ -47,10 +47,13 @@ def analyze_item(
     ]
     if fulltext:
         parts.append(f"正文:\n{fulltext}")
+    # trace 标签带板块/源（P5）：LangSmith 里按标签切片看各板块/各源的成本与耗时
+    tags = [prompt_name, item.source] + ([item.category.value] if item.category else [])
     analysis = client.chat(
         model=client.settings.deepread_model,
         system=load_prompt(prompt_name),
         user="\n".join(parts),
+        tags=tags,
     )
     # 防御模型偶发的格式自作主张：代码块围栏剥掉；整体是 JSON 的按失败处理
     analysis = analysis.removeprefix("```markdown").removeprefix("```").removesuffix("```").strip()
@@ -65,6 +68,7 @@ def analyze_item(
             system="从给定文本中抽取实体，调用 extract_entities 提交。",
             user=f"{item.title}\n\n{analysis}",
             tool=EXTRACT_ENTITIES_TOOL,
+            tags=["entities", item.source],
         )
         entities = args.get("entities", [])
         if isinstance(entities, list):
