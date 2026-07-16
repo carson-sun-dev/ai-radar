@@ -48,6 +48,10 @@ SUBMIT_SCORES_TOOL = {
     },
 }
 
+# 注意：曾有 SUBMIT_ANALYSIS_TOOL 让深读分析走 tool call，已废弃——
+# 长中文文本经 JSON 转义进 tool arguments 会触发方舟服务端间歇性丢弃 tool_calls，
+# 长文本生成一律走普通 chat（见 src/llm/deepread.py 的通道选择说明）。
+
 # 实体抽取：深读阶段（P4）与实体索引/历史关联（P6）共用。
 # 实体是历史关联的检索键，命名要求可精确匹配（模型名带版本、技术名用通用写法）
 EXTRACT_ENTITIES_TOOL = {

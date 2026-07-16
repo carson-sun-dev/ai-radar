@@ -4,7 +4,7 @@
 掐住这一个口子就能离线测试全部采集逻辑。
 """
 
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import httpx
@@ -178,6 +178,9 @@ class TestFetchRetry:
 
 
 class TestRunner:
+    # 相对时间而不是写死日期：runner 有 30 天时效闸，固定日期的测试会随时间过期
+    RECENT = datetime.now(UTC) - timedelta(days=1)
+
     def _config(self) -> RadarConfig:
         return RadarConfig.model_validate(
             {
@@ -195,10 +198,7 @@ class TestRunner:
                 raise FetchError("超时（已重试 3 次）")
             return [
                 NewsItem.create(
-                    source=source.id,
-                    title="t",
-                    url="https://a.com/1",
-                    published_at=datetime(2026, 7, 10, tzinfo=UTC),
+                    source=source.id, title="t", url="https://a.com/1", published_at=self.RECENT
                 )
             ]
 
@@ -209,7 +209,7 @@ class TestRunner:
 
         assert [i.source for i in collected] == ["good"]
         assert failures == {"bad": "超时（已重试 3 次）"}
-        assert state.watermark("good") == datetime(2026, 7, 10, tzinfo=UTC)
+        assert state.watermark("good") == self.RECENT
         assert state.watermark("bad") is None  # 失败不推进：下次窗口自动补齐
 
     def test_second_run_yields_nothing_new(self, monkeypatch, tmp_path):
@@ -218,10 +218,7 @@ class TestRunner:
             "rss",
             lambda s, r: [
                 NewsItem.create(
-                    source=s.id,
-                    title="t",
-                    url="https://a.com/1",
-                    published_at=datetime(2026, 7, 10, tzinfo=UTC),
+                    source=s.id, title="t", url="https://a.com/1", published_at=self.RECENT
                 )
             ],
         )
@@ -233,3 +230,23 @@ class TestRunner:
         first, _ = runner.run_all(config, state, dedup)
         second, _ = runner.run_all(config, state, dedup)
         assert len(first) == 1 and second == []  # 同一条目第二轮被 seen 拦下
+
+    def test_stale_items_dropped_and_marked_seen(self, monkeypatch, tmp_path):
+        # 时效闸：首轮无水位线时，存量旧闻（如 2024 年创建的仓库）不得进打分池
+        stale = NewsItem.create(
+            source="good",
+            title="两年前的老仓库",
+            url="https://a.com/old",
+            published_at=datetime.now(UTC) - timedelta(days=400),
+        )
+        fresh = NewsItem.create(
+            source="good", title="新条目", url="https://a.com/new", published_at=self.RECENT
+        )
+        monkeypatch.setitem(runner._COLLECTORS, "rss", lambda s, r: [stale, fresh])
+        config = RadarConfig.model_validate(
+            {"sources": [{"id": "good", "org": "A", "collector": "rss", "url": "https://a.com/f"}]}
+        )
+        dedup = DedupStore(tmp_path / "seen.json")
+        collected, _ = runner.run_all(config, StateStore(tmp_path / "state.json"), dedup)
+        assert collected == [fresh]
+        assert dedup.is_seen(stale.id)  # 旧条目标已见：以后永不再进池

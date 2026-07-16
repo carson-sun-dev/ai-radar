@@ -30,6 +30,27 @@ class ArkClient:
         self.prompt_tokens = 0
         self.completion_tokens = 0
 
+    def chat(
+        self, *, model: str, system: str, user: str, thinking: bool = False
+    ) -> str:
+        """普通文本补全。长文本生成（深读分析等）走这里而不是 tool call——
+        实测方舟对长中文 tool arguments 的服务端解析会间歇性丢弃 tool_calls
+        （finish_reason=tool_calls 但字段为空），纯文本没有 JSON 转义压力。
+        """
+        resp = self._client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+            extra_body={"thinking": {"type": "enabled" if thinking else "disabled"}},
+            temperature=0.3,
+        )
+        if resp.usage:
+            self.prompt_tokens += resp.usage.prompt_tokens
+            self.completion_tokens += resp.usage.completion_tokens
+        return (resp.choices[0].message.content or "").strip()
+
     def tool_call(
         self,
         *,
@@ -38,12 +59,13 @@ class ArkClient:
         user: str,
         tool: dict,
         thinking: bool = False,
-        max_attempts: int = 2,
+        max_attempts: int = 4,
     ) -> dict:
         """强制调用指定工具，返回解析后的 arguments dict。
 
-        这里的重试针对「模型没好好返回」（缺 tool call / JSON 烂）；
-        网络层重试由 OpenAI SDK 自带。语义校验（字段值对不对）是调用方的事。
+        这里的重试针对「模型没好好返回」（缺 tool call / JSON 烂）——方舟实测
+        存在间歇性丢 tool_calls 的服务端问题（约四成），4 次独立尝试把残余失败
+        压到约 2.6%；网络层重试由 OpenAI SDK 自带。语义校验是调用方的事。
         """
         name = tool["function"]["name"]
         last_error = ""
