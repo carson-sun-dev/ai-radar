@@ -21,6 +21,10 @@ class Settings:
     # 方舟模型 ID 带版本后缀（/models 接口实测）；环境变量可覆盖，升级版本改 .env/Secrets
     score_model: str = "deepseek-v4-flash-260425"
     deepread_model: str = "deepseek-v4-pro-260425"
+    # 计价（元/百万 tokens）：默认按 pro 牌价对全部用量做上限估算（flash 实际更低），
+    # 报告尾注会注明是上限；P5 接 LangSmith 后有精确值
+    price_in: float = 12.0
+    price_out: float = 24.0
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -33,4 +37,6 @@ class Settings:
             ark_base_url=os.environ.get("ARK_BASE_URL", DEFAULT_BASE_URL),
             score_model=os.environ.get("ARK_SCORE_MODEL", cls.score_model),
             deepread_model=os.environ.get("ARK_DEEPREAD_MODEL", cls.deepread_model),
+            price_in=float(os.environ.get("ARK_PRICE_IN", cls.price_in)),
+            price_out=float(os.environ.get("ARK_PRICE_OUT", cls.price_out)),
         )

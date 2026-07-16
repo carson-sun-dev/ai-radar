@@ -69,6 +69,10 @@ class RetryDefaults(BaseModel):
 
 class RadarConfig(BaseModel):
     defaults: RetryDefaults = Field(default_factory=RetryDefaults)
+    # 时效窗口：发布超过 N 天的条目采集时丢弃（标记已见，不再出现）。
+    # 首轮运行/新加源时没有水位线，没有这道闸，存量旧闻（如几年前创建的
+    # GitHub 仓库）会涌入打分池霸榜；30 天余量兜住 arXiv 晚收录的补漏场景
+    max_age_days: int = 30
     sources: list[SourceConfig]
 
     @model_validator(mode="after")

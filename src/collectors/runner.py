@@ -4,6 +4,8 @@
 业务逻辑留在这层，保证不依赖框架也能单独运行和测试。
 """
 
+from datetime import UTC, datetime, timedelta
+
 from src.collectors import arxiv, github, hf_papers, rss, web
 from src.collectors.base import FetchError
 from src.config import CollectorKind, RadarConfig
@@ -30,6 +32,7 @@ def run_all(
     """
     collected: list[NewsItem] = []
     failures: dict[str, str] = {}
+    cutoff = datetime.now(UTC) - timedelta(days=config.max_age_days)
     for source in config.sources:
         try:
             items = _COLLECTORS[source.collector](source, config.defaults)
@@ -43,7 +46,11 @@ def run_all(
             failures[source.id] = reason
             continue
 
-        fresh = dedup.filter_new(items)
+        # 时效闸：过期条目直接标已见后丢弃——首轮没有水位线时，
+        # 这是唯一防止存量旧闻（几年前的 GitHub 仓库等）涌入打分池的机制
+        stale = [i for i in items if i.published_at < cutoff]
+        dedup.mark_seen(stale)
+        fresh = dedup.filter_new([i for i in items if i.published_at >= cutoff])
         dedup.mark_seen(fresh)
         if items:
             # 水位线推进用「本次抓到的最新发布时间」，与是否重复无关——

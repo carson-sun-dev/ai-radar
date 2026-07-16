@@ -8,6 +8,9 @@ defaults:
   backoff_base_seconds: 5
   backoff_factor: 3 # 重试间隔 5s → 15s → 45s
 
+# 时效窗口：超过 30 天的条目不进打分池（防首轮/新加源时存量旧闻霸榜）
+max_age_days: 30
+
 sources:
   # ============ 国际 ============
   - id: openai-news

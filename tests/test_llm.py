@@ -19,15 +19,20 @@ from src.tools.schemas import SUBMIT_SCORES_TOOL
 SETTINGS = Settings(ark_api_key="test-key")
 
 
-def _response(arguments: str | None, usage=(100, 20)):
+def _response(arguments: str | None, usage=(100, 20), content: str = ""):
     """构造 OpenAI SDK 响应的鸭子类型替身。arguments=None 模拟模型没返回 tool call。"""
     tool_calls = None
     if arguments is not None:
         tool_calls = [SimpleNamespace(function=SimpleNamespace(arguments=arguments))]
     return SimpleNamespace(
-        choices=[SimpleNamespace(message=SimpleNamespace(tool_calls=tool_calls))],
+        choices=[SimpleNamespace(message=SimpleNamespace(tool_calls=tool_calls, content=content))],
         usage=SimpleNamespace(prompt_tokens=usage[0], completion_tokens=usage[1]),
     )
+
+
+def _chat_response(text: str, usage=(100, 80)):
+    """普通补全响应（无 tool call）：深读分析走的通道。"""
+    return _response(None, usage=usage, content=text)
 
 
 class FakeOpenAI:
@@ -78,9 +83,17 @@ class TestArkClient:
         assert len(fake.calls) == 2
 
     def test_raises_after_exhausting_attempts(self):
-        client, _ = _client([_response(None), _response("not json{")])
-        with pytest.raises(ToolCallError, match="已尝试 2 次"):
+        # 默认 4 次：方舟间歇性丢 tool_calls（约四成）下的残余失败率约 2.6%
+        bad = [_response(None), _response("not json{"), _response(None), _response(None)]
+        client, _ = _client(bad)
+        with pytest.raises(ToolCallError, match="已尝试 4 次"):
             client.tool_call(model="m", system="s", user="u", tool=SUBMIT_SCORES_TOOL)
+
+    def test_chat_returns_text(self):
+        # 长文本生成的通道：普通补全，无 JSON 转义压力（方舟服务端教训）
+        client, fake = _client([_chat_response("这是一段深读分析。")])
+        assert client.chat(model="m", system="s", user="u") == "这是一段深读分析。"
+        assert "tools" not in fake.calls[0]
 
     def test_accumulates_usage_across_calls(self):
         # 用量跨调用累计：P5 的成本尾注依赖这个数

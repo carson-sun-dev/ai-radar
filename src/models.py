@@ -67,6 +67,7 @@ class NewsItem(BaseModel):
     score: int | None = None  # 1–10，rubric 见 prompts/
     score_reason: str = ""
     entities: list[str] = Field(default_factory=list)  # 实体索引/历史关联的原料
+    analysis: str = ""  # 深读/中读产出的中文技术介绍（深读 300–500 字，中读 3–5 句）
     extra: dict = Field(default_factory=dict)  # 源特定信号（如 HF papers 点赞数、star 增速）
 
     @field_validator("published_at")
