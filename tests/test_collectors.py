@@ -119,6 +119,34 @@ class TestWeb:
         ]
         assert all(i.published_at.tzinfo == UTC for i in items)  # 首见时间兜底
 
+    def test_links_summary_rescues_linkless_body(self, monkeypatch):
+        # 2026-07 seed 实测：Jina 正文只剩图片卡片和纯文本标题（站点卡片改版），
+        # 靠 X-With-Links-Summary 汇总节兜底提链接
+        seen_headers: dict = {}
+        md = (
+            "![Image 1: 卡片标题](https://cdn.example.com/x.png)\n纯文本标题\n\n"
+            "Links/Buttons:\n"
+            "- [Real Article Title](https://www.anthropic.com/news/real-article)\n"
+            "- [Careers](https://www.anthropic.com/careers)\n"
+        )
+
+        def fake_fetch(url, retry=None, headers=None, **kw):
+            seen_headers.update(headers or {})
+            return md
+
+        monkeypatch.setattr("src.collectors.base.fetch", fake_fetch)
+        source = SourceConfig(
+            id="t",
+            org="X",
+            collector="web",
+            url="https://www.anthropic.com/news",
+            link_prefix="https://www.anthropic.com/news/",
+            via_jina=True,
+        )
+        items = web.collect(source, RETRY)
+        assert [i.title for i in items] == ["Real Article Title"]
+        assert seen_headers.get("X-With-Links-Summary") == "true"
+
     def test_direct_html_success_skips_jina(self, monkeypatch):
         html = (
             '<a href="/news/direct-article">Direct fetch works fine</a>'

@@ -45,7 +45,11 @@ def collect(source: SourceConfig, retry: RetryDefaults) -> list[NewsItem]:
             pass  # 直抓失败不是终点，下面走 Jina 兜底
         links = [(t, u) for t, u in links if normalize_url(u).startswith(prefix)]
     if not links:
-        md = base.fetch(f"{_JINA}{source.url}", retry)
+        # 链接汇总头：Jina 正文 markdown 不保证含卡片链接（2026-07 seed 实测：站点卡片
+        # 改版后正文只剩图片和纯文本标题），汇总节稳定列出页内全部 <a>，是更可靠的提取源
+        md = base.fetch(
+            f"{_JINA}{source.url}", retry, headers={"X-With-Links-Summary": "true"}
+        )
         links = [(t, u) for t, u in _links_from_markdown(md) if normalize_url(u).startswith(prefix)]
 
     now = datetime.now(UTC)
