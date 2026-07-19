@@ -23,6 +23,7 @@ from src.llm.client import ArkClient
 from src.llm.deepread import analyze_item, fetch_fulltext
 from src.llm.scoring import score_items
 from src.models import NewsItem, ReportMeta
+from src.report.index import INDEX_PATH, update_index
 from src.report.render import RunUsage, render_midweek, report_payload
 from src.report.select import Selection, select_for_midweek
 from src.state import DedupStore, StateStore
@@ -38,6 +39,7 @@ class PipelineContext:
     state: StateStore
     dedup: DedupStore
     reports_dir: Path = field(default_factory=lambda: Path("reports"))
+    index_path: Path = field(default_factory=lambda: INDEX_PATH)
     # 尾注耗时实测的起点：monotonic 不受系统时钟调整影响
     started_at: float = field(default_factory=time.monotonic)
 
@@ -137,6 +139,9 @@ def build_midweek_graph(ctx: PipelineContext):
         (month_dir / f"midweek-{meta.date}.json").write_text(
             json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8"
         )
+        # 实体入索（P6）：只索引深读/中读——实体抽取只发生在这两档
+        selection = state["selection"]
+        update_index(meta, selection.deep + selection.mid, ctx.index_path)
         # 状态最后落盘：前面任何一步崩溃都不推进水位线/去重，天然事务性
         ctx.state.save()
         ctx.dedup.save()
