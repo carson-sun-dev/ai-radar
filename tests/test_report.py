@@ -5,8 +5,13 @@ from datetime import UTC, datetime
 import yaml
 
 from src.models import Category, NewsItem
-from src.report.render import render_midweek
+from src.report.render import RunUsage, render_midweek
 from src.report.select import select_for_midweek
+
+USAGE = RunUsage(
+    tokens_in=10000, tokens_out=2000, cached=3000, cost_cny=0.17,
+    precise=False, duration_seconds=125.0,
+)
 
 
 def _item(n: int, cat: Category, score: int, day: int = 10) -> NewsItem:
@@ -71,7 +76,7 @@ class TestRender:
             sel,
             failures or {},
             raw_count=50,
-            usage=(10000, 2000, 0.17),
+            usage=USAGE,
             date_str="2026-07-14",
             source_orgs=["OpenAI", "Anthropic", "字节 Seed"],
         )
@@ -110,5 +115,14 @@ class TestRender:
     def test_failed_analysis_falls_back_to_summary(self):
         scored = [_item(0, Category.MODEL, 9)]  # analysis 为空 = 深读失败
         sel = select_for_midweek(scored, [])
-        md, _ = render_midweek(sel, {}, 1, (0, 0, 0.0), "2026-07-14")
+        empty = RunUsage(tokens_in=0, tokens_out=0, cached=0, cost_cny=0.0, precise=False)
+        md, _ = render_midweek(sel, {}, 1, empty, "2026-07-14")
         assert "深读生成失败" in md and "摘要 0" in md  # 降级但如实标注
+
+    def test_footer_usage_measured_honestly(self):
+        # 尾注实测（P5）：耗时、缓存命中可见；计价方式必须标注（估算不冒充实测）
+        md, meta = self._render()
+        assert "耗时：2 分 5 秒" in md
+        assert "缓存命中 3,000" in md
+        assert "上限估" in md  # precise=False 时不许伪装成实测价
+        assert meta.duration_seconds == 125.0

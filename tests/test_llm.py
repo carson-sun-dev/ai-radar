@@ -19,14 +19,18 @@ from src.tools.schemas import SUBMIT_SCORES_TOOL
 SETTINGS = Settings(ark_api_key="test-key")
 
 
-def _response(arguments: str | None, usage=(100, 20), content: str = ""):
+def _response(arguments: str | None, usage=(100, 20), content: str = "", cached: int = 0):
     """构造 OpenAI SDK 响应的鸭子类型替身。arguments=None 模拟模型没返回 tool call。"""
     tool_calls = None
     if arguments is not None:
         tool_calls = [SimpleNamespace(function=SimpleNamespace(arguments=arguments))]
     return SimpleNamespace(
         choices=[SimpleNamespace(message=SimpleNamespace(tool_calls=tool_calls, content=content))],
-        usage=SimpleNamespace(prompt_tokens=usage[0], completion_tokens=usage[1]),
+        usage=SimpleNamespace(
+            prompt_tokens=usage[0],
+            completion_tokens=usage[1],
+            prompt_tokens_details=SimpleNamespace(cached_tokens=cached),
+        ),
     )
 
 
@@ -106,6 +110,39 @@ class TestArkClient:
         for _ in range(2):
             client.tool_call(model="m", system="s", user="u", tool=SUBMIT_SCORES_TOOL)
         assert (client.prompt_tokens, client.completion_tokens) == (150, 30)
+
+    def test_usage_split_by_model_with_cache_hits(self):
+        # 分模型账本（P5）：flash/pro 牌价不同，混账算不出精确成本；缓存命中单记
+        client, _ = _client(
+            [
+                _response('{"entries": []}', usage=(100, 20), cached=40),
+                _chat_response("分析" * 30, usage=(200, 80)),
+            ]
+        )
+        client.tool_call(model="v4-flash-1", system="s", user="u", tool=SUBMIT_SCORES_TOOL)
+        client.chat(model="v4-pro-1", system="s", user="u")
+        assert client.usage_by_model["v4-flash-1"].cached == 40
+        assert client.usage_by_model["v4-pro-1"].prompt == 200
+        assert client.cached_tokens == 40
+        assert (client.prompt_tokens, client.completion_tokens) == (300, 100)
+
+    def test_cost_summary_upper_bound_without_flash_price(self):
+        # flash 未配牌价：按 pro 价上限估（precise=False）；缓存命中按缓存价是
+        # 平台既定计费行为，即使在上限模式下也照常适用
+        client, _ = _client([_response('{"entries": []}', usage=(100, 20), cached=40)])
+        client.tool_call(model="v4-flash-1", system="s", user="u", tool=SUBMIT_SCORES_TOOL)
+        cost, precise = client.cost_summary()
+        assert not precise
+        assert abs(cost - (60 * 12.0 + 40 * 1.0 + 20 * 24.0) / 1e6) < 1e-12
+
+    def test_cost_summary_precise_with_flash_price(self):
+        settings = Settings(ark_api_key="k", price_in_flash=2.0, price_out_flash=6.0)
+        fake = FakeOpenAI([_response('{"entries": []}', usage=(100, 20), cached=40)])
+        client = ArkClient(settings=settings, client=fake)
+        client.tool_call(model="v4-flash-1", system="s", user="u", tool=SUBMIT_SCORES_TOOL)
+        cost, precise = client.cost_summary()
+        assert precise
+        assert abs(cost - (60 * 2.0 + 40 * 1.0 + 20 * 6.0) / 1e6) < 1e-12
 
 
 class TestPrompts:

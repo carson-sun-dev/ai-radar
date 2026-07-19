@@ -8,10 +8,29 @@ Cite 纪律（设计纪要第 5 节）：所有 URL 从 NewsItem 带入，模型
 里不含链接——引用行为发生在这里，不发生在模型里。
 """
 
+from dataclasses import dataclass
+
 import yaml
 
 from src.models import Category, NewsItem, ReportMeta, RunType
 from src.report.select import Selection
+
+
+@dataclass(frozen=True)
+class RunUsage:
+    """一次运行的用量实测，由流水线从客户端账本汇总后传入。
+
+    precise 标记成本是「分模型实测牌价」还是「flash 未配牌价的上限估」——
+    尾注必须能区分这两种数字，读者不该把估算当实测。
+    """
+
+    tokens_in: int
+    tokens_out: int
+    cached: int  # 输入中缓存命中部分（计费更便宜，单列展示省了多少）
+    cost_cny: float
+    precise: bool
+    duration_seconds: float | None = None
+
 
 CATEGORY_NAMES = {
     Category.MODEL: "模型动态",
@@ -45,7 +64,7 @@ def render_midweek(
     selection: Selection,
     failures: dict[str, str],
     raw_count: int,
-    usage: tuple[int, int, float],  # (入 tokens, 出 tokens, 成本上限元)
+    usage: RunUsage,
     date_str: str,
     source_orgs: list[str] | None = None,  # 本期采集成功的机构名（按配置顺序去重）
 ) -> tuple[str, ReportMeta]:
@@ -86,15 +105,18 @@ def render_midweek(
     scored_count = len(selection.deep) + len(selection.mid) + sum(
         len(v) for v in selection.glance.values()
     )
-    tokens_in, tokens_out, cost = usage
     footer.append(
         f"- 条目：原始 {raw_count} → 新增 {scored_count + len(selection.unscored)}"
         f"（打分 {scored_count}，未打分 {len(selection.unscored)}）"
     )
+    price_note = "分模型实测牌价" if usage.precise else "flash 未配牌价，按 pro 价上限估"
     footer.append(
-        f"- 成本：入 {tokens_in:,} / 出 {tokens_out:,} tokens ≈ ¥{cost:.2f}"
-        f"（按 pro 牌价上限估，P5 接观测后有精确值）"
+        f"- 成本：入 {usage.tokens_in:,}（缓存命中 {usage.cached:,}）"
+        f"/ 出 {usage.tokens_out:,} tokens ≈ ¥{usage.cost_cny:.2f}（{price_note}）"
     )
+    if usage.duration_seconds is not None:
+        minutes, seconds = divmod(round(usage.duration_seconds), 60)
+        footer.append(f"- 耗时：{minutes} 分 {seconds} 秒")
 
     all_entities = sorted({e for i in selection.deep + selection.mid for e in i.entities})
     meta = ReportMeta(
@@ -105,8 +127,11 @@ def render_midweek(
         tags=[c.value for c in Category if c in deep_by_cat],
         item_count=scored_count + len(selection.unscored),
         sources_failed=[f"{sid}：{reason}" for sid, reason in failures.items()],
-        tokens_used=tokens_in + tokens_out,
-        cost_cny=round(cost, 4),
+        tokens_used=usage.tokens_in + usage.tokens_out,
+        cost_cny=round(usage.cost_cny, 4),
+        duration_seconds=(
+            round(usage.duration_seconds, 1) if usage.duration_seconds is not None else None
+        ),
     )
 
     frontmatter = yaml.safe_dump(

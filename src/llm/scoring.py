@@ -59,7 +59,11 @@ def score_items(
         user = "\n\n---\n\n".join(_render_item(i) for i in batch)
         try:
             args = client.tool_call(
-                model=model, system=system, user=user, tool=SUBMIT_SCORES_TOOL
+                model=model,
+                system=system,
+                user=user,
+                tool=SUBMIT_SCORES_TOOL,
+                tags=["score"],  # trace 标签（P5）：LangSmith 按阶段切片
             )
             result = ScoreBatch.model_validate(args)
         except (ToolCallError, ValidationError):
