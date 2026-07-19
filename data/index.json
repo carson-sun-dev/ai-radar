@@ -1,0 +1,504 @@
+{
+ "LangGraph": [
+  {
+   "id": "5312667f8f8f354f",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "资讯 0",
+   "url": "https://example.com/0",
+   "score": 9,
+   "summary": "这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读"
+  },
+  {
+   "id": "f2f9784142e4d11e",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "资讯 1",
+   "url": "https://example.com/1",
+   "score": 8,
+   "summary": "这是一段合格的中读分析，讲清了方法与变化。这是一段合格的中读分析，讲清了方法与变化。这是一段合格的中读分析，讲清了方法与变化。"
+  }
+ ],
+ "GPT-5.6 Sol": [
+  {
+   "id": "30f48121decc708b",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Previewing GPT-5.6 Sol: a next-generation model",
+   "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+   "score": 9,
+   "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  }
+ ],
+ "OpenAI": [
+  {
+   "id": "30f48121decc708b",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Previewing GPT-5.6 Sol: a next-generation model",
+   "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+   "score": 9,
+   "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  }
+ ],
+ "安全栈": [
+  {
+   "id": "30f48121decc708b",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Previewing GPT-5.6 Sol: a next-generation model",
+   "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+   "score": 9,
+   "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  }
+ ],
+ "长链推理": [
+  {
+   "id": "30f48121decc708b",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Previewing GPT-5.6 Sol: a next-generation model",
+   "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+   "score": 9,
+   "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  }
+ ],
+ "指令微调": [
+  {
+   "id": "30f48121decc708b",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Previewing GPT-5.6 Sol: a next-generation model",
+   "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+   "score": 9,
+   "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  }
+ ],
+ "强化学习": [
+  {
+   "id": "30f48121decc708b",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Previewing GPT-5.6 Sol: a next-generation model",
+   "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+   "score": 9,
+   "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  }
+ ],
+ "对齐技术": [
+  {
+   "id": "30f48121decc708b",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Previewing GPT-5.6 Sol: a next-generation model",
+   "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+   "score": 9,
+   "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  }
+ ],
+ "越狱攻击": [
+  {
+   "id": "30f48121decc708b",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Previewing GPT-5.6 Sol: a next-generation model",
+   "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+   "score": 9,
+   "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  }
+ ],
+ "Shippy": [
+  {
+   "id": "11253d0d7f138338",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "What building Shippy taught us about building agents",
+   "url": "https://huggingface.co/blog/allenai/shippy-tech-blog",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 团队的工程复盘文章，分享了他们构建 AI 助手 Shippy 过程中积累的 Agent 开发实战经验。\n\n此前，构建 AI Agent 的主要痛点在于，开发者往往过度依赖单一模型的推理能力，试图让一个“超级大脑”处理所有复杂任务。这导致系统在面对多步骤、跨工具的真实业务场景时，容易出现幻觉、上下文窗口过载以及任务执行失控。Shippy 项目的核心发现是，单纯"
+  }
+ ],
+ "Hugging Face": [
+  {
+   "id": "11253d0d7f138338",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "What building Shippy taught us about building agents",
+   "url": "https://huggingface.co/blog/allenai/shippy-tech-blog",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 团队的工程复盘文章，分享了他们构建 AI 助手 Shippy 过程中积累的 Agent 开发实战经验。\n\n此前，构建 AI Agent 的主要痛点在于，开发者往往过度依赖单一模型的推理能力，试图让一个“超级大脑”处理所有复杂任务。这导致系统在面对多步骤、跨工具的真实业务场景时，容易出现幻觉、上下文窗口过载以及任务执行失控。Shippy 项目的核心发现是，单纯"
+  },
+  {
+   "id": "969cdff003616d87",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Model Routing Is Simple. Until It Isn’t.",
+   "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
+   "score": 8,
+   "summary": "Model Routing Is Simple. Until It Isn’t. 是一篇来自 Hugging Face 博客的技术文章，探讨了模型路由在实际应用中的复杂性。文章指出，虽然路由的基本概念简单，但在动态选择最优模型时，会面临延迟、成本与性能权衡等挑战。这值得关注，因为它揭示了在构建高效、可扩展的 AI 应用时，模型调度策略远比表面看起来更具工程难度。"
+  }
+ ],
+ "LongStraw": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "Qwen3.6-27B": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "GLM-5.2": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "GRPO": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "分组相对策略优化": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "混合循环注意力": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "全注意力": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "压缩注意力混合专家模型": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "H20 GPU": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "KV cache": [
+  {
+   "id": "408f90923081be06",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+   "url": "https://huggingface.co/papers/2607.14952",
+   "score": 9,
+   "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  }
+ ],
+ "Model Routing": [
+  {
+   "id": "969cdff003616d87",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Model Routing Is Simple. Until It Isn’t.",
+   "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
+   "score": 8,
+   "summary": "Model Routing Is Simple. Until It Isn’t. 是一篇来自 Hugging Face 博客的技术文章，探讨了模型路由在实际应用中的复杂性。文章指出，虽然路由的基本概念简单，但在动态选择最优模型时，会面临延迟、成本与性能权衡等挑战。这值得关注，因为它揭示了在构建高效、可扩展的 AI 应用时，模型调度策略远比表面看起来更具工程难度。"
+  }
+ ],
+ "Bridge Evidence": [
+  {
+   "id": "97f11b3ce171a7df",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+   "url": "https://arxiv.org/abs/2607.15253v1",
+   "score": 8,
+   "summary": "Bridge Evidence 这篇论文揭示了一个关键发现：在静态检索评估中看似无用的文档，在多步智能体搜索中却可能承担关键的因果作用。研究通过对比静态检索效用与反事实轨迹效用，发现两者近乎统计独立，并识别出约三分之一的文档属于“桥接文档”——它们对静态读者无价值，却是智能体完成后续推理和查询所必需的。这一发现挑战了当前检索系统仅依赖静态有用性进行训练和评估的范式，强调了需要为智能体搜索设计能捕捉"
+  }
+ ],
+ "静态检索效用": [
+  {
+   "id": "97f11b3ce171a7df",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+   "url": "https://arxiv.org/abs/2607.15253v1",
+   "score": 8,
+   "summary": "Bridge Evidence 这篇论文揭示了一个关键发现：在静态检索评估中看似无用的文档，在多步智能体搜索中却可能承担关键的因果作用。研究通过对比静态检索效用与反事实轨迹效用，发现两者近乎统计独立，并识别出约三分之一的文档属于“桥接文档”——它们对静态读者无价值，却是智能体完成后续推理和查询所必需的。这一发现挑战了当前检索系统仅依赖静态有用性进行训练和评估的范式，强调了需要为智能体搜索设计能捕捉"
+  }
+ ],
+ "反事实轨迹效用": [
+  {
+   "id": "97f11b3ce171a7df",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+   "url": "https://arxiv.org/abs/2607.15253v1",
+   "score": 8,
+   "summary": "Bridge Evidence 这篇论文揭示了一个关键发现：在静态检索评估中看似无用的文档，在多步智能体搜索中却可能承担关键的因果作用。研究通过对比静态检索效用与反事实轨迹效用，发现两者近乎统计独立，并识别出约三分之一的文档属于“桥接文档”——它们对静态读者无价值，却是智能体完成后续推理和查询所必需的。这一发现挑战了当前检索系统仅依赖静态有用性进行训练和评估的范式，强调了需要为智能体搜索设计能捕捉"
+  }
+ ],
+ "桥接文档": [
+  {
+   "id": "97f11b3ce171a7df",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+   "url": "https://arxiv.org/abs/2607.15253v1",
+   "score": 8,
+   "summary": "Bridge Evidence 这篇论文揭示了一个关键发现：在静态检索评估中看似无用的文档，在多步智能体搜索中却可能承担关键的因果作用。研究通过对比静态检索效用与反事实轨迹效用，发现两者近乎统计独立，并识别出约三分之一的文档属于“桥接文档”——它们对静态读者无价值，却是智能体完成后续推理和查询所必需的。这一发现挑战了当前检索系统仅依赖静态有用性进行训练和评估的范式，强调了需要为智能体搜索设计能捕捉"
+  }
+ ],
+ "多步智能体搜索": [
+  {
+   "id": "97f11b3ce171a7df",
+   "date": "2026-07-17",
+   "run_type": "midweek",
+   "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+   "url": "https://arxiv.org/abs/2607.15253v1",
+   "score": 8,
+   "summary": "Bridge Evidence 这篇论文揭示了一个关键发现：在静态检索评估中看似无用的文档，在多步智能体搜索中却可能承担关键的因果作用。研究通过对比静态检索效用与反事实轨迹效用，发现两者近乎统计独立，并识别出约三分之一的文档属于“桥接文档”——它们对静态读者无价值，却是智能体完成后续推理和查询所必需的。这一发现挑战了当前检索系统仅依赖静态有用性进行训练和评估的范式，强调了需要为智能体搜索设计能捕捉"
+  }
+ ],
+ "Seed2.1": [
+  {
+   "id": "23dea4307fda033f",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Seed2.1",
+   "url": "https://seed.bytedance.com/en/seed2_1",
+   "score": 8,
+   "summary": ""
+  }
+ ],
+ "Seed2.1 Pro": [
+  {
+   "id": "23dea4307fda033f",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Seed2.1",
+   "url": "https://seed.bytedance.com/en/seed2_1",
+   "score": 8,
+   "summary": ""
+  }
+ ],
+ "Seed2.1 Turbo": [
+  {
+   "id": "23dea4307fda033f",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Seed2.1",
+   "url": "https://seed.bytedance.com/en/seed2_1",
+   "score": 8,
+   "summary": ""
+  }
+ ],
+ "Workspace Bench": [
+  {
+   "id": "23dea4307fda033f",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Seed2.1",
+   "url": "https://seed.bytedance.com/en/seed2_1",
+   "score": 8,
+   "summary": ""
+  }
+ ],
+ "Agent Startup Bench": [
+  {
+   "id": "23dea4307fda033f",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Seed2.1",
+   "url": "https://seed.bytedance.com/en/seed2_1",
+   "score": 8,
+   "summary": ""
+  }
+ ],
+ "NL2Repo-Bench": [
+  {
+   "id": "23dea4307fda033f",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Seed2.1",
+   "url": "https://seed.bytedance.com/en/seed2_1",
+   "score": 8,
+   "summary": ""
+  }
+ ],
+ "字节跳动": [
+  {
+   "id": "23dea4307fda033f",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Seed2.1",
+   "url": "https://seed.bytedance.com/en/seed2_1",
+   "score": 8,
+   "summary": ""
+  }
+ ],
+ "Claude": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ],
+ "Claude Code": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ],
+ "Claude Cowork": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ],
+ "claude.ai": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ],
+ "Anthropic": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ],
+ "sandbox": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ],
+ "blast radius": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ],
+ "human-in-the-loop": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ],
+ "approval fatigue": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ],
+ "defense-in-depth": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": ""
+  }
+ ]
+}
