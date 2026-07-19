@@ -1,0 +1,67 @@
+{
+  "openai-news": {
+    "watermark": "2026-07-17T10:00:00Z",
+    "last_success_at": "2026-07-19T17:05:57.577097Z",
+    "last_error": null
+  },
+  "anthropic-news": {
+    "watermark": "2026-07-19T17:05:57.822447Z",
+    "last_success_at": "2026-07-19T17:05:57.822662Z",
+    "last_error": null
+  },
+  "anthropic-engineering": {
+    "watermark": "2026-07-19T17:05:58.254747Z",
+    "last_success_at": "2026-07-19T17:05:58.254817Z",
+    "last_error": null
+  },
+  "deepmind-blog": {
+    "watermark": "2026-07-16T09:30:42Z",
+    "last_success_at": "2026-07-19T17:05:58.677477Z",
+    "last_error": null
+  },
+  "hf-blog": {
+    "watermark": "2026-07-17T15:57:54Z",
+    "last_success_at": "2026-07-19T17:05:58.964782Z",
+    "last_error": null
+  },
+  "hf-daily-papers": {
+    "watermark": "2026-07-16T00:00:00Z",
+    "last_success_at": "2026-07-19T17:05:59.091789Z",
+    "last_error": null
+  },
+  "langgraph-releases": {
+    "watermark": "2026-07-10T22:58:04Z",
+    "last_success_at": "2026-07-19T17:05:59.690317Z",
+    "last_error": null
+  },
+  "deepseek-github": {
+    "watermark": "2026-06-26T12:36:05Z",
+    "last_success_at": "2026-07-19T17:06:00.371095Z",
+    "last_error": null
+  },
+  "qwen-github": {
+    "watermark": "2026-06-29T19:06:24Z",
+    "last_success_at": "2026-07-19T17:06:01.202357Z",
+    "last_error": null
+  },
+  "glm-github": {
+    "watermark": "2026-05-28T11:38:02Z",
+    "last_success_at": "2026-07-19T17:06:02.068511Z",
+    "last_error": null
+  },
+  "seed-research": {
+    "watermark": null,
+    "last_success_at": null,
+    "last_error": "解析失败（列表页未提取到文章链接）"
+  },
+  "kimi-github": {
+    "watermark": "2026-05-22T08:02:03Z",
+    "last_success_at": "2026-07-19T17:06:03.420412Z",
+    "last_error": null
+  },
+  "arxiv-papers": {
+    "watermark": "2026-07-16T17:48:29Z",
+    "last_success_at": "2026-07-19T17:06:03.794348Z",
+    "last_error": null
+  }
+}
