@@ -107,6 +107,27 @@ class ArkClient:
         self._record(model, resp.usage)
         return (resp.choices[0].message.content or "").strip()
 
+    def chat(
+        self, *, model: str, system: str, user: str, thinking: bool = False
+    ) -> str:
+        """普通文本补全。长文本生成（深读分析等）走这里而不是 tool call——
+        实测方舟对长中文 tool arguments 的服务端解析会间歇性丢弃 tool_calls
+        （finish_reason=tool_calls 但字段为空），纯文本没有 JSON 转义压力。
+        """
+        resp = self._client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+            extra_body={"thinking": {"type": "enabled" if thinking else "disabled"}},
+            temperature=0.3,
+        )
+        if resp.usage:
+            self.prompt_tokens += resp.usage.prompt_tokens
+            self.completion_tokens += resp.usage.completion_tokens
+        return (resp.choices[0].message.content or "").strip()
+
     def tool_call(
         self,
         *,
