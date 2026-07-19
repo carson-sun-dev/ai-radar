@@ -1,0 +1,44 @@
+# 周报流水线（bot 通道）：读本周周中报 JSON 做综述，不重新采集
+# 定时在 P10 上线阶段才启用，当前只留手动触发（workflow_dispatch）验证
+name: Weekly report
+
+on:
+  workflow_dispatch:
+  # P10 上线时取消注释（UTC 0:00 周日 = 北京时间早 8 点，见设计纪要第 4 节）：
+  # schedule:
+  #   - cron: "0 0 * * 0"
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # bot 通道：deploy key 在 main ruleset 的 bypass 名单里
+          ssh-key: ${{ secrets.BOT_DEPLOY_KEY }}
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: 安装依赖
+        run: uv sync
+
+      - name: 运行周报流水线
+        env:
+          ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+          LANGSMITH_TRACING: ${{ secrets.LANGSMITH_API_KEY != '' }}
+          LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+          LANGSMITH_PROJECT: ai-radar
+          ARK_PRICE_IN_FLASH: ${{ vars.ARK_PRICE_IN_FLASH }}
+          ARK_PRICE_OUT_FLASH: ${{ vars.ARK_PRICE_OUT_FLASH }}
+        run: uv run python -m src.pipeline.weekly
+
+      - name: 提交周报（bot 直推 main）
+        run: |
+          git config user.name "ai-radar-bot"
+          git config user.email "ai-radar-bot@users.noreply.github.com"
+          git add reports/
+          git diff --cached --quiet && echo "无周报产出" && exit 0
+          git commit -m "[bot] 周报 $(date -u +%F)"
+          git push
