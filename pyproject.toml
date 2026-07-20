@@ -9,10 +9,12 @@ dependencies = [
     "httpx>=0.28.1",
     "langgraph>=1.2.9",
     "langsmith>=0.10.2",
+    "markdown>=3.10.2",
     "openai>=2.45.0",
     "pydantic>=2.13.4",
     "python-dotenv>=1.2.2",
     "pyyaml>=6.0.3",
+    "weasyprint>=69.0",
 ]
 
 [dependency-groups]

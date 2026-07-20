@@ -23,6 +23,7 @@ from src.llm.client import ArkClient
 from src.llm.deepread import analyze_item, fetch_fulltext
 from src.llm.scoring import score_items
 from src.models import NewsItem, ReportMeta
+from src.report.images import attach_images
 from src.report.index import INDEX_PATH, update_index
 from src.report.render import RunUsage, render_midweek, report_payload
 from src.report.select import Selection, select_for_midweek
@@ -40,6 +41,7 @@ class PipelineContext:
     dedup: DedupStore
     reports_dir: Path = field(default_factory=lambda: Path("reports"))
     index_path: Path = field(default_factory=lambda: INDEX_PATH)
+    assets_dir: Path = field(default_factory=lambda: Path("assets"))
     # 尾注耗时实测的起点：monotonic 不受系统时钟调整影响
     started_at: float = field(default_factory=time.monotonic)
 
@@ -77,6 +79,11 @@ def build_midweek_graph(ctx: PipelineContext):
             # 深读配全文；抓不到就降级用摘要分析（analyze_item 内部只看有没有 fulltext）
             fulltext = fetch_fulltext(item.url, ctx.config.defaults)
             analyze_item(ctx.client, item, "deepread", fulltext)
+            # 配图（P7）：只给深读条目挑图，复用刚抓的全文，避免二次请求
+            if fulltext:
+                attach_images(
+                    ctx.client, item, fulltext, ctx.assets_dir, ctx.config.defaults
+                )
         for item in selection.mid:
             analyze_item(ctx.client, item, "midread")
         return {}

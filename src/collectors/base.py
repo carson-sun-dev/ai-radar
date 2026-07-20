@@ -35,13 +35,13 @@ def _classify_status(status: int) -> str:
     return f"HTTP {status}"
 
 
-def fetch(
+def _fetch(
     url: str,
-    retry: RetryDefaults | None = None,
-    headers: dict[str, str] | None = None,
-    sleep=time.sleep,  # 可注入：测试里不真睡 65 秒
-) -> str:
-    """带重试的 GET。全部尝试失败时抛 FetchError（含分类原因与重试次数）。
+    retry: RetryDefaults | None,
+    headers: dict[str, str] | None,
+    sleep,
+) -> httpx.Response:
+    """带重试的 GET，返回成功响应。全部尝试失败时抛 FetchError（含分类原因）。
 
     403/429 也照常重试：偶发的边缘节点误判和瞬时限流占比不低，
     重试成本只有几十秒，比直接放弃一个源划算。
@@ -57,7 +57,7 @@ def fetch(
                 follow_redirects=True,
             )
             if resp.status_code == 200:
-                return resp.text
+                return resp
             last_reason = _classify_status(resp.status_code)
         except httpx.TimeoutException:
             last_reason = "超时"
@@ -67,3 +67,23 @@ def fetch(
             # 指数退避 5s → 15s → 45s（sources.yaml defaults 定案）
             sleep(retry.backoff_base_seconds * retry.backoff_factor**attempt)
     raise FetchError(f"{last_reason}（已重试 {retry.max_retries} 次）")
+
+
+def fetch(
+    url: str,
+    retry: RetryDefaults | None = None,
+    headers: dict[str, str] | None = None,
+    sleep=time.sleep,  # 可注入：测试里不真睡 65 秒
+) -> str:
+    """带重试的 GET，返回响应文本（页面/API 的主用法）。"""
+    return _fetch(url, retry, headers, sleep).text
+
+
+def fetch_bytes(
+    url: str,
+    retry: RetryDefaults | None = None,
+    headers: dict[str, str] | None = None,
+    sleep=time.sleep,
+) -> bytes:
+    """带重试的 GET，返回原始字节（图片下载用，P7 挑图管线）。"""
+    return _fetch(url, retry, headers, sleep).content

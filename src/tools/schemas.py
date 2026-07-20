@@ -75,3 +75,29 @@ EXTRACT_ENTITIES_TOOL = {
         },
     },
 }
+
+# 深读挑图（P7，设计纪要第 6 节）：模型从正文候选图里挑 1-2 张最有信息量的，
+# 只返回序号——URL/下载由程序负责（与 cite 同纪律：模型只挑不碰链接）。
+# 架构图/流程图/结果图优先，装饰图/logo/作者头像不选
+PICK_IMAGES_TOOL = {
+    "type": "function",
+    "function": {
+        "name": "pick_images",
+        "description": (
+            "从候选图片里挑最多 2 张最能帮助理解技术要点的关键图"
+            "（架构图/流程图/结果对比图优先），只返回其序号。"
+            "没有值得配的图就返回空数组——装饰图、logo、头像一律不选。"
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "indices": {
+                    "type": "array",
+                    "items": {"type": "integer"},
+                    "description": "选中图片的序号（0 起，最多 2 个）；无合适图返回 []",
+                }
+            },
+            "required": ["indices"],
+        },
+    },
+}

@@ -21,6 +21,13 @@ jobs:
         with:
           enable-cache: true
 
+      # weasyprint 运行期依赖 pango/cairo/gdk-pixbuf；中文字体不装则 PDF 满页方块
+      - name: 安装 PDF 系统依赖与中文字体
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpango-1.0-0 libpangocairo-1.0-0 \
+            libgdk-pixbuf-2.0-0 libffi-dev fonts-noto-cjk
+
       - name: 安装依赖
         run: uv sync
 
@@ -32,6 +39,13 @@ jobs:
           LANGSMITH_PROJECT: ai-radar
           ARK_PRICE_IN_FLASH: ${{ vars.ARK_PRICE_IN_FLASH }}
           ARK_PRICE_OUT_FLASH: ${{ vars.ARK_PRICE_OUT_FLASH }}
+          # SMTP（发周报 PDF 附件）：任一未配则只生成报告不发信，见 delivery.py
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT || '465' }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_SENDER: ${{ secrets.SMTP_USER }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: uv run python -m src.pipeline.weekly
 
       - name: 提交周报（bot 直推 main）
