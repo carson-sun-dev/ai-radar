@@ -82,6 +82,9 @@ class NewsItem(BaseModel):
     score_reason: str = ""
     entities: list[str] = Field(default_factory=list)  # 实体索引/历史关联的原料
     analysis: str = ""  # 深读/中读产出的中文技术介绍（深读 300–500 字，中读 3–5 句）
+    # 深读挑图（P7）：模型从正文图片里选、程序下载入 assets/，每项 {path, caption}。
+    # 与 cite 同一纪律——模型只挑不碰 URL，下载与本地路径由程序负责
+    images: list[dict] = Field(default_factory=list)
     extra: dict = Field(default_factory=dict)  # 源特定信号（如 HF papers 点赞数、star 增速）
 
     @field_validator("published_at")

@@ -7,6 +7,7 @@ from src.llm.client import ArkClient
 from src.llm.settings import Settings
 from src.models import Category, NewsItem, ReportMeta, RunType
 from src.pipeline.weekly import WeeklyContext, build_weekly_graph
+from src.report.delivery import MailConfig
 from src.report.index import history_for, update_index
 from src.report.render import RunUsage
 from src.report.weekly import (
@@ -124,8 +125,11 @@ class TestRenderWeekly:
         assert "趋势段生成失败" in md and "面试视角生成失败" in md
 
 
-def test_weekly_graph_end_to_end(tmp_path):
-    # 造两份周中报 JSON + 一份含历史的索引，全假件跑通图
+def test_weekly_graph_end_to_end(tmp_path, monkeypatch):
+    # 造两份周中报 JSON + 一份含历史的索引，全假件跑通图。
+    # PDF 渲染在投递节点会跑 weasyprint（重系统依赖），端到端测里替身掉——
+    # PDF 真实性由 test_delivery + CI 线上验收覆盖，这里只测图的接线
+    monkeypatch.setattr("src.pipeline.weekly.render_pdf", lambda md, base_url=None: b"%PDF")
     month = tmp_path / "reports" / "2026-07"
     month.mkdir(parents=True)
     for date, n0 in (("2026-07-17", 0), ("2026-07-19", 10)):
@@ -148,6 +152,7 @@ def test_weekly_graph_end_to_end(tmp_path):
         client=ArkClient(settings=Settings(ark_api_key="k"), client=fake),
         reports_dir=tmp_path / "reports",
         index_path=index_path,
+        mail=MailConfig(host="", port=465, user="", password="", sender="", recipient=""),
     )
     result = build_weekly_graph(ctx).invoke({})
 

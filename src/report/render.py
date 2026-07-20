@@ -48,10 +48,18 @@ def _cite_line(item: NewsItem) -> str:
     )
 
 
+def _image_block(item: NewsItem) -> str:
+    # 配图（P7）：模型挑、程序下，本地路径相对报告根（reports/ 与 assets/ 同级）
+    if not item.images:
+        return ""
+    lines = [f"![{img['caption']}](../../{img['path']})" for img in item.images]
+    return "\n".join(lines) + "\n\n"
+
+
 def _item_block(item: NewsItem, marker: str) -> str:
     # 分析失败的降级路径：摘要+打分理由顶上，并如实标注（报告不说谎）
     body = item.analysis or f"（深读生成失败，以下为原文摘要）\n\n{item.summary[:500]}"
-    return f"### {marker} {item.title}\n\n{body}\n\n{_cite_line(item)}\n"
+    return f"### {marker} {item.title}\n\n{body}\n\n{_image_block(item)}{_cite_line(item)}\n"
 
 
 def _glance_line(item: NewsItem) -> str:

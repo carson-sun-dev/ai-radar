@@ -17,6 +17,7 @@ from langgraph.graph import END, START, StateGraph
 from src.llm.client import ArkClient
 from src.llm.prompts import load_prompt
 from src.models import NewsItem, ReportMeta
+from src.report.delivery import MailConfig, email_body_html, render_pdf, send_report
 from src.report.index import INDEX_PATH, history_for
 from src.report.render import RunUsage
 from src.report.weekly import (
@@ -36,6 +37,7 @@ class WeeklyContext:
     client: ArkClient
     reports_dir: Path = field(default_factory=lambda: Path("reports"))
     index_path: Path = field(default_factory=lambda: INDEX_PATH)
+    mail: MailConfig = field(default_factory=MailConfig.from_env)
     started_at: float = field(default_factory=time.monotonic)
 
 
@@ -155,6 +157,28 @@ def build_weekly_graph(ctx: WeeklyContext):
         # 也不更新索引——实体都已在周中报入索，重复入索只会摊薄检索质量
         return {"report_path": str(md_path)}
 
+    def deliver(state: WeeklyState) -> WeeklyState:
+        # 投递（P7）：周报是邮件推送的产物。渲染 PDF + 发信；未配 SMTP 或
+        # 渲染失败都不炸流水线——报告已落 git，邮件是锦上添花不是主链路
+        meta = state["report_meta"]
+        try:
+            pdf = render_pdf(state["report_md"], base_url=str(ctx.reports_dir.parent.resolve()))
+        except Exception as e:  # noqa: BLE001 — weasyprint 缺系统库等环境问题不该废掉整轮
+            print(f"⚠ PDF 渲染失败，跳过邮件：{type(e).__name__}: {e}")
+            return {}
+        if not ctx.mail.enabled:
+            print("SMTP 未配置，仅生成报告不发信")
+            return {}
+        send_report(
+            ctx.mail,
+            subject=f"AI 前沿周报 · {meta.date}",
+            html_body=email_body_html(state["report_md"]),
+            pdf_bytes=pdf,
+            pdf_name=f"weekly-{meta.date}.pdf",
+        )
+        print(f"周报已发送至 {ctx.mail.recipient}")
+        return {}
+
     graph = StateGraph(WeeklyState)
     for name, fn in [
         ("load", load),
@@ -162,6 +186,7 @@ def build_weekly_graph(ctx: WeeklyContext):
         ("generate", generate),
         ("render", render),
         ("persist", persist),
+        ("deliver", deliver),
     ]:
         graph.add_node(name, fn)
     graph.add_edge(START, "load")
@@ -169,7 +194,8 @@ def build_weekly_graph(ctx: WeeklyContext):
     graph.add_edge("select", "generate")
     graph.add_edge("generate", "render")
     graph.add_edge("render", "persist")
-    graph.add_edge("persist", END)
+    graph.add_edge("persist", "deliver")
+    graph.add_edge("deliver", END)
     return graph.compile()
 
 

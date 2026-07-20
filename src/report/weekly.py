@@ -86,8 +86,11 @@ def render_weekly(
 ) -> tuple[str, ReportMeta]:
     parts = [f"# AI 前沿周报 · {date_str}\n", "## 本周 Top5\n"]
     for rank, item in enumerate(top, 1):
+        # 配图跟着 Top 条目走（深读时挑好存进了 JSON，这里直接复用，不重新挑图）
+        imgs = "".join(f"![{img['caption']}](../../{img['path']})\n" for img in item.images)
+        img_block = f"{imgs}\n" if imgs else ""
         parts.append(
-            f"### {rank}. {item.title}\n\n{_blurb(item)}\n\n"
+            f"### {rank}. {item.title}\n\n{_blurb(item)}\n\n{img_block}"
             f"> 评分 {item.score}/10 · {item.score_reason}\n"
             f"> 来源：<{item.url}> · 发布 {item.published_at.date()}\n"
         )
