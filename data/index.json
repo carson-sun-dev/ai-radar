@@ -302,7 +302,7 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
+   "summary": "字节跳动发布了 Seed2.1 模型家族，包含 Pro 和 Turbo 两种规格，定位为面向真实生产力场景的下一代智能体（Agent）模型。\n\n此前，大模型在完成高价值办公任务时，往往难以可靠地处理多步骤工作流，例如从项目规划、文件处理到工具调用的完整链条。在代码工程领域，模型也常缺乏端到端的交付稳定性，无法独立完成从需求理解、编码、调试到验证的全流程。Seed2.1 正是为了解决这些痛点，旨在让"
   }
  ],
  "Seed2.1 Pro": [
@@ -313,7 +313,7 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
+   "summary": "字节跳动发布了 Seed2.1 模型家族，包含 Pro 和 Turbo 两种规格，定位为面向真实生产力场景的下一代智能体（Agent）模型。\n\n此前，大模型在完成高价值办公任务时，往往难以可靠地处理多步骤工作流，例如从项目规划、文件处理到工具调用的完整链条。在代码工程领域，模型也常缺乏端到端的交付稳定性，无法独立完成从需求理解、编码、调试到验证的全流程。Seed2.1 正是为了解决这些痛点，旨在让"
   }
  ],
  "Seed2.1 Turbo": [
@@ -324,29 +324,7 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
-  }
- ],
- "Workspace Bench": [
-  {
-   "id": "23dea4307fda033f",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "Seed2.1",
-   "url": "https://seed.bytedance.com/en/seed2_1",
-   "score": 8,
-   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
-  }
- ],
- "Agent Startup Bench": [
-  {
-   "id": "23dea4307fda033f",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "Seed2.1",
-   "url": "https://seed.bytedance.com/en/seed2_1",
-   "score": 8,
-   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
+   "summary": "字节跳动发布了 Seed2.1 模型家族，包含 Pro 和 Turbo 两种规格，定位为面向真实生产力场景的下一代智能体（Agent）模型。\n\n此前，大模型在完成高价值办公任务时，往往难以可靠地处理多步骤工作流，例如从项目规划、文件处理到工具调用的完整链条。在代码工程领域，模型也常缺乏端到端的交付稳定性，无法独立完成从需求理解、编码、调试到验证的全流程。Seed2.1 正是为了解决这些痛点，旨在让"
   }
  ],
  "NL2Repo-Bench": [
@@ -357,95 +335,29 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
+   "summary": "字节跳动发布了 Seed2.1 模型家族，包含 Pro 和 Turbo 两种规格，定位为面向真实生产力场景的下一代智能体（Agent）模型。\n\n此前，大模型在完成高价值办公任务时，往往难以可靠地处理多步骤工作流，例如从项目规划、文件处理到工具调用的完整链条。在代码工程领域，模型也常缺乏端到端的交付稳定性，无法独立完成从需求理解、编码、调试到验证的全流程。Seed2.1 正是为了解决这些痛点，旨在让"
   }
  ],
- "Claude": [
+ "Workspace Bench": [
   {
-   "id": "64af1d1a2fd48283",
+   "id": "23dea4307fda033f",
    "date": "2026-07-19",
    "run_type": "midweek",
-   "title": "How we contain Claude across products",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
+   "title": "Seed2.1",
+   "url": "https://seed.bytedance.com/en/seed2_1",
+   "score": 8,
+   "summary": "字节跳动发布了 Seed2.1 模型家族，包含 Pro 和 Turbo 两种规格，定位为面向真实生产力场景的下一代智能体（Agent）模型。\n\n此前，大模型在完成高价值办公任务时，往往难以可靠地处理多步骤工作流，例如从项目规划、文件处理到工具调用的完整链条。在代码工程领域，模型也常缺乏端到端的交付稳定性，无法独立完成从需求理解、编码、调试到验证的全流程。Seed2.1 正是为了解决这些痛点，旨在让"
   }
  ],
- "Anthropic": [
+ "xDailyBench": [
   {
-   "id": "64af1d1a2fd48283",
+   "id": "23dea4307fda033f",
    "date": "2026-07-19",
    "run_type": "midweek",
-   "title": "How we contain Claude across products",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
-  }
- ],
- "gVisor": [
-  {
-   "id": "64af1d1a2fd48283",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "How we contain Claude across products",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
-  }
- ],
- "Claude Code": [
-  {
-   "id": "64af1d1a2fd48283",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "How we contain Claude across products",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
-  }
- ],
- "Claude Cowork": [
-  {
-   "id": "64af1d1a2fd48283",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "How we contain Claude across products",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
-  }
- ],
- "Seatbelt": [
-  {
-   "id": "64af1d1a2fd48283",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "How we contain Claude across products",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
-  }
- ],
- "bubblewrap": [
-  {
-   "id": "64af1d1a2fd48283",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "How we contain Claude across products",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
-  }
- ],
- "MCP 服务器": [
-  {
-   "id": "64af1d1a2fd48283",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "How we contain Claude across products",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
+   "title": "Seed2.1",
+   "url": "https://seed.bytedance.com/en/seed2_1",
+   "score": 8,
+   "summary": "字节跳动发布了 Seed2.1 模型家族，包含 Pro 和 Turbo 两种规格，定位为面向真实生产力场景的下一代智能体（Agent）模型。\n\n此前，大模型在完成高价值办公任务时，往往难以可靠地处理多步骤工作流，例如从项目规划、文件处理到工具调用的完整链条。在代码工程领域，模型也常缺乏端到端的交付稳定性，无法独立完成从需求理解、编码、调试到验证的全流程。Seed2.1 正是为了解决这些痛点，旨在让"
   }
  ],
  "LangChain": [
@@ -456,10 +368,10 @@
    "title": "Improving Agents is a Data Mining Problem",
    "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
    "score": 8,
-   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
   }
  ],
- "智能体": [
+ "AI 智能体 (Agent)": [
   {
    "id": "4a0a79e7203bae64",
    "date": "2026-07-19",
@@ -467,7 +379,7 @@
    "title": "Improving Agents is a Data Mining Problem",
    "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
    "score": 8,
-   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
   }
  ],
  "数据挖掘": [
@@ -478,10 +390,10 @@
    "title": "Improving Agents is a Data Mining Problem",
    "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
    "score": 8,
-   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
   }
  ],
- "评判模型": [
+ "轨迹 (Traces)": [
   {
    "id": "4a0a79e7203bae64",
    "date": "2026-07-19",
@@ -489,10 +401,10 @@
    "title": "Improving Agents is a Data Mining Problem",
    "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
    "score": 8,
-   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
   }
  ],
- "评估体系": [
+ "复合智能体系统": [
   {
    "id": "4a0a79e7203bae64",
    "date": "2026-07-19",
@@ -500,7 +412,62 @@
    "title": "Improving Agents is a Data Mining Problem",
    "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
    "score": 8,
-   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
+  }
+ ],
+ "轨迹裁判模型": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
+  }
+ ],
+ "GPT-4": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
+  }
+ ],
+ "脚手架工程 (Harness Engineering)": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
+  }
+ ],
+ "模型微调 (SFT/RL)": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
+  }
+ ],
+ "数据飞轮": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
   }
  ],
  "LangGraph": [
