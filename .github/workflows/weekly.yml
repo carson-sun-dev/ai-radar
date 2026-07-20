@@ -1,12 +1,13 @@
 # 周报流水线（bot 通道）：读本周周中报 JSON 做综述，不重新采集
-# 定时在 P10 上线阶段才启用，当前只留手动触发（workflow_dispatch）验证
+# P10 上线：已开定时；workflow_dispatch 保留供随时手动补跑
 name: Weekly report
 
 on:
   workflow_dispatch:
-  # P10 上线时取消注释（UTC 0:00 周日 = 北京时间早 8 点，见设计纪要第 4 节）：
-  # schedule:
-  #   - cron: "0 0 * * 0"
+  schedule:
+    # UTC 0:00 周日 = 北京时间早 8 点（设计纪要第 4 节）。周报排在周五采集之后，
+    # 读当周两期周中报 JSON 做综述
+    - cron: "0 0 * * 0"
 
 jobs:
   weekly:

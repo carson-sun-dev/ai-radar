@@ -1,12 +1,13 @@
 # 周中报采集流水线（bot 通道）
-# 定时在 P10 上线阶段才启用，当前只留手动触发（workflow_dispatch）验证
+# P10 上线：已开定时；workflow_dispatch 保留供随时手动补跑
 name: Collect midweek
 
 on:
   workflow_dispatch:
-  # P10 上线时取消注释（UTC 0:00 周二/周五 = 北京时间早 8 点，见设计纪要第 4 节）：
-  # schedule:
-  #   - cron: "0 0 * * 2,5"
+  schedule:
+    # UTC 0:00 周二/周五 = 北京时间早 8 点（设计纪要第 4 节）。
+    # GitHub 定时有分钟级排队延迟，非严格准点；只从默认分支 main 触发
+    - cron: "0 0 * * 2,5"
 
 jobs:
   midweek:

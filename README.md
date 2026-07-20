@@ -42,10 +42,22 @@ eval/             # golden.jsonl 与回归脚本
 - [x] P1 数据层（模型 / sources.yaml / 水位线与去重）
 - [x] P2 采集器 ×4
 - [x] P3 LLM 层（方舟客户端 / 工具 schema / 打分 prompt）
-- [ ] P4 最小闭环（周中报真实产出）
-- [ ] P5 观测与规则校验（LangSmith）
-- [ ] P6 周报与历史关联（实体索引）
-- [ ] P7 推送与图片（PDF / SMTP）
-- [ ] P8 评测深化（忠实度 judge / golden set）
-- [ ] P9 MCP 化与 skills
-- [ ] P10 上线与校准
+- [x] P4 最小闭环（周中报真实产出）
+- [x] P5 观测与规则校验（LangSmith）
+- [x] P6 周报与历史关联（实体索引）
+- [x] P7 推送与图片（PDF / SMTP）— 代码就绪，SMTP secrets 待配后启用邮件
+- [x] P8 评测深化（忠实度 judge / golden set）
+- [ ] P9 MCP 化与 skills — 暂缓
+- [~] P10 上线与校准 — 定时已开（周二/五采集、周日周报），试运行两周中
+
+## 上线与校准（P10）
+
+定时已启用：`collect.yml`（UTC 周二/五 0:00）、`weekly.yml`（UTC 周日 0:00）。
+两周试运行观察，按人工阅读体验校准 top-N / rubric / 关键词，误判记入 `eval/golden.jsonl`。
+
+**校准待办**（施工期记账，按试运行观察到的严重度排期）：
+- seed 源导航页泄漏：Vision/Speech/Robotics 等导航链混进报告（`link_prefix` 太宽），需收紧过滤
+- 事件聚合缺失：同一事件多条目（如 GPT-5.6 预览/正式/进 Copilot）各自占位，应聚合
+- bigmodel.cn 智谱模型更新页：单页 changelog，现有 web 采集器吃不下，需专用解析器
+
+改打分 prompt 前先跑 `python -m eval.run_regression` 看一致率（基线 8/10）。
