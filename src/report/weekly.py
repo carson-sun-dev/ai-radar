@@ -10,7 +10,7 @@ from dataclasses import dataclass
 
 import yaml
 
-from src.models import Category, NewsItem, ReportMeta, RunType
+from src.models import Category, NewsItem, ReportMeta, RunType, dedup_key
 from src.report.render import CATEGORY_NAMES, RunUsage
 
 TOP_N = 5
@@ -41,15 +41,20 @@ def parse_sections(text: str) -> WeeklySections:
 
 
 def week_pool(payloads: list[dict]) -> list[NewsItem]:
-    """合并本周各期周中报的全量条目，按 id 去重（回填与常规运行可能重叠）。"""
+    """合并本周各期周中报的全量条目去重（回填与常规运行、跨源同文都可能重叠）。
+
+    按 dedup_key(url) 而非 id 去重：能收敛同一 arXiv 论文的 arxiv/HF 两个入口，
+    也对历史数据里 id 不一致的同文条目稳健（防御 make_item_id 升级前的旧数据）。
+    """
     seen: set[str] = set()
     pool: list[NewsItem] = []
     for payload in payloads:
         buckets = [payload["deep"], payload["mid"], *payload["glance"].values()]
         for raw in (item for bucket in buckets for item in bucket):
-            if raw["id"] in seen:
+            key = dedup_key(raw["url"])
+            if key in seen:
                 continue
-            seen.add(raw["id"])
+            seen.add(key)
             pool.append(NewsItem.model_validate(raw))
     return pool
 

@@ -6,11 +6,16 @@
 """
 
 import hashlib
+import re
 from datetime import UTC, datetime
 from enum import StrEnum
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 from pydantic import BaseModel, Field, field_validator
+
+# 同一篇 arXiv 论文有两个入口：arxiv.org/abs/2607.14431v1 与 huggingface.co/papers/2607.14431。
+# URL 不同 → 去重键不同 → 周报里同文占两行。用 arXiv id（去版本号）作规范去重键收敛两者。
+_ARXIV_ID = re.compile(r"(?:arxiv\.org/abs/|huggingface\.co/papers/)(\d{4}\.\d{4,5})")
 
 
 def normalize_url(url: str) -> str:
@@ -32,12 +37,21 @@ def normalize_url(url: str) -> str:
     )
 
 
+def dedup_key(url: str) -> str:
+    """去重用的规范化标识：arXiv 论文收敛到 id（跨 arxiv/HF 两入口归一），
+    其余用规范化 URL。只影响去重键，不改 NewsItem.url（展示仍是原始可点链接）。
+    """
+    if m := _ARXIV_ID.search(url):
+        return f"arxiv:{m.group(1)}"
+    return normalize_url(url)
+
+
 def make_item_id(url: str) -> str:
-    """去重键：规范化 URL 的 sha256 前 16 位。
+    """去重键：规范化标识的 sha256 前 16 位。
 
     用哈希而不是原始 URL 做键，是为了 seen.json 里键长可控且无转义问题。
     """
-    return hashlib.sha256(normalize_url(url).encode()).hexdigest()[:16]
+    return hashlib.sha256(dedup_key(url).encode()).hexdigest()[:16]
 
 
 class Category(StrEnum):

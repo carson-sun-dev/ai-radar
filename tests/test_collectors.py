@@ -147,6 +147,34 @@ class TestWeb:
         assert [i.title for i in items] == ["Real Article Title"]
         assert seen_headers.get("X-With-Links-Summary") == "true"
 
+    def test_trailing_date_extracted_and_stripped(self, monkeypatch):
+        # Jina 把发布日期粘在标题尾（"…AI agentsSep 29, 2025"）：既清标题又取真日期，
+        # 真日期是存量旧文被 runner 时效闸挡住的关键
+        md = (
+            "Links/Buttons:\n"
+            "- [Effective context engineering for AI agentsSep 29, 2025]"
+            "(https://www.anthropic.com/news/context-engineering)\n"
+        )
+        monkeypatch.setattr("src.collectors.base.fetch", lambda *a, **kw: md)
+        source = self.SOURCE.model_copy(update={"via_jina": True})
+        items = web.collect(source, RETRY)
+        assert items[0].title == "Effective context engineering for AI agents"
+        assert items[0].published_at.date().isoformat() == "2025-09-29"
+
+    def test_featured_prefix_and_summary_concat_cleaned_by_alt(self, monkeypatch):
+        # Featured 卡片把 "Featured"+标题+整段摘要粘成一行，无日期：靠图片 alt 截回标题
+        md = (
+            "![Image 1: How we contain Claude across products](https://cdn/x.svg)\n\n"
+            "Links/Buttons:\n"
+            "- [FeaturedHow we contain Claude across productsAs agents grow more capable, "
+            "so does their blast radius.](https://www.anthropic.com/news/contain-claude)\n"
+        )
+        monkeypatch.setattr("src.collectors.base.fetch", lambda *a, **kw: md)
+        source = self.SOURCE.model_copy(update={"via_jina": True})
+        items = web.collect(source, RETRY)
+        assert items[0].title == "How we contain Claude across products"
+        assert items[0].published_at.tzinfo == UTC  # 无日期 → 首见时间兜底
+
     def test_direct_html_success_skips_jina(self, monkeypatch):
         html = (
             '<a href="/news/direct-article">Direct fetch works fine</a>'

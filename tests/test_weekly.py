@@ -69,6 +69,19 @@ class TestWeeklySelect:
         pool = week_pool([payload, payload])  # 同一份重复喂：回填重叠场景
         assert len(pool) == 2
 
+    def test_pool_collapses_cross_source_same_paper(self):
+        # 同一 arXiv 论文的 arxiv/HF 两入口 URL 不同，但 dedup_key 归一 → 只留一条
+        arxiv = _item(1, 8)
+        arxiv.url = "https://arxiv.org/abs/2607.14431v1"
+        hf = _item(2, 8)
+        hf.url = "https://huggingface.co/papers/2607.14431"
+        payload = {
+            "deep": [arxiv.model_dump(mode="json")],
+            "mid": [hf.model_dump(mode="json")],
+            "glance": {},
+        }
+        assert len(week_pool([payload])) == 1
+
     def test_top5_global_ranking_no_category_quota(self):
         # 周报是全局视角：同板块可占多席，7 分以下进不了 Top5
         pool = [
