@@ -175,6 +175,42 @@ class TestWeb:
         assert items[0].title == "How we contain Claude across products"
         assert items[0].published_at.tzinfo == UTC  # 无日期 → 首见时间兜底
 
+    def test_undated_item_gets_real_date_from_article(self, monkeypatch):
+        # 无日期条目（Anthropic 置顶 Featured 是无日期旧文）：补抓文章页 publishedOn，
+        # 否则退回首见时间会永远判「新」、绕过时效闸——本 bug 的核心
+        listing = (
+            "Links/Buttons:\n"
+            "- [FeaturedHow we contain Claude](https://www.anthropic.com/news/contain)\n"
+        )
+        # Next.js 实际格式：数据当 JSON-in-JSON 塞进 script，引号被反斜杠转义
+        article = r'<script>{\"publishedOn\":\"2026-05-25\",\"showSidebar\":false}</script>'
+
+        def fake_fetch(url, *a, **kw):
+            return listing if url.startswith("https://r.jina.ai/") else article
+
+        monkeypatch.setattr("src.collectors.base.fetch", fake_fetch)
+        source = self.SOURCE.model_copy(update={"via_jina": True, "date_from_article": True})
+        items = web.collect(source, RETRY)
+        assert items[0].published_at.date().isoformat() == "2026-05-25"
+
+    def test_article_date_not_fetched_when_flag_off(self, monkeypatch):
+        # date_from_article 关闭（如 seed，文章页 JS 渲染取不到日期）：不做补抓，退回首见时间
+        calls: list[str] = []
+
+        def fake_fetch(url, *a, **kw):
+            calls.append(url)
+            return "Links/Buttons:\n- [Seed2.1](https://seed.bytedance.com/en/seed2_1)\n"
+
+        monkeypatch.setattr("src.collectors.base.fetch", fake_fetch)
+        source = SourceConfig(
+            id="seed", org="Seed", collector="web",
+            url="https://seed.bytedance.com/en/blog",
+            link_prefix="https://seed.bytedance.com/en/", via_jina=True,
+        )
+        items = web.collect(source, RETRY)
+        assert items[0].published_at.tzinfo == UTC  # 首见时间兜底
+        assert len(calls) == 1  # 只抓了列表页，没有补抓文章页
+
     def test_direct_html_success_skips_jina(self, monkeypatch):
         html = (
             '<a href="/news/direct-article">Direct fetch works fine</a>'

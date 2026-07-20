@@ -44,6 +44,10 @@ class SourceConfig(BaseModel):
     # web：跳过直抓、直接走 Jina Reader。适用于 JS 渲染重的站点——直抓虽可能 200，
     # 但正文/标题是嵌套元素拼出的垃圾（2026-07 实测 Anthropic、Seed 均如此）
     via_jina: bool = False
+    # web：列表页拿不到日期的条目（如 Anthropic 置顶 Featured 卡片无日期），
+    # 补抓文章页原始 HTML 取真实发布日期。仅对「文章页在原始 HTML 里暴露日期」的源开启
+    # （Anthropic 有 publishedOn；Seed 文章页是 JS 渲染，开了也取不到，故不开）
+    date_from_article: bool = False
     max_items: int = 50  # 单次采集上限：防止某源异常（如改版后全量重发）刷爆打分池
 
     @model_validator(mode="after")
