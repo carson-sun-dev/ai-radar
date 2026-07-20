@@ -2,7 +2,7 @@
 
 from datetime import UTC, datetime, timedelta, timezone
 
-from src.models import NewsItem, make_item_id, normalize_url
+from src.models import NewsItem, dedup_key, make_item_id, normalize_url
 
 
 class TestNormalizeUrl:
@@ -28,6 +28,25 @@ class TestNormalizeUrl:
         a = make_item_id("https://example.com/post?utm_campaign=weekly")
         b = make_item_id("https://example.com/post/")
         assert a == b
+
+
+class TestDedupKey:
+    def test_arxiv_and_hf_paper_collapse(self):
+        # 同一论文的 arxiv/HF 两入口（含版本号）必须归一，否则周报同文占两行
+        arxiv = "https://arxiv.org/abs/2607.14431v1"
+        hf = "https://huggingface.co/papers/2607.14431"
+        assert dedup_key(arxiv) == dedup_key(hf) == "arxiv:2607.14431"
+        assert make_item_id(arxiv) == make_item_id(hf)
+
+    def test_different_papers_stay_distinct(self):
+        assert dedup_key("https://arxiv.org/abs/2607.14431") != dedup_key(
+            "https://arxiv.org/abs/2607.99999"
+        )
+
+    def test_non_paper_url_falls_back_to_normalized(self):
+        assert dedup_key("https://openai.com/news/gpt?utm_source=x") == (
+            "https://openai.com/news/gpt"
+        )
 
 
 class TestNewsItem:

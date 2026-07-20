@@ -25,6 +25,7 @@ sources:
     url: https://www.anthropic.com/news
     link_prefix: https://www.anthropic.com/news/
     via_jina: true
+    date_from_article: true # 置顶 Featured 卡片无日期，补抓文章页 publishedOn
 
   # engineering blog 单独成源：对应用岗价值最高的一路，不与产品新闻混排
   - id: anthropic-engineering
@@ -33,6 +34,7 @@ sources:
     url: https://www.anthropic.com/engineering
     link_prefix: https://www.anthropic.com/engineering/
     via_jina: true
+    date_from_article: true # 同上：置顶 Featured 无日期，补抓文章页 publishedOn
 
   - id: deepmind-blog
     org: Google DeepMind
