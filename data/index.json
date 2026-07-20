@@ -1,24 +1,4 @@
 {
- "LangGraph": [
-  {
-   "id": "5312667f8f8f354f",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "资讯 0",
-   "url": "https://example.com/0",
-   "score": 9,
-   "summary": "这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读"
-  },
-  {
-   "id": "f2f9784142e4d11e",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "资讯 1",
-   "url": "https://example.com/1",
-   "score": 8,
-   "summary": "这是一段合格的中读分析，讲清了方法与变化。这是一段合格的中读分析，讲清了方法与变化。这是一段合格的中读分析，讲清了方法与变化。"
-  }
- ],
  "GPT-5.6 Sol": [
   {
    "id": "30f48121decc708b",
@@ -140,7 +120,7 @@
  ],
  "LongStraw": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -151,7 +131,7 @@
  ],
  "Qwen3.6-27B": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -162,7 +142,7 @@
  ],
  "GLM-5.2": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -173,7 +153,7 @@
  ],
  "GRPO": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -184,7 +164,7 @@
  ],
  "分组相对策略优化": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -195,7 +175,7 @@
  ],
  "混合循环注意力": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -206,7 +186,7 @@
  ],
  "全注意力": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -217,7 +197,7 @@
  ],
  "压缩注意力混合专家模型": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -228,7 +208,7 @@
  ],
  "H20 GPU": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -239,7 +219,7 @@
  ],
  "KV cache": [
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
@@ -261,7 +241,7 @@
  ],
  "Bridge Evidence": [
   {
-   "id": "97f11b3ce171a7df",
+   "id": "6c4f869362c5f682",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
@@ -272,7 +252,7 @@
  ],
  "静态检索效用": [
   {
-   "id": "97f11b3ce171a7df",
+   "id": "6c4f869362c5f682",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
@@ -283,7 +263,7 @@
  ],
  "反事实轨迹效用": [
   {
-   "id": "97f11b3ce171a7df",
+   "id": "6c4f869362c5f682",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
@@ -294,7 +274,7 @@
  ],
  "桥接文档": [
   {
-   "id": "97f11b3ce171a7df",
+   "id": "6c4f869362c5f682",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
@@ -305,7 +285,7 @@
  ],
  "多步智能体搜索": [
   {
-   "id": "97f11b3ce171a7df",
+   "id": "6c4f869362c5f682",
    "date": "2026-07-17",
    "run_type": "midweek",
    "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
@@ -322,7 +302,7 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": ""
+   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
   }
  ],
  "Seed2.1 Pro": [
@@ -333,7 +313,7 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": ""
+   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
   }
  ],
  "Seed2.1 Turbo": [
@@ -344,7 +324,7 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": ""
+   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
   }
  ],
  "Workspace Bench": [
@@ -355,7 +335,7 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": ""
+   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
   }
  ],
  "Agent Startup Bench": [
@@ -366,7 +346,7 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": ""
+   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
   }
  ],
  "NL2Repo-Bench": [
@@ -377,18 +357,7 @@
    "title": "Seed2.1",
    "url": "https://seed.bytedance.com/en/seed2_1",
    "score": 8,
-   "summary": ""
-  }
- ],
- "字节跳动": [
-  {
-   "id": "23dea4307fda033f",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "Seed2.1",
-   "url": "https://seed.bytedance.com/en/seed2_1",
-   "score": 8,
-   "summary": ""
+   "summary": "字节跳动 Seed 团队正式发布了 Seed2.1 模型家族，这是一个定位为“下一代智能体”的 AI 生产力模型，包含 Pro 和 Turbo 两种规格，旨在直接面向真实世界的复杂工作任务。\n\n此前，大模型在真实办公和开发场景中面临的核心痛点是“交付不稳定”。模型或许能完成单步问答，但在需要多步规划、跨工具调用和长周期执行的高价值任务（如项目规划、端到端代码开发）中，往往会在中途偏离目标或产生不可"
   }
  ],
  "Claude": [
@@ -396,43 +365,10 @@
    "id": "64af1d1a2fd48283",
    "date": "2026-07-19",
    "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "title": "How we contain Claude across products",
    "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
    "score": 9,
-   "summary": ""
-  }
- ],
- "Claude Code": [
-  {
-   "id": "64af1d1a2fd48283",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": ""
-  }
- ],
- "Claude Cowork": [
-  {
-   "id": "64af1d1a2fd48283",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": ""
-  }
- ],
- "claude.ai": [
-  {
-   "id": "64af1d1a2fd48283",
-   "date": "2026-07-19",
-   "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
-   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-   "score": 9,
-   "summary": ""
+   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
   }
  ],
  "Anthropic": [
@@ -440,65 +376,151 @@
    "id": "64af1d1a2fd48283",
    "date": "2026-07-19",
    "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "title": "How we contain Claude across products",
    "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
    "score": 9,
-   "summary": ""
+   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
   }
  ],
- "sandbox": [
+ "gVisor": [
   {
    "id": "64af1d1a2fd48283",
    "date": "2026-07-19",
    "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "title": "How we contain Claude across products",
    "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
    "score": 9,
-   "summary": ""
+   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
   }
  ],
- "blast radius": [
+ "Claude Code": [
   {
    "id": "64af1d1a2fd48283",
    "date": "2026-07-19",
    "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "title": "How we contain Claude across products",
    "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
    "score": 9,
-   "summary": ""
+   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
   }
  ],
- "human-in-the-loop": [
+ "Claude Cowork": [
   {
    "id": "64af1d1a2fd48283",
    "date": "2026-07-19",
    "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "title": "How we contain Claude across products",
    "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
    "score": 9,
-   "summary": ""
+   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
   }
  ],
- "approval fatigue": [
+ "Seatbelt": [
   {
    "id": "64af1d1a2fd48283",
    "date": "2026-07-19",
    "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "title": "How we contain Claude across products",
    "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
    "score": 9,
-   "summary": ""
+   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
   }
  ],
- "defense-in-depth": [
+ "bubblewrap": [
   {
    "id": "64af1d1a2fd48283",
    "date": "2026-07-19",
    "run_type": "midweek",
-   "title": "FeaturedHow we contain Claude across productsAs agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containmen",
+   "title": "How we contain Claude across products",
    "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
    "score": 9,
-   "summary": ""
+   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
+  }
+ ],
+ "MCP 服务器": [
+  {
+   "id": "64af1d1a2fd48283",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "How we contain Claude across products",
+   "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+   "score": 9,
+   "summary": "过去一年，Anthropic 对 AI 智能体（agent）的风险认知发生了根本转变：从完全拒绝授予可能破坏内部服务的权限，到如今将其视为日常开发工具。这篇文章系统阐述了他们如何通过“遏制”（containment）而非单纯“监督”来控制 Claude 智能体的破坏半径（blast radius，即单次故障可能造成的最大损失），使其能在生产环境中安全地执行高风险操作。\n\n此前，行业主要依赖“人在回"
+  }
+ ],
+ "LangChain": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+  }
+ ],
+ "智能体": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+  }
+ ],
+ "数据挖掘": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+  }
+ ],
+ "评判模型": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+  }
+ ],
+ "评估体系": [
+  {
+   "id": "4a0a79e7203bae64",
+   "date": "2026-07-19",
+   "run_type": "midweek",
+   "title": "Improving Agents is a Data Mining Problem",
+   "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+   "score": 8,
+   "summary": "这篇文章介绍了 LangChain 将智能体性能提升转化为一个数据挖掘问题。其核心方法是通过挖掘智能体的运行轨迹来定位失败案例，并使用这些数据微调一个成本远低于前沿大模型的评判模型，再结合评估体系实现性能的持续爬坡优化。这值得关注是因为它提供了一条不依赖昂贵大模型、通过系统化数据挖掘与评估迭代来高效改进智能体的工程路径。"
+  }
+ ],
+ "LangGraph": [
+  {
+   "id": "5312667f8f8f354f",
+   "date": "2026-07-20",
+   "run_type": "midweek",
+   "title": "资讯 0",
+   "url": "https://example.com/0",
+   "score": 9,
+   "summary": "这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读分析。这是深读"
+  },
+  {
+   "id": "f2f9784142e4d11e",
+   "date": "2026-07-20",
+   "run_type": "midweek",
+   "title": "资讯 1",
+   "url": "https://example.com/1",
+   "score": 8,
+   "summary": "这是一段合格的中读分析，讲清了方法与变化。这是一段合格的中读分析，讲清了方法与变化。这是一段合格的中读分析，讲清了方法与变化。"
   }
  ]
 }

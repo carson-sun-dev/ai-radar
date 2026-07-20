@@ -36,12 +36,10 @@
    "engineering",
    "paper"
   ],
-  "item_count": 125,
-  "sources_failed": [
-   "seed-research：解析失败（列表页未提取到文章链接）"
-  ],
-  "tokens_used": 15306,
-  "cost_cny": 0.1907,
+  "item_count": 123,
+  "sources_failed": [],
+  "tokens_used": 0,
+  "cost_cny": 0.0,
   "duration_seconds": null
  },
  "deep": [
@@ -86,7 +84,7 @@
    "extra": {}
   },
   {
-   "id": "408f90923081be06",
+   "id": "a0ba75fd6bbd8545",
    "source": "hf-daily-papers",
    "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
    "url": "https://huggingface.co/papers/2607.14952",
@@ -108,9 +106,7 @@
     "KV cache"
    ],
    "analysis": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核心痛点是：长上下文的 RL 训练需要为整个序列构建计算图并保留中间激活，显存开销随序列长度线性甚至超线性增长，导致单次训练能处理的上下文严重受限。AI 智能体在真实环境中产生的超长交互轨迹，因此无法直接用于策略优化，只能退而求其次用短序列训练、再靠模型泛化能力去应对长序列，这显然不是最优解。\n\nLongStraw 的技术要点在于“分离评估与回放”。它首先在不开启自动微分的情况下对共享提示（prompt）进行前向计算，只保留后续 token 生成所需的模型特定状态，而丢弃完整的计算图。随后，它将多个响应分支逐一回放——每次只重建一个短分支的计算图并完成梯度计算。这种“一次评估、多次回放”的策略，将原本需要同时驻留显存的超长计算图，拆解为可串行处理的短图，代价是增加了额外的回放时间。该方法基于分组相对策略优化（GRPO，一种通过组内比较来更新策略的强化学习算法）实现，并在两个不同架构的模型上验证：混合循环与全注意力的 Qwen3.6-27B，以及压缩注意力混合专家模型 GLM-5.2。在 8 张 H20 GPU 上，LongStraw 能完成 210 万 token 位置的分组评分与响应反向传播，组大小从 2 增至 8 时峰值显存仅增加 0.21 GB，压力测试更达到 446 万 token；在 32 张 H20 上，则验证了 GLM-5.2 全部 78 层的端到端执行路径。\n\n对 AI 应用岗而言，这项工作的价值在于它直接回应了“生产级长上下文智能体如何训练”这一现实问题。面试中可谈的点包括：一是“计算换空间”的工程权衡——用回放时间换取显存可行性，这体现了对资源约束的务实理解；二是架构感知的设计思路，即针对混合注意力、MoE 等不同模型结构做针对性优化，而非追求通用方案；三是 GRPO 这类无需 critic 模型的 RL 算法，因其低显存特性，天然适合与长上下文训练结合。需要注意的是，论文明确声明当前验证的是“执行容量”而非完整训练正确性，因为捕获的提示状态是分离的，部分分布式前向和梯度组合路径尚未打通，这意味着离生产落地还有工程化距离，但方向已经清晰。",
-   "extra": {
-    "upvotes": 175
-   }
+   "extra": {}
   }
  ],
  "mid": [
@@ -146,7 +142,7 @@
    "extra": {}
   },
   {
-   "id": "97f11b3ce171a7df",
+   "id": "6c4f869362c5f682",
    "source": "arxiv-papers",
    "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
    "url": "https://arxiv.org/abs/2607.15253v1",
@@ -197,7 +193,7 @@
     "extra": {}
    },
    {
-    "id": "d5c069a92ef59fcc",
+    "id": "6527e8551a9d7eea",
     "source": "hf-daily-papers",
     "title": "VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding",
     "url": "https://huggingface.co/papers/2607.14935",
@@ -208,9 +204,7 @@
     "score_reason": "开源全栈视频理解模型，upvotes高达143，对视频应用选型有参考价值，但非头部机构发布",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 143
-    }
+    "extra": {}
    },
    {
     "id": "b98a594ec40e8f26",
@@ -269,7 +263,7 @@
     "extra": {}
    },
    {
-    "id": "73f9766e34dc687c",
+    "id": "479eac65ab4ae526",
     "source": "hf-daily-papers",
     "title": "WanSong v1.0 Technical Report",
     "url": "https://huggingface.co/papers/2607.14749",
@@ -280,9 +274,7 @@
     "score_reason": "音乐生成基础模型技术报告，领域垂直，对通用AI应用工程参考价值有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 12
-    }
+    "extra": {}
    },
    {
     "id": "2015b07b78a1afec",
@@ -424,9 +416,7 @@
     "score_reason": "DeepSeek 开源投机解码全栈训练评估代码库，对推理加速有直接工程价值，stars 高说明社区认可",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "stars": 6696
-    }
+    "extra": {}
    },
    {
     "id": "855db08b75f6ecde",
@@ -555,7 +545,7 @@
     "extra": {}
    },
    {
-    "id": "69cde88f536d89ee",
+    "id": "f791661221f39be5",
     "source": "arxiv-papers",
     "title": "MyAG: A Graph-Based Framework for Designing and Analyzing Composable LLM Agent Systems",
     "url": "https://arxiv.org/abs/2607.13474v1",
@@ -608,9 +598,7 @@
     "score_reason": "Qwen 语言世界模型仓库，面向通用 agent 的世界建模，有探索价值但尚不成熟",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "stars": 847
-    }
+    "extra": {}
    },
    {
     "id": "965bb4d2ca17efb5",
@@ -641,7 +629,7 @@
     "extra": {}
    },
    {
-    "id": "53a2133359d25ed1",
+    "id": "f9064bca1782faba",
     "source": "arxiv-papers",
     "title": "DS@GT ARC at LongEval: Citation Integrity and Factual Grounding in Scientific QA",
     "url": "https://arxiv.org/abs/2607.14400v1",
@@ -655,7 +643,7 @@
     "extra": {}
    },
    {
-    "id": "e26f958b3d87e948",
+    "id": "f5e3177df679e052",
     "source": "arxiv-papers",
     "title": "Can an Old Dog Be Taught New Tricks? Taking LLMs Beyond Sentence Level Translation",
     "url": "https://arxiv.org/abs/2607.14040v1",
@@ -750,9 +738,7 @@
     "score_reason": "Qwen 机器人导航仓库，领域偏机器人，对通用 AI 应用工程参考有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "stars": 108
-    }
+    "extra": {}
    },
    {
     "id": "f6f3df77eb2dbdcc",
@@ -766,9 +752,7 @@
     "score_reason": "Qwen 机器人操作仓库，领域偏机器人，对通用 AI 应用工程参考有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "stars": 104
-    }
+    "extra": {}
    },
    {
     "id": "ad312ce435987076",
@@ -827,7 +811,7 @@
     "extra": {}
    },
    {
-    "id": "637936d73c740882",
+    "id": "b778f5c846a6c344",
     "source": "arxiv-papers",
     "title": "RAGthoven at SemEval-2026 Task 1: A Multi-Stage Pipeline Walks Into a Benchmark and Barely Clears the Bar",
     "url": "https://arxiv.org/abs/2607.13189v1",
@@ -1179,7 +1163,7 @@
   ],
   "paper": [
    {
-    "id": "4085f36e0eebb253",
+    "id": "2a82fdad55af5460",
     "source": "hf-daily-papers",
     "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
     "url": "https://huggingface.co/papers/2607.15257",
@@ -1190,12 +1174,10 @@
     "score_reason": "提出鲁棒的开域信息搜索Agent协作框架，直接解决Agent搜索循环和预算浪费的生产问题，upvotes高",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 59
-    }
+    "extra": {}
    },
    {
-    "id": "06dfe9f583885075",
+    "id": "9944adf59098e03f",
     "source": "arxiv-papers",
     "title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
     "url": "https://arxiv.org/abs/2607.14431v1",
@@ -1209,23 +1191,7 @@
     "extra": {}
    },
    {
-    "id": "c84cb6f8c4813e3b",
-    "source": "hf-daily-papers",
-    "title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
-    "url": "https://huggingface.co/papers/2607.14431",
-    "published_at": "2026-07-15T00:00:00Z",
-    "summary": "We report a way to make a frozen small language model both more capable and dramatically cheaper at once, without changing any weights. Verified knowledge is deposited once as a byte-exact key-value (KV) state artifact and later restored, by graft, into a fresh inference context. The restore is bit-exact: under a pinned deterministic configuration, the grafted logits are byte-for-byte identical to a fresh computation (SHA-256 equality), with zero KL divergence and 100% argmax agreement over fifty samples. We show that own-position graft is the unique numerically exact operating point on a model with floating-point rotary encoding, and we verify byte-exactness on two model scales (12B, 31B) and two GPU targets, one through a pre-registered replay. On AIME 2025, a frozen Gemma-4-12B moves from 80.0% to 93.3% once a verified solution library is grafted, above its own 77.5% and its 31B sibling's 89.2% published anchors. On the recurring case, eight problems the base model never solves within a 401,026-token budget are answered from cached verified solutions in 61 total decode tokens, a factor of 6,574 fewer tokens and about 8,700x less energy; the capability claim proper rests on held-out transfer (7 of 7 at 31B). The same byte-exact store widens usable context from 32,768 to 2,854,766 tokens at zero extra accelerator memory, and moves byte-identical between machines of the same architecture. We describe the system at the behavior level; the engine is proprietary, and every repor",
-    "category": "paper",
-    "score": 8,
-    "score_reason": "提出 KV-Cache Grafting 方法，冻结小模型通过字节精确的 KV 状态嫁接实现能力提升和成本降低，方法新颖且可复现，对推理优化有直接工程价值",
-    "entities": [],
-    "analysis": "",
-    "extra": {
-     "upvotes": 10
-    }
-   },
-   {
-    "id": "b36e838f86e21957",
+    "id": "c63d450152c609c1",
     "source": "arxiv-papers",
     "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
     "url": "https://arxiv.org/abs/2607.13205v1",
@@ -1239,7 +1205,7 @@
     "extra": {}
    },
    {
-    "id": "357a99ae41154258",
+    "id": "6dca107608565b66",
     "source": "hf-daily-papers",
     "title": "GRASP: GRanularity-Aware Search Policy for Agentic RAG",
     "url": "https://huggingface.co/papers/2607.10463",
@@ -1250,12 +1216,10 @@
     "score_reason": "提出粒度感知搜索策略解决Agentic RAG中何时检索、用何种匹配方式的核心工程问题，方法可复现，对RAG系统设计有直接参考价值",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 5
-    }
+    "extra": {}
    },
    {
-    "id": "581c70f74e2701ae",
+    "id": "721ffc4ce64aafff",
     "source": "arxiv-papers",
     "title": "SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning",
     "url": "https://arxiv.org/abs/2607.14777v1",
@@ -1269,23 +1233,7 @@
     "extra": {}
    },
    {
-    "id": "f4e92f0bd9cc1913",
-    "source": "hf-daily-papers",
-    "title": "SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning",
-    "url": "https://huggingface.co/papers/2607.14777",
-    "published_at": "2026-07-16T00:00:00Z",
-    "summary": "Large language models are increasingly trained as interactive agents for long-horizon tasks involving multi-turn interaction, tool use, and environment feedback. Outcome-based reinforcement learning (RL) provides a practical optimization paradigm, but its sparse trajectory-level rewards offer limited guidance on intermediate decisions, leaving a supervision gap between episode-level outcomes and token-level policy learning. We propose SEED (SElf-Evolving On-Policy Distillation), a self-evolving framework that converts completed on-policy trajectories into training-time hindsight skills and distills their behavioral effect back into the policy model. SEED first fine-tunes the policy to analyze completed trajectories and generate natural-language skills that capture reusable workflows, decisive observations, or failure-avoidance rules. During RL, the current policy both collects trajectories and serves as the analyzer that extracts hindsight skills from them. Policy updates therefore improve subsequent decision making and skill analysis together, allowing hindsight supervision to evolve with the policy. SEED then re-scores the sampled actions under ordinary and skill-augmented contexts, converting the skill-induced probability shift into a dense token-level on-policy distillation signal. This signal is jointly optimized with outcome-based RL, keeping the auxiliary supervision aligned with the current trajectory distribution. Extensive experiments on text-based and vision-based ",
-    "category": "paper",
-    "score": 7,
-    "score_reason": "提出自进化策略蒸馏的强化学习方法，解决长程 agent 任务中稀疏奖励的监督缺口，对 agent 训练有参考价值",
-    "entities": [],
-    "analysis": "",
-    "extra": {
-     "upvotes": 85
-    }
-   },
-   {
-    "id": "fd8bf315d875a1d6",
+    "id": "05316cc180112ae8",
     "source": "arxiv-papers",
     "title": "PReM: Learning What to Preserve and When to Refresh for Context Compression",
     "url": "https://arxiv.org/abs/2607.14327v1",
@@ -1299,7 +1247,7 @@
     "extra": {}
    },
    {
-    "id": "d200d5cdf3436b55",
+    "id": "4e8620ef55d76d5e",
     "source": "arxiv-papers",
     "title": "Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making",
     "url": "https://arxiv.org/abs/2607.14277v1",
@@ -1313,7 +1261,7 @@
     "extra": {}
    },
    {
-    "id": "bc478d9ce040098b",
+    "id": "e6aa3f68badc6151",
     "source": "arxiv-papers",
     "title": "Self-Evolving Agent Harnesses via Gated Semantic Quality-Diversity",
     "url": "https://arxiv.org/abs/2607.13683v1",
@@ -1327,7 +1275,7 @@
     "extra": {}
    },
    {
-    "id": "ce2d59c12defc0d3",
+    "id": "37140ce7af377843",
     "source": "arxiv-papers",
     "title": "Branching Policy Optimization: Sandbox-Native Language Agent Reinforcement Learning",
     "url": "https://arxiv.org/abs/2607.14171v1",
@@ -1341,7 +1289,7 @@
     "extra": {}
    },
    {
-    "id": "68887b6860a0de45",
+    "id": "34d1972f38715130",
     "source": "arxiv-papers",
     "title": "Memory as a Controlled Process: Learned Adaptive Memory Management for LLM Agents",
     "url": "https://arxiv.org/abs/2607.13591v1",
@@ -1369,7 +1317,7 @@
     "extra": {}
    },
    {
-    "id": "2e34a0282276480b",
+    "id": "08d26803ae81ed85",
     "source": "hf-daily-papers",
     "title": "RoboTTT: Context Scaling for Robot Policies",
     "url": "https://huggingface.co/papers/2607.15275",
@@ -1380,12 +1328,10 @@
     "score_reason": "将机器人策略的视觉运动上下文扩展到 8K 时间步，但领域偏机器人，对通用 AI 应用工程参考有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 18
-    }
+    "extra": {}
    },
    {
-    "id": "7194ff44b59b8711",
+    "id": "ccdf74ce210f6e9f",
     "source": "arxiv-papers",
     "title": "SPyCE: Skill-Policy Co-evolution for Multimodal Agents",
     "url": "https://arxiv.org/abs/2607.13854v1",
@@ -1399,7 +1345,7 @@
     "extra": {}
    },
    {
-    "id": "e266e0875ba4e0f2",
+    "id": "1684bb1f7079095d",
     "source": "arxiv-papers",
     "title": "Set-shifting Behavioral Test for Harnessed Agents",
     "url": "https://arxiv.org/abs/2607.13396v1",
@@ -1413,7 +1359,7 @@
     "extra": {}
    },
    {
-    "id": "ee7e2d4f76125163",
+    "id": "7a98b5250fa6da68",
     "source": "hf-daily-papers",
     "title": "Demystifying On-Policy Distillation: Roles, Pathologies, and Regulations",
     "url": "https://huggingface.co/papers/2607.13399",
@@ -1424,12 +1370,10 @@
     "score_reason": "系统分析on-policy蒸馏的训练动态与病理，对理解LLM后训练有参考价值但偏理论",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 17
-    }
+    "extra": {}
    },
    {
-    "id": "9438be446657fa8e",
+    "id": "f027f4e86d41b914",
     "source": "hf-daily-papers",
     "title": "Generative Compilation: On-the-Fly Compiler Feedback as AI Generates Code",
     "url": "https://huggingface.co/papers/2607.13921",
@@ -1440,9 +1384,7 @@
     "score_reason": "探索编译器反馈在 AI 代码生成中的实时约束解码，对 Rust 等强类型语言代码生成有参考价值",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 6
-    }
+    "extra": {}
    },
    {
     "id": "e9167e656930e3f1",
@@ -1487,7 +1429,7 @@
     "extra": {}
    },
    {
-    "id": "36f7b0201c97565c",
+    "id": "fbe07c8acb42404a",
     "source": "arxiv-papers",
     "title": "RetroAgent: Harnessing LLMs to Search Over Structured Memory for Agentic Retrosynthesis Planning",
     "url": "https://arxiv.org/abs/2607.14512v1",
@@ -1501,7 +1443,7 @@
     "extra": {}
    },
    {
-    "id": "7a2c6f6b5babe1a9",
+    "id": "afd6699f95ae0f02",
     "source": "hf-daily-papers",
     "title": "VIABench: A Comprehensive Video Benchmark Collected from Blind Individuals for Visual Impairment Assistance",
     "url": "https://huggingface.co/papers/2607.14660",
@@ -1512,12 +1454,10 @@
     "score_reason": "视障辅助视频基准，对多模态应用评测有参考但非工程方法",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 8
-    }
+    "extra": {}
    },
    {
-    "id": "28ee465e1c3f78ba",
+    "id": "64a1c26c8a1cbe90",
     "source": "hf-daily-papers",
     "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
     "url": "https://huggingface.co/papers/2607.15277",
@@ -1528,12 +1468,10 @@
     "score_reason": "研究ICL的统计自洽性，偏理论分析，对应用工程实践参考价值有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 7
-    }
+    "extra": {}
    },
    {
-    "id": "24248ce9e1ae0326",
+    "id": "3c9a856f2d2a0482",
     "source": "hf-daily-papers",
     "title": "Video = World + Event Stream",
     "url": "https://huggingface.co/papers/2607.15038",
@@ -1544,12 +1482,10 @@
     "score_reason": "视频流式交互模型的概念框架，偏理论视角，缺乏可复现的工程方法",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 17
-    }
+    "extra": {}
    },
    {
-    "id": "e86be06a4946963b",
+    "id": "8a368533a646d728",
     "source": "arxiv-papers",
     "title": "DevicesWorld: Benchmarking Cross-Device Agents in Heterogeneous Environments",
     "url": "https://arxiv.org/abs/2607.13465v1",
@@ -1563,7 +1499,7 @@
     "extra": {}
    },
    {
-    "id": "b0333caec0cdaffb",
+    "id": "c5adf101b9466e33",
     "source": "hf-daily-papers",
     "title": "Chat2Scenic: An Iterative RAG-Based Framework for Scenario Generation in Autonomous Driving",
     "url": "https://huggingface.co/papers/2607.14387",
@@ -1574,12 +1510,10 @@
     "score_reason": "RAG 框架用于自动驾驶场景生成，领域特定，对通用 RAG 工程参考有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 4
-    }
+    "extra": {}
    },
    {
-    "id": "16265b2a1e315725",
+    "id": "d4ecb754058ff970",
     "source": "hf-daily-papers",
     "title": "RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination",
     "url": "https://huggingface.co/papers/2607.14187",
@@ -1590,12 +1524,10 @@
     "score_reason": "具身认知基础模型，upvotes 高但偏前沿研究，对当前应用工程直接帮助有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 23
-    }
+    "extra": {}
    },
    {
-    "id": "6e205d20c7a11188",
+    "id": "d341f3ecc477e08f",
     "source": "hf-daily-papers",
     "title": "Rethinking the Evaluation of Harness Evolution for Agents",
     "url": "https://huggingface.co/papers/2607.12227",
@@ -1606,12 +1538,10 @@
     "score_reason": "Agent 评估方法反思，对 agent 工程评测有启发但无直接可复现方法",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 6
-    }
+    "extra": {}
    },
    {
-    "id": "b92eff760c0b6b93",
+    "id": "432a881da824a284",
     "source": "hf-daily-papers",
     "title": "UniVR: Thinking in Visual Space for Unified Visual Reasoning",
     "url": "https://huggingface.co/papers/2607.12800",
@@ -1622,12 +1552,10 @@
     "score_reason": "纯视觉演示中学习推理与规划，偏视觉智能研究，与应用工程选型关联弱",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 28
-    }
+    "extra": {}
    },
    {
-    "id": "3beb6faa3794660e",
+    "id": "b904780bf6da86c9",
     "source": "hf-daily-papers",
     "title": "Concurrent Image Understanding and Generation: Self-Correcting Coupled Markov Jump Processes",
     "url": "https://huggingface.co/papers/2607.13188",
@@ -1638,12 +1566,10 @@
     "score_reason": "图像理解与生成耦合的马尔可夫过程，偏生成模型理论，应用工程参考价值一般",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 28
-    }
+    "extra": {}
    },
    {
-    "id": "35f4085dbc684527",
+    "id": "de209d1cce3b77cf",
     "source": "hf-daily-papers",
     "title": "Spectral Rewiring for Exploration, Purification, and Model Merging",
     "url": "https://huggingface.co/papers/2607.03065",
@@ -1654,9 +1580,7 @@
     "score_reason": "探讨强化学习后训练中的谱重连方法，偏理论优化，与应用工程距离较远",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 22
-    }
+    "extra": {}
    },
    {
     "id": "0b8dc2473cab870c",
@@ -1673,7 +1597,7 @@
     "extra": {}
    },
    {
-    "id": "70bf80739ef60d44",
+    "id": "932a1581c2508921",
     "source": "hf-daily-papers",
     "title": "Hierarchical Denoising For Multi-Step Visual Reasoning",
     "url": "https://huggingface.co/papers/2607.15278",
@@ -1684,12 +1608,10 @@
     "score_reason": "视频模型多步推理的去噪方法，偏视觉推理理论，应用工程距离远",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 3
-    }
+    "extra": {}
    },
    {
-    "id": "b0fe1db6fb3112cb",
+    "id": "8367a0954905109e",
     "source": "hf-daily-papers",
     "title": "SUFLECA: Scaling Up Feature Learning for CAD-to-image Alignment",
     "url": "https://huggingface.co/papers/2607.15058",
@@ -1700,12 +1622,10 @@
     "score_reason": "CAD 到图像对齐的 9D 位姿估计，领域特化，与应用工程关联弱",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 7
-    }
+    "extra": {}
    },
    {
-    "id": "3176ca477ee214f7",
+    "id": "c99c27f5e0d48445",
     "source": "hf-daily-papers",
     "title": "BadWAM: When World-Action Models Dream Right but Act Wrong",
     "url": "https://huggingface.co/papers/2607.15207",
@@ -1716,12 +1636,10 @@
     "score_reason": "研究世界-动作模型的幻觉问题，偏具身智能理论，与应用工程距离远",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 46
-    }
+    "extra": {}
    },
    {
-    "id": "5657b23248e1492c",
+    "id": "16ddf804fe1d6288",
     "source": "hf-daily-papers",
     "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
     "url": "https://huggingface.co/papers/2607.15273",
@@ -1732,12 +1650,10 @@
     "score_reason": "MeanFlow生成器的强化学习对齐方法，偏生成模型理论，工程参考价值有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 12
-    }
+    "extra": {}
    },
    {
-    "id": "14929e3c65fac4cc",
+    "id": "e8b65fa591f5f167",
     "source": "arxiv-papers",
     "title": "MamaBench: Benchmarking LLM Robustness in Maternal and Child Health Diagnosis through Counterfactual Clinical Perturbation",
     "url": "https://arxiv.org/abs/2607.14385v1",
@@ -1751,7 +1667,7 @@
     "extra": {}
    },
    {
-    "id": "d66a52b5defa21e5",
+    "id": "b8d798754bd49e8c",
     "source": "arxiv-papers",
     "title": "Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis",
     "url": "https://arxiv.org/abs/2607.13602v1",
@@ -1765,7 +1681,7 @@
     "extra": {}
    },
    {
-    "id": "83e0d44e5c713f48",
+    "id": "73de1824a49c8af6",
     "source": "hf-daily-papers",
     "title": "From Pixels to States: Rethinking Interactive World Models as Game Engines",
     "url": "https://huggingface.co/papers/2607.14076",
@@ -1776,12 +1692,10 @@
     "score_reason": "视频生成模型作为游戏引擎的探索，偏研究前沿，与应用工程落地距离远",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 29
-    }
+    "extra": {}
    },
    {
-    "id": "9c8b39ac2e3ea00e",
+    "id": "496fda13dd3cebad",
     "source": "hf-daily-papers",
     "title": "DeepLoop: Depth Scaling for Looped Transformers",
     "url": "https://huggingface.co/papers/2607.13491",
@@ -1792,12 +1706,10 @@
     "score_reason": "循环Transformer的深度缩放理论，偏模型架构研究，工程应用价值有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 13
-    }
+    "extra": {}
    },
    {
-    "id": "8d1d2170730a7c98",
+    "id": "c3904cb69daf2d41",
     "source": "hf-daily-papers",
     "title": "MultiRef-Compass: Towards Comprehensive Evaluation of Multi-Reference-to-Audio-Video Generation",
     "url": "https://huggingface.co/papers/2607.14189",
@@ -1808,12 +1720,10 @@
     "score_reason": "多参考到音视频生成的评测基准，领域过于细分，对通用AI应用工程参考价值低",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 31
-    }
+    "extra": {}
    },
    {
-    "id": "021ec3a54adc9a0e",
+    "id": "ed1eb42c9843037e",
     "source": "hf-daily-papers",
     "title": "KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation",
     "url": "https://huggingface.co/papers/2607.14202",
@@ -1824,12 +1734,10 @@
     "score_reason": "关键帧条件视频生成的评测基准，领域细分，工程参考价值有限",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 36
-    }
+    "extra": {}
    },
    {
-    "id": "230867c986d4e7a4",
+    "id": "9dec9f8bce6f56db",
     "source": "hf-daily-papers",
     "title": "AsySplat: Efficient Asymmetric 3D Gaussian Splatting for Long-Sequence Scene Modeling",
     "url": "https://huggingface.co/papers/2607.10995",
@@ -1840,12 +1748,10 @@
     "score_reason": "3D 高斯泼溅长序列建模效率优化，偏图形学，与应用工程距离远",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 7
-    }
+    "extra": {}
    },
    {
-    "id": "6fc5421277dd7966",
+    "id": "0475b16357b7661e",
     "source": "hf-daily-papers",
     "title": "On Locality and Length Generalization in Visual Reasoning",
     "url": "https://huggingface.co/papers/2607.09061",
@@ -1856,9 +1762,7 @@
     "score_reason": "视觉推理中的局部性与长度泛化研究，偏理论，与应用工程距离较远",
     "entities": [],
     "analysis": "",
-    "extra": {
-     "upvotes": 2
-    }
+    "extra": {}
    },
    {
     "id": "617f45738c65d6ba",
@@ -1875,7 +1779,7 @@
     "extra": {}
    },
    {
-    "id": "9fc27edd1553538d",
+    "id": "29d4831735112f48",
     "source": "arxiv-papers",
     "title": "Digital Pantheon: Simulating and Auditing Coalition Formation with LLM Agents",
     "url": "https://arxiv.org/abs/2607.15095v1",
