@@ -59,7 +59,14 @@ def _image_block(item: NewsItem) -> str:
 def _item_block(item: NewsItem, marker: str) -> str:
     # 分析失败的降级路径：摘要+打分理由顶上，并如实标注（报告不说谎）
     body = item.analysis or f"（深读生成失败，以下为原文摘要）\n\n{item.summary[:500]}"
-    return f"### {marker} {item.title}\n\n{body}\n\n{_image_block(item)}{_cite_line(item)}\n"
+    # 忠实度存疑（P8）：judge 重生成后仍不过，标 ⚠ 提醒读者核对原文，不删条目
+    caveat = ""
+    if item.low_confidence:
+        caveat = "\n\n> ⚠ 忠实度存疑：本篇分析对照原文核查未通过，请以原文为准。"
+    return (
+        f"### {marker} {item.title}\n\n{body}{caveat}\n\n"
+        f"{_image_block(item)}{_cite_line(item)}\n"
+    )
 
 
 def _glance_line(item: NewsItem) -> str:

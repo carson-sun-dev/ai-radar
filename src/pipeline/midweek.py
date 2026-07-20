@@ -28,6 +28,7 @@ from src.report.index import INDEX_PATH, update_index
 from src.report.render import RunUsage, render_midweek, report_payload
 from src.report.select import Selection, select_for_midweek
 from src.state import DedupStore, StateStore
+from src.validate.judge import judge_faithfulness
 from src.validate.rules import check_analysis, check_quota
 
 
@@ -79,8 +80,16 @@ def build_midweek_graph(ctx: PipelineContext):
             # 深读配全文；抓不到就降级用摘要分析（analyze_item 内部只看有没有 fulltext）
             fulltext = fetch_fulltext(item.url, ctx.config.defaults)
             analyze_item(ctx.client, item, "deepread", fulltext)
-            # 配图（P7）：只给深读条目挑图，复用刚抓的全文，避免二次请求
             if fulltext:
+                # 忠实度 judge（P8）：不过则重生成一次再判，仍不过标低置信。
+                # 放在挑图前——judge 可能重生成分析，图与分析独立、不受影响
+                if item.analysis and not judge_faithfulness(
+                    ctx.client, item.analysis, fulltext
+                ).passed:
+                    analyze_item(ctx.client, item, "deepread", fulltext)
+                    if not judge_faithfulness(ctx.client, item.analysis, fulltext).passed:
+                        item.low_confidence = True
+                # 配图（P7）：复用刚抓的全文挑图，避免二次请求
                 attach_images(
                     ctx.client, item, fulltext, ctx.assets_dir, ctx.config.defaults
                 )

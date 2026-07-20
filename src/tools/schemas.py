@@ -101,3 +101,31 @@ PICK_IMAGES_TOOL = {
         },
     },
 }
+
+
+# 忠实度审查（P8，评测第 2 层，设计纪要第 15 节）：judge 对照原文核查深读分析里的
+# 技术断言有无依据，返回 1-5 分与「无依据断言」清单。LLM-as-judge 的结构化出口。
+SUBMIT_JUDGMENT_TOOL = {
+    "type": "function",
+    "function": {
+        "name": "submit_judgment",
+        "description": "对照原文核查分析的忠实度：打 1-5 分并列出无原文依据的技术断言。",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "score": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5,
+                    "description": "忠实度：5=全部断言有据，3=个别存疑，1=大量臆造",
+                },
+                "unsupported": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "原文找不到依据的具体断言（数字/结论/方法），无则空数组",
+                },
+            },
+            "required": ["score", "unsupported"],
+        },
+    },
+}

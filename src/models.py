@@ -85,6 +85,8 @@ class NewsItem(BaseModel):
     # 深读挑图（P7）：模型从正文图片里选、程序下载入 assets/，每项 {path, caption}。
     # 与 cite 同一纪律——模型只挑不碰 URL，下载与本地路径由程序负责
     images: list[dict] = Field(default_factory=list)
+    # 忠实度存疑标记（P8）：judge 重生成后仍低于阈值，报告标 ⚠ 而不删条目
+    low_confidence: bool = False
     extra: dict = Field(default_factory=dict)  # 源特定信号（如 HF papers 点赞数、star 增速）
 
     @field_validator("published_at")
