@@ -70,12 +70,14 @@ def test_midweek_graph_end_to_end(monkeypatch, tmp_path):
         "src.pipeline.midweek.fetch_fulltext", lambda url, retry: "全文内容" * 100
     )
     entities = json.dumps({"entities": ["LangGraph"]})
+    judge_ok = _response('{"score": 5, "unsupported": []}')  # P8 忠实度 judge 放行
     # 假产出要过 P5 规则校验（深读 250–650 字、中读 2–6 句），否则触发重试耗尽假响应
     fake_llm = FakeOpenAI(
         [
             _response(_score_response(items)),  # score 节点：一批 4 条
             _chat_response("这是深读分析。" * 50),  # deep：分析走普通 chat
             _response(entities),  # deep：实体走小 tool call
+            judge_ok,  # deep：忠实度 judge（有全文才跑）
             _chat_response("这是一段合格的中读分析，讲清了方法与变化。" * 3),  # mid：同上
             _response(entities),
         ]
@@ -132,6 +134,7 @@ def test_validate_node_intercepts_bad_output_and_retries(monkeypatch, tmp_path):
             _response(_score_response(items)),
             _chat_response("这是深读分析。" * 50),  # deep 一次合格
             _response(entities),
+            _response('{"score": 5, "unsupported": []}'),  # deep 忠实度 judge 放行
             _chat_response(bad_mid),  # mid 首次产出坏文本
             _response(entities),
             _chat_response(good_mid),  # validate 节点重试
@@ -150,4 +153,5 @@ def test_validate_node_intercepts_bad_output_and_retries(monkeypatch, tmp_path):
     md = Path(result["report_path"]).read_text(encoding="utf-8")
     assert "这是重试后合格的中读分析" in md  # 重试产物顶替坏产物
     assert bad_mid not in md  # 坏产物没有溜进报告
-    assert len(fake_llm.calls) == 7  # 恰好多出一轮 mid 重试（分析+实体）
+    # score(1) + deep[chat+实体+judge=3] + mid[chat+实体=2] + validate mid 重试[chat+实体=2]
+    assert len(fake_llm.calls) == 8
