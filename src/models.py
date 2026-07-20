@@ -82,6 +82,8 @@ class NewsItem(BaseModel):
     score_reason: str = ""
     entities: list[str] = Field(default_factory=list)  # 实体索引/历史关联的原料
     analysis: str = ""  # 深读/中读产出的中文技术介绍（深读 300–500 字，中读 3–5 句）
+    # 忠实度存疑标记（P8）：judge 重生成后仍低于阈值，报告标 ⚠ 而不删条目
+    low_confidence: bool = False
     extra: dict = Field(default_factory=dict)  # 源特定信号（如 HF papers 点赞数、star 增速）
 
     @field_validator("published_at")
