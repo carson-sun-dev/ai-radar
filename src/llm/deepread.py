@@ -10,6 +10,8 @@ JSON 参数会触发方舟服务端的间歇性解析丢弃（越长越容易丢
 走 tool call 拿结构化结果。「什么时候用 function calling」的边界就在这里。
 """
 
+import re
+
 from pydantic import ValidationError
 
 from src.collectors import base
@@ -21,12 +23,21 @@ from src.tools.schemas import EXTRACT_ENTITIES_TOOL
 
 # 约 8k token：单条深读输入的成本上限，超长文章截断（关键内容通常在前部）
 MAX_FULLTEXT_CHARS = 12000
+# HF papers 详情页 Jina 抓不到正文（2026-07 实测返 None），映射到 arXiv abs 页
+# （摘要+元数据，Jina 可抓）。cite 仍用原 HF 链接，只是取正文换个入口
+_HF_PAPER = re.compile(r"huggingface\.co/papers/(\d{4}\.\d{4,5})")
+
+
+def _fulltext_url(url: str) -> str:
+    if m := _HF_PAPER.search(url):
+        return f"https://arxiv.org/abs/{m.group(1)}"
+    return url
 
 
 def fetch_fulltext(url: str, retry: RetryDefaults) -> str | None:
     """拉正文。失败返回 None 而不抛异常：深读降级用摘要，不值得废掉整条条目。"""
     try:
-        return base.fetch(f"https://r.jina.ai/{url}", retry)[:MAX_FULLTEXT_CHARS]
+        return base.fetch(f"https://r.jina.ai/{_fulltext_url(url)}", retry)[:MAX_FULLTEXT_CHARS]
     except base.FetchError:
         return None
 

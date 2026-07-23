@@ -342,3 +342,19 @@ class TestRunner:
         collected, _ = runner.run_all(config, StateStore(tmp_path / "state.json"), dedup)
         assert collected == [fresh]
         assert dedup.is_seen(stale.id)  # 旧条目标已见：以后永不再进池
+
+
+class TestFulltextUrl:
+    def test_hf_paper_maps_to_arxiv(self):
+        # HF papers 页 Jina 抓不到正文，取全文时映射到 arXiv abs（2026-07-23 深读失败根因）
+        from src.llm.deepread import _fulltext_url
+
+        assert _fulltext_url("https://huggingface.co/papers/2607.18754") == (
+            "https://arxiv.org/abs/2607.18754"
+        )
+
+    def test_non_hf_url_unchanged(self):
+        from src.llm.deepread import _fulltext_url
+
+        url = "https://deepmind.google/blog/introducing-gemini"
+        assert _fulltext_url(url) == url

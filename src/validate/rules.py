@@ -13,8 +13,12 @@ import re
 from src.models import NewsItem
 from src.report.select import DEEP_PER_CATEGORY, MID_PER_CATEGORY, Selection
 
-DEEP_CHAR_RANGE = (250, 650)  # prompt 要求 300–500 字，留生成波动余量
-MID_SENT_RANGE = (2, 6)  # prompt 要求 3–5 句，同上
+# 上限是「失控护栏」不是「目标」：pro 对内容丰富的源写到 1000–1600 字很常见
+# （2026-07-23 生产实测 Gemini 1006→1559 字，波动大）。清掉一篇忠实的长分析换成
+# 「深读失败+一句摘要」永远让报告更差，所以上限放到 2500 只拦真正跑飞/循环的输出；
+# 长度「目标」交给 prompt（400–800 字）软引导。下限 250 兜住空/极短（多为原文太薄）。
+DEEP_CHAR_RANGE = (250, 2500)
+MID_SENT_RANGE = (2, 6)  # prompt 要求 3–5 句，留生成波动余量
 
 _URL = re.compile(r"https?://")
 _SENT_END = re.compile(r"[。！？!?]")
