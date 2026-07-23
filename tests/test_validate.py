@@ -27,7 +27,11 @@ class TestCheckAnalysis:
 
     def test_deep_length_out_of_range_caught(self):
         assert check_analysis(_item("短。" * 10), "deep")  # 远低于下限
-        assert check_analysis(_item("超长内容。" * 200), "deep")  # 远超上限
+        assert check_analysis(_item("超长内容。" * 600), "deep")  # 3000 字 > 2500 护栏
+
+    def test_thorough_deep_analysis_within_guard(self):
+        # 生产实测 pro 常写 1000–1600 字：护栏放宽后不再被误清（2026-07-23 深读回归）
+        assert check_analysis(_item("这是一段讲透了的深读分析。" * 120), "deep") == []
 
     def test_missing_analysis_caught(self):
         assert check_analysis(_item(""), "deep") == ["分析缺失"]
