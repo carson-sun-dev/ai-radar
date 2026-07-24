@@ -1,0 +1,566 @@
+{
+ "meta": {
+  "date": "2026-07-24",
+  "run_type": "midweek",
+  "description": "深读：SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD；ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
+  "entities": [
+   "Deep Agents",
+   "DeepSeek-V4",
+   "DeepSeek-V4-Flash",
+   "GPT-5.4-Mini",
+   "Harbor",
+   "ICAE-Bench",
+   "LangChain",
+   "MoE",
+   "SLAI T-Rex",
+   "SuperPOD",
+   "vibe-coding",
+   "专家并行",
+   "全参数后训练",
+   "基准测试",
+   "昇腾 NPU",
+   "模型浮点运算利用率",
+   "深度智能体",
+   "用户智能体数据",
+   "统一评估框架"
+  ],
+  "tags": [
+   "engineering",
+   "paper"
+  ],
+  "item_count": 28,
+  "sources_failed": [
+   "arxiv-papers：超时（已重试 3 次）"
+  ],
+  "tokens_used": 35804,
+  "cost_cny": 0.5314,
+  "duration_seconds": 285.9
+ },
+ "deep": [
+  {
+   "id": "81456436b66e35b5",
+   "source": "hf-daily-papers",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "published_at": "2026-07-22T00:00:00Z",
+   "summary": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication overhead, and inefficient kernel execution. While most large-scale LLM training systems are built around GPU-based clusters, this report presents an end-to-end optimization practice on the Ascend NPU SuperPOD. Using the DeepSeek-V4 model family as the target workload, we develop a hierarchical optimization framework spanning model-level parallelism, computation-communication orchestration, and low-level kernel execution. The resulting system achieves 34.22% Model FLOPs Utilization (MFU) with a 2.93x improvement over the open-source baseline recipe while maintaining training stability. Building on this optimized infrastructure, we further establish a CPT and SFT workflow for complex Operations Research (OR) tasks. We refer to the integrated framework as SLAI T-Rex. Using DeepSeek-V4-Flash, we develop OR-oriented CPT and SFT data pipelines that combine collected domain resources with solver-verified synthetic optimization documents. The resulting dataset contains 10K high-quality SFT samples spanning four task categories and three problem representations. The specialized model achieves the highest average zero-shot Pass@1 score among the evaluated models, reaching 71.81% and outperforming GPT-5.4-Mini and the base DeepSeek-V4-Flash model by 3.98 and 11.27 percentage",
+   "category": "engineering",
+   "score": 8,
+   "score_reason": "万亿参数MoE模型在昇腾集群上的全参数后训练实践报告，对国产算力大规模训练有直接工程参考价值",
+   "entities": [
+    "SLAI T-Rex",
+    "DeepSeek-V4",
+    "昇腾 NPU",
+    "SuperPOD",
+    "MoE",
+    "全参数后训练",
+    "专家并行",
+    "模型浮点运算利用率",
+    "GPT-5.4-Mini",
+    "DeepSeek-V4-Flash"
+   ],
+   "analysis": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显存压力巨大；同时，专家并行等策略引入的通信开销往往无法被计算有效掩盖，形成通信瓶颈；此外，底层算子的执行效率在超大规模集群上也会成为木桶短板。此前，这类大规模训练系统几乎完全围绕 GPU 集群构建，而 SLAI T-Rex 的目标是在昇腾 NPU 这一不同硬件生态上，实现从底层算子到顶层并行策略的全栈优化，并证明其生产可行性。\n\n技术流程与方法要点在于其分层优化框架，该框架覆盖了三个核心层面。在模型级并行策略层面，团队针对万亿参数 MoE 架构设计了特定的并行方案组合，以缓解显存压力并平衡计算负载。在计算与通信编排层面，核心目标是解决通信开销无法被计算掩盖的问题，通过精细的调度与流水线设计，让通信过程尽可能与计算过程重叠执行，从而提升整体吞吐。在底层算子执行层面，针对昇腾 NPU 的硬件特性进行了深度算子优化，以消除低效的内核执行。这套组合拳最终实现了 34.22% 的模型浮点运算利用率，相比开源基线方案提升了 2.93 倍，同时保持了训练稳定性。在此基础上，他们建立了一套面向运筹学任务的继续预训练和有监督微调工作流。其数据管线结合了收集的领域资源和经数学求解器验证的合成优化文档，最终产出了一个包含 1 万条高质量 SFT 样本的数据集，覆盖四类任务和三种问题表示形式。微调后的模型在零样本 Pass@1 指标上达到 71.81%，比 GPT-5.4-Mini 和 DeepSeek-V4-Flash 基座模型分别高出 3.98 和 11.27 个百分点。\n\n对 AI 应用岗而言，这份工作的价值在于展示了前沿模型从训练系统到领域落地的完整工程链路，提供了多个面试可谈点。首先，它证明了在非 GPU 生态上实现万亿参数模型高效训练的可行性，这涉及异构计算、软硬件协同优化等关键能力，是面试中讨论国产化替代和基础设施选型时的绝佳案例。其次，分层优化思想是解决复杂系统问题的通用方法论，面试官可能会就此考察你如何拆解性能瓶颈。最后，从通用基座模型到特定复杂推理领域的微调流程，特别是结合求解器生成合成数据以构建高质量 SFT 数据集的方法，直接对应了当前大模型应用开发中“如何让模型在专业领域可靠工作”的核心命题，你可以借此阐述对数据质量、评估指标以及领域适应的理解。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 45
+   }
+  },
+  {
+   "id": "10c6ecea14a55e86",
+   "source": "hf-daily-papers",
+   "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
+   "url": "https://huggingface.co/papers/2607.21217",
+   "published_at": "2026-07-23T00:00:00Z",
+   "summary": "The recent emergence of vibe-coding workflows is changing what coding agents are expected to do. Instead of merely completing code under fully specified instructions, agents are increasingly expected to transform incomplete product intent into working software by combining various abilities including planning, requirement clarification, tool use, debugging, and repository-level construction. Yet existing benchmarks have not fully caught up with this shift, evaluating agents on static, fully specified tasks. In this paper, we introduce ICAE-Bench, a benchmark for evaluating coding agents under interactive project-building settings. The basic idea is to start from a fuzzy product requirement, simulating the dynamic paradigm with an automated User Agent. To make this setting both realistic and evaluable, ICAE-Bench introduces three key designs. First, to avoid the ambiguity of unconstrained fuzzy requirements, each task derives ambiguity from a precise real open-source repository with executable behavior. Second, to ensure high-quality and reproducible user simulation, ICAE-Bench grounds interaction through User Agent Data, allowing the User Agent to reveal hidden constraints without inventing new requirements or leaking implementation artifacts. Third, to evaluate open-ended repositories fairly, ICAE-Bench uses standardized black-box tests together with multi-dimensional diagnostics, including functional correctness, semantic and API similarity, structural fidelity, design qual",
+   "category": "paper",
+   "score": 8,
+   "score_reason": "评估 coding agent 作为交互式项目构建者的基准，直接关联 vibe-coding 工程实践，HF 上榜佐证",
+   "entities": [
+    "ICAE-Bench",
+    "vibe-coding",
+    "用户智能体数据"
+   ],
+   "analysis": "ICAE-Bench 是一个专门用于评估编程智能体在交互式项目构建场景下表现的新基准。随着“vibe-coding”（氛围编程，指从模糊意图出发、通过多轮交互逐步构建软件的开发范式）的兴起，编程智能体的角色已从单纯根据完整指令补全代码，转变为将不完整的产品意图转化为可运行软件。ICAE-Bench 正是为了填补现有基准仍停留在静态、全指定任务评估这一空白而设计的。\n\n此前，评估编程智能体的痛点在于，传统基准提供的都是需求完全明确、一次性交付的静态任务，无法衡量智能体在真实开发中所需的规划、需求澄清、工具使用、调试和仓库级构建等综合能力。当智能体面对模糊需求时，评估面临两大难题：一是模糊需求本身难以定义和量化，容易导致评估标准不统一；二是模拟用户交互时，如何保证交互质量高且可复现，避免用户模拟器自行编造需求或泄露实现细节，从而影响评估的公平性。\n\nICAE-Bench 通过三项关键设计解决了上述问题。第一，它从真实开源仓库中派生模糊需求。每个任务都对应一个具有可执行行为的精确仓库，模糊性并非凭空捏造，而是通过隐藏该仓库的部分约束条件来产生，这样既保证了需求的现实性，又为后续评估提供了明确的参照标准。第二，它引入了“用户智能体数据”来驱动交互。用户智能体在对话中只能根据预设数据揭示隐藏的约束，不能发明新需求或泄露实现细节，从而确保了用户模拟的高质量和可复现性。第三，它采用标准化的黑盒测试与多维度诊断相结合的方式进行评估。评估维度不仅包括功能正确性，还涵盖语义与 API 相似度、结构保真度、设计质量以及交互质量，从而对智能体生成的开放式仓库进行更全面的评判。\n\n对于 AI 应用岗而言，ICAE-Bench 的提出标志着编程智能体的评估正从“做题”走向“做事”，这对生产环境的可用性评估具有直接指导意义。面试中，你可以从以下几个角度展开讨论：一是强调现代 AI 应用开发中“交互式需求澄清”的重要性，指出智能体需要具备主动提问、逐步细化模糊意图的能力，而非被动接受指令；二是阐述评估体系的多维度设计思路，说明仅靠功能正确性不足以衡量生成项目的质量，还需关注代码结构、API 设计等工程化指标；三是探讨用户模拟器在评测中的关键作用，以及如何通过约束其行为来保证评估的客观性和可复现性。这些点都能体现你对 AI 应用从原型走向生产落地所需工程化考量的深入理解。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 4
+   }
+  }
+ ],
+ "mid": [
+  {
+   "id": "35c0257d1b804bbd",
+   "source": "langchain-blog",
+   "title": "How We Benchmark Deep Agents",
+   "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
+   "published_at": "2026-07-23T17:55:37Z",
+   "summary": "We revamped how we benchmark Deep Agents. Here's the eval setup we run in Harbor across coding, conversation, and retrieval, and how we use it to ship changes.",
+   "category": "engineering",
+   "score": 7,
+   "score_reason": "LangChain公开Deep Agents评测方案，对构建Agent评估体系有直接参考价值",
+   "entities": [
+    "LangChain",
+    "Harbor",
+    "深度智能体",
+    "Deep Agents",
+    "基准测试",
+    "统一评估框架"
+   ],
+   "analysis": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "b9b05711cfcb303f",
+   "source": "hf-daily-papers",
+   "title": "DocOps: A Verifiable Benchmark for Autonomous Agents in Complex Document Operations",
+   "url": "https://huggingface.co/papers/2607.19865",
+   "published_at": "2026-07-22T00:00:00Z",
+   "summary": "As autonomous agents rapidly evolve, their ability to reliably manipulate ubiquitous digital documents has become critical for enabling general-purpose AI assistants and automating complex workspace workflows. In this paper, we introduce DocOps, a deterministically verifiable evaluation framework underpinned by a hierarchical taxonomy that deconstructs document operations inspired by real-world practices into atomic dimensions and escalating workflow complexities. Based on DocOps, we systematically evaluate representative closed- and open-source models across various agentic harnesses, revealing that even the most advanced frontier configurations still exhibit profound limitations when handling highly coupled, long-range tasks. Furthermore, a fine-grained analysis of existing agents' manipulation behaviors uncovers 3 key failure modes: long-term state tracking collapse, shallow semantic verification, and destructive editing of structural metadata. Ultimately, our work exposes the capability boundaries of agents in maintaining global document consistency, shedding light on the future design of robust, non-destructive agents for complex digital ecosystems.",
+   "category": "paper",
+   "score": 7,
+   "score_reason": "文档操作智能体可验证基准，直接面向 AI 助手工作流自动化，有工程参考价值",
+   "entities": [],
+   "analysis": "DocOps 是一个面向自主智能体的可验证文档操作评测框架，它基于现实工作流构建了一套分层分类体系，将文档操作分解为原子维度并逐步提升任务复杂度。该研究系统评估了当前主流闭源与开源模型在不同智能体框架下的表现，发现即使是最前沿的配置在处理高度耦合的长程任务时仍存在明显局限。通过细粒度分析，研究揭示了长期状态追踪崩溃、浅层语义验证和结构性元数据破坏性编辑这三种关键失败模式，为设计能在复杂数字生态中保持全局文档一致性的稳健智能体指明了方向。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 4
+   }
+  }
+ ],
+ "glance": {
+  "model": [
+   {
+    "id": "bf70d809f9542eee",
+    "source": "openai-news",
+    "title": "Launching Health in ChatGPT",
+    "url": "https://openai.com/index/health-in-chatgpt",
+    "published_at": "2026-07-23T00:00:00Z",
+    "summary": "Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.",
+    "category": "model",
+    "score": 4,
+    "score_reason": "ChatGPT 健康功能上线，是产品功能更新而非模型或工程方法，对 AI 应用工程参考价值有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "engineering": [
+   {
+    "id": "96f5dc656a14a806",
+    "source": "hf-blog",
+    "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+    "url": "https://huggingface.co/blog/nunchaku-diffusers",
+    "published_at": "2026-07-23T00:00:00Z",
+    "summary": "",
+    "category": "engineering",
+    "score": 6,
+    "score_reason": "Nunchaku 4-bit 扩散推理集成到 Diffusers，对工程部署有实用价值，但摘要缺失信息有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "81a50cbd7d37a132",
+    "source": "langchain-blog",
+    "title": "July 2026: LangChain Newsletter — NemoClaw Blueprint, OpenWiki Brains, and More",
+    "url": "https://www.langchain.com/blog/july-2026-langchain-newsletter",
+    "published_at": "2026-07-23T18:51:32Z",
+    "summary": "NemoClaw Deep Agents blueprint, LangSmith Sandboxes free trial, Fleet Slack integration, voice tracing, OpenWiki Brains, and RLMs in Deep Agents. See what's new at LangChain",
+    "category": "engineering",
+    "score": 5,
+    "score_reason": "LangChain月度更新，包含新蓝图和集成，但多为产品功能罗列，深度有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "49857bbbb2f8af4d",
+    "source": "openai-news",
+    "title": "How Codex became a collaborator for OpenAI’s creative team",
+    "url": "https://openai.com/index/codex-collaborator-creative-team",
+    "published_at": "2026-07-16T07:00:00Z",
+    "summary": "How OpenAI’s creative team uses Codex to build custom creative tools, accelerate ideation, and prototype faster with context-aware AI.",
+    "category": "engineering",
+    "score": 5,
+    "score_reason": "OpenAI 内部用 Codex 做创意工具的案例分享，有一定参考价值但偏营销叙事，无具体工程细节",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "d8ae462f902fd3cc",
+    "source": "kimi-github",
+    "title": "新仓库 MoonshotAI/nano-kpu",
+    "url": "https://github.com/MoonshotAI/nano-kpu",
+    "published_at": "2026-07-23T07:39:09Z",
+    "summary": "",
+    "category": "engineering",
+    "score": 2,
+    "score_reason": "新仓库仅1星且无描述，无法判断内容价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "stars": 1
+    }
+   },
+   {
+    "id": "0b77332577c67d38",
+    "source": "seed-research",
+    "title": "Seed STEM Fellows Program",
+    "url": "https://seed.bytedance.com/en/seedstem",
+    "published_at": "2026-07-24T02:03:20.665182Z",
+    "summary": "",
+    "category": "engineering",
+    "score": 1,
+    "score_reason": "人才招聘类项目，与AI应用工程无关",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "paper": [
+   {
+    "id": "db16e7af0aded23b",
+    "source": "hf-daily-papers",
+    "title": "Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking",
+    "url": "https://huggingface.co/papers/2607.19747",
+    "published_at": "2026-07-22T00:00:00Z",
+    "summary": "As large language models and AI agents become the primary consumers of search results, document set quality determines the upper bound of downstream generation. Yet existing evaluation systems remain confined to scoring documents independently and aggregating via nDCG, ignoring inter-document interactions (redundancy, conflict, complementarity) and unable to answer what makes one document set better than another. To address these issues, we propose a complete evaluate-diagnose-optimize framework. We design SetwiseEvalKit, a three-level, nine-dimension document set evaluation benchmark covering both short-form and long-form scenarios, comprising approximately 28K high-quality evaluation rubrics. We systematically evaluate 12 rerankers: even the best method achieves no more than 45% coverage, cross-document coordination dimensions are universally weak, and no single method maintains top performance across both settings. Building on this, we propose Rubric4Setwise, a training-free method that converts rubric-based evaluation criteria into document set selection signals, achieving the best downstream generation performance with fewer documents and search rounds. It is the only method that maintains state-of-the-art results across both scenarios, validating the effectiveness of closing the loop from evaluation to optimization.",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "提出面向文档集质量的检索排序新范式，直接改进RAG/Agent检索质量，有工程参考价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 24
+    }
+   },
+   {
+    "id": "d1031b2dae29af3e",
+    "source": "hf-daily-papers",
+    "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
+    "url": "https://huggingface.co/papers/2607.19604",
+    "published_at": "2026-07-21T00:00:00Z",
+    "summary": "Injecting factual knowledge into large language models (LLMs) reliably and at scale remains an open challenge. Hypernetworks provide a promising solution to large-scale knowledge injection. Although hypernetworks are typically applied for test-time adaptation, we explore their use in train-time knowledge injection, where, given a large corpus of facts, we train a hypernetwork to generate a fixed LoRA adapter that, when inserted into the target model, enable the model to answer questions about those facts. In this work, we investigate whether hypernetworks can be used to perform train-time knowledge injection and how this ability varies with scale. The scaling behavior of hypernetworks remains largely unstudied. Our design decouples the hypernetwork's injection capacity from the target model's general capability, enabling, for the first time, a rigorous study of scaling laws for hypernetwork architectures. We characterize how loss, reasoning accuracy, and out-of-distribution (OOD) generalization vary with hypernetwork depth, width, and target network size. We construct a large-scale dataset, called MegaWikiQA, containing tens of millions of multi-hop question-answer examples across 39 domains constructed from examples in Wikidata5M. Our results reveal: (i) hypernetwork-based injection exhibits broadly predictive power law scaling along all architecture axes; and (ii) hypernetworks are capable of reliable OOD generalization at increasing scales, suggesting that hypernetwork pro",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "超网络知识注入的缩放律研究，HF 11 upvotes，对 LLM 知识更新工程有参考价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 11
+    }
+   },
+   {
+    "id": "396f9b41e2de0c23",
+    "source": "hf-daily-papers",
+    "title": "FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation",
+    "url": "https://huggingface.co/papers/2607.16190",
+    "published_at": "2026-07-17T00:00:00Z",
+    "summary": "Video Diffusion Transformers process long spatio-temporal sequences, making self-attention the main bottleneck in high-resolution video generation. Training-free sparse attention reduces this cost, but adaptive Top-p routing creates uneven per-head workloads under multi-GPU sequence parallelism. The resulting workload heterogeneity turns sparse attention into a rank-level straggler problem. We present , a training-free sparse-attention system that improves the distributed execution efficiency of adaptive sparse attention under multi-GPU sequence parallelism. uses Top-p routing, a Top-k safety floor, and video-aware block organization as the sparse-routing frontend, then repairs the materialized mask at runtime. Runtime Load Balancing migrates a small number of heavy heads via P2P communication to shorten the current critical path. Slack-Aware Sparse Augmentation fills residual non-critical-rank slack with additional high-value blocks, while overlap hides scheduling and migration overhead behind existing computation. On step-distilled Wan2.2 I2V, reduces average load imbalance from 1.34 to 1.08 and delivers a 4.41times attention speedup over FlashAttention, while achieving a 2.02--2.11times DiT inference speedup with competitive video quality.",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "视频生成自适应稀疏注意力负载均衡，直接解决生成模型推理瓶颈，有工程价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 4
+    }
+   },
+   {
+    "id": "cdae63199291fec5",
+    "source": "hf-daily-papers",
+    "title": "Trace: A Taxonomy-Guided Environment for Multidomain Visual Reasoning",
+    "url": "https://huggingface.co/papers/2607.19790",
+    "published_at": "2026-07-22T00:00:00Z",
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) has substantially improved language-model reasoning, yet its extension to vision-language models remains constrained by the lack of training data that are simultaneously broad, exactly verifiable, and reproducible. We introduce Trace, a taxonomy-guided environment for multidomain visual reasoning. Trace factorizes task construction into a scene grammar and an executable task program, separating visual realization from answer computation. A shared semantic state determines the rendered image, prompt, typed answer, verifier state, and replayable instance trace. The resulting environment comprises 1,000 tasks over 277 scene grammars and 11 visual domains, with controlled semantic and visual variation. RLVR on 64,000 Trace instances improves the macro-average across 24 external benchmarks by 3.51 percentage points for Qwen2.5-VL-3B and 4.06 points for Qwen2.5-VL-7B, providing evidence that broad procedural training can transfer beyond the generated task distributions. Project page: https://maveryn.github.io/trace/.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "多领域视觉推理的 RLVR 环境，对 VLM 推理训练有参考价值，但偏研究工具",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "09c1f53665ffb073",
+    "source": "hf-daily-papers",
+    "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+    "url": "https://huggingface.co/papers/2607.19691",
+    "published_at": "2026-07-22T00:00:00Z",
+    "summary": "Reinforcement learning with verifiable rewards has become the predominant recipe for eliciting test-time scaling in explicit Chain-of-Thought reasoners. Yet this scaling path remains computationally costly, since every intermediate step must be decoded as a language token. Latent reasoning instead carries intermediate computation as continuous vectors and already matches or surpasses explicit CoT at far shorter horizons. Despite this promise, latent reasoners remain largely imitation-bound, while explicit CoT has already moved past imitation via outcome-reward RL. Latent trajectories lack a tractable per-step likelihood and an adaptive stopping interface under fixed thinking budgets, so outcome rewards cannot elicit latent test-time scaling. We introduce Surrogate Latent Policy Optimization (SLPO) to bring outcome-reward RL to autoregressive latent reasoners: an empirical surrogate policy density over latent transitions for trajectory-level credit assignment, and a correctness-supervised stopping head that outcome-reward optimization refines into a variable-horizon policy. Across continuous and soft thinking settings, SLPO improves Pass@k under parallel sampling and allocates longer latent computation to harder instances with higher deterministic accuracy.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "提出替代显式CoT的潜在推理缩放方法，有潜力但尚处早期研究阶段",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "2f54a8c23b7770d2",
+    "source": "hf-daily-papers",
+    "title": "Moving Alphabet: A Controlled Study of Training Data for Text-to-Video Generation",
+    "url": "https://huggingface.co/papers/2607.18789",
+    "published_at": "2026-07-21T00:00:00Z",
+    "summary": "Text-to-video generation has advanced significantly over the past five years through scaling of model size, data, and compute. Unlike model architecture, training data is often underexplored. Real-world data curation is complex and non-trivial, involving clip selection from raw videos and captioning to create video-text pairs for learning text-to-video mappings. We study how data distribution and caption quality impact text-to-video models. To enable controlled experiments, we introduce Moving Alphabet, a procedural testbed that renders letters with varying fonts, colors, sizes, and positions, moving in different directions and speeds against a black background. This design allows precise control over data distribution and caption quality by corrupting ground-truth metadata. Our experiments yield three findings: a) a diverse and balanced distribution of video content and duration is critical for generalization; b) caption quality significantly affects both model performance and training efficiency, suggesting that text-to-video models are bounded by video understanding capabilities; and c) classifier-free guidance and fine-tuning on high-quality data provide partial recovery from models trained on corrupted captions, but cannot fully compensate for poor pre-training data. We believe these insights can inform the development of large-scale text-to-video models, and we advocate for greater attention to the science of pre-training data.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "文生视频训练数据的受控研究，对理解数据分布影响有参考价值，但非直接工程方法",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 0
+    }
+   },
+   {
+    "id": "8b24b71901c379d9",
+    "source": "hf-daily-papers",
+    "title": "An Exam for Active Observers",
+    "url": "https://huggingface.co/papers/2607.16165",
+    "published_at": "2026-07-17T00:00:00Z",
+    "summary": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot. Decades of psychophysics and cognitive science have argued that this active observation is essential for a wide range of tasks. Whether today's multimodal large language models (MLLMs) exercise active observation is an empirical question that current vision-language benchmarks do not answer. We introduce ActiveVision, a benchmark that makes active observation measurable for MLLMs, comprising 17 tasks across 3 categories. Tasks are designed to force repeated visual perception rather than a single static description. Frontier MLLMs collapse on ActiveVision: the highest-scoring model we evaluate, GPT-5.5 at the highest exposed reasoning-effort tier, solves only 10.6% of items and scores zero on 11 of the 17 tasks, and even Claude Fable 5, despite topping most reasoning and coding leaderboards, solves just 3.5%, far behind three human participants who average 96.1%. Furthermore, much of the gap persists even when models write and run their own vision code: such code is unreliable on realistic imagery, and catching its failures itself requires the active perception the models lack. Together, these results indicate that current MLLMs lack robust active visual observation, motivating architectures and training objectives that close the perception-reasoning loop.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "MLLM 主动观察能力评测，HF 20 upvotes 热度高，但偏评估框架而非工程方法",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 20
+    }
+   },
+   {
+    "id": "cc43f4d4b9db74be",
+    "source": "hf-daily-papers",
+    "title": "Beyond Euclidean Clipping: Overcoming Exploration Collapse in LLM RL via Riemannian Isometric Policy Optimization",
+    "url": "https://huggingface.co/papers/2607.10169",
+    "published_at": "2026-07-11T00:00:00Z",
+    "summary": "Reinforcement learning (RL) has become a dominant paradigm for enhancing LLMs' reasoning capabilities. However, RL algorithms with PPO-Clip are inherently limited by exploration collapse. Subsequent works remain primarily heuristic and fail to identify the essential cause of PPO-Clip's failure. This work reveals the fundamental flaw of PPO-Clip: it implicitly measures policy discrepancy using Euclidean metric, which is theoretically inconsistent with the intrinsic geometry on the policy Riemannian manifold. This geometric mismatch results in overly conservative updates in low-probability regions while aggressive in high-probability regions, ultimately collapsing exploration. To correct this geometric flaw, we propose Riemannian Isometric Policy Optimization (RIPO), which guarantees isometric policy updates on the Riemannian manifold, effectively balancing exploration and exploitation. We further show that RIPO achieves a favorable bias-variance trade-off, which stabilizes optimization. Extensive experiments demonstrate that RIPO significantly surpasses existing LLM RL algorithms across seven competition-level benchmarks (up to 60% improvement over GRPO on AIME24).",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "揭示了PPO-Clip的探索崩溃根本原因并提出黎曼等距策略优化，理论贡献扎实但距离直接应用工程实践较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 9
+    }
+   },
+   {
+    "id": "2c8288134a5f4aae",
+    "source": "hf-daily-papers",
+    "title": "Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers",
+    "url": "https://huggingface.co/papers/2607.21594",
+    "published_at": "2026-07-23T00:00:00Z",
+    "summary": "Multi-agent interactive world models should not only generate consistent observations, but also maintain world states that persist across agents and evolve across views. Existing autoregressive video diffusion pipelines carry forward observation history as conditioning context, which makes shared state difficult to maintain in multi-agent and multi-view settings. We present WorldWeaver (W^2), a streaming multi-agent video diffusion model that augments rollout with cross-agent world state registers: learnable tokens that store shared world information, track individual agent status, and are dynamically updated after each generated chunk. We ground these registers with supervision signals spanning individual agent status, global state views including bird's-eye views, and scene text. We further improve the architecture with a Mixture-of-Transformers design that uses separate weights for world state modeling and visual frame modeling. Extensive experiments in two-agent Minecraft video generation show that explicit world-state modeling improves logical consistency and generation quality.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "多智能体自回归扩散世界模型，方向有趣但偏研究早期，与应用工程距离较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 0
+    }
+   },
+   {
+    "id": "9dd4a2e4a71f2b2a",
+    "source": "hf-daily-papers",
+    "title": "Train the Model, Not the Reader: Decodability Supervision for Verifiable Activation Explanations",
+    "url": "https://huggingface.co/papers/2607.20379",
+    "published_at": "2026-07-22T00:00:00Z",
+    "summary": "Natural-language autoencoders score explanations of hidden activations by reconstruction: an explanation is deemed faithful if the activation can be regenerated from it. The test is structurally insensitive to individual false claims: if flipping a claim does not change the reconstruction, the claim is never penalized. We show the test is passed in two ways, neither faithful. On a released Qwen-2.5-7B verbalizer, explanations reconstruct well above chance while ~2% of specific claims are reconstruction-dependent, so the score tracks gist, not specific facts. Under exact synthetic ground truth, the standard recipe develops co-adapted private codes (false wording the reconstruction depends on) in 5/5 runs, and fixes that leave the target model unchanged do not help. We contribute two audit protocols, the grounded-vs-true cross and the evaluator swap, and RECAP (Readable Encodings via Co-trained Auxiliary Predictors): linear heads trained alongside the target model to keep designated content decodable. On RECAP-trained sandbox models, fresh verbalizers state the designated content truly and the codes vanish, at a +0.001-nat cost. This replicates on a pretrained Pythia-160M: the content becomes reliably probe-decodable, though a fresh verbalizer conveys it only in part (truth 0.44-0.46 vs a near-zero control). For interpretability, high reconstruction does not certify individual claims. For AI safety, RECAP makes designated internal content independently checkable against probes ",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "激活解释的可解码性监督，可解释性方向，与应用工程距离较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "c2eb5deb511c8f82",
+    "source": "hf-daily-papers",
+    "title": "Self Gradient Forcing: Native Long Video Extrapolation",
+    "url": "https://huggingface.co/papers/2607.20368",
+    "published_at": "2026-07-22T00:00:00Z",
+    "summary": "Recent autoregressive video diffusion methods are increasingly built upon Self Forcing, where the student is trained on histories produced by its own rollout rather than ground-truth video contexts. This reduces exposure bias, but the historical key-value cache is still used by future frames only as frozen rollout state. As a result, future losses cannot supervise how earlier generated latents should be written into more useful keys and values for later video-latent generation. We call this the historical context-gradient gap. We propose Self Gradient Forcing (SGF), a two-pass training strategy that restores this missing supervision signal without backpropagating through the full serial rollout. Pass 1 performs a no-gradient autoregressive rollout matching inference and, at a sampled denoising exit step, records both the self-generated context and the noisy latents fed to the model. Pass 2 performs parallel context-gradient reconstruction for the recorded exit step. The generated context is used as stop-gradient clean-latent input, while the model recomputes the context KV representations and future-to-context causal attention. Thus, SGF provides the missing memory-writing supervision within the native autoregressive training objective, using losses on future video latents to train the model to encode context into more effective causal memory. Across extensive long-horizon frame-wise and chunk-wise experiments under different initializations, SGF achieves stronger native long",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "提出自梯度强制改进长视频外推，对视频生成领域有价值但非通用AI应用工程方法",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 29
+    }
+   },
+   {
+    "id": "31f2a4b6980dfa6c",
+    "source": "hf-daily-papers",
+    "title": "Differentiable Logic Gate Networks for Low-Latency EEG Classification on Edge Devices",
+    "url": "https://huggingface.co/papers/2607.18149",
+    "published_at": "2026-07-20T00:00:00Z",
+    "summary": "Real-time EEG classification on edge devices is bottlenecked by the floating-point arithmetic of conventional neural networks. We investigated Differentiable Logic Gate Networks (Diff-Logic) as a hardware-native alternative that compiles models into pure Boolean circuits executable via bitwise CPU operations. Through rigorous iso-parameter experiments across four EEG datasets spanning two classification tasks, binary dementia detection and 3-class emotion recognition, we compared Diff-Logic against matched-capacity Multi-Layer Perceptron (MLP) and Binarized Neural Network (BNN) baselines at four complexity tiers (50k-500k parameters). On dementia screening, Diff-Logic achieved 80.2% Macro F1, outperforming the MLP baseline by 6.8%. On emotion recognition, the MLP retained a moderate performance advantage but incurred a 2.3times higher latency and 14times larger model size when deployed on a power-constrained (7W) Nvidia Jetson Orin Nano CPU (Single-core). Critically, Diff-Logic inference time remained nearly constant across a 10times increase in model scale, achieving a peak speedup of 2.9times over MLPs at the largest complexity tier. Our results establish logic-based neural architectures as a practical paradigm for resource-constrained brain-computer interfaces, achieving competitive or superior performance while natively satisfying the latency and memory constraints of portable edge deployment. Code is available on GitHub: https://github.com/Shyamal-Dharia/eeg-difflogic",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "可微分逻辑门网络用于边缘 EEG 分类，特定领域方法，对通用 AI 应用工程参考价值有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "604ed9c209987b9a",
+    "source": "hf-daily-papers",
+    "title": "Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment",
+    "url": "https://huggingface.co/papers/2607.13429",
+    "published_at": "2026-07-15T00:00:00Z",
+    "summary": "Finetuning a pretrained vision-language model (VLM) on robot demonstrations via behavior cloning (BC) has become the standard recipe for vision-language-action (VLA) policies. However, BC finetuning progressively overwrites the pretrained representations that support visual and semantic generalization. Co-training on web image-text data, a common remedy, does not prevent this; it applies language and action losses to separate observations, leaving VLAs with language-action misalignment that standard manipulation benchmarks do not expose. We propose Anchor-Align, which augments BC with two objectives: Vision-Language Anchoring distills layer-wise representations from a frozen VLM copy to prevent this drift, while Language-Action Alignment converts each action target into a discrete motion-direction label and jointly trains language and action prediction on the same robot observation. On a physical xArm7 robot, across two widely used VLA architectures, Anchor-Align improves real-robot success on both (28% to 54% and 37% to 60%). At scale in simulation, we demonstrate consistent improvements on OOD perturbations, perceptual robustness, and long-horizon control across LIBERO-PRO, LIBERO-Plus, and CALVIN, respectively, suggesting that preserving pretrained representations and effective action learning are not fundamentally at odds. Project page: anchoralignvla.github.io",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "提出VLA微调中表示锚定与语言-动作对齐方法，解决机器人策略泛化问题但领域较窄",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 10
+    }
+   },
+   {
+    "id": "987a564f20653f59",
+    "source": "hf-daily-papers",
+    "title": "ENTRAP-VL: A Taxonomic Probe for Dual Contextual Entrainment in Vision-Language Models",
+    "url": "https://huggingface.co/papers/2607.20092",
+    "published_at": "2026-07-22T00:00:00Z",
+    "summary": "Contextual entrainment is the tendency of a model to let auxiliary context in its input pull its output, independently of whether that context is relevant, true, or even meaningful. Recently, it has been identified and given a mechanistic account in unimodal language models. Whether and how it manifests in vision-language models (VLMs) is, by contrast, largely unexamined, and the field lacks a purpose-built instrument with which to investigate it. We take the position that studying contextual entrainment in VLMs requires more than porting an existing text-only benchmark to the multimodal setting: it requires a taxonomically structured, dual-modality instrument whose conditions are constructed around the item at hand (the depicted image in the textual stream, the textual query in the visual stream). We argue that the move to VLMs is substantive rather than incremental. It makes entrainment a dual phenomenon, drivable independently by textual and by visual context, and it opens a veracity distinction (context that is false of the depicted scene yet possible in the world) that has no counterpart in the unimodal, world-knowledge-only formulation of prior work. To make this position concrete and actionable, we introduce ENTRAP-VL (ENTRainment Assessment Probe for Vision and Language), a manually curated dataset of 1,500 items across eight categories, organized by a taxonomy that spans two axes, i.e., the association of context with the item and its relationship to truth, and split",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "VLM 上下文牵引现象的探测研究，偏理论分析，对应用工程直接帮助不大",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "ae9cbe529daf91c1",
+    "source": "hf-daily-papers",
+    "title": "SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments",
+    "url": "https://huggingface.co/papers/2607.20207",
+    "published_at": "2026-07-22T00:00:00Z",
+    "summary": "Practical robotic grasping in complex scenes requires both 3D spatial reasoning and alignment with task-specific requirements. Vision-language models (VLMs) offer a natural way to specify these requirements using language, but existing approaches either use a VLM to predict the grasp directly with limited spatial awareness, or train the VLM together with the grasping model, which requires significantly more data and compute. These limitations impede performance and have prevented scaling to multiple embodiments in complex scenes. We address this by proposing SeededGrasp, a novel data-efficient framework that enables a VLM to predict a seed point to be used as conditioning for a subsequent lightweight grasp-generation model. Our architecture decouples high-level semantic reasoning from low-level geometric execution, enabling multi-embodiment support while bypassing the need for expensive end-to-end training. To enable training such models, we release the first multi-embodiment tabletop grasping dataset comprising over 2.5M grasps in cluttered scenes. Experimental results demonstrate that our approach outperforms existing baselines, achieving 72% success in simulation and 78% in real-world grasping experiments. See our project site for data and code: https://uoft-isl.github.io/seeded-grasp/",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "语言引导的机器人抓取方法，结合VLM但场景局限在机器人领域",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "6f8fab332f1d8174",
+    "source": "hf-daily-papers",
+    "title": "ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion",
+    "url": "https://huggingface.co/papers/2607.20417",
+    "published_at": "2026-07-22T00:00:00Z",
+    "summary": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions. However, this scene-adaptive capacity allocation is largely lost in existing feed-forward 3DGS methods, which commonly regress Gaussians at input pixels and lift them along camera rays. Such pixel-aligned formulations make the number and placement of primitives depend on image resolution and input viewpoints rather than scene complexity, resulting in dense and often redundant Gaussian sets. We present ATSplat, a feed-forward 3DGS framework that restores the adaptive allocation capability of 3DGS optimization through Adaptive 3D Tokens. ATSplat first lifts coarse patch-level depth and camera cues into sparse 3D anchor tokens, forming a compact scaffold of the scene. Each token is then regressed into local Gaussians with learnable 3D offsets, decoupling primitive placement from input image grids. An Adaptive Token Expansion module predicts a token-level uncertainty score, supervised by rendering error maps, and selectively expands high-uncertainty tokens through learnable expansion layers. This sparse-to-adaptive formulation enables ATSplat to concentrate primitives in challenging regions while maintaining a compact representation. Experiments on two representative datasets, RealEstate10K and DL3DV, show that ATSplat achieves state-of-the-art rendering quality while reducing the number of Gaussians by",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "前馈3D高斯泼溅的紧凑方法，属于3D视觉方向，与AI应用工程关联弱",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 4
+    }
+   },
+   {
+    "id": "a34eeef2da9501e8",
+    "source": "hf-daily-papers",
+    "title": "G-MAD: A Game-Based Data Generation Framework for Multi-View RGB-T Aerial Object Detection",
+    "url": "https://huggingface.co/papers/2607.19942",
+    "published_at": "2026-07-22T00:00:00Z",
+    "summary": "This work introduces G-MAD, an open-source framework that uses Arma3 to generate synchronized multi-view RGB-T data for aerial object detection. G-MAD addresses key limitations of real-world aerial dataset construction, including limited viewpoint control, imperfect RGB-T alignment and high annotation cost. The framework supports structured scenario specification, controllable multi-view camera placement, simultaneous visible/thermal capture, and automatic bounding box annotation using engine-level geometric metadata. These capabilities enable controlled studies of viewpoint variation, multi-modal fusion, and synthetic-to-real transfer in aerial object detection. Besides, using G-MAD, we construct and release AMOD, a new large-scale multi-view aerial RGB-T object detection benchmark. The source code and the dataset are available at https://unique-chan.github.io/G-MAD-Project.",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "基于游戏引擎生成多视角RGB-T航拍检测数据，领域过于垂直且与应用工程距离远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "8a14886370ccb64b",
+    "source": "hf-daily-papers",
+    "title": "SLAM in Low-Light Environments: Project Report",
+    "url": "https://huggingface.co/papers/2607.17699",
+    "published_at": "2026-07-20T00:00:00Z",
+    "summary": "Simultaneous localization and mapping (SLAM) is one of the fundamental problems in robotics, as it enables autonomous operations in real-world scenarios. Under low illumination, reduced contrast, sensor noise, and motion blur degrade both feature extraction and feature matching, while compensating with LiDAR, depth, or thermal sensors raises cost, power draw, and integration complexity. Existing benchmarks remain dominated by well-lit indoor or daylight sequences, leaving open how far SLAM with standard RGB cameras can be pushed in the dark. We benchmark six systems spanning the feature-based, direct, filter-based, and learning-based paradigms - ORB-SLAM3, DSO, Kimera-VIO, OpenVINS, DPVO, and DPV-SLAM - on five LaMARia sequences of varying difficulty and illumination, reporting absolute and relative pose error alongside control-point recall. Kimera-VIO is the only system to track all five sequences to completion, combining the lowest relative pose error with steadily growing absolute error due to the absence of loop closure; DPVO and DPV-SLAM never lose tracking but incur absolute errors of roughly 100 m under low light; and the classical monocular pipelines (ORB-SLAM3, DSO) together with the filter-based OpenVINS fail outright or diverge on most of the harder and low-light sequences. The results suggest that RGB-only SLAM maintains stable low-light tracking only when both inertial fusion and global optimization are present. Closing the remaining gap will likely require low-l",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "低光照 SLAM 项目报告，机器人领域特定问题，与 AI 应用工程关联弱",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 0
+    }
+   }
+  ]
+ },
+ "unscored": []
+}

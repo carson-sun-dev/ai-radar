@@ -369,6 +369,15 @@
    "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
    "score": 8,
    "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
+  },
+  {
+   "id": "35c0257d1b804bbd",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "How We Benchmark Deep Agents",
+   "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
+   "score": 7,
+   "summary": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -917,6 +926,204 @@
    "url": "https://huggingface.co/papers/2607.18603",
    "score": 7,
    "summary": "AutoIndex 是一个学习文档表示程序的框架，这些程序是可执行的变换，能将原始文档映射为检索系统所使用的表示。与传统方法仅微调检索器或少量预处理超参数不同，它通过验证引导的程序搜索，让智能体诊断当前程序的失败并合成候选更新，仅保留能提升检索质量的修改。在固定使用 BM25 的 CRUMB 基准测试中，该方法在所有 8 项任务上均提升了召回率，平均 Recall@100 提升 8.4%，nDCG"
+  }
+ ],
+ "SLAI T-Rex": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "DeepSeek-V4": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "昇腾 NPU": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "SuperPOD": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "MoE": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "全参数后训练": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "专家并行": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "模型浮点运算利用率": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "GPT-5.4-Mini": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "DeepSeek-V4-Flash": [
+  {
+   "id": "81456436b66e35b5",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+   "url": "https://huggingface.co/papers/2607.20145",
+   "score": 8,
+   "summary": "SLAI T-Rex 是一项在华为昇腾 NPU SuperPOD 集群上，对 DeepSeek-V4 系列万亿参数级混合专家模型进行全参数后训练的系统工程实践，并在此基础上构建了面向复杂运筹学任务的领域专用模型。\n\n这项工作解决的核心痛点是，万亿参数 MoE 模型的全参数后训练在大规模分布式系统中面临严峻挑战。MoE 模型虽然通过稀疏激活降低了单次推理的计算量，但其庞大的总参数量导致全参数训练时显"
+  }
+ ],
+ "ICAE-Bench": [
+  {
+   "id": "10c6ecea14a55e86",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
+   "url": "https://huggingface.co/papers/2607.21217",
+   "score": 8,
+   "summary": "ICAE-Bench 是一个专门用于评估编程智能体在交互式项目构建场景下表现的新基准。随着“vibe-coding”（氛围编程，指从模糊意图出发、通过多轮交互逐步构建软件的开发范式）的兴起，编程智能体的角色已从单纯根据完整指令补全代码，转变为将不完整的产品意图转化为可运行软件。ICAE-Bench 正是为了填补现有基准仍停留在静态、全指定任务评估这一空白而设计的。\n\n此前，评估编程智能体的痛点在于"
+  }
+ ],
+ "vibe-coding": [
+  {
+   "id": "10c6ecea14a55e86",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
+   "url": "https://huggingface.co/papers/2607.21217",
+   "score": 8,
+   "summary": "ICAE-Bench 是一个专门用于评估编程智能体在交互式项目构建场景下表现的新基准。随着“vibe-coding”（氛围编程，指从模糊意图出发、通过多轮交互逐步构建软件的开发范式）的兴起，编程智能体的角色已从单纯根据完整指令补全代码，转变为将不完整的产品意图转化为可运行软件。ICAE-Bench 正是为了填补现有基准仍停留在静态、全指定任务评估这一空白而设计的。\n\n此前，评估编程智能体的痛点在于"
+  }
+ ],
+ "用户智能体数据": [
+  {
+   "id": "10c6ecea14a55e86",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
+   "url": "https://huggingface.co/papers/2607.21217",
+   "score": 8,
+   "summary": "ICAE-Bench 是一个专门用于评估编程智能体在交互式项目构建场景下表现的新基准。随着“vibe-coding”（氛围编程，指从模糊意图出发、通过多轮交互逐步构建软件的开发范式）的兴起，编程智能体的角色已从单纯根据完整指令补全代码，转变为将不完整的产品意图转化为可运行软件。ICAE-Bench 正是为了填补现有基准仍停留在静态、全指定任务评估这一空白而设计的。\n\n此前，评估编程智能体的痛点在于"
+  }
+ ],
+ "Harbor": [
+  {
+   "id": "35c0257d1b804bbd",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "How We Benchmark Deep Agents",
+   "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
+   "score": 7,
+   "summary": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。"
+  }
+ ],
+ "深度智能体": [
+  {
+   "id": "35c0257d1b804bbd",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "How We Benchmark Deep Agents",
+   "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
+   "score": 7,
+   "summary": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。"
+  }
+ ],
+ "Deep Agents": [
+  {
+   "id": "35c0257d1b804bbd",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "How We Benchmark Deep Agents",
+   "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
+   "score": 7,
+   "summary": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。"
+  }
+ ],
+ "基准测试": [
+  {
+   "id": "35c0257d1b804bbd",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "How We Benchmark Deep Agents",
+   "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
+   "score": 7,
+   "summary": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。"
+  }
+ ],
+ "统一评估框架": [
+  {
+   "id": "35c0257d1b804bbd",
+   "date": "2026-07-24",
+   "run_type": "midweek",
+   "title": "How We Benchmark Deep Agents",
+   "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
+   "score": 7,
+   "summary": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。"
   }
  ]
 }
