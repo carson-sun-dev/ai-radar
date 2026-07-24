@@ -1,7 +1,7 @@
 """P6 测试：实体索引的幂等与历史查询、周报选题/渲染/两段解析、周报流水线端到端。"""
 
 import json
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 
 from src.llm.client import ArkClient
 from src.llm.settings import Settings
@@ -130,9 +130,14 @@ def test_weekly_graph_end_to_end(tmp_path, monkeypatch):
     # PDF 渲染在投递节点会跑 weasyprint（重系统依赖），端到端测里替身掉——
     # PDF 真实性由 test_delivery + CI 线上验收覆盖，这里只测图的接线
     monkeypatch.setattr("src.pipeline.weekly.render_pdf", lambda md, base_url=None: b"%PDF")
-    month = tmp_path / "reports" / "2026-07"
-    month.mkdir(parents=True)
-    for date, n0 in (("2026-07-17", 0), ("2026-07-19", 10)):
+    # 周中报日期相对「今天」生成，不能写死：load 节点按真实 now 的 7 天窗口找报告，
+    # 写死日期会随真实时间推移滑出窗口（时间炸弹）。用当周二/五相对周日的位置（-5/-2 天），
+    # 任何一天跑都稳落在窗口内。
+    today = datetime.now(UTC)
+    d_early = (today - timedelta(days=5)).strftime("%Y-%m-%d")
+    d_late = (today - timedelta(days=2)).strftime("%Y-%m-%d")
+    reports = tmp_path / "reports"
+    for date, n0 in ((d_early, 0), (d_late, 10)):
         payload = {
             "meta": _meta(date).model_dump(mode="json"),
             "deep": [_item(n0 + 1, 9).model_dump(mode="json")],
@@ -140,27 +145,28 @@ def test_weekly_graph_end_to_end(tmp_path, monkeypatch):
             "glance": {"model": [_item(n0 + 3, 6).model_dump(mode="json")]},
             "unscored": [],
         }
+        month = reports / date[:7]  # 相对日期可能跨月，按各自 YYYY-MM 落目录
+        month.mkdir(parents=True, exist_ok=True)
         (month / f"midweek-{date}.json").write_text(
             json.dumps(payload, ensure_ascii=False), encoding="utf-8"
         )
     index_path = tmp_path / "index.json"
     old = _item(1, 8)  # 与 Top5 之一同实体（实体1），date 在本周前 → 应进历史材料
-    update_index(_meta("2026-07-10"), [old], index_path)
+    hist_date = (today - timedelta(days=12)).strftime("%Y-%m-%d")  # 早于窗口起点
+    update_index(_meta(hist_date), [old], index_path)
 
     fake = FakeOpenAI([_chat_response("【趋势】本周趋势正文。\n【面试视角】面试谈点正文。")])
     ctx = WeeklyContext(
         client=ArkClient(settings=Settings(ark_api_key="k"), client=fake),
-        reports_dir=tmp_path / "reports",
+        reports_dir=reports,
         index_path=index_path,
         mail=MailConfig(host="", port=465, user="", password="", sender="", recipient=""),
     )
     result = build_weekly_graph(ctx).invoke({})
 
-    md = (tmp_path / "reports").joinpath(*result["report_path"].split("/")[-2:]).read_text(
-        encoding="utf-8"
-    )
+    md = reports.joinpath(*result["report_path"].split("/")[-2:]).read_text(encoding="utf-8")
     assert "本周趋势正文" in md and "面试谈点正文" in md
-    assert "周中报 2026-07-17" in md
+    assert f"周中报 {d_early}" in md
     # 历史关联进了生成 prompt（演进关系的原料）
     assert "实体历史" in fake.calls[0]["messages"][1]["content"]
     # 综合生成开 thinking（一周归纳比单篇分析吃推理）
