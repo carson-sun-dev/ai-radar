@@ -134,8 +134,11 @@ def test_weekly_graph_end_to_end(tmp_path, monkeypatch):
     # 写死日期会随真实时间推移滑出窗口（时间炸弹）。用当周二/五相对周日的位置（-5/-2 天），
     # 任何一天跑都稳落在窗口内。
     today = datetime.now(UTC)
-    d_early = (today - timedelta(days=5)).strftime("%Y-%m-%d")
-    d_late = (today - timedelta(days=2)).strftime("%Y-%m-%d")
+
+    def days_ago(n: int) -> str:
+        return (today - timedelta(days=n)).strftime("%Y-%m-%d")
+
+    d_early, d_late = days_ago(5), days_ago(2)
     reports = tmp_path / "reports"
     for date, n0 in ((d_early, 0), (d_late, 10)):
         payload = {
@@ -152,7 +155,7 @@ def test_weekly_graph_end_to_end(tmp_path, monkeypatch):
         )
     index_path = tmp_path / "index.json"
     old = _item(1, 8)  # 与 Top5 之一同实体（实体1），date 在本周前 → 应进历史材料
-    hist_date = (today - timedelta(days=12)).strftime("%Y-%m-%d")  # 早于窗口起点
+    hist_date = days_ago(12)  # 早于窗口起点
     update_index(_meta(hist_date), [old], index_path)
 
     fake = FakeOpenAI([_chat_response("【趋势】本周趋势正文。\n【面试视角】面试谈点正文。")])
