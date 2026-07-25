@@ -41,6 +41,19 @@ def _meta(date: str, run_type: RunType = RunType.MIDWEEK) -> ReportMeta:
     return ReportMeta(date=date, run_type=run_type, description="d")
 
 
+def _freeze_now(instant: datetime) -> type[datetime]:
+    """返回 datetime 子类，now() 恒返回 instant——冻结被测模块的时钟。
+    周报图的 load/generate/render 节点都读 datetime.now(UTC) 定位窗口与报告日期，
+    冻结后测试完全脱离真实墙钟（否则 fixture 日期与真实 now 会随时间错位）。"""
+
+    class _Frozen(datetime):
+        @classmethod
+        def now(cls, tz=None):  # noqa: ARG003 — 冻结值已是 UTC，忽略 tz
+            return instant
+
+    return _Frozen
+
+
 class TestIndex:
     def test_update_is_idempotent_and_lookup_respects_date(self, tmp_path):
         path = tmp_path / "index.json"
@@ -130,15 +143,15 @@ def test_weekly_graph_end_to_end(tmp_path, monkeypatch):
     # PDF 渲染在投递节点会跑 weasyprint（重系统依赖），端到端测里替身掉——
     # PDF 真实性由 test_delivery + CI 线上验收覆盖，这里只测图的接线
     monkeypatch.setattr("src.pipeline.weekly.render_pdf", lambda md, base_url=None: b"%PDF")
-    # 周中报日期相对「今天」生成，不能写死：load 节点按真实 now 的 7 天窗口找报告，
-    # 写死日期会随真实时间推移滑出窗口（时间炸弹）。用当周二/五相对周日的位置（-5/-2 天），
-    # 任何一天跑都稳落在窗口内。
-    today = datetime.now(UTC)
+    # 冻结周报图读的时钟到某个固定周日（周报运行日）：fixture 与 7 天窗口共用同一「今天」，
+    # 测试完全确定、不看真实墙钟。周中报是当周二/五（相对周日 -5/-2 天）。
+    now = datetime(2026, 7, 26, tzinfo=UTC)  # 周日
+    monkeypatch.setattr("src.pipeline.weekly.datetime", _freeze_now(now))
 
     def days_ago(n: int) -> str:
-        return (today - timedelta(days=n)).strftime("%Y-%m-%d")
+        return (now - timedelta(days=n)).strftime("%Y-%m-%d")
 
-    d_early, d_late = days_ago(5), days_ago(2)
+    d_early, d_late = days_ago(5), days_ago(2)  # 周二 / 周五
     reports = tmp_path / "reports"
     for date, n0 in ((d_early, 0), (d_late, 10)):
         payload = {
@@ -148,7 +161,7 @@ def test_weekly_graph_end_to_end(tmp_path, monkeypatch):
             "glance": {"model": [_item(n0 + 3, 6).model_dump(mode="json")]},
             "unscored": [],
         }
-        month = reports / date[:7]  # 相对日期可能跨月，按各自 YYYY-MM 落目录
+        month = reports / date[:7]  # 与生产一致：报告按 YYYY-MM 分目录
         month.mkdir(parents=True, exist_ok=True)
         (month / f"midweek-{date}.json").write_text(
             json.dumps(payload, ensure_ascii=False), encoding="utf-8"
