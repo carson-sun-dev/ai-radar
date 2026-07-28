@@ -1125,5 +1125,379 @@
    "score": 7,
    "summary": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。"
   }
+ ],
+ "Claude Opus 5": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "Anthropic": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "Fable 5": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "Opus 4.8": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "Claude Max": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "Claude Pro": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "effort setting": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "Zapier AutomationBench": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "Frontier-Bench": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "ARC-AGI 3": [
+  {
+   "id": "c34a327604b5be4a",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "score": 9,
+   "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  }
+ ],
+ "OpenForgeRL": [
+  {
+   "id": "cd258d1d6bc6cb14",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+   "url": "https://huggingface.co/papers/2607.21557",
+   "score": 8,
+   "summary": "OpenForgeRL 是一个开源框架，专门用来端到端地训练那些运行在复杂推理脚手架（inference harness）上的 AI 智能体。所谓推理脚手架，就是像 Claude Code、Codex 或 OpenClaw 这类系统，它们负责驱动智能体的多轮推理、工具调用以及与外部环境的交互。OpenForgeRL 的核心价值在于，它让研究人员能够直接在这些真实部署环境中训练和优化智能体，而不需要"
+  }
+ ],
+ "Claude Code": [
+  {
+   "id": "cd258d1d6bc6cb14",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+   "url": "https://huggingface.co/papers/2607.21557",
+   "score": 8,
+   "summary": "OpenForgeRL 是一个开源框架，专门用来端到端地训练那些运行在复杂推理脚手架（inference harness）上的 AI 智能体。所谓推理脚手架，就是像 Claude Code、Codex 或 OpenClaw 这类系统，它们负责驱动智能体的多轮推理、工具调用以及与外部环境的交互。OpenForgeRL 的核心价值在于，它让研究人员能够直接在这些真实部署环境中训练和优化智能体，而不需要"
+  }
+ ],
+ "Codex": [
+  {
+   "id": "cd258d1d6bc6cb14",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+   "url": "https://huggingface.co/papers/2607.21557",
+   "score": 8,
+   "summary": "OpenForgeRL 是一个开源框架，专门用来端到端地训练那些运行在复杂推理脚手架（inference harness）上的 AI 智能体。所谓推理脚手架，就是像 Claude Code、Codex 或 OpenClaw 这类系统，它们负责驱动智能体的多轮推理、工具调用以及与外部环境的交互。OpenForgeRL 的核心价值在于，它让研究人员能够直接在这些真实部署环境中训练和优化智能体，而不需要"
+  }
+ ],
+ "OpenClaw": [
+  {
+   "id": "cd258d1d6bc6cb14",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+   "url": "https://huggingface.co/papers/2607.21557",
+   "score": 8,
+   "summary": "OpenForgeRL 是一个开源框架，专门用来端到端地训练那些运行在复杂推理脚手架（inference harness）上的 AI 智能体。所谓推理脚手架，就是像 Claude Code、Codex 或 OpenClaw 这类系统，它们负责驱动智能体的多轮推理、工具调用以及与外部环境的交互。OpenForgeRL 的核心价值在于，它让研究人员能够直接在这些真实部署环境中训练和优化智能体，而不需要"
+  }
+ ],
+ "Kubernetes": [
+  {
+   "id": "cd258d1d6bc6cb14",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+   "url": "https://huggingface.co/papers/2607.21557",
+   "score": 8,
+   "summary": "OpenForgeRL 是一个开源框架，专门用来端到端地训练那些运行在复杂推理脚手架（inference harness）上的 AI 智能体。所谓推理脚手架，就是像 Claude Code、Codex 或 OpenClaw 这类系统，它们负责驱动智能体的多轮推理、工具调用以及与外部环境的交互。OpenForgeRL 的核心价值在于，它让研究人员能够直接在这些真实部署环境中训练和优化智能体，而不需要"
+  }
+ ],
+ "ConsistencyGate": [
+  {
+   "id": "eb3c4aa35bd7d2b9",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "ConsistencyGate: Preventing Memory Contamination in LLM Agents via Self-Consistency Admission Control",
+   "url": "https://arxiv.org/abs/2607.22962v1",
+   "score": 8,
+   "summary": "这是一篇关于大语言模型智能体记忆管理的新研究，提出了一种名为ConsistencyGate的写入时准入控制机制，旨在防止虚假信息在长期对话中持续污染智能体的外部记忆。\n\n该研究解决的核心痛点是“记忆污染”问题。在多轮交互的LLM智能体中，系统会将对话中提取的事实存入外部记忆，供后续推理使用。但若某一步写入了一条幻觉事实，这条错误信息就会作为前提持续影响所有后续步骤，导致错误不断累积和放大。现有的记"
+  }
+ ],
+ "LLM Agent 记忆管理": [
+  {
+   "id": "eb3c4aa35bd7d2b9",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "ConsistencyGate: Preventing Memory Contamination in LLM Agents via Self-Consistency Admission Control",
+   "url": "https://arxiv.org/abs/2607.22962v1",
+   "score": 8,
+   "summary": "这是一篇关于大语言模型智能体记忆管理的新研究，提出了一种名为ConsistencyGate的写入时准入控制机制，旨在防止虚假信息在长期对话中持续污染智能体的外部记忆。\n\n该研究解决的核心痛点是“记忆污染”问题。在多轮交互的LLM智能体中，系统会将对话中提取的事实存入外部记忆，供后续推理使用。但若某一步写入了一条幻觉事实，这条错误信息就会作为前提持续影响所有后续步骤，导致错误不断累积和放大。现有的记"
+  }
+ ],
+ "写入时准入控制机制": [
+  {
+   "id": "eb3c4aa35bd7d2b9",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "ConsistencyGate: Preventing Memory Contamination in LLM Agents via Self-Consistency Admission Control",
+   "url": "https://arxiv.org/abs/2607.22962v1",
+   "score": 8,
+   "summary": "这是一篇关于大语言模型智能体记忆管理的新研究，提出了一种名为ConsistencyGate的写入时准入控制机制，旨在防止虚假信息在长期对话中持续污染智能体的外部记忆。\n\n该研究解决的核心痛点是“记忆污染”问题。在多轮交互的LLM智能体中，系统会将对话中提取的事实存入外部记忆，供后续推理使用。但若某一步写入了一条幻觉事实，这条错误信息就会作为前提持续影响所有后续步骤，导致错误不断累积和放大。现有的记"
+  }
+ ],
+ "自洽性校验": [
+  {
+   "id": "eb3c4aa35bd7d2b9",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "ConsistencyGate: Preventing Memory Contamination in LLM Agents via Self-Consistency Admission Control",
+   "url": "https://arxiv.org/abs/2607.22962v1",
+   "score": 8,
+   "summary": "这是一篇关于大语言模型智能体记忆管理的新研究，提出了一种名为ConsistencyGate的写入时准入控制机制，旨在防止虚假信息在长期对话中持续污染智能体的外部记忆。\n\n该研究解决的核心痛点是“记忆污染”问题。在多轮交互的LLM智能体中，系统会将对话中提取的事实存入外部记忆，供后续推理使用。但若某一步写入了一条幻觉事实，这条错误信息就会作为前提持续影响所有后续步骤，导致错误不断累积和放大。现有的记"
+  }
+ ],
+ "记忆污染": [
+  {
+   "id": "eb3c4aa35bd7d2b9",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "ConsistencyGate: Preventing Memory Contamination in LLM Agents via Self-Consistency Admission Control",
+   "url": "https://arxiv.org/abs/2607.22962v1",
+   "score": 8,
+   "summary": "这是一篇关于大语言模型智能体记忆管理的新研究，提出了一种名为ConsistencyGate的写入时准入控制机制，旨在防止虚假信息在长期对话中持续污染智能体的外部记忆。\n\n该研究解决的核心痛点是“记忆污染”问题。在多轮交互的LLM智能体中，系统会将对话中提取的事实存入外部记忆，供后续推理使用。但若某一步写入了一条幻觉事实，这条错误信息就会作为前提持续影响所有后续步骤，导致错误不断累积和放大。现有的记"
+  }
+ ],
+ "MoonshotAI": [
+  {
+   "id": "f9fc9369b145f749",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "新仓库 MoonshotAI/Kimi-K3",
+   "url": "https://github.com/MoonshotAI/Kimi-K3",
+   "score": 8,
+   "summary": "MoonshotAI 发布了新仓库 Kimi-K3，这是一个由 Open Frontier Intelligence 推出的项目。目前公开信息有限，仅知其为新发布的代码库，具体功能与技术细节尚未披露。值得关注的是，这可能是月之暗面在开源方向的新动作，后续动态值得持续跟踪。"
+  }
+ ],
+ "Kimi-K3": [
+  {
+   "id": "f9fc9369b145f749",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "新仓库 MoonshotAI/Kimi-K3",
+   "url": "https://github.com/MoonshotAI/Kimi-K3",
+   "score": 8,
+   "summary": "MoonshotAI 发布了新仓库 Kimi-K3，这是一个由 Open Frontier Intelligence 推出的项目。目前公开信息有限，仅知其为新发布的代码库，具体功能与技术细节尚未披露。值得关注的是，这可能是月之暗面在开源方向的新动作，后续动态值得持续跟踪。"
+  }
+ ],
+ "Open Frontier Intelligence": [
+  {
+   "id": "f9fc9369b145f749",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "新仓库 MoonshotAI/Kimi-K3",
+   "url": "https://github.com/MoonshotAI/Kimi-K3",
+   "score": 8,
+   "summary": "MoonshotAI 发布了新仓库 Kimi-K3，这是一个由 Open Frontier Intelligence 推出的项目。目前公开信息有限，仅知其为新发布的代码库，具体功能与技术细节尚未披露。值得关注的是，这可能是月之暗面在开源方向的新动作，后续动态值得持续跟踪。"
+  }
+ ],
+ "Molt": [
+  {
+   "id": "ef1fd47256bc9fb7",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning",
+   "url": "https://huggingface.co/papers/2607.21653",
+   "score": 8,
+   "summary": "Molt 是一个 PyTorch 原生的智能体强化学习训练框架，旨在降低算法修改的迭代成本。其核心变化在于将智能体视为普通程序，通过单一异步循环训练多模态与混合专家策略，并严格保证训练所用 token 均由当前策略生成，从而在 token、策略版本和模型语义上保持一致。该框架代码紧凑简洁，便于研究人员整体理解，也适合 AI 编程助手完整阅读与推理。值得关注的是，在匹配的完全异步协议下，其统计性能与"
+  }
+ ],
+ "PyTorch": [
+  {
+   "id": "ef1fd47256bc9fb7",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning",
+   "url": "https://huggingface.co/papers/2607.21653",
+   "score": 8,
+   "summary": "Molt 是一个 PyTorch 原生的智能体强化学习训练框架，旨在降低算法修改的迭代成本。其核心变化在于将智能体视为普通程序，通过单一异步循环训练多模态与混合专家策略，并严格保证训练所用 token 均由当前策略生成，从而在 token、策略版本和模型语义上保持一致。该框架代码紧凑简洁，便于研究人员整体理解，也适合 AI 编程助手完整阅读与推理。值得关注的是，在匹配的完全异步协议下，其统计性能与"
+  }
+ ],
+ "智能体强化学习训练框架": [
+  {
+   "id": "ef1fd47256bc9fb7",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning",
+   "url": "https://huggingface.co/papers/2607.21653",
+   "score": 8,
+   "summary": "Molt 是一个 PyTorch 原生的智能体强化学习训练框架，旨在降低算法修改的迭代成本。其核心变化在于将智能体视为普通程序，通过单一异步循环训练多模态与混合专家策略，并严格保证训练所用 token 均由当前策略生成，从而在 token、策略版本和模型语义上保持一致。该框架代码紧凑简洁，便于研究人员整体理解，也适合 AI 编程助手完整阅读与推理。值得关注的是，在匹配的完全异步协议下，其统计性能与"
+  }
+ ],
+ "Megatron": [
+  {
+   "id": "ef1fd47256bc9fb7",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning",
+   "url": "https://huggingface.co/papers/2607.21653",
+   "score": 8,
+   "summary": "Molt 是一个 PyTorch 原生的智能体强化学习训练框架，旨在降低算法修改的迭代成本。其核心变化在于将智能体视为普通程序，通过单一异步循环训练多模态与混合专家策略，并严格保证训练所用 token 均由当前策略生成，从而在 token、策略版本和模型语义上保持一致。该框架代码紧凑简洁，便于研究人员整体理解，也适合 AI 编程助手完整阅读与推理。值得关注的是，在匹配的完全异步协议下，其统计性能与"
+  }
+ ],
+ "Ground Truth First": [
+  {
+   "id": "0d9d322929f9c115",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Ground Truth First: A Longitudinal Evaluation Instrument for Agent Memory, and the Tenure Crossover in Memory-Architecture Rankings",
+   "url": "https://arxiv.org/abs/2607.21962v1",
+   "score": 8,
+   "summary": "这是来自一篇论文的研究，它提出了一种全新的智能体记忆评估方法，核心变化在于颠覆了传统“先生成对话再提取答案”的流程，改为先由脚本播种带有有效期、易变性等属性的“事实”，再据此生成对话，从而从源头保证了评估答案的绝对准确性。该方法构建了一个包含约380个问题的合成语料库，并嵌入了事实有效期、信源信任度等现有基准测试所缺失的关键特征。研究最值得关注的是发现了一个“任期交叉”现象：随着对话历史从三周延长"
+  }
+ ],
+ "智能体记忆评估": [
+  {
+   "id": "0d9d322929f9c115",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Ground Truth First: A Longitudinal Evaluation Instrument for Agent Memory, and the Tenure Crossover in Memory-Architecture Rankings",
+   "url": "https://arxiv.org/abs/2607.21962v1",
+   "score": 8,
+   "summary": "这是来自一篇论文的研究，它提出了一种全新的智能体记忆评估方法，核心变化在于颠覆了传统“先生成对话再提取答案”的流程，改为先由脚本播种带有有效期、易变性等属性的“事实”，再据此生成对话，从而从源头保证了评估答案的绝对准确性。该方法构建了一个包含约380个问题的合成语料库，并嵌入了事实有效期、信源信任度等现有基准测试所缺失的关键特征。研究最值得关注的是发现了一个“任期交叉”现象：随着对话历史从三周延长"
+  }
+ ],
+ "任期交叉": [
+  {
+   "id": "0d9d322929f9c115",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Ground Truth First: A Longitudinal Evaluation Instrument for Agent Memory, and the Tenure Crossover in Memory-Architecture Rankings",
+   "url": "https://arxiv.org/abs/2607.21962v1",
+   "score": 8,
+   "summary": "这是来自一篇论文的研究，它提出了一种全新的智能体记忆评估方法，核心变化在于颠覆了传统“先生成对话再提取答案”的流程，改为先由脚本播种带有有效期、易变性等属性的“事实”，再据此生成对话，从而从源头保证了评估答案的绝对准确性。该方法构建了一个包含约380个问题的合成语料库，并嵌入了事实有效期、信源信任度等现有基准测试所缺失的关键特征。研究最值得关注的是发现了一个“任期交叉”现象：随着对话历史从三周延长"
+  }
+ ],
+ "Tenure Crossover": [
+  {
+   "id": "0d9d322929f9c115",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Ground Truth First: A Longitudinal Evaluation Instrument for Agent Memory, and the Tenure Crossover in Memory-Architecture Rankings",
+   "url": "https://arxiv.org/abs/2607.21962v1",
+   "score": 8,
+   "summary": "这是来自一篇论文的研究，它提出了一种全新的智能体记忆评估方法，核心变化在于颠覆了传统“先生成对话再提取答案”的流程，改为先由脚本播种带有有效期、易变性等属性的“事实”，再据此生成对话，从而从源头保证了评估答案的绝对准确性。该方法构建了一个包含约380个问题的合成语料库，并嵌入了事实有效期、信源信任度等现有基准测试所缺失的关键特征。研究最值得关注的是发现了一个“任期交叉”现象：随着对话历史从三周延长"
+  }
+ ],
+ "记忆架构": [
+  {
+   "id": "0d9d322929f9c115",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Ground Truth First: A Longitudinal Evaluation Instrument for Agent Memory, and the Tenure Crossover in Memory-Architecture Rankings",
+   "url": "https://arxiv.org/abs/2607.21962v1",
+   "score": 8,
+   "summary": "这是来自一篇论文的研究，它提出了一种全新的智能体记忆评估方法，核心变化在于颠覆了传统“先生成对话再提取答案”的流程，改为先由脚本播种带有有效期、易变性等属性的“事实”，再据此生成对话，从而从源头保证了评估答案的绝对准确性。该方法构建了一个包含约380个问题的合成语料库，并嵌入了事实有效期、信源信任度等现有基准测试所缺失的关键特征。研究最值得关注的是发现了一个“任期交叉”现象：随着对话历史从三周延长"
+  }
+ ],
+ "预算型记忆": [
+  {
+   "id": "0d9d322929f9c115",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Ground Truth First: A Longitudinal Evaluation Instrument for Agent Memory, and the Tenure Crossover in Memory-Architecture Rankings",
+   "url": "https://arxiv.org/abs/2607.21962v1",
+   "score": 8,
+   "summary": "这是来自一篇论文的研究，它提出了一种全新的智能体记忆评估方法，核心变化在于颠覆了传统“先生成对话再提取答案”的流程，改为先由脚本播种带有有效期、易变性等属性的“事实”，再据此生成对话，从而从源头保证了评估答案的绝对准确性。该方法构建了一个包含约380个问题的合成语料库，并嵌入了事实有效期、信源信任度等现有基准测试所缺失的关键特征。研究最值得关注的是发现了一个“任期交叉”现象：随着对话历史从三周延长"
+  }
+ ],
+ "基于来源类型的图记忆": [
+  {
+   "id": "0d9d322929f9c115",
+   "date": "2026-07-28",
+   "run_type": "midweek",
+   "title": "Ground Truth First: A Longitudinal Evaluation Instrument for Agent Memory, and the Tenure Crossover in Memory-Architecture Rankings",
+   "url": "https://arxiv.org/abs/2607.21962v1",
+   "score": 8,
+   "summary": "这是来自一篇论文的研究，它提出了一种全新的智能体记忆评估方法，核心变化在于颠覆了传统“先生成对话再提取答案”的流程，改为先由脚本播种带有有效期、易变性等属性的“事实”，再据此生成对话，从而从源头保证了评估答案的绝对准确性。该方法构建了一个包含约380个问题的合成语料库，并嵌入了事实有效期、信源信任度等现有基准测试所缺失的关键特征。研究最值得关注的是发现了一个“任期交叉”现象：随着对话历史从三周延长"
+  }
  ]
 }
