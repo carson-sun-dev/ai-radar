@@ -19,6 +19,33 @@
    "url": "https://openai.com/index/previewing-gpt-5-6-sol",
    "score": 9,
    "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  },
+  {
+   "id": "dca7adc62d79fe1c",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "Advancing the price-performance frontier with GPT-5.6",
+   "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+   "score": 7,
+   "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  },
+  {
+   "id": "eb71f165025c2507",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "How GPT-5.6 fuses frontier intelligence with frontier efficiency",
+   "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency",
+   "score": 6,
+   "summary": "GPT-5.6 是 OpenAI 推出的新模型，其核心变化在于将前沿智能与前沿效率深度融合，从模型本身、推理过程到智能体工作流三个层面系统性提升 AI 效率。该方法旨在让每一美元投入都能产出更有用的智能，标志着大模型发展从单纯追求能力转向同时优化成本与实用性。这一变化值得关注，因为它直接回应了行业对 AI 应用规模化落地时经济性的核心关切。"
+  },
+  {
+   "id": "265c6a0134aba9b6",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+   "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+   "score": 8,
+   "summary": "OpenAI 通过启用两项 API 设置，使 GPT-5.6 在 ARC-AGI-3 基准测试中的得分提升至原来的三倍。核心方法是保留推理过程并启用压缩机制，从而在提升性能的同时提高了效率。这一变化值得关注，因为它展示了通过简单的配置调整就能显著增强模型在抽象推理任务上的表现。"
   }
  ],
  "安全栈": [
@@ -160,6 +187,24 @@
    "url": "https://huggingface.co/papers/2607.14952",
    "score": 9,
    "summary": "随着大模型推理上下文长度向百万 token 级别迈进，强化学习后训练（RL post-training）却普遍停留在 256K token 以下，只能依赖部署时的长度泛化能力来弥补。LongStraw 正是为了弥合这一鸿沟而设计的架构感知执行栈，它能在固定 GPU 预算下完成百万 token 级别的 RL 后训练，特别针对 AI 智能体这类需要累积长轨迹观测、工具输出和历史决策的场景。\n\n此前的核"
+  },
+  {
+   "id": "addb2010cc1e9550",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization",
+   "url": "https://huggingface.co/papers/2607.25659",
+   "score": 8,
+   "summary": "CoRT 是一种在基于评分标准的强化学习训练中，为语言模型提供 token 级别信用分配的方法。它不引入额外的评分模型，而是通过“反事实重放”来估算每个 token 对最终评分的贡献，从而让策略优化更精细。\n\n在 GRPO 这类训练流程中，模型会根据多个评分标准生成回答，但系统通常只给出一个整体的标量奖励，并将其均匀地广播到回答中的每一个 token。这意味着，即使不同评分标准对应回答中的不同部分"
+  },
+  {
+   "id": "329886612290721f",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "MemHarness: Memory Is Reconstructed, Not Replayed",
+   "url": "https://huggingface.co/papers/2607.28272",
+   "score": 7,
+   "summary": "MemHarness 提出了一种让大模型智能体主动“重构”记忆而非简单“回放”记忆的框架。其核心变化在于，每一步决策时，模型会根据当前状态对检索到的过往经验进行批判与重建，生成贴合当下情境的指导，并通过 GRPO 端到端训练自然涌现这种重构能力。这项工作值得关注，因为它解决了传统记忆增强方法中静态回放导致的负迁移问题，在 ALFWorld 和 WebShop 等任务上显著优于纯强化学习与静态记忆基"
   }
  ],
  "分组相对策略优化": [
@@ -378,6 +423,15 @@
    "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
    "score": 7,
    "summary": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。"
+  },
+  {
+   "id": "a026c30d6c994b0e",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "LangSmith LLM Gateway: runtime governance built into the agent lifecycle",
+   "url": "https://www.langchain.com/blog/introducing-llm-gateway",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -1498,6 +1552,299 @@
    "url": "https://arxiv.org/abs/2607.21962v1",
    "score": 8,
    "summary": "这是来自一篇论文的研究，它提出了一种全新的智能体记忆评估方法，核心变化在于颠覆了传统“先生成对话再提取答案”的流程，改为先由脚本播种带有有效期、易变性等属性的“事实”，再据此生成对话，从而从源头保证了评估答案的绝对准确性。该方法构建了一个包含约380个问题的合成语料库，并嵌入了事实有效期、信源信任度等现有基准测试所缺失的关键特征。研究最值得关注的是发现了一个“任期交叉”现象：随着对话历史从三周延长"
+  }
+ ],
+ "GPT-5.6": [
+  {
+   "id": "dca7adc62d79fe1c",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "Advancing the price-performance frontier with GPT-5.6",
+   "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+   "score": 7,
+   "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  },
+  {
+   "id": "eb71f165025c2507",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "How GPT-5.6 fuses frontier intelligence with frontier efficiency",
+   "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency",
+   "score": 6,
+   "summary": "GPT-5.6 是 OpenAI 推出的新模型，其核心变化在于将前沿智能与前沿效率深度融合，从模型本身、推理过程到智能体工作流三个层面系统性提升 AI 效率。该方法旨在让每一美元投入都能产出更有用的智能，标志着大模型发展从单纯追求能力转向同时优化成本与实用性。这一变化值得关注，因为它直接回应了行业对 AI 应用规模化落地时经济性的核心关切。"
+  },
+  {
+   "id": "265c6a0134aba9b6",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+   "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+   "score": 8,
+   "summary": "OpenAI 通过启用两项 API 设置，使 GPT-5.6 在 ARC-AGI-3 基准测试中的得分提升至原来的三倍。核心方法是保留推理过程并启用压缩机制，从而在提升性能的同时提高了效率。这一变化值得关注，因为它展示了通过简单的配置调整就能显著增强模型在抽象推理任务上的表现。"
+  }
+ ],
+ "GPT-5.6 Luna": [
+  {
+   "id": "dca7adc62d79fe1c",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "Advancing the price-performance frontier with GPT-5.6",
+   "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+   "score": 7,
+   "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  }
+ ],
+ "GPT-5.6 Terra": [
+  {
+   "id": "dca7adc62d79fe1c",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "Advancing the price-performance frontier with GPT-5.6",
+   "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+   "score": 7,
+   "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  }
+ ],
+ "稀疏激活": [
+  {
+   "id": "dca7adc62d79fe1c",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "Advancing the price-performance frontier with GPT-5.6",
+   "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+   "score": 7,
+   "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  }
+ ],
+ "注意力机制": [
+  {
+   "id": "dca7adc62d79fe1c",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "Advancing the price-performance frontier with GPT-5.6",
+   "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+   "score": 7,
+   "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  }
+ ],
+ "量化压缩": [
+  {
+   "id": "dca7adc62d79fe1c",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "Advancing the price-performance frontier with GPT-5.6",
+   "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+   "score": 7,
+   "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  }
+ ],
+ "推理引擎调度": [
+  {
+   "id": "dca7adc62d79fe1c",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "Advancing the price-performance frontier with GPT-5.6",
+   "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+   "score": 7,
+   "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  }
+ ],
+ "批处理策略": [
+  {
+   "id": "dca7adc62d79fe1c",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "Advancing the price-performance frontier with GPT-5.6",
+   "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+   "score": 7,
+   "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  }
+ ],
+ "LangSmith LLM Gateway": [
+  {
+   "id": "a026c30d6c994b0e",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "LangSmith LLM Gateway: runtime governance built into the agent lifecycle",
+   "url": "https://www.langchain.com/blog/introducing-llm-gateway",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
+  }
+ ],
+ "LangSmith": [
+  {
+   "id": "a026c30d6c994b0e",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "LangSmith LLM Gateway: runtime governance built into the agent lifecycle",
+   "url": "https://www.langchain.com/blog/introducing-llm-gateway",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
+  }
+ ],
+ "spend limits": [
+  {
+   "id": "a026c30d6c994b0e",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "LangSmith LLM Gateway: runtime governance built into the agent lifecycle",
+   "url": "https://www.langchain.com/blog/introducing-llm-gateway",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
+  }
+ ],
+ "PII 脱敏": [
+  {
+   "id": "a026c30d6c994b0e",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "LangSmith LLM Gateway: runtime governance built into the agent lifecycle",
+   "url": "https://www.langchain.com/blog/introducing-llm-gateway",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
+  }
+ ],
+ "trace continuity": [
+  {
+   "id": "a026c30d6c994b0e",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "LangSmith LLM Gateway: runtime governance built into the agent lifecycle",
+   "url": "https://www.langchain.com/blog/introducing-llm-gateway",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
+  }
+ ],
+ "KV cache 压缩": [
+  {
+   "id": "a026c30d6c994b0e",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "LangSmith LLM Gateway: runtime governance built into the agent lifecycle",
+   "url": "https://www.langchain.com/blog/introducing-llm-gateway",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
+  }
+ ],
+ "CoRT": [
+  {
+   "id": "addb2010cc1e9550",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization",
+   "url": "https://huggingface.co/papers/2607.25659",
+   "score": 8,
+   "summary": "CoRT 是一种在基于评分标准的强化学习训练中，为语言模型提供 token 级别信用分配的方法。它不引入额外的评分模型，而是通过“反事实重放”来估算每个 token 对最终评分的贡献，从而让策略优化更精细。\n\n在 GRPO 这类训练流程中，模型会根据多个评分标准生成回答，但系统通常只给出一个整体的标量奖励，并将其均匀地广播到回答中的每一个 token。这意味着，即使不同评分标准对应回答中的不同部分"
+  }
+ ],
+ "Counterfactual Replay": [
+  {
+   "id": "addb2010cc1e9550",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization",
+   "url": "https://huggingface.co/papers/2607.25659",
+   "score": 8,
+   "summary": "CoRT 是一种在基于评分标准的强化学习训练中，为语言模型提供 token 级别信用分配的方法。它不引入额外的评分模型，而是通过“反事实重放”来估算每个 token 对最终评分的贡献，从而让策略优化更精细。\n\n在 GRPO 这类训练流程中，模型会根据多个评分标准生成回答，但系统通常只给出一个整体的标量奖励，并将其均匀地广播到回答中的每一个 token。这意味着，即使不同评分标准对应回答中的不同部分"
+  }
+ ],
+ "Token-Level Rubric-Guided Policy Optimization": [
+  {
+   "id": "addb2010cc1e9550",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization",
+   "url": "https://huggingface.co/papers/2607.25659",
+   "score": 8,
+   "summary": "CoRT 是一种在基于评分标准的强化学习训练中，为语言模型提供 token 级别信用分配的方法。它不引入额外的评分模型，而是通过“反事实重放”来估算每个 token 对最终评分的贡献，从而让策略优化更精细。\n\n在 GRPO 这类训练流程中，模型会根据多个评分标准生成回答，但系统通常只给出一个整体的标量奖励，并将其均匀地广播到回答中的每一个 token。这意味着，即使不同评分标准对应回答中的不同部分"
+  }
+ ],
+ "反事实重放": [
+  {
+   "id": "addb2010cc1e9550",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization",
+   "url": "https://huggingface.co/papers/2607.25659",
+   "score": 8,
+   "summary": "CoRT 是一种在基于评分标准的强化学习训练中，为语言模型提供 token 级别信用分配的方法。它不引入额外的评分模型，而是通过“反事实重放”来估算每个 token 对最终评分的贡献，从而让策略优化更精细。\n\n在 GRPO 这类训练流程中，模型会根据多个评分标准生成回答，但系统通常只给出一个整体的标量奖励，并将其均匀地广播到回答中的每一个 token。这意味着，即使不同评分标准对应回答中的不同部分"
+  }
+ ],
+ "token 级别信用分配": [
+  {
+   "id": "addb2010cc1e9550",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization",
+   "url": "https://huggingface.co/papers/2607.25659",
+   "score": 8,
+   "summary": "CoRT 是一种在基于评分标准的强化学习训练中，为语言模型提供 token 级别信用分配的方法。它不引入额外的评分模型，而是通过“反事实重放”来估算每个 token 对最终评分的贡献，从而让策略优化更精细。\n\n在 GRPO 这类训练流程中，模型会根据多个评分标准生成回答，但系统通常只给出一个整体的标量奖励，并将其均匀地广播到回答中的每一个 token。这意味着，即使不同评分标准对应回答中的不同部分"
+  }
+ ],
+ "ARC-AGI-3": [
+  {
+   "id": "265c6a0134aba9b6",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+   "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+   "score": 8,
+   "summary": "OpenAI 通过启用两项 API 设置，使 GPT-5.6 在 ARC-AGI-3 基准测试中的得分提升至原来的三倍。核心方法是保留推理过程并启用压缩机制，从而在提升性能的同时提高了效率。这一变化值得关注，因为它展示了通过简单的配置调整就能显著增强模型在抽象推理任务上的表现。"
+  }
+ ],
+ "保留推理过程": [
+  {
+   "id": "265c6a0134aba9b6",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+   "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+   "score": 8,
+   "summary": "OpenAI 通过启用两项 API 设置，使 GPT-5.6 在 ARC-AGI-3 基准测试中的得分提升至原来的三倍。核心方法是保留推理过程并启用压缩机制，从而在提升性能的同时提高了效率。这一变化值得关注，因为它展示了通过简单的配置调整就能显著增强模型在抽象推理任务上的表现。"
+  }
+ ],
+ "压缩机制": [
+  {
+   "id": "265c6a0134aba9b6",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+   "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+   "score": 8,
+   "summary": "OpenAI 通过启用两项 API 设置，使 GPT-5.6 在 ARC-AGI-3 基准测试中的得分提升至原来的三倍。核心方法是保留推理过程并启用压缩机制，从而在提升性能的同时提高了效率。这一变化值得关注，因为它展示了通过简单的配置调整就能显著增强模型在抽象推理任务上的表现。"
+  }
+ ],
+ "MemHarness": [
+  {
+   "id": "329886612290721f",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "MemHarness: Memory Is Reconstructed, Not Replayed",
+   "url": "https://huggingface.co/papers/2607.28272",
+   "score": 7,
+   "summary": "MemHarness 提出了一种让大模型智能体主动“重构”记忆而非简单“回放”记忆的框架。其核心变化在于，每一步决策时，模型会根据当前状态对检索到的过往经验进行批判与重建，生成贴合当下情境的指导，并通过 GRPO 端到端训练自然涌现这种重构能力。这项工作值得关注，因为它解决了传统记忆增强方法中静态回放导致的负迁移问题，在 ALFWorld 和 WebShop 等任务上显著优于纯强化学习与静态记忆基"
+  }
+ ],
+ "ALFWorld": [
+  {
+   "id": "329886612290721f",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "MemHarness: Memory Is Reconstructed, Not Replayed",
+   "url": "https://huggingface.co/papers/2607.28272",
+   "score": 7,
+   "summary": "MemHarness 提出了一种让大模型智能体主动“重构”记忆而非简单“回放”记忆的框架。其核心变化在于，每一步决策时，模型会根据当前状态对检索到的过往经验进行批判与重建，生成贴合当下情境的指导，并通过 GRPO 端到端训练自然涌现这种重构能力。这项工作值得关注，因为它解决了传统记忆增强方法中静态回放导致的负迁移问题，在 ALFWorld 和 WebShop 等任务上显著优于纯强化学习与静态记忆基"
+  }
+ ],
+ "WebShop": [
+  {
+   "id": "329886612290721f",
+   "date": "2026-07-31",
+   "run_type": "midweek",
+   "title": "MemHarness: Memory Is Reconstructed, Not Replayed",
+   "url": "https://huggingface.co/papers/2607.28272",
+   "score": 7,
+   "summary": "MemHarness 提出了一种让大模型智能体主动“重构”记忆而非简单“回放”记忆的框架。其核心变化在于，每一步决策时，模型会根据当前状态对检索到的过往经验进行批判与重建，生成贴合当下情境的指导，并通过 GRPO 端到端训练自然涌现这种重构能力。这项工作值得关注，因为它解决了传统记忆增强方法中静态回放导致的负迁移问题，在 ALFWorld 和 WebShop 等任务上显著优于纯强化学习与静态记忆基"
   }
  ]
 }
