@@ -432,6 +432,15 @@
    "url": "https://www.langchain.com/blog/introducing-llm-gateway",
    "score": 8,
    "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
+  },
+  {
+   "id": "1b5d601f7570164e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "How Stripe Built Kai on Deep Agents in 1 Week",
+   "url": "https://www.langchain.com/blog/how-stripe-built-their-knowledge-ai-platform-on-deep-agents",
+   "score": 8,
+   "summary": "Stripe 的 Kai 是一个面向全公司 5000 名员工的 AI 智能体，基于 LangChain、LangGraph 和 Deep Agents 框架构建，从启动到上线仅用了一周时间，并在约四周内覆盖了全部目标用户。这个案例展示了如何用现代 AI 工程工具链，快速交付一个真正进入生产环境、被大规模使用的企业级 AI 应用。\n\n此前，企业构建内部 AI 助手的痛点在于：传统开发方式周期长，难以"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -551,6 +560,15 @@
    "url": "https://example.com/1",
    "score": 8,
    "summary": "这是一段合格的中读分析，讲清了方法与变化。这是一段合格的中读分析，讲清了方法与变化。这是一段合格的中读分析，讲清了方法与变化。"
+  },
+  {
+   "id": "1b5d601f7570164e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "How Stripe Built Kai on Deep Agents in 1 Week",
+   "url": "https://www.langchain.com/blog/how-stripe-built-their-knowledge-ai-platform-on-deep-agents",
+   "score": 8,
+   "summary": "Stripe 的 Kai 是一个面向全公司 5000 名员工的 AI 智能体，基于 LangChain、LangGraph 和 Deep Agents 框架构建，从启动到上线仅用了一周时间，并在约四周内覆盖了全部目标用户。这个案例展示了如何用现代 AI 工程工具链，快速交付一个真正进入生产环境、被大规模使用的企业级 AI 应用。\n\n此前，企业构建内部 AI 助手的痛点在于：传统开发方式周期长，难以"
   }
  ],
  "Gemini 3.6 Flash": [
@@ -1156,6 +1174,15 @@
    "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
    "score": 7,
    "summary": "LangChain 博客介绍了其内部对深度智能体（Deep Agents）的基准测试方法革新。核心变化在于建立了一套名为 Harbor 的统一评估框架，横跨编程、对话和检索三大任务维度，用于系统化地衡量智能体性能。该方法值得关注是因为它将评估从零散测试转变为工程化流水线，直接指导每一次模型或策略的变更发布，为智能体产品的迭代提供了量化依据。"
+  },
+  {
+   "id": "1b5d601f7570164e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "How Stripe Built Kai on Deep Agents in 1 Week",
+   "url": "https://www.langchain.com/blog/how-stripe-built-their-knowledge-ai-platform-on-deep-agents",
+   "score": 8,
+   "summary": "Stripe 的 Kai 是一个面向全公司 5000 名员工的 AI 智能体，基于 LangChain、LangGraph 和 Deep Agents 框架构建，从启动到上线仅用了一周时间，并在约四周内覆盖了全部目标用户。这个案例展示了如何用现代 AI 工程工具链，快速交付一个真正进入生产环境、被大规模使用的企业级 AI 应用。\n\n此前，企业构建内部 AI 助手的痛点在于：传统开发方式周期长，难以"
   }
  ],
  "基准测试": [
@@ -1845,6 +1872,336 @@
    "url": "https://huggingface.co/papers/2607.28272",
    "score": 7,
    "summary": "MemHarness 提出了一种让大模型智能体主动“重构”记忆而非简单“回放”记忆的框架。其核心变化在于，每一步决策时，模型会根据当前状态对检索到的过往经验进行批判与重建，生成贴合当下情境的指导，并通过 GRPO 端到端训练自然涌现这种重构能力。这项工作值得关注，因为它解决了传统记忆增强方法中静态回放导致的负迁移问题，在 ALFWorld 和 WebShop 等任务上显著优于纯强化学习与静态记忆基"
+  }
+ ],
+ "Opt.Gear": [
+  {
+   "id": "01aae4c81f0ba35e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Opt.Gear Technical Report",
+   "url": "https://arxiv.org/abs/2608.01034v1",
+   "score": 6,
+   "summary": "这是一篇关于 Opt.Gear 基础模型的技术报告，该模型专为端侧设备的高效部署、实时推理和强任务能力而设计。\n\n它要解决的核心痛点，是当前大语言模型在端侧部署时面临的“内存墙”和“速度墙”问题。具体来说，随着上下文长度增加，传统 Transformer 架构中用于缓存键值对的 KV-cache 内存占用会呈指数级增长，导致长文本推理时设备内存迅速耗尽，解码速度急剧下降。这使得在手机、物联网设备甚"
+  }
+ ],
+ "卷积键值门控混合器": [
+  {
+   "id": "01aae4c81f0ba35e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Opt.Gear Technical Report",
+   "url": "https://arxiv.org/abs/2608.01034v1",
+   "score": 6,
+   "summary": "这是一篇关于 Opt.Gear 基础模型的技术报告，该模型专为端侧设备的高效部署、实时推理和强任务能力而设计。\n\n它要解决的核心痛点，是当前大语言模型在端侧部署时面临的“内存墙”和“速度墙”问题。具体来说，随着上下文长度增加，传统 Transformer 架构中用于缓存键值对的 KV-cache 内存占用会呈指数级增长，导致长文本推理时设备内存迅速耗尽，解码速度急剧下降。这使得在手机、物联网设备甚"
+  }
+ ],
+ "局部-全局注意力": [
+  {
+   "id": "01aae4c81f0ba35e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Opt.Gear Technical Report",
+   "url": "https://arxiv.org/abs/2608.01034v1",
+   "score": 6,
+   "summary": "这是一篇关于 Opt.Gear 基础模型的技术报告，该模型专为端侧设备的高效部署、实时推理和强任务能力而设计。\n\n它要解决的核心痛点，是当前大语言模型在端侧部署时面临的“内存墙”和“速度墙”问题。具体来说，随着上下文长度增加，传统 Transformer 架构中用于缓存键值对的 KV-cache 内存占用会呈指数级增长，导致长文本推理时设备内存迅速耗尽，解码速度急剧下降。这使得在手机、物联网设备甚"
+  }
+ ],
+ "KV-cache 压缩": [
+  {
+   "id": "01aae4c81f0ba35e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Opt.Gear Technical Report",
+   "url": "https://arxiv.org/abs/2608.01034v1",
+   "score": 6,
+   "summary": "这是一篇关于 Opt.Gear 基础模型的技术报告，该模型专为端侧设备的高效部署、实时推理和强任务能力而设计。\n\n它要解决的核心痛点，是当前大语言模型在端侧部署时面临的“内存墙”和“速度墙”问题。具体来说，随着上下文长度增加，传统 Transformer 架构中用于缓存键值对的 KV-cache 内存占用会呈指数级增长，导致长文本推理时设备内存迅速耗尽，解码速度急剧下降。这使得在手机、物联网设备甚"
+  }
+ ],
+ "W4A32 量化": [
+  {
+   "id": "01aae4c81f0ba35e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Opt.Gear Technical Report",
+   "url": "https://arxiv.org/abs/2608.01034v1",
+   "score": 6,
+   "summary": "这是一篇关于 Opt.Gear 基础模型的技术报告，该模型专为端侧设备的高效部署、实时推理和强任务能力而设计。\n\n它要解决的核心痛点，是当前大语言模型在端侧部署时面临的“内存墙”和“速度墙”问题。具体来说，随着上下文长度增加，传统 Transformer 架构中用于缓存键值对的 KV-cache 内存占用会呈指数级增长，导致长文本推理时设备内存迅速耗尽，解码速度急剧下降。这使得在手机、物联网设备甚"
+  }
+ ],
+ "Opt.Gear-1M": [
+  {
+   "id": "01aae4c81f0ba35e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Opt.Gear Technical Report",
+   "url": "https://arxiv.org/abs/2608.01034v1",
+   "score": 6,
+   "summary": "这是一篇关于 Opt.Gear 基础模型的技术报告，该模型专为端侧设备的高效部署、实时推理和强任务能力而设计。\n\n它要解决的核心痛点，是当前大语言模型在端侧部署时面临的“内存墙”和“速度墙”问题。具体来说，随着上下文长度增加，传统 Transformer 架构中用于缓存键值对的 KV-cache 内存占用会呈指数级增长，导致长文本推理时设备内存迅速耗尽，解码速度急剧下降。这使得在手机、物联网设备甚"
+  }
+ ],
+ "Opt.Gear-270M": [
+  {
+   "id": "01aae4c81f0ba35e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Opt.Gear Technical Report",
+   "url": "https://arxiv.org/abs/2608.01034v1",
+   "score": 6,
+   "summary": "这是一篇关于 Opt.Gear 基础模型的技术报告，该模型专为端侧设备的高效部署、实时推理和强任务能力而设计。\n\n它要解决的核心痛点，是当前大语言模型在端侧部署时面临的“内存墙”和“速度墙”问题。具体来说，随着上下文长度增加，传统 Transformer 架构中用于缓存键值对的 KV-cache 内存占用会呈指数级增长，导致长文本推理时设备内存迅速耗尽，解码速度急剧下降。这使得在手机、物联网设备甚"
+  }
+ ],
+ "Opt.Gear-1B": [
+  {
+   "id": "01aae4c81f0ba35e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Opt.Gear Technical Report",
+   "url": "https://arxiv.org/abs/2608.01034v1",
+   "score": 6,
+   "summary": "这是一篇关于 Opt.Gear 基础模型的技术报告，该模型专为端侧设备的高效部署、实时推理和强任务能力而设计。\n\n它要解决的核心痛点，是当前大语言模型在端侧部署时面临的“内存墙”和“速度墙”问题。具体来说，随着上下文长度增加，传统 Transformer 架构中用于缓存键值对的 KV-cache 内存占用会呈指数级增长，导致长文本推理时设备内存迅速耗尽，解码速度急剧下降。这使得在手机、物联网设备甚"
+  }
+ ],
+ "Stripe": [
+  {
+   "id": "1b5d601f7570164e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "How Stripe Built Kai on Deep Agents in 1 Week",
+   "url": "https://www.langchain.com/blog/how-stripe-built-their-knowledge-ai-platform-on-deep-agents",
+   "score": 8,
+   "summary": "Stripe 的 Kai 是一个面向全公司 5000 名员工的 AI 智能体，基于 LangChain、LangGraph 和 Deep Agents 框架构建，从启动到上线仅用了一周时间，并在约四周内覆盖了全部目标用户。这个案例展示了如何用现代 AI 工程工具链，快速交付一个真正进入生产环境、被大规模使用的企业级 AI 应用。\n\n此前，企业构建内部 AI 助手的痛点在于：传统开发方式周期长，难以"
+  }
+ ],
+ "Kai": [
+  {
+   "id": "1b5d601f7570164e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "How Stripe Built Kai on Deep Agents in 1 Week",
+   "url": "https://www.langchain.com/blog/how-stripe-built-their-knowledge-ai-platform-on-deep-agents",
+   "score": 8,
+   "summary": "Stripe 的 Kai 是一个面向全公司 5000 名员工的 AI 智能体，基于 LangChain、LangGraph 和 Deep Agents 框架构建，从启动到上线仅用了一周时间，并在约四周内覆盖了全部目标用户。这个案例展示了如何用现代 AI 工程工具链，快速交付一个真正进入生产环境、被大规模使用的企业级 AI 应用。\n\n此前，企业构建内部 AI 助手的痛点在于：传统开发方式周期长，难以"
+  }
+ ],
+ "AI 智能体": [
+  {
+   "id": "1b5d601f7570164e",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "How Stripe Built Kai on Deep Agents in 1 Week",
+   "url": "https://www.langchain.com/blog/how-stripe-built-their-knowledge-ai-platform-on-deep-agents",
+   "score": 8,
+   "summary": "Stripe 的 Kai 是一个面向全公司 5000 名员工的 AI 智能体，基于 LangChain、LangGraph 和 Deep Agents 框架构建，从启动到上线仅用了一周时间，并在约四周内覆盖了全部目标用户。这个案例展示了如何用现代 AI 工程工具链，快速交付一个真正进入生产环境、被大规模使用的企业级 AI 应用。\n\n此前，企业构建内部 AI 助手的痛点在于：传统开发方式周期长，难以"
+  }
+ ],
+ "KV Cache 压缩": [
+  {
+   "id": "23b32000378d66d5",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+   "url": "https://arxiv.org/abs/2608.00902v1",
+   "score": 8,
+   "summary": "这是一篇关于大模型推理优化的实证研究，聚焦于 LLM Agent 场景下的在线 KV 缓存压缩技术。KV 缓存（Key-Value Cache）是 Transformer 模型在自回归生成时保存的历史键值对，用于避免重复计算，但当 Agent 产生长轨迹（推理步骤、工具调用、环境反馈）时，缓存会急剧膨胀，成为推理瓶颈。\n\n此前 KV 缓存压缩方法大多假设静态上下文，即未来查询已知或可离线近似，这在"
+  }
+ ],
+ "Token 驱逐 (Token Eviction, TE)": [
+  {
+   "id": "23b32000378d66d5",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+   "url": "https://arxiv.org/abs/2608.00902v1",
+   "score": 8,
+   "summary": "这是一篇关于大模型推理优化的实证研究，聚焦于 LLM Agent 场景下的在线 KV 缓存压缩技术。KV 缓存（Key-Value Cache）是 Transformer 模型在自回归生成时保存的历史键值对，用于避免重复计算，但当 Agent 产生长轨迹（推理步骤、工具调用、环境反馈）时，缓存会急剧膨胀，成为推理瓶颈。\n\n此前 KV 缓存压缩方法大多假设静态上下文，即未来查询已知或可离线近似，这在"
+  }
+ ],
+ "注意力匹配 (Attention Matching, AM)": [
+  {
+   "id": "23b32000378d66d5",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+   "url": "https://arxiv.org/abs/2608.00902v1",
+   "score": 8,
+   "summary": "这是一篇关于大模型推理优化的实证研究，聚焦于 LLM Agent 场景下的在线 KV 缓存压缩技术。KV 缓存（Key-Value Cache）是 Transformer 模型在自回归生成时保存的历史键值对，用于避免重复计算，但当 Agent 产生长轨迹（推理步骤、工具调用、环境反馈）时，缓存会急剧膨胀，成为推理瓶颈。\n\n此前 KV 缓存压缩方法大多假设静态上下文，即未来查询已知或可离线近似，这在"
+  }
+ ],
+ "代理查询 (Agency Query)": [
+  {
+   "id": "23b32000378d66d5",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+   "url": "https://arxiv.org/abs/2608.00902v1",
+   "score": 8,
+   "summary": "这是一篇关于大模型推理优化的实证研究，聚焦于 LLM Agent 场景下的在线 KV 缓存压缩技术。KV 缓存（Key-Value Cache）是 Transformer 模型在自回归生成时保存的历史键值对，用于避免重复计算，但当 Agent 产生长轨迹（推理步骤、工具调用、环境反馈）时，缓存会急剧膨胀，成为推理瓶颈。\n\n此前 KV 缓存压缩方法大多假设静态上下文，即未来查询已知或可离线近似，这在"
+  }
+ ],
+ "延迟压缩 (Delayed Compaction)": [
+  {
+   "id": "23b32000378d66d5",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+   "url": "https://arxiv.org/abs/2608.00902v1",
+   "score": 8,
+   "summary": "这是一篇关于大模型推理优化的实证研究，聚焦于 LLM Agent 场景下的在线 KV 缓存压缩技术。KV 缓存（Key-Value Cache）是 Transformer 模型在自回归生成时保存的历史键值对，用于避免重复计算，但当 Agent 产生长轨迹（推理步骤、工具调用、环境反馈）时，缓存会急剧膨胀，成为推理瓶颈。\n\n此前 KV 缓存压缩方法大多假设静态上下文，即未来查询已知或可离线近似，这在"
+  }
+ ],
+ "即时压缩 (Immediate Compaction)": [
+  {
+   "id": "23b32000378d66d5",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+   "url": "https://arxiv.org/abs/2608.00902v1",
+   "score": 8,
+   "summary": "这是一篇关于大模型推理优化的实证研究，聚焦于 LLM Agent 场景下的在线 KV 缓存压缩技术。KV 缓存（Key-Value Cache）是 Transformer 模型在自回归生成时保存的历史键值对，用于避免重复计算，但当 Agent 产生长轨迹（推理步骤、工具调用、环境反馈）时，缓存会急剧膨胀，成为推理瓶颈。\n\n此前 KV 缓存压缩方法大多假设静态上下文，即未来查询已知或可离线近似，这在"
+  }
+ ],
+ "BrowseComp-Plus": [
+  {
+   "id": "23b32000378d66d5",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+   "url": "https://arxiv.org/abs/2608.00902v1",
+   "score": 8,
+   "summary": "这是一篇关于大模型推理优化的实证研究，聚焦于 LLM Agent 场景下的在线 KV 缓存压缩技术。KV 缓存（Key-Value Cache）是 Transformer 模型在自回归生成时保存的历史键值对，用于避免重复计算，但当 Agent 产生长轨迹（推理步骤、工具调用、环境反馈）时，缓存会急剧膨胀，成为推理瓶颈。\n\n此前 KV 缓存压缩方法大多假设静态上下文，即未来查询已知或可离线近似，这在"
+  }
+ ],
+ "WideSearch": [
+  {
+   "id": "23b32000378d66d5",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+   "url": "https://arxiv.org/abs/2608.00902v1",
+   "score": 8,
+   "summary": "这是一篇关于大模型推理优化的实证研究，聚焦于 LLM Agent 场景下的在线 KV 缓存压缩技术。KV 缓存（Key-Value Cache）是 Transformer 模型在自回归生成时保存的历史键值对，用于避免重复计算，但当 Agent 产生长轨迹（推理步骤、工具调用、环境反馈）时，缓存会急剧膨胀，成为推理瓶颈。\n\n此前 KV 缓存压缩方法大多假设静态上下文，即未来查询已知或可离线近似，这在"
+  }
+ ],
+ "Helpmate": [
+  {
+   "id": "6f9a0b21dd8a66c8",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Don't Offer What Can't Be Done: Deterministic Executability Gating for LLM Skill Selection at Scale",
+   "url": "https://arxiv.org/abs/2608.01050v1",
+   "score": 8,
+   "summary": "这是一个来自 Wix 客服助手 Helpmate 的工程实践，核心是在大模型选择技能时，引入一个确定性的“可执行性门控”环节。该方法在语义匹配之后、LLM 最终决策之前，通过检查账户状态中的硬性停止条件，直接剔除那些当前状态下根本无法执行的技能。这样做不仅大幅减少了送入大模型的技能描述 token，还避免了模型推荐用户无法使用的功能。生产数据分析显示，该门控去除了近六成的技能-消息对，节省了约 2"
+  }
+ ],
+ "Wix": [
+  {
+   "id": "6f9a0b21dd8a66c8",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Don't Offer What Can't Be Done: Deterministic Executability Gating for LLM Skill Selection at Scale",
+   "url": "https://arxiv.org/abs/2608.01050v1",
+   "score": 8,
+   "summary": "这是一个来自 Wix 客服助手 Helpmate 的工程实践，核心是在大模型选择技能时，引入一个确定性的“可执行性门控”环节。该方法在语义匹配之后、LLM 最终决策之前，通过检查账户状态中的硬性停止条件，直接剔除那些当前状态下根本无法执行的技能。这样做不仅大幅减少了送入大模型的技能描述 token，还避免了模型推荐用户无法使用的功能。生产数据分析显示，该门控去除了近六成的技能-消息对，节省了约 2"
+  }
+ ],
+ "可执行性门控": [
+  {
+   "id": "6f9a0b21dd8a66c8",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Don't Offer What Can't Be Done: Deterministic Executability Gating for LLM Skill Selection at Scale",
+   "url": "https://arxiv.org/abs/2608.01050v1",
+   "score": 8,
+   "summary": "这是一个来自 Wix 客服助手 Helpmate 的工程实践，核心是在大模型选择技能时，引入一个确定性的“可执行性门控”环节。该方法在语义匹配之后、LLM 最终决策之前，通过检查账户状态中的硬性停止条件，直接剔除那些当前状态下根本无法执行的技能。这样做不仅大幅减少了送入大模型的技能描述 token，还避免了模型推荐用户无法使用的功能。生产数据分析显示，该门控去除了近六成的技能-消息对，节省了约 2"
+  }
+ ],
+ "确定性可执行性门控": [
+  {
+   "id": "6f9a0b21dd8a66c8",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Don't Offer What Can't Be Done: Deterministic Executability Gating for LLM Skill Selection at Scale",
+   "url": "https://arxiv.org/abs/2608.01050v1",
+   "score": 8,
+   "summary": "这是一个来自 Wix 客服助手 Helpmate 的工程实践，核心是在大模型选择技能时，引入一个确定性的“可执行性门控”环节。该方法在语义匹配之后、LLM 最终决策之前，通过检查账户状态中的硬性停止条件，直接剔除那些当前状态下根本无法执行的技能。这样做不仅大幅减少了送入大模型的技能描述 token，还避免了模型推荐用户无法使用的功能。生产数据分析显示，该门控去除了近六成的技能-消息对，节省了约 2"
+  }
+ ],
+ "LLM Skill Selection": [
+  {
+   "id": "6f9a0b21dd8a66c8",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Don't Offer What Can't Be Done: Deterministic Executability Gating for LLM Skill Selection at Scale",
+   "url": "https://arxiv.org/abs/2608.01050v1",
+   "score": 8,
+   "summary": "这是一个来自 Wix 客服助手 Helpmate 的工程实践，核心是在大模型选择技能时，引入一个确定性的“可执行性门控”环节。该方法在语义匹配之后、LLM 最终决策之前，通过检查账户状态中的硬性停止条件，直接剔除那些当前状态下根本无法执行的技能。这样做不仅大幅减少了送入大模型的技能描述 token，还避免了模型推荐用户无法使用的功能。生产数据分析显示，该门控去除了近六成的技能-消息对，节省了约 2"
+  }
+ ],
+ "逐块过滤验证": [
+  {
+   "id": "c74219c4d623dde4",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Verification Without Sufficiency: Per-Chunk Filtering Fails on Multi-Hop RAG, and Decomposition Repairs It",
+   "url": "https://arxiv.org/abs/2608.00585v1",
+   "score": 8,
+   "summary": "这篇论文揭示了当前检索增强生成中普遍采用的逐块过滤验证方法在多跳问答场景下的根本性失败。核心发现是，逐块验证假设单个文本块足以作为回答的前提，但多跳问题故意设计成没有任何单一文本块包含完整答案，导致蕴含评分在多跳数据集上表现极差，甚至不如不过滤。研究通过七项对照实验排除了模型能力、前提长度等其他因素的干扰，并证明随着生成器能力增强，逐块过滤的负面影响反而加剧。修复方案是将验证条件从原始问题改为分解"
+  }
+ ],
+ "多跳RAG": [
+  {
+   "id": "c74219c4d623dde4",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Verification Without Sufficiency: Per-Chunk Filtering Fails on Multi-Hop RAG, and Decomposition Repairs It",
+   "url": "https://arxiv.org/abs/2608.00585v1",
+   "score": 8,
+   "summary": "这篇论文揭示了当前检索增强生成中普遍采用的逐块过滤验证方法在多跳问答场景下的根本性失败。核心发现是，逐块验证假设单个文本块足以作为回答的前提，但多跳问题故意设计成没有任何单一文本块包含完整答案，导致蕴含评分在多跳数据集上表现极差，甚至不如不过滤。研究通过七项对照实验排除了模型能力、前提长度等其他因素的干扰，并证明随着生成器能力增强，逐块过滤的负面影响反而加剧。修复方案是将验证条件从原始问题改为分解"
+  }
+ ],
+ "检索增强生成": [
+  {
+   "id": "c74219c4d623dde4",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Verification Without Sufficiency: Per-Chunk Filtering Fails on Multi-Hop RAG, and Decomposition Repairs It",
+   "url": "https://arxiv.org/abs/2608.00585v1",
+   "score": 8,
+   "summary": "这篇论文揭示了当前检索增强生成中普遍采用的逐块过滤验证方法在多跳问答场景下的根本性失败。核心发现是，逐块验证假设单个文本块足以作为回答的前提，但多跳问题故意设计成没有任何单一文本块包含完整答案，导致蕴含评分在多跳数据集上表现极差，甚至不如不过滤。研究通过七项对照实验排除了模型能力、前提长度等其他因素的干扰，并证明随着生成器能力增强，逐块过滤的负面影响反而加剧。修复方案是将验证条件从原始问题改为分解"
+  }
+ ],
+ "蕴含评分": [
+  {
+   "id": "c74219c4d623dde4",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Verification Without Sufficiency: Per-Chunk Filtering Fails on Multi-Hop RAG, and Decomposition Repairs It",
+   "url": "https://arxiv.org/abs/2608.00585v1",
+   "score": 8,
+   "summary": "这篇论文揭示了当前检索增强生成中普遍采用的逐块过滤验证方法在多跳问答场景下的根本性失败。核心发现是，逐块验证假设单个文本块足以作为回答的前提，但多跳问题故意设计成没有任何单一文本块包含完整答案，导致蕴含评分在多跳数据集上表现极差，甚至不如不过滤。研究通过七项对照实验排除了模型能力、前提长度等其他因素的干扰，并证明随着生成器能力增强，逐块过滤的负面影响反而加剧。修复方案是将验证条件从原始问题改为分解"
+  }
+ ],
+ "问题分解": [
+  {
+   "id": "c74219c4d623dde4",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Verification Without Sufficiency: Per-Chunk Filtering Fails on Multi-Hop RAG, and Decomposition Repairs It",
+   "url": "https://arxiv.org/abs/2608.00585v1",
+   "score": 8,
+   "summary": "这篇论文揭示了当前检索增强生成中普遍采用的逐块过滤验证方法在多跳问答场景下的根本性失败。核心发现是，逐块验证假设单个文本块足以作为回答的前提，但多跳问题故意设计成没有任何单一文本块包含完整答案，导致蕴含评分在多跳数据集上表现极差，甚至不如不过滤。研究通过七项对照实验排除了模型能力、前提长度等其他因素的干扰，并证明随着生成器能力增强，逐块过滤的负面影响反而加剧。修复方案是将验证条件从原始问题改为分解"
+  }
+ ],
+ "迭代检索系统": [
+  {
+   "id": "c74219c4d623dde4",
+   "date": "2026-08-04",
+   "run_type": "midweek",
+   "title": "Verification Without Sufficiency: Per-Chunk Filtering Fails on Multi-Hop RAG, and Decomposition Repairs It",
+   "url": "https://arxiv.org/abs/2608.00585v1",
+   "score": 8,
+   "summary": "这篇论文揭示了当前检索增强生成中普遍采用的逐块过滤验证方法在多跳问答场景下的根本性失败。核心发现是，逐块验证假设单个文本块足以作为回答的前提，但多跳问题故意设计成没有任何单一文本块包含完整答案，导致蕴含评分在多跳数据集上表现极差，甚至不如不过滤。研究通过七项对照实验排除了模型能力、前提长度等其他因素的干扰，并证明随着生成器能力增强，逐块过滤的负面影响反而加剧。修复方案是将验证条件从原始问题改为分解"
   }
  ]
 }
