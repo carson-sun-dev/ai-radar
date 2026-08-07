@@ -8,6 +8,15 @@
    "url": "https://openai.com/index/previewing-gpt-5-6-sol",
    "score": 9,
    "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  },
+  {
+   "id": "b1c9322e571fec76",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+   "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+   "score": 7,
+   "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
   }
  ],
  "OpenAI": [
@@ -46,6 +55,15 @@
    "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
    "score": 8,
    "summary": "OpenAI 通过启用两项 API 设置，使 GPT-5.6 在 ARC-AGI-3 基准测试中的得分提升至原来的三倍。核心方法是保留推理过程并启用压缩机制，从而在提升性能的同时提高了效率。这一变化值得关注，因为它展示了通过简单的配置调整就能显著增强模型在抽象推理任务上的表现。"
+  },
+  {
+   "id": "b1c9322e571fec76",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+   "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+   "score": 7,
+   "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
   }
  ],
  "安全栈": [
@@ -441,6 +459,24 @@
    "url": "https://www.langchain.com/blog/how-stripe-built-their-knowledge-ai-platform-on-deep-agents",
    "score": 8,
    "summary": "Stripe 的 Kai 是一个面向全公司 5000 名员工的 AI 智能体，基于 LangChain、LangGraph 和 Deep Agents 框架构建，从启动到上线仅用了一周时间，并在约四周内覆盖了全部目标用户。这个案例展示了如何用现代 AI 工程工具链，快速交付一个真正进入生产环境、被大规模使用的企业级 AI 应用。\n\n此前，企业构建内部 AI 助手的痛点在于：传统开发方式周期长，难以"
+  },
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  },
+  {
+   "id": "6a2c44f62f58bd05",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "How we built an autonomous SRE agent for Kubernetes",
+   "url": "https://www.langchain.com/blog/how-we-build-an-autonomous-sre-agent-for-kubernetes-deployments",
+   "score": 7,
+   "summary": "LangChain 发布了一款面向 Kubernetes 部署的自主 SRE 智能体，它基于 Deep Agents 构建，能够自主执行运维操作，并在执行变更前引入人工审批机制。该方案还集成了 LangSmith 进行链路追踪与评估，以确保智能体行为的可观测性与可靠性。这一实践展示了如何将大模型智能体应用于生产级基础设施管理，并平衡自主性与安全控制，对关注 AI 在运维领域落地的面试者具有参考价值"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -569,6 +605,24 @@
    "url": "https://www.langchain.com/blog/how-stripe-built-their-knowledge-ai-platform-on-deep-agents",
    "score": 8,
    "summary": "Stripe 的 Kai 是一个面向全公司 5000 名员工的 AI 智能体，基于 LangChain、LangGraph 和 Deep Agents 框架构建，从启动到上线仅用了一周时间，并在约四周内覆盖了全部目标用户。这个案例展示了如何用现代 AI 工程工具链，快速交付一个真正进入生产环境、被大规模使用的企业级 AI 应用。\n\n此前，企业构建内部 AI 助手的痛点在于：传统开发方式周期长，难以"
+  },
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  },
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
   }
  ],
  "Gemini 3.6 Flash": [
@@ -1183,6 +1237,24 @@
    "url": "https://www.langchain.com/blog/how-stripe-built-their-knowledge-ai-platform-on-deep-agents",
    "score": 8,
    "summary": "Stripe 的 Kai 是一个面向全公司 5000 名员工的 AI 智能体，基于 LangChain、LangGraph 和 Deep Agents 框架构建，从启动到上线仅用了一周时间，并在约四周内覆盖了全部目标用户。这个案例展示了如何用现代 AI 工程工具链，快速交付一个真正进入生产环境、被大规模使用的企业级 AI 应用。\n\n此前，企业构建内部 AI 助手的痛点在于：传统开发方式周期长，难以"
+  },
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  },
+  {
+   "id": "6a2c44f62f58bd05",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "How we built an autonomous SRE agent for Kubernetes",
+   "url": "https://www.langchain.com/blog/how-we-build-an-autonomous-sre-agent-for-kubernetes-deployments",
+   "score": 7,
+   "summary": "LangChain 发布了一款面向 Kubernetes 部署的自主 SRE 智能体，它基于 Deep Agents 构建，能够自主执行运维操作，并在执行变更前引入人工审批机制。该方案还集成了 LangSmith 进行链路追踪与评估，以确保智能体行为的可观测性与可靠性。这一实践展示了如何将大模型智能体应用于生产级基础设施管理，并平衡自主性与安全控制，对关注 AI 在运维领域落地的面试者具有参考价值"
   }
  ],
  "基准测试": [
@@ -1370,6 +1442,15 @@
    "url": "https://huggingface.co/papers/2607.21557",
    "score": 8,
    "summary": "OpenForgeRL 是一个开源框架，专门用来端到端地训练那些运行在复杂推理脚手架（inference harness）上的 AI 智能体。所谓推理脚手架，就是像 Claude Code、Codex 或 OpenClaw 这类系统，它们负责驱动智能体的多轮推理、工具调用以及与外部环境的交互。OpenForgeRL 的核心价值在于，它让研究人员能够直接在这些真实部署环境中训练和优化智能体，而不需要"
+  },
+  {
+   "id": "6a2c44f62f58bd05",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "How we built an autonomous SRE agent for Kubernetes",
+   "url": "https://www.langchain.com/blog/how-we-build-an-autonomous-sre-agent-for-kubernetes-deployments",
+   "score": 7,
+   "summary": "LangChain 发布了一款面向 Kubernetes 部署的自主 SRE 智能体，它基于 Deep Agents 构建，能够自主执行运维操作，并在执行变更前引入人工审批机制。该方案还集成了 LangSmith 进行链路追踪与评估，以确保智能体行为的可观测性与可靠性。这一实践展示了如何将大模型智能体应用于生产级基础设施管理，并平衡自主性与安全控制，对关注 AI 在运维领域落地的面试者具有参考价值"
   }
  ],
  "ConsistencyGate": [
@@ -1619,6 +1700,15 @@
    "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
    "score": 7,
    "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  },
+  {
+   "id": "b1c9322e571fec76",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+   "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+   "score": 7,
+   "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
   }
  ],
  "GPT-5.6 Terra": [
@@ -1707,6 +1797,15 @@
    "url": "https://www.langchain.com/blog/introducing-llm-gateway",
    "score": 8,
    "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
+  },
+  {
+   "id": "6a2c44f62f58bd05",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "How we built an autonomous SRE agent for Kubernetes",
+   "url": "https://www.langchain.com/blog/how-we-build-an-autonomous-sre-agent-for-kubernetes-deployments",
+   "score": 7,
+   "summary": "LangChain 发布了一款面向 Kubernetes 部署的自主 SRE 智能体，它基于 Deep Agents 构建，能够自主执行运维操作，并在执行变更前引入人工审批机制。该方案还集成了 LangSmith 进行链路追踪与评估，以确保智能体行为的可观测性与可靠性。这一实践展示了如何将大模型智能体应用于生产级基础设施管理，并平衡自主性与安全控制，对关注 AI 在运维领域落地的面试者具有参考价值"
   }
  ],
  "spend limits": [
@@ -2202,6 +2301,380 @@
    "url": "https://arxiv.org/abs/2608.00585v1",
    "score": 8,
    "summary": "这篇论文揭示了当前检索增强生成中普遍采用的逐块过滤验证方法在多跳问答场景下的根本性失败。核心发现是，逐块验证假设单个文本块足以作为回答的前提，但多跳问题故意设计成没有任何单一文本块包含完整答案，导致蕴含评分在多跳数据集上表现极差，甚至不如不过滤。研究通过七项对照实验排除了模型能力、前提长度等其他因素的干扰，并证明随着生成器能力增强，逐块过滤的负面影响反而加剧。修复方案是将验证条件从原始问题改为分解"
+  }
+ ],
+ "ChatGPT": [
+  {
+   "id": "b1c9322e571fec76",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+   "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+   "score": 7,
+   "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
+  }
+ ],
+ "强化学习人类反馈": [
+  {
+   "id": "b1c9322e571fec76",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+   "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+   "score": 7,
+   "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
+  }
+ ],
+ "动态路由": [
+  {
+   "id": "b1c9322e571fec76",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+   "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+   "score": 7,
+   "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
+  }
+ ],
+ "模型量化": [
+  {
+   "id": "b1c9322e571fec76",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+   "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+   "score": 7,
+   "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
+  }
+ ],
+ "投机解码": [
+  {
+   "id": "b1c9322e571fec76",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+   "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+   "score": 7,
+   "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
+  }
+ ],
+ "LangChain 生态": [
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  }
+ ],
+ "多代理系统": [
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  }
+ ],
+ "Agent 编排": [
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  }
+ ],
+ "认知架构": [
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  }
+ ],
+ "有向图模型": [
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  }
+ ],
+ "任务规划器": [
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  }
+ ],
+ "子代理调度": [
+  {
+   "id": "6b92c20e980b4f98",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Deep Agents vs LangChain vs LangGraph",
+   "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+   "score": 8,
+   "summary": "在 AI 应用开发领域，LangChain 团队近期发布了一篇技术定位文章，系统梳理了旗下三个开源框架——Deep Agents、LangChain 和 LangGraph——在构建智能代理时的核心差异与适用场景。这不是一篇功能对比清单，而是一份面向开发者的选型指南，帮助团队根据任务复杂度、控制粒度和生产需求做出决策。\n\n此前，开发者在构建 AI 代理时面临一个普遍痛点：框架要么过于高层导致灵活性"
+  }
+ ],
+ "ABSeeker": [
+  {
+   "id": "f23c0abac927be7f",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+   "url": "https://huggingface.co/papers/2608.05102",
+   "score": 8,
+   "summary": "Long-horizon search agents（长程搜索智能体，指需要多步搜索、检索、验证、整合信息才能回答复杂问题的 AI 系统）的训练一直面临一个核心难题：如何判断一次多步搜索轨迹中，哪些步骤真正有用、哪些是冗余甚至错误的。ABSeeker 提出了一种名为 Answer-Backtracked Credit Assignment（ABC，答案回溯式功劳分配）的细粒度功劳分配框架，专门用于"
+  }
+ ],
+ "Answer-Backtracked Credit Assignment (ABC)": [
+  {
+   "id": "f23c0abac927be7f",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+   "url": "https://huggingface.co/papers/2608.05102",
+   "score": 8,
+   "summary": "Long-horizon search agents（长程搜索智能体，指需要多步搜索、检索、验证、整合信息才能回答复杂问题的 AI 系统）的训练一直面临一个核心难题：如何判断一次多步搜索轨迹中，哪些步骤真正有用、哪些是冗余甚至错误的。ABSeeker 提出了一种名为 Answer-Backtracked Credit Assignment（ABC，答案回溯式功劳分配）的细粒度功劳分配框架，专门用于"
+  }
+ ],
+ "Qwen3.5-4B": [
+  {
+   "id": "f23c0abac927be7f",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+   "url": "https://huggingface.co/papers/2608.05102",
+   "score": 8,
+   "summary": "Long-horizon search agents（长程搜索智能体，指需要多步搜索、检索、验证、整合信息才能回答复杂问题的 AI 系统）的训练一直面临一个核心难题：如何判断一次多步搜索轨迹中，哪些步骤真正有用、哪些是冗余甚至错误的。ABSeeker 提出了一种名为 Answer-Backtracked Credit Assignment（ABC，答案回溯式功劳分配）的细粒度功劳分配框架，专门用于"
+  }
+ ],
+ "Answer-Backtracked Clue Recovery": [
+  {
+   "id": "f23c0abac927be7f",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+   "url": "https://huggingface.co/papers/2608.05102",
+   "score": 8,
+   "summary": "Long-horizon search agents（长程搜索智能体，指需要多步搜索、检索、验证、整合信息才能回答复杂问题的 AI 系统）的训练一直面临一个核心难题：如何判断一次多步搜索轨迹中，哪些步骤真正有用、哪些是冗余甚至错误的。ABSeeker 提出了一种名为 Answer-Backtracked Credit Assignment（ABC，答案回溯式功劳分配）的细粒度功劳分配框架，专门用于"
+  }
+ ],
+ "Clue-Anchored Step Scoring": [
+  {
+   "id": "f23c0abac927be7f",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+   "url": "https://huggingface.co/papers/2608.05102",
+   "score": 8,
+   "summary": "Long-horizon search agents（长程搜索智能体，指需要多步搜索、检索、验证、整合信息才能回答复杂问题的 AI 系统）的训练一直面临一个核心难题：如何判断一次多步搜索轨迹中，哪些步骤真正有用、哪些是冗余甚至错误的。ABSeeker 提出了一种名为 Answer-Backtracked Credit Assignment（ABC，答案回溯式功劳分配）的细粒度功劳分配框架，专门用于"
+  }
+ ],
+ "ABC-SFT": [
+  {
+   "id": "f23c0abac927be7f",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+   "url": "https://huggingface.co/papers/2608.05102",
+   "score": 8,
+   "summary": "Long-horizon search agents（长程搜索智能体，指需要多步搜索、检索、验证、整合信息才能回答复杂问题的 AI 系统）的训练一直面临一个核心难题：如何判断一次多步搜索轨迹中，哪些步骤真正有用、哪些是冗余甚至错误的。ABSeeker 提出了一种名为 Answer-Backtracked Credit Assignment（ABC，答案回溯式功劳分配）的细粒度功劳分配框架，专门用于"
+  }
+ ],
+ "ABC-GRPO": [
+  {
+   "id": "f23c0abac927be7f",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+   "url": "https://huggingface.co/papers/2608.05102",
+   "score": 8,
+   "summary": "Long-horizon search agents（长程搜索智能体，指需要多步搜索、检索、验证、整合信息才能回答复杂问题的 AI 系统）的训练一直面临一个核心难题：如何判断一次多步搜索轨迹中，哪些步骤真正有用、哪些是冗余甚至错误的。ABSeeker 提出了一种名为 Answer-Backtracked Credit Assignment（ABC，答案回溯式功劳分配）的细粒度功劳分配框架，专门用于"
+  }
+ ],
+ "BrowseComp": [
+  {
+   "id": "f23c0abac927be7f",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+   "url": "https://huggingface.co/papers/2608.05102",
+   "score": 8,
+   "summary": "Long-horizon search agents（长程搜索智能体，指需要多步搜索、检索、验证、整合信息才能回答复杂问题的 AI 系统）的训练一直面临一个核心难题：如何判断一次多步搜索轨迹中，哪些步骤真正有用、哪些是冗余甚至错误的。ABSeeker 提出了一种名为 Answer-Backtracked Credit Assignment（ABC，答案回溯式功劳分配）的细粒度功劳分配框架，专门用于"
+  }
+ ],
+ "BrowseComp-ZH": [
+  {
+   "id": "f23c0abac927be7f",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+   "url": "https://huggingface.co/papers/2608.05102",
+   "score": 8,
+   "summary": "Long-horizon search agents（长程搜索智能体，指需要多步搜索、检索、验证、整合信息才能回答复杂问题的 AI 系统）的训练一直面临一个核心难题：如何判断一次多步搜索轨迹中，哪些步骤真正有用、哪些是冗余甚至错误的。ABSeeker 提出了一种名为 Answer-Backtracked Credit Assignment（ABC，答案回溯式功劳分配）的细粒度功劳分配框架，专门用于"
+  }
+ ],
+ "WeatherNext": [
+  {
+   "id": "ebc5821a44c45c7a",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+   "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+   "score": 5,
+   "summary": "WeatherNext 是 DeepMind 推出的新一代 AI 气象模型，专门针对气旋预报实现了突破性提升。该模型在预测气旋路径和强度方面展现出显著优势，标志着 AI 在极端天气预测领域迈出关键一步。这一进展值得关注，因为它有望大幅延长灾害预警时间，为防灾减灾提供更可靠的技术支撑。"
+  }
+ ],
+ "DeepMind": [
+  {
+   "id": "ebc5821a44c45c7a",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+   "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+   "score": 5,
+   "summary": "WeatherNext 是 DeepMind 推出的新一代 AI 气象模型，专门针对气旋预报实现了突破性提升。该模型在预测气旋路径和强度方面展现出显著优势，标志着 AI 在极端天气预测领域迈出关键一步。这一进展值得关注，因为它有望大幅延长灾害预警时间，为防灾减灾提供更可靠的技术支撑。"
+  }
+ ],
+ "气旋预报": [
+  {
+   "id": "ebc5821a44c45c7a",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+   "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+   "score": 5,
+   "summary": "WeatherNext 是 DeepMind 推出的新一代 AI 气象模型，专门针对气旋预报实现了突破性提升。该模型在预测气旋路径和强度方面展现出显著优势，标志着 AI 在极端天气预测领域迈出关键一步。这一进展值得关注，因为它有望大幅延长灾害预警时间，为防灾减灾提供更可靠的技术支撑。"
+  }
+ ],
+ "SRE 智能体": [
+  {
+   "id": "6a2c44f62f58bd05",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "How we built an autonomous SRE agent for Kubernetes",
+   "url": "https://www.langchain.com/blog/how-we-build-an-autonomous-sre-agent-for-kubernetes-deployments",
+   "score": 7,
+   "summary": "LangChain 发布了一款面向 Kubernetes 部署的自主 SRE 智能体，它基于 Deep Agents 构建，能够自主执行运维操作，并在执行变更前引入人工审批机制。该方案还集成了 LangSmith 进行链路追踪与评估，以确保智能体行为的可观测性与可靠性。这一实践展示了如何将大模型智能体应用于生产级基础设施管理，并平衡自主性与安全控制，对关注 AI 在运维领域落地的面试者具有参考价值"
+  }
+ ],
+ "RESUME CONTRACT": [
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
+  }
+ ],
+ "CrewAI": [
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
+  }
+ ],
+ "TLA+": [
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
+  }
+ ],
+ "工作流持久层": [
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
+  }
+ ],
+ "检查点": [
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
+  }
+ ],
+ "中断": [
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
+  }
+ ],
+ "恢复": [
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
+  }
+ ],
+ "前缀延续": [
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
+  }
+ ],
+ "副作用精确一次执行": [
+  {
+   "id": "6aaf581831d3c5e6",
+   "date": "2026-08-07",
+   "run_type": "midweek",
+   "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
+   "url": "https://huggingface.co/papers/2608.03836",
+   "score": 8,
+   "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
   }
  ]
 }
