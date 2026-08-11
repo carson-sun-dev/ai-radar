@@ -1,0 +1,943 @@
+{
+ "meta": {
+  "date": "2026-08-11",
+  "run_type": "midweek",
+  "description": "深读：Meta is back with Muse Glimmer: local, agentic, multimodal, and open source；Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS；Making Knowledge ",
+  "entities": [
+   "API 流量路由",
+   "Code-Switching",
+   "DCAS",
+   "Decoupling CLI Agent Scaffolding",
+   "Distil-abel",
+   "Flow Matching",
+   "GPT-4V",
+   "GPT-5.6 Sol",
+   "Gemini",
+   "LangChain",
+   "LangSmith",
+   "Managed Deep Agents",
+   "Meta",
+   "Model ML",
+   "Muse Glimmer",
+   "NVIDIA Magpie TTS",
+   "TensorRT-LLM",
+   "Triton 推理服务器",
+   "中间层特征对齐",
+   "后端替换拦截层",
+   "命令行智能体脚手架",
+   "基于偏好的蒸馏方法",
+   "知识蒸馏",
+   "规划感知的轨迹收集",
+   "规划感知轨迹微调",
+   "跨脚手架评估",
+   "输出分布匹配"
+  ],
+  "tags": [
+   "model",
+   "engineering",
+   "paper"
+  ],
+  "item_count": 49,
+  "sources_failed": [
+   "anthropic-news：HTTP 403（疑似反爬）（已重试 3 次）",
+   "anthropic-engineering：HTTP 403（疑似反爬）（已重试 3 次）",
+   "seed-research：HTTP 403（疑似反爬）（已重试 3 次）",
+   "arxiv-papers：超时（已重试 3 次）"
+  ],
+  "tokens_used": 20704,
+  "cost_cny": 0.2887,
+  "duration_seconds": 356.9
+ },
+ "deep": [
+  {
+   "id": "dfb586131bf3d3cb",
+   "source": "hf-blog",
+   "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+   "url": "https://huggingface.co/blog/muse-glimmer",
+   "published_at": "2026-08-10T00:00:00Z",
+   "summary": "",
+   "category": "model",
+   "score": 9,
+   "score_reason": "Meta开源多模态Agent模型Muse Glimmer，本地可部署、agentic、开源，直接改变应用层工程实践",
+   "entities": [
+    "Muse Glimmer",
+    "Meta",
+    "GPT-4V",
+    "Gemini"
+   ],
+   "analysis": "这是 Meta 最新发布的开源多模态 AI 模型 Muse Glimmer，一个能在本地设备上运行、具备智能体能力、同时处理文本与图像的多模态模型。它延续了 Meta 一贯的开源策略，但这次的关键突破在于将“智能体”和“多模态”能力压缩到可本地部署的规模，让开发者能在个人设备上构建能看、能读、能自主决策的 AI 应用。\n\n此前，多模态模型和智能体系统长期面临一个核心矛盾：能力越强，对云端算力的依赖就越重。GPT-4V、Gemini 等多模态大模型虽然能理解图文，但必须调用远程 API，带来延迟、隐私和离线不可用的问题。而能在本地运行的小模型，要么只处理文本，要么缺乏智能体所需的工具调用和自主规划能力。开发者若想做一个能看懂屏幕截图、操作本地应用的 AI 助手，往往需要拼接多个模型和复杂的工程管线，系统脆弱且难以维护。Muse Glimmer 试图用一个统一模型解决这个碎片化问题。\n\n从技术流程看，Muse Glimmer 的核心在于将多模态感知与智能体行动闭环整合进单一模型架构。它接收的输入可以是自然语言指令、屏幕截图或照片，内部通过视觉编码器将图像转化为与文本对齐的表示，再经由一个经过智能体任务微调的语言模型主干进行推理。这个主干不仅生成文字回复，还能输出结构化的“行动指令”——比如点击坐标、键盘输入、应用切换等操作。训练上，Meta 采用了分阶段策略：先在大规模图文数据上做多模态预训练，让模型建立视觉与语言的基础关联；然后在带标注的智能体交互轨迹数据上进行监督微调，教会模型如何将观察到的界面状态映射为具体操作；最后通过强化学习优化模型在真实交互环境中的决策质量，使其能完成多步任务而不会中途迷失。这种设计让模型具备了“观察-思考-行动”的完整循环，而不只是被动回答问题。\n\n对 AI 应用岗而言，Muse Glimmer 的出现标志着本地化智能体应用从“能做 demo”走向“可能生产可用”的转折点。面试中可以从三个角度切入讨论：第一，隐私与离线场景的工程价值——医疗、金融、工业等领域的应用终于可以摆脱数据上云的合规枷锁，面试官很可能追问你如何评估本地模型与云端模型的取舍边界；第二，智能体架构的简化——过去需要视觉模型、语言模型、规划模块、执行器层层串联的复杂管线，现在可能被单一模型替代，这直接关系到团队的人力配置和系统维护成本，你可以谈谈这种简化对工程团队意味着什么；第三，开源生态的加速效应——Meta 的开源策略意味着开发者可以基于此模型做领域微调，比如专门针对某个企业软件的界面操作进行优化，这为垂直场景的 AI 应用打开了快速落地的通道，面试中若能结合具体业务场景提出微调方案，会是非常加分的实战思维。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "5890b1cfd4cc38aa",
+   "source": "hf-blog",
+   "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+   "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+   "published_at": "2026-08-10T16:25:36Z",
+   "summary": "",
+   "category": "engineering",
+   "score": 8,
+   "score_reason": "低延迟多语言语音Agent构建方法，含开源权重和部署控制，直接解决生产级语音应用工程问题",
+   "entities": [
+    "NVIDIA Magpie TTS",
+    "Flow Matching",
+    "TensorRT-LLM",
+    "Triton 推理服务器",
+    "Code-Switching"
+   ],
+   "analysis": "这是一篇关于 NVIDIA Magpie TTS 开源文本转语音模型的技术发布，它提供了一套开放权重、支持多语种、低延迟的语音合成方案，让开发者能完全掌控从模型到部署的整个链路。\n\n在 Magpie TTS 出现之前，构建生产级语音智能体面临几个核心痛点。首先是延迟问题，传统的自回归 TTS 模型需要逐帧生成音频，导致首包延迟和总合成时间都偏高，在需要实时交互的语音对话场景中体验很差。其次是多语种支持往往需要为每种语言单独训练或微调模型，维护成本高且跨语言表现不稳定。第三是闭源 API 方案虽然省事，但开发者无法控制模型版本、推理部署细节，数据隐私和定制化需求都受限制，尤其在金融、医疗等合规要求严格的行业，私有化部署是刚需。此外，开源社区长期缺乏一个既能达到商用质量、又支持多语种、还能在消费级硬件上低延迟运行的完整方案。\n\nMagpie TTS 的技术实现围绕三个关键设计展开。在模型架构上，它采用非自回归的流式匹配（Flow Matching）方案，通俗讲就是不再像传统模型那样一个字一个字地“念”出来，而是直接学习从文本到语音频谱的映射路径，配合概率常微分方程求解器，能够一次性生成整段音频，大幅压缩了合成时间。多语种能力方面，模型通过共享的音素表示和语言嵌入，在单一模型内支持英语、中文、日语、韩语、德语、法语等主要语言，并且能处理中英混合的 Code-Switching 场景，这对面向全球市场的应用尤为关键。在部署优化上，NVIDIA 提供了完整的推理管线，包括 TensorRT-LLM 加速和 Triton 推理服务器集成，使得模型可以在 GPU 甚至边缘设备上实现毫秒级响应。特别值得一提的是，Magpie TTS 支持流式音频输出，即模型在生成过程中就可以边合成边播放，首包延迟被压缩到极低水平，这是实现自然对话节奏的技术基础。\n\n对 AI 应用岗的面试和实际工作而言，这条资讯的价值体现在几个层面。首先是生产可用性的判断依据：当面试官问到“如何选型 TTS 方案”时，你可以从延迟指标、多语种覆盖、部署可控性三个维度展开，Magpie TTS 恰好提供了一个开源基准。其次，流式推理和低延迟优化是实时语音智能体的核心技术挑战，理解 Flow Matching 相比自回归方案在延迟上的优势，以及 TensorRT-LLM 这类推理加速工具的作用，能体现你对 AI 工程化的深入思考。再者，多语种和 Code-Switching 的支持涉及音素对齐、语言嵌入等底层设计，如果你在项目中处理过国际化需求，可以结合这些技术点说明如何避免“一套语言一个模型”的维护噩梦。最后，开放权重和全链路部署控制意味着你可以将模型集成到私有云或边缘设备中，这在面试中讨论数据安全、合规部署、成本优化时都是有力的论据。整体来看，Magpie TTS 代表了语音 AI 从“能用”走向“好用且可控”的趋势，掌握这类方案的技术细节，能帮助你在面试中展现出从模型选型到工程落地的完整视角。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "815edfe6383208a7",
+   "source": "hf-blog",
+   "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+   "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+   "published_at": "2026-08-10T10:05:36Z",
+   "summary": "",
+   "category": "paper",
+   "score": 8,
+   "score_reason": "知识蒸馏规模化方法，直接降低模型部署成本，对应用层模型压缩和推理优化有实用价值",
+   "entities": [
+    "Distil-abel",
+    "知识蒸馏",
+    "输出分布匹配",
+    "中间层特征对齐",
+    "基于偏好的蒸馏方法"
+   ],
+   "analysis": "知识蒸馏是一种用大模型（教师）教会小模型（学生）模仿其输出的技术，目的是让小模型在保持较高性能的同时大幅降低推理成本。这篇文章介绍了一个名为 Distil-abel 的新工具，它把知识蒸馏从过去需要大量手工编码和复杂工程搭建的繁琐流程，变成了一套可配置、可复用的标准化流水线，让团队能够以极低的工程成本在大规模数据上运行蒸馏任务。\n\n此前，知识蒸馏在实际落地中面临两个核心痛点。第一是工程门槛高，研究人员需要自己编写数据加载、模型调用、结果比对、质量过滤等一整套代码，不同项目之间很难复用，每次蒸馏几乎都要从零搭建。第二是规模化困难，当需要处理百万级甚至更大规模的数据时，单机处理速度太慢，而分布式执行又涉及任务调度、容错、资源管理等复杂问题，很多团队最终只能在小批量数据上做实验，无法真正用于生产级模型训练。这导致知识蒸馏虽然理论上很美好，但在工业界的大规模应用中一直难以普及。\n\nDistil-abel 的解决方案是把蒸馏流程抽象成几个标准化的步骤，并用声明式配置来驱动整个流水线。它的核心设计包括三个层面。首先，它定义了一套统一的蒸馏任务模板，用户只需要在配置文件中指定教师模型、学生模型、数据集路径以及蒸馏策略，工具会自动完成数据预处理、教师推理、学生训练数据生成等环节，无需手写胶水代码。其次，它内置了多种蒸馏策略的支持，包括传统的输出分布匹配、中间层特征对齐，以及更现代的基于偏好的蒸馏方法，用户可以通过切换配置项来对比不同策略的效果。第三，也是最具工程价值的一点，它原生集成了分布式执行引擎，能够自动将蒸馏任务拆分到多台机器上并行运行，并处理节点故障恢复、任务重试等问题，使得在数千台机器上处理亿级数据成为可能。整个工具以 Python 库的形式发布，可以直接集成到现有的训练流水线中。\n\n对于 AI 应用工程师而言，这个工具直接回应了面试中经常被考察的一个问题：如何把研究阶段的模型优化技术变成可稳定运行的生产系统。在面试中，你可以从三个角度展开讨论。一是工程抽象能力，说明你理解将复杂流程标准化、配置化的重要性，而不是每次都写一次性脚本。二是成本意识，能够分析知识蒸馏在大规模场景下的计算开销和工程人力成本，并说明如何通过工具选型来降低总成本。三是生产可用性考量，比如分布式任务的容错机制、与现有 MLOps 流程的集成方式、以及如何监控蒸馏质量等。这些点恰好是大厂在评估 AI 应用岗候选人时最看重的工程素养，而不仅仅是模型训练技巧本身。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  }
+ ],
+ "mid": [
+  {
+   "id": "95f74aeac90a93bb",
+   "source": "openai-news",
+   "title": "Model ML completes finance work more efficiently with GPT-5.6 Sol",
+   "url": "https://openai.com/index/model-ml",
+   "published_at": "2026-08-10T12:00:00Z",
+   "summary": "Model ML uses GPT-5.6 Sol to carry finance work from research and analysis through editable, traceable PowerPoint decks and Excel workbooks.",
+   "category": "model",
+   "score": 7,
+   "score_reason": "GPT-5.6 Sol是OpenAI新模型，用于金融工作自动化，属旗舰中期迭代，值得了解能力边界",
+   "entities": [
+    "GPT-5.6 Sol",
+    "Model ML"
+   ],
+   "analysis": "Model ML 利用 GPT-5.6 Sol 将金融工作从研究分析推进到可编辑、可追溯的 PowerPoint 演示文稿和 Excel 工作簿。其核心变化在于将大模型能力直接嵌入专业文档生成流程，实现端到端的自动化产出。这值得关注，因为它展示了 AI 在金融这类高精度场景中，从信息处理到最终交付物的完整闭环能力。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "b63273fd00b53bf8",
+   "source": "langchain-blog",
+   "title": "Managed Deep Agents is now in public beta",
+   "url": "https://www.langchain.com/blog/managed-deep-agents-is-now-in-public-beta",
+   "published_at": "2026-08-07T19:39:38Z",
+   "summary": "Deploy Deep Agents to a managed LangSmith runtime with durable execution, memory, sandboxes, channels, evals, and production-ready infrastructure.",
+   "category": "engineering",
+   "score": 7,
+   "score_reason": "LangChain Deep Agents 托管服务公测，提供生产级 agent 部署基础设施，直接相关且实用。",
+   "entities": [
+    "Managed Deep Agents",
+    "LangChain",
+    "LangSmith"
+   ],
+   "analysis": "LangChain 推出了 Managed Deep Agents 的公开测试版，这是一个将深度智能体部署到托管 LangSmith 运行时的服务。它提供了持久化执行、记忆、沙盒、通道、评估及生产级基础设施等关键能力。这一变化值得关注，因为它将复杂的智能体开发与运维工作流整合为一体化托管方案，有望显著降低从原型到生产环境的工程门槛。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "f771880554b4edea",
+   "source": "hf-daily-papers",
+   "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+   "url": "https://huggingface.co/papers/2608.06113",
+   "published_at": "2026-08-06T00:00:00Z",
+   "summary": "CLI-based software-engineering agents have matured rapidly, yet the open ecosystem has converged on a single training environment: trajectory datasets used to fine-tune open models are collected almost exclusively under OpenHands. Models fine-tuned on this data score well under OpenHands but degrade substantially when deployed under any non-training scaffold. Untrained base models do not show this divergence, indicating the gap is fine-tuning-induced and tied to the conventions of the training scaffold. We argue that a load-bearing scaffold-specific behavior is planning structure, in two senses this paper distinguishes: explicit planning, a pre-execution plan produced as a first-class artifact, and implicit planning, the structural conventions that shape execution throughout the agent loop. Under this hypothesis, closing the gap requires moving planning from a fixed scaffold artifact to a learned model capability. We introduce Decoupling CLI Agent Scaffolding (DCAS), a backend-substitution interception layer that routes API traffic between any CLI scaffold and any backend model without modifying the scaffold, enabling cross-scaffold evaluation and planning-aware trajectory collection. Using DCAS, a controlled plan-source intervention confirms planning quality is a high-leverage component, with gains exceeding the cross-scaffold drops we observe. A model fine-tuned on a small set of DCAS-collected planning-aware trajectories under a single scaffold gains consistently across no",
+   "category": "paper",
+   "score": 8,
+   "score_reason": "CLI Agent脚手架解耦与规划泛化，直接揭示当前Agent训练范式缺陷，对工程选型有重要参考。",
+   "entities": [
+    "DCAS",
+    "Decoupling CLI Agent Scaffolding",
+    "命令行智能体脚手架",
+    "后端替换拦截层",
+    "API 流量路由",
+    "跨脚手架评估",
+    "规划感知的轨迹收集",
+    "规划感知轨迹微调"
+   ],
+   "analysis": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨迹微调的模型，能在多个未见过的脚手架上获得一致提升。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 13
+   }
+  }
+ ],
+ "glance": {
+  "model": [
+   {
+    "id": "081601c279be28d3",
+    "source": "openai-news",
+    "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
+    "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+    "published_at": "2026-08-10T10:00:00Z",
+    "summary": "Meet GPT-5.6-Cyber, OpenAI’s cybersecurity-specific model available through Daybreak Red for authorized vulnerability research, exploit validation, and security testing.",
+    "category": "model",
+    "score": 7,
+    "score_reason": "GPT-5.6-Cyber是OpenAI网络安全专用模型，属子线型号更新，对安全领域应用选型有参考价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "e66cc71d0943fe40",
+    "source": "openai-news",
+    "title": "Responding to the next frontier of critical cyber capabilities",
+    "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
+    "published_at": "2026-08-07T15:20:00Z",
+    "summary": "OpenAI is sharing preliminary cybersecurity evaluations for Astra and the steps we’re taking to strengthen safeguards and security controls.",
+    "category": "model",
+    "score": 4,
+    "score_reason": "Astra网络安全评估初步分享，涉及安全能力但无具体模型发布或工程方法",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "29b0e61ec6cd1ed3",
+    "source": "openai-news",
+    "title": "Putting frontier cyber models in more trusted hands",
+    "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands",
+    "published_at": "2026-08-10T10:00:00Z",
+    "summary": "Approved Daybreak partners can use OpenAI’s frontier cyber models to deliver authorized, governed cybersecurity services to customers.",
+    "category": "model",
+    "score": 3,
+    "score_reason": "Daybreak合作伙伴使用前沿网络模型的营销通稿，无模型细节或工程方法",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "2a5c0cad5d8b2f9d",
+    "source": "openai-news",
+    "title": "Premium seats are coming to ChatGPT Business",
+    "url": "https://openai.com/index/premium-seats-chatgpt-business",
+    "published_at": "2026-08-10T00:00:00Z",
+    "summary": "Premium seats are coming to ChatGPT Business. Sign up by August 20 to get $100 in workspace credits and unlock higher usage for your team's most demanding work.",
+    "category": "model",
+    "score": 2,
+    "score_reason": "ChatGPT Business付费席位促销，纯商业推广，无技术价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "3d196224ab27a2df",
+    "source": "openai-news",
+    "title": "OpenAI’s letter to Governor Abbott on responsible AI infrastructure in Texas",
+    "url": "https://openai.com/index/responsible-ai-infrastructure-texas",
+    "published_at": "2026-08-10T14:00:00Z",
+    "summary": "OpenAI sent Governor Greg Abbott a letter outlining its commitment to responsible AI infrastructure in Texas. The letter supports reliable, transparent growth that benefits Texans.",
+    "category": "model",
+    "score": 1,
+    "score_reason": "纯政治公关信函，与AI应用工程完全无关",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "engineering": [
+   {
+    "id": "54341145e7f814b6",
+    "source": "langchain-blog",
+    "title": "Managed Deep Agents: the fastest way to ship a production deep agent",
+    "url": "https://www.langchain.com/blog/introducing-managed-deep-agents",
+    "published_at": "2026-08-07T19:39:38Z",
+    "summary": "Run deep agents in production with durable execution, sandboxes, tool access, and LangSmith observability, without building the runtime yourself. Now in private beta",
+    "category": "engineering",
+    "score": 6,
+    "score_reason": "Managed Deep Agents 是 LangChain 的托管服务，对生产部署有参考价值，但当前仅 private beta，信息有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "6476741ad7bd8e8e",
+    "source": "openai-news",
+    "title": "How Zapier transformed core marketing processes with ChatGPT Work",
+    "url": "https://openai.com/index/zapier",
+    "published_at": "2026-08-10T00:00:00Z",
+    "summary": "The enterprise marketing team at Zapier uses ChatGPT Work to reduce the number of drop-offs in its lead funnel, build campaign assets, and automate reporting.",
+    "category": "engineering",
+    "score": 5,
+    "score_reason": "Zapier使用ChatGPT Work的案例，有实际应用场景但缺乏具体工程实现细节",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "0e82d8998833621a",
+    "source": "openai-news",
+    "title": "Virgin Atlantic sharpens customer journeys with ChatGPT Work",
+    "url": "https://openai.com/index/virgin-atlantic/chatgpt-work",
+    "published_at": "2026-08-10T00:00:00Z",
+    "summary": "Virgin Atlantic is accelerating research, product planning, and decision-making with ChatGPT Work, helping teams connect signals across the customer journey.",
+    "category": "engineering",
+    "score": 5,
+    "score_reason": "Virgin Atlantic使用ChatGPT Work的客户案例，有参考价值但偏营销性质",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "5367cc95a8fd9817",
+    "source": "openai-news",
+    "title": "What building an AI-native finance function taught me",
+    "url": "https://openai.com/index/building-an-ai-native-finance-function",
+    "published_at": "2026-08-10T17:00:00Z",
+    "summary": "OpenAI CFO Sarah Friar shares five lessons for building an AI-native finance function, from automated forecasting to stronger controls and AI ROI.",
+    "category": "engineering",
+    "score": 4,
+    "score_reason": "CFO分享AI-native财务经验，有参考价值但偏管理视角，缺乏可复现工程细节",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "6cbb30c6942a175f",
+    "source": "langgraph-releases",
+    "title": "langchain-ai/langgraph langgraph-checkpoint-postgres==3.1.2",
+    "url": "https://github.com/langchain-ai/langgraph/releases/tag/checkpointpostgres%3D%3D3.1.2",
+    "published_at": "2026-08-07T20:40:16Z",
+    "summary": "Changes since checkpointpostgres==3.1.1\n\n* release(checkpoint-postgres): 3.1.2 (#8565)\n* release(checkpoint): 4.2.0 (#8563)\n* test(checkpoint-postgres,checkpoint-sqlite): run the conformance suite (#8537)\n* fix(checkpoint-postgres): find plain-value seeds when walking delta history (#8535)\n* chore: enable RUF100 and clear unused noqa directives (#8546)\n* chore(checkpoint-postgres,checkpoint-sqlite): enable PLC0415 lint rule (#8540)\n* chore(deps): bump the minor-and-patch group in /libs/checkpoint-postgres with 5 updates (#8497)",
+    "category": "engineering",
+    "score": 4,
+    "score_reason": "LangGraph checkpoint-postgres 的补丁版本更新，修复细节对多数应用层开发者不关键",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "b5b452d355a57b33",
+    "source": "langgraph-releases",
+    "title": "langchain-ai/langgraph langgraph-checkpoint==4.2.0",
+    "url": "https://github.com/langchain-ai/langgraph/releases/tag/checkpoint%3D%3D4.2.0",
+    "published_at": "2026-08-07T20:05:22Z",
+    "summary": "Changes since checkpoint==4.1.1\n\n* release(checkpoint): 4.2.0 (#8563)\n* fix(checkpoint): collect writes at plain-value seed in delta channel history (#8526)\n* chore: enforce PLC0415 in tests for the remaining packages (#8547)\n* chore: enable RUF100 and clear unused noqa directives (#8546)\n* chore(deps): bump the minor-and-patch group in /libs/checkpoint with 4 updates (#8490)\n* feat(checkpoint,checkpoint-postgres): add opt-in omit_expired to skip expired rows on read (#8354)\n* chore(deps): bump the minor-and-patch group in /libs/checkpoint with 5 updates (#8248)\n* chore(deps): bump langsmith from 0.8.0 to 0.8.18 in /libs/checkpoint (#8173)\n* docs: standardize package `README.md` structure (#8064)\n* chore: migrate Python type checking to ty (#8002)\n* chore(deps-dev): bump the major group in /libs/checkpoint with 2 updates (#7967)\n* chore(deps): bump the minor-and-patch group in /libs/checkpoint with 3 updates (#7960)",
+    "category": "engineering",
+    "score": 4,
+    "score_reason": "LangGraph checkpoint 库的次要版本更新，修复 delta channel 写入问题，影响面窄",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "7347f06e7c916544",
+    "source": "openai-news",
+    "title": "How HSP GRUPPE builds AI capabilities for tax advisory",
+    "url": "https://openai.com/index/hsp-gruppe",
+    "published_at": "2026-08-07T09:00:00Z",
+    "summary": "Discover how HSP GRUPPE uses ChatGPT Enterprise to boost productivity, improve work quality, and create more capacity for tax advisory and client service.",
+    "category": "engineering",
+    "score": 4,
+    "score_reason": "HSP GRUPPE使用ChatGPT Enterprise的案例，偏营销，缺乏可复现工程细节",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "paper": [
+   {
+    "id": "624979042481ff50",
+    "source": "hf-blog",
+    "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
+    "url": "https://huggingface.co/blog/allenai/tutormoments",
+    "published_at": "2026-08-07T17:53:32Z",
+    "summary": "",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "AI tutor何时干预/不干预的研究，对构建高质量AI教育Agent的交互策略有直接参考价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "88d2816c6f2d8653",
+    "source": "hf-daily-papers",
+    "title": "YOLO-PEFT: Parameter-Efficient Fine-Tuning on YOLO Family",
+    "url": "https://huggingface.co/papers/2608.07051",
+    "published_at": "2026-08-07T00:00:00Z",
+    "summary": "Generic parameter-efficient fine-tuning (PEFT) methods transferred from language models can fail silently on real-time detectors, whose heterogeneous operators and detection-specific components impose placement constraints absent from regular Transformer stacks. We propose YOLO-PEFT, a structure-aware framework that formulates adapter placement as an auditable constraint-planning problem. Given a detector graph, a PEFT request, and a resource budget, YOLO-PEFT assigns operator and semantic roles, evaluates explicit operator-validity, detector-semantic, graph-interface, and deployment predicates, records a reason code for each excluded module, and either emits a budgeted target-module plan or returns Refuse before training. Under the official VOC07+12 trainval-to-VOC07 test protocol, planner-selected RS-LoRA reaches 0.7138 and 0.7307 mAP50-95 on YOLO11s and YOLO12s, respectively, compared with 0.6428 and 0.6662 for Full-SFT. On RT-DETR-L, all seven evaluated LoRA-family configurations cross the predefined catastrophic threshold, supporting a calibrated Refuse-to-Full-SFT decision within the evaluated coverage. A controlled YOLO11 audit further shows that LoRA reduces peak training memory by 43.9 percent, although training takes 1.72 times longer. Within the evaluated detector families, placement policies, and calibration coverage, YOLO-PEFT replaces manual target-module trial and error with explicit, inspectable planning while preserving verified train-save-merge-export paths;",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "YOLO 上的 PEFT 方法，结构感知的 adapter 放置策略，对视觉模型微调工程有直接实用价值。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 15
+    }
+   },
+   {
+    "id": "1711b023abdd897f",
+    "source": "hf-daily-papers",
+    "title": "SFT Conflicts, RL Coexists: A Theoretical and Empirical Analysis of Multi-Task Learning for LLMs",
+    "url": "https://huggingface.co/papers/2608.03573",
+    "published_at": "2026-08-06T00:00:00Z",
+    "summary": "Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) exhibit fundamentally different behaviors in enhancing multi-task reasoning for large language models (LLMs). Our preliminary experiments revealed a phenomenon: SFT suffers from severe task conflicts under multi-stage training, whereas RL enables stable coexistence across diverse tasks. Empirically, we trace this to the parameter level, observing that RL induces sparse and approximately orthogonal updates across tasks. We provide a theoretical explanation for this mechanism by analyzing multi-task gradient interference. Our results reveal a distinction: interference in SFT is norm-limited, scaling with the absolute gradient magnitude, whereas interference in RL is variance-limited, bounded by the gradient variance induced by advantage normalization and on-policy optimization. This small variance bound yields near-orthogonal optimization directions across tasks. Leveraging this insight, we propose Parallel-RL, a paradigm that decouples multi-task training, significantly improving efficiency and flexibility.",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "SFT 与 RL 在多任务学习中的冲突与共存分析，有理论和实验支撑，对 LLM 微调策略选择有直接指导意义。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 32
+    }
+   },
+   {
+    "id": "67c15eded2ea2e70",
+    "source": "hf-daily-papers",
+    "title": "Relevant but Incomplete: Referential Dangling as a Paradigm-Level Failure Mode in Hard Prompt Compression",
+    "url": "https://huggingface.co/papers/2608.04569",
+    "published_at": "2026-08-05T00:00:00Z",
+    "summary": "Hard prompt compression reduces long-context inference cost by independently scoring tokens, sentences, or chunks and retaining the highest-scoring units under a budget. We identify a structural failure in this procedure: independent selection can split dependent evidence pairs, retaining one member while deleting the other. When retained text contains an answer but deleted text defines the entity needed to interpret it, we call the result referential dangling. At a compression ratio of 0.30, Beaver, which ranks coherent chunks using Qwen3-0.6B embeddings, leaves the answer path incomplete in 34-54% of bridge examples across three multi-hop question answering datasets. On a shared HotpotQA bridge set, all six hard compressors we test exhibit dangling at rates up to 60%, and every document in LongBench-v2 Single-Document QA contains at least one dangling reference. On dangling examples evaluated with Qwen3-8B, reinserting the missing supporting paragraph while removing nonsupporting paragraphs to maintain the token budget improves accuracy by 29-34 percentage points (p < 0.0001), recovering at least 88% of the gap to contexts retaining both supporting paragraphs. Stronger answer models do not absorb the loss: on MuSiQue, GPT-5.5 is 8.8 points less accurate on compressed contexts than on contexts retaining both supporting paragraphs. Finally, we train a compact classifier to rank omitted sentences by whether they are needed to interpret retained text and reinsert the top-ranked",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "硬提示压缩中引用悬垂失败模式分析，对RAG和长上下文工程有直接指导意义。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 8
+    }
+   },
+   {
+    "id": "f5db8858e467a33f",
+    "source": "hf-daily-papers",
+    "title": "Efficient Knowledge Distillation for LLMs: Offline Top-K Logits and a Fused Chunked KL Loss",
+    "url": "https://huggingface.co/papers/2608.03796",
+    "published_at": "2026-08-04T00:00:00Z",
+    "summary": "Small language models are often the only option for deployment under tight latency, cost, and on-premises constraints, but they are rarely trained from scratch: a compressed model is usually recovered through knowledge distillation (KD). This recovery step largely decides the final quality, yet it is expensive. We present a practitioner's study of how to make distillation training efficient, organised around two systems contributions. First, we show that offline KD (caching the teacher's top-K logits once and training the student against the cache) matches online distillation at near-identical training loss while removing the teacher from memory, running about 29\\% faster per iteration, and reaching up to 41\\% higher throughput on a single H200 GPU. Second, we introduce a fused, chunked KL loss that never materialises the full vocabulary-sized logit tensor, making peak memory linear in the sequence length. This removes the memory spike that otherwise caps context length and lets us train at four times the context (32{,}768 tokens) on a single GPU. A separate output-head-only toy benchmark isolates the loss kernel and confirms its memory and iteration-rate scaling from 4K to 256K tokens. Together these make large-scale healing and hundreds of ablations affordable. We also report supporting ablations on loss design and sequence packing. We release our chunked-loss implementation: https://github.com/CompactifAI/Full-Chunked-KL-Loss.",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "LLM知识蒸馏高效训练方法，Offline Top-K Logits和Chunked KL Loss有工程可复现性，对小模型部署实用。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 9
+    }
+   },
+   {
+    "id": "b7ef43c5beed5d98",
+    "source": "hf-daily-papers",
+    "title": "Beyond Simply Environment Scaling: Designing Effective Environment Distributions for Multimodal Agent Learning",
+    "url": "https://huggingface.co/papers/2608.03571",
+    "published_at": "2026-08-06T00:00:00Z",
+    "summary": "Recent works train agents by constructing large-scale multimodal environment pools. However, we find that simply increasing the number of multimodal environments does not always benefit. We further analyze the limitations in current multimodal environment distributions through a series of experiments. Based on these findings, we study how to build more effective training environment distributions from two dimensions: **diversity** and **difficulty structure**. For diversity, we propose **Ability-aware Environment Selection (AES)** to obtain diverse environment sets. For difficulty structure, we propose **Hierarchical Difficulty Curriculum (HDC)**, which organizes curriculum learning through two difficulty levels: harness weakening and state-scale progression. Experiments show that AES and HDC effectively improve multimodal agent training.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "多模态智能体训练环境分布设计，有实验发现和设计建议，对构建 agent 训练 pipeline 有参考价值。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 28
+    }
+   },
+   {
+    "id": "8148daa7c2a6a718",
+    "source": "hf-daily-papers",
+    "title": "StreamArena: Toward Continuous, Interactive, and Long-Horizon Agentic Streaming Video Understanding",
+    "url": "https://huggingface.co/papers/2608.05703",
+    "published_at": "2026-08-06T00:00:00Z",
+    "summary": "Deploying autonomous multimodal agents in continuous, real-world environments requires them to ingest unbounded audio-visual streams and maintain hour-scale memory. However, current evaluations predominantly rely on brief clips and multiple-choice formats. This design allows minimal baselines that process only the last four frames to match or surpass complex streaming models, while answer options also expose language shortcuts. We introduce StreamArena, a benchmark for hour-scale, interactive streaming video understanding. StreamArena contains 243 full-length videos averaging 88.8 minutes and 3,646 rigorously annotated, open-ended question-answer pairs that evaluate real-time perception, historical retrospection, proactive interaction, and multimodal tool utilization. Evaluation across diverse systems exposes a tension between continuous interaction and long-horizon multimodal comprehension. Methods that retain only recent frames cannot recover distant events, methods that convert past observations into text lose visual evidence, and methods that repeatedly compress visual memory struggle to preserve fine-grained details over time. We address this tension with StreamMind, a two-tier architecture that assigns latency-critical interaction and proactive monitoring to independently scheduled frontend workers, while backend workers asynchronously construct persistent multimodal memory and perform historical recall and external search. StreamMind outperforms existing streaming base",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "流式视频理解 agent 评测基准，暴露当前评测缺陷，对构建长视频 agent 有参考价值。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 14
+    }
+   },
+   {
+    "id": "bf07415013ea103b",
+    "source": "hf-daily-papers",
+    "title": "When Privileged Guidance Misaligns: State-Matched Routing and Contextualized Self-Distillation for Multi-Turn Agents",
+    "url": "https://huggingface.co/papers/2608.05219",
+    "published_at": "2026-08-05T00:00:00Z",
+    "summary": "Privileged on-policy distillation provides dense supervision for multi-turn agents by allowing a synchronized teacher to re-score the student's response at every turn with access to training-only references, such as successful trajectories. In interactive environments, however, the student's preceding actions continually change the execution state. As the student takes different actions or completes subgoals in a different order, its rollout may reach states not covered by the reference, making the reference an unreliable source of guidance for the state actually reached. Applying privileged distillation indiscriminately therefore creates state--reference mismatch. This mismatch motivates a central objective: providing privileged reference guidance that remains compatible with the student's current execution state. We introduce State-Matched Routing and Contextualized Self-Distillation (SMRC-SD), which explicitly determines when and how a privileged trajectory should guide an on-policy student. At each turn, SMRC-SD verifies whether the student's current execution state matches a supported state along the reference trajectory. Distillation is applied only at matched states, filtering out turns for which the reference lacks locally compatible guidance. For each matched state, SMRC-SD further constructs state-conditioned teacher context from the successful trajectory, grounding supervision in the state actually reached. Across ALFWorld and WebShop, SMRC-SD consistently outperfo",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "多轮 agent 的蒸馏方法改进，解决状态不匹配问题，对 agent 训练有参考价值。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "c3e7bf27e5d56406",
+    "source": "hf-daily-papers",
+    "title": "MatrAIx: Simulating the World with 8.3 Billion Persona Agents",
+    "url": "https://huggingface.co/papers/2608.04205",
+    "published_at": "2026-08-04T00:00:00Z",
+    "summary": "Human evaluation of AI systems and digital products is costly, slow, and difficult to scale. Offline evaluations are more scalable but often abstract away human diversity and interactive behavior. We therefore introduce MatrAIx, a population-scale simulated-user evaluation infrastructure for testing AI systems and digital products with heterogeneous users. MatrAIx has three core components: First, Persona 8B contains 8.3 billion persona records represented by 1,290 categorical dimensions. Records are either sampled from a dependency graph that preserves correlated attributes or derived from human-authored profiles. We release a quality-filtered coreset of approximately 1 million personas, comprising 599,847 human-grounded and 400,000 synthetic records. Second, the MatrAIx Playground provides four environments in which diverse users evaluate and interact with digital products: Survey, AI Chatbot, Web, and App. Third, MatrAIx provides 1,010 application tasks spanning more than 25 domains, including Commerce, Software, Finance, and Healthcare. We conducted 18,189 evaluation trials across eight representative tasks. Persona agents were powered by three LLMs: Claude Opus 4.8, GPT 5.5, and Claude Haiku 4.5. The resulting feedback captures how decisions and preferences vary across persona backgrounds, including hesitation after a price increase, willingness to continue after an AI assistant fails, and latency tolerance. We conducted two main validation studies: First, a 400-trial co",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "大规模模拟用户评估框架，对AI产品评测有参考价值，但工程落地门槛高。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 14
+    }
+   },
+   {
+    "id": "07bf95cef57b5548",
+    "source": "hf-daily-papers",
+    "title": "Reinforcement Learning with Evolving Rubrics as Rewards for Audio Reasoning",
+    "url": "https://huggingface.co/papers/2608.02831",
+    "published_at": "2026-08-03T19:46:13Z",
+    "summary": "Audio reasoning is essential for machine understanding of the acoustic world. Reinforcement learning with verifiable rewards can elicit such reasoning, yet existing reward designs are complementary in their limitations: outcome-based rewards supervise only the final answer and let the model reach it without attending to the audio, whereas process-based rewards score the reasoning itself but rely on coarse, hand-crafted, and fixed criteria that neither adapt to each question nor stay grounded in the acoustic evidence. Moreover, questions differ in what they demand, with some hinging on perception and others on multi-step reasoning, and any static criterion weakens as the policy improves. Supervising the reasoning process with fine-grained, audio-grounded, and adaptive rewards is therefore crucial, yet challenging since such rewards are impractical to design by hand for every sample. To this end, we introduce AudioRubrics, a reinforcement learning framework that supervises audio reasoning with self-evolving, audio-grounded rubric rewards. AudioRubrics synthesizes per-sample rubrics from the raw waveform and, conditioned on the model's own rollouts, regenerates and reweights criteria per group, supplying a continuous learning signal that keeps targeting the current policy's weaknesses as static criteria saturate. Comprehensive evaluations across three audio reasoning benchmarks reveal that AudioRubrics substantially outperforms a wide range of open-source and training-based base",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "音频推理的 RL 奖励设计方法，结合结果与过程奖励，对多模态 RL 训练有参考价值。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 9
+    }
+   },
+   {
+    "id": "8981679652b81c34",
+    "source": "hf-daily-papers",
+    "title": "Douyin Multimodal Embedding Model Technical Report",
+    "url": "https://huggingface.co/papers/2608.02148",
+    "published_at": "2026-08-03T00:00:00Z",
+    "summary": "Multimodal representation learning is a cornerstone of modern AI. By encoding multimodal queries and targets into vectors, it powers industrial search and recommendation and underpins modern agents. Real-world platforms with complex modalities and massive-scale content, such as Douyin, Xiaohongshu, and YouTube, demand both efficiency under billion-scale indexing and fine-grained discrimination for hard matching. Existing MLLM embedding models rarely satisfy both. Contrastive models are efficient but rely on pair-level supervision too coarse for fine-grained distinctions, while CoT-based models improve discrimination through explicit generation impractical to serve online. We present Douyin Multimodal Embedding (DME), a model trained in two stages to combine both strengths. Stage 1 performs large-scale contrastive pre-training that establishes a unified multimodal embedding space with broad modality and task coverage. Stage 2 supplements semantic sufficiency, the property that an embedding is grounded in retrieval-relevant evidence and preserves fine-grained counterpart-side semantics, via two mechanisms. Evidence-Grounded Typed Latent Reasoning organizes retrieval evidence through hidden-space latent reasoning, and Cross-Conditional Reconstruction enforces counterpart-side semantics through cross-directional autoregressive reconstruction. Both act only during training and add only marginal query-side overhead, so DME serves as efficiently as a standard contrastive encoder. On",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "抖音多模态 embedding 模型技术报告，工业级多模态检索方案，有工程参考价值但细节有限。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 8
+    }
+   },
+   {
+    "id": "6f3e5307be1e31e1",
+    "source": "hf-daily-papers",
+    "title": "Capek 0.5: An Execution-Centric Vision-Language Model for Embodied Intelligence",
+    "url": "https://huggingface.co/papers/2608.06756",
+    "published_at": "2026-08-07T00:00:00Z",
+    "summary": "Vision-language models are increasingly serving as the reasoning core of embodied agents. Robot execution is inherently iterative: each action reshapes the scene and physical state, continually renewing what must be perceived, reasoned about, and verified. Meeting these demands requires complementary capabilities that differ in supervision signals, prediction formats, and verification criteria. Existing approaches typically develop these capabilities against isolated, task-specific objectives, leaving open how they should be organized and integrated around execution as a whole. We present Capek 0.5, an embodied vision-language model built around an execution-centric capability taxonomy. Rather than organizing training by datasets or tasks, the taxonomy groups embodied capabilities according to their functional roles throughout execution and comprises four capability families: Spatial Reasoning, Temporal Understanding, Action Guidance, and State Verification. Each capability is first acquired by a dedicated specialist through reinforcement learning with verifiable rewards from a shared backbone, and the specialists are then consolidated into a single inference-time model through weight-space merging followed by routed policy-space distillation. We instantiate Capek 0.5 at the 2B and 35B-A3B scales and evaluate it from three complementary perspectives: comprehensive benchmark suites including Capek-StateBench, a new benchmark for state verification; a controlled study of capabi",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "具身智能VLM，执行中心设计思路对Agent工程有启发，但领域较窄。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "2af1f4f4353c3643",
+    "source": "hf-daily-papers",
+    "title": "Zero Gap Is Not Restoration: Stratified Per-Question Probability Evaluation and Step-wise Mitigation of Benchmark Contamination",
+    "url": "https://huggingface.co/papers/2608.07341",
+    "published_at": "2026-08-07T00:00:00Z",
+    "summary": "Test data from public benchmarks inevitably leaks into pretraining corpora, inflating evaluation scores once memorized. Contamination mitigation evaluation intervenes in the decoding process to suppress memorization and restore a contaminated model's genuine capability, but its prevailing metric, the G-AP (Gap of Aggregate Performance), is flawed. Discrete correct/incorrect readouts cannot characterize per-question performance, averaging before differencing lets over- and under-suppression cancel out, and uniform per-question weighting invites strategies to push solve probabilities onto the clean model's high-frequency values. We propose SA-PPG (Stratified Aggregate of Per-question Probability Gaps): estimate each question's solve probability by sampling, difference it against the clean model per question, and aggregate within groups defined by the clean model's solve probability. Existing mitigation strategies first estimate where contamination lies and then operate on the estimate, so they are only as correct as the estimate. RailCap instead judges contamination during generation: whenever a sample falls back onto the greedy trajectory, the next trajectory token is capped to the runner-up, accumulating suppression until the response distribution becomes sufficiently dispersed. Across multiple contaminated models and benchmarks, SA-PPG reveals that prior strategies' restoration is substantially overestimated, while RailCap attains the lowest SA-PPG.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "基准污染检测与缓解方法，对评估可信度有参考价值，但方法偏研究向，非直接工程可用。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "c3088902873753fb",
+    "source": "hf-daily-papers",
+    "title": "Enfold: Folding World Model Imagination into Predictive Representations for Ultra-Efficient Embodied Control",
+    "url": "https://huggingface.co/papers/2607.26657",
+    "published_at": "2026-08-06T00:00:00Z",
+    "summary": "World generative models are typically used through what they produce: a rendered future, a video-conditioned action, or latent context computed by a costly generative branch. We argue that their more reusable asset is the computation that constructs a future. As a generator transforms a corrupted future into a coherent trajectory, its intermediate states organize appearance, spatial layout, and interaction across levels of abstraction. Can this future-generative computation be internalized in a representation inferred from the present alone? We present Enfold, which transfers this computation into a representation predicted from the current visual context and language instruction. During training, multi-level states exposed as the generator processes the observed future supervise a current-only encoder. The learned representation is fed back to condition future generation and is read by task heads without allowing task gradients to reshape the encoder. At deployment, action prediction no longer executes the generator. Across LIBERO, RoboTwin2.0, and real-robot tasks, Enfold supports strong control while reducing action latency by 3.7times relative to Fast--WAM, Enfold-Flash reaches 10.1times. Representation analyses show that it suppresses nuisance variation and preferentially captures changes that emerge over longer horizons. When the current scene is altered by human intervention, both the generated continuation and the executed actions adapt, which is inconsistent with fix",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "世界模型用于具身控制的新方法，偏前沿研究，与应用工程距离较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "e4c987b05c6926ec",
+    "source": "hf-daily-papers",
+    "title": "PrivacyPeek: Auditing What LLM-Based Agents Acquire, Not Just What They Say",
+    "url": "https://huggingface.co/papers/2606.00152",
+    "published_at": "2026-08-06T00:00:00Z",
+    "summary": "LLM-based agents are rapidly advancing, autonomously invoking external tools to complete multi-step tasks for users. However, agents often acquire more sensitive information than the task requires. Existing privacy benchmarks audit what the agent's response or outgoing actions disclose, but overlook the acquisition stage where data first enters the agent's context. The over-acquired information is then one careless action or one attack away from an outright leak. To assess its prevalence, we introduce PrivacyPeek, a benchmark for evaluating acquisition-stage privacy leakage of LLM-based agents, with 1{,}182 cases across 7 acquisition behaviours and 16 application domains. Specifically, Acquisition Inspection examines the agent's tool-call trajectory, both the tools it invokes and the data it receives, to detect when it acquires sensitive information beyond the task scope. Probe Elicitation then issues a follow-up probe and measures how readily an attacker could elicit sensitive information the agent acquired but did not disclose. Our experiments on 10 LLM-based agents across 4 model families show that the unnecessary acquisition of sensitive information is widespread. In addition, we observe a correlation between the task-completion capability and acquisition-stage leakage. Prompt-level defences reduce only a small fraction of acquisition-stage leakage, leaving the majority unmitigated. These results make auditing acquisition-stage privacy both urgent and necessary. Our datas",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "LLM Agent 隐私审计方法，关注数据获取阶段，对 agent 安全工程有启发但非核心方法。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "d42276e6d09ff84b",
+    "source": "hf-daily-papers",
+    "title": "Small Foundation Models of Human Cognition and Behaviour",
+    "url": "https://huggingface.co/papers/2608.05224",
+    "published_at": "2026-08-05T00:00:00Z",
+    "summary": "Large language models fine-tuned on human behavioural data have emerged as general-purpose cognitive proxies, but the scale this requires, and whether these models process task structure or exploit statistical shortcuts, remain open questions. We train fourteen models from 135M to 14B parameters across four architecture families on Psych-101, a dataset of 10.7 million trial-level choices from 160 experiments. In-distribution, scale barely matters. The models fall within a narrow band, as though against a ceiling, and 0.6B to 1B parameters suffice to match a 70B baseline on held-out participants. Out-of-distribution, that band opens into a markedly steeper scaling gradient, with larger models clearly advantaged in generalisation to novel task structure. To determine what information these models use, we run two diagnostics. We progressively strip four prompt channels -- task instructions, experimental stimuli, outcome feedback, and choice history -- across 27 experiments, and permute trial order. Masking the content of stimuli and feedback destroys 75.7% of learned information and pushes models below chance, demonstrating that choice history alone does not account for performance. Permutation reveals invariance on tasks with independent trials but sensitivity where trial order is determined by prior responses. Small cognitively fine-tuned models therefore show promise as noise ceiling estimators for psychological experiments, though their scope remains bounded by the paradigms",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "小模型认知行为建模，对模型选型有参考但偏向认知科学，工程直接性一般。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 7
+    }
+   },
+   {
+    "id": "99699db3bc0fe6ba",
+    "source": "hf-daily-papers",
+    "title": "DuplexGen: Adaptive Synthesis of Human-AI Turn-Taking Dialogues",
+    "url": "https://huggingface.co/papers/2607.26178",
+    "published_at": "2026-07-28T00:00:00Z",
+    "summary": "Turn-taking is a central component of full-duplex interaction. Which turn-taking behaviors are appropriate varies with the scenario, yet current models apply a single norm regardless of context. This limitation originates in their training data: human-human speech corpora capture natural timing phenomena but provide little role grounding or scenario-specific norms, while heuristic or prompted synthesis methods inject turn-taking behaviors without basing them on human preferences. We introduce DuplexGen, a framework for generating dialogues with scenario-adaptive turn-taking by calibrating LLM predictions against a small set of slot-level human preference annotations. In six cooperative and competitive tasks, human turn-taking preferences differ systematically, and DuplexGen aligns substantially more closely with those preferences than uncalibrated prompting or training solely on generic human-human data; a full-duplex model trained on DuplexGen-generated data exhibits distinctive, human-preferred turn-taking behaviors. These results show that human calibration, not corpus scale or prompt design alone, is what allows turn-taking synthesis to be scenario-specific.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "人机轮换对话合成，对语音/对话Agent有参考价值，但方法尚在论文阶段，工程可用性一般。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "a90f5a062f6ed3f6",
+    "source": "hf-daily-papers",
+    "title": "When Activation Oracles Learn Not to Read: Concept-Specific Blind Spots in Fine-Tuned Oracles",
+    "url": "https://huggingface.co/papers/2607.23379",
+    "published_at": "2026-07-25T00:00:00Z",
+    "summary": "Activation Oracles (AOs) are language models trained to answer natural-language questions about another model's internal activations. They offer a flexible interface for reading hidden information from model states, especially when relevant information is internally represented but absent or incomplete in visible behavior. However, AOs are themselves learned systems: their answers are shaped by training data, objectives, and learned reporting behavior, rather than being neutral readouts of represented information. We study this in a controlled Taboo Word Guessing setting, where subject models are fine-tuned to internally use a hidden concept while avoiding direct disclosure. Contrary to the expectation that an AO trained on such a subject becomes a specialist reader, we find that fine-tuned AOs can become concept-specific anti-readers: they selectively fail to recover the concept persistently present during their own training. This failure is not simply explained by absence of the concept from the subject or oracle representations: the target remains decodable inside the oracle, while LogitLens and layer-ablation analyses indicate that the failure arises in the AO readout pathway. Our results show that behavioral leakage, representation-level decodability, and AO-verbalizability can come apart, raising a reliability concern for learned interpretability interfaces.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "激活Oracle微调后概念盲点分析，对模型可解释性有启发但工程直接应用有限。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 10
+    }
+   },
+   {
+    "id": "95a04d7e9c8c2776",
+    "source": "hf-daily-papers",
+    "title": "Multi-Agent Forensic Reasoning for Generalizable Deepfake Video Detection",
+    "url": "https://huggingface.co/papers/2608.06865",
+    "published_at": "2026-08-07T00:00:00Z",
+    "summary": "The malicious use of generative artificial intelligence to create highly realistic deepfake videos raises serious ethical concerns and poses substantial challenges to AI safety. However, existing deepfake video benchmarks provide limited coverage of recent synthesis methods and generally lack reliable fine-grained textual annotations. Meanwhile, conventional detectors and multimodal large language models (MLLMs), whether operating as a single model or relying on a single analytical perspective, often fail to capture subtle forgery artifacts, limiting their generalization to emerging AI-generated methods. To address these limitations, we introduce FaceVid-Forensics-100K, a large-scale deepfake video dataset comprising 100,000 videos and spanning 33 synthesis methods across face swapping, face reenactment, and entire-face synthesis, including recent generators such as Seedance 2.0. The dataset provides fine-grained textual annotations of visual observations and verdict-consistent forensic explanations, automatically synthesized through a multi-model aggregation and conflict-resolution pipeline powered by advanced MLLMs. Building on this benchmark, we propose a multi-agent forensic reasoning framework that employs four specialized domain-expert agents to independently analyze forgery cues from four perspectives: texture, lighting, motion, and physics. A judge agent then reconciles their reports to produce a final prediction together with an explanation. Extensive evaluations on ",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "多Agent深度伪造检测，安全方向，与应用工程核心问题关联弱。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "0728a7aff3228837",
+    "source": "hf-daily-papers",
+    "title": "SimWAM: A Simple World Action Model for End-to-End Autonomous Driving",
+    "url": "https://huggingface.co/papers/2608.07468",
+    "published_at": "2026-08-07T00:00:00Z",
+    "summary": "World-Action Models (WAMs) improve end-to-end autonomous driving by transferring video dynamics priors to action prediction, but existing methods require costly future generation at inference. We present SimWAM, a simple yet effective WAM that uses video generation purely as a training signal. It co-trains a pretrained video expert and a lightweight action expert with joint flow matching. An isolated attention mask keeps action prediction independent of future frames, allowing the video branch to be discarded after training and leaving a self-contained planner that directly predicts trajectories. Since the two experts share no parameters and interact only through a unified attention interface, the video backbone could be replaced and the action expert scaled independently without modifying the learning objective or inference pipeline. We further apply reinforcement learning to optimize a compositional driving reward beyond trajectory imitation. Our SimWAM achieves 91.5 PDMS on NAVSIM, surpasses state-of-the-art WAM-based planners with substantially lower latency, and transfers zero-shot to nuScenes. These results position SimWAM as a simple yet solid baseline that could readily benefit from advances in video generation for efficient autonomous driving. The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "端到端自动驾驶世界动作模型，领域特化强，对通用 AI 应用工程参考价值低。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 22
+    }
+   },
+   {
+    "id": "e58c134200634a63",
+    "source": "hf-daily-papers",
+    "title": "OneEmo: A Unified Multimodal Reasoning Model for Emotion Perception, Understanding, and Interaction",
+    "url": "https://huggingface.co/papers/2608.06013",
+    "published_at": "2026-08-06T00:00:00Z",
+    "summary": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable capabilities in emotional intelligence. However, prevailing research predominantly focuses on task-specific specialization, often neglecting inter-task synergy and leaving latent reasoning potential underexplored. To bridge this gap, we introduce OneEmo, a unified affective generalist capable of mastering emotion perception, comprehension, and interaction. For this purpose, we first construct EmoWorld-130K, a comprehensive dataset that distills specialized affective knowledge into explicit reasoning trajectories via a human-in-the-loop workflow. Supervised fine-tuning on this corpus reveals significant mutual benefits derived from multi-task learning. Second, to fully unlock the latent reasoning potential, we propose Emo-Chord, a novel reinforcement learning strategy that stabilizes optimization through unified multi-task reward allocation. Extensive experiments demonstrate that OneEmo achieves state-of-the-art performance against similarly sized baselines across most benchmarks. Notably, despite having significantly fewer parameters than commercial models, OneEmo delivers highly competitive results. This paper paves the way for more reliable and interpretable affective computing. The code is available at https://github.com/waHAHJIAHAO/OneEmo.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "统一多模态情感推理模型，任务较垂直，对通用AI应用工程参考价值有限。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 0
+    }
+   },
+   {
+    "id": "a5fd48fd59bf736e",
+    "source": "hf-daily-papers",
+    "title": "Do AI Personas Grow? Analyzing and Benchmarking Personality Evolution in LLM Agents After Life Events",
+    "url": "https://huggingface.co/papers/2608.06485",
+    "published_at": "2026-08-06T00:00:00Z",
+    "summary": "Personality-conditioned LLM agents (PC-Agents) are increasingly used in emotional support, social simulation, and role-playing, motivating the development of lifelong agents that remain coherent over extended interactions. A key component of such coherence is personality evolution: agents should undergo plausible, psychology-grounded changes as they experience life events in different contexts. Although prior work shows that LLM personalities can shift under contextual perturbations, how these shifts vary across traits, events, personas, and models remains poorly understood. We study event-induced personality change after 11 major life events, using the Big Five traits as a psychometric anchor and interpreting the resulting trajectories against longitudinal evidence from human personality psychology. Across four diagnostic axes, PC-Agents exhibit measurable trait shifts at similar rates for event-trait pairs with and without documented human change directions. Even when shifts follow the expected direction, their magnitudes usually fall below human effect-size ranges. Gender and cultural-region prompts show little moderating effect, while persona-level dispersion is compressed three- to four-fold relative to human samples. To enable systematic comparison, we introduce BFI-Adapt, a reusable benchmark for scoring the directional fidelity of event-induced personality change, and use it to rank 14 models. A validation suite shows that the measured shifts exceed no-event retest no",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "LLM Agent 人格演化分析，方向小众，对主流 AI 应用工程参考价值有限。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "271afa97148fa2ef",
+    "source": "hf-daily-papers",
+    "title": "CLIP-CC-Bench: Evaluating Paragraph-Level Video Descriptions in Video-Language Models",
+    "url": "https://huggingface.co/papers/2608.04302",
+    "published_at": "2026-08-05T00:00:00Z",
+    "summary": "Benchmarking video-language models has largely focused on short clips and single-sentence metrics, leaving open whether current systems can generate accurate long-form, paragraph-level descriptions. We introduce CLIP-CC-Bench, an evaluation suite for long-form video description built from 5 hours of movie content segmented into 90-second clips, each paired with an expert-written paragraph-style reference. The evaluation suite employs an ensemble of five state-of-the-art LLM-based embedding models to increase reliability and mitigate single-model bias, and applies two complementary methodologies: (i) coarse-grained semantic matching and (ii) fine-grained semantic matching to compare model-generated descriptions against CLIP-CC-Bench references. Using this framework, we evaluate 17 state-of-the-art video-language models and report both their Borda-aggregated rankings and their average scores on CLIP-CC-Bench. We further quantify the protocol's internal reliability through inter-judge agreement and bootstrap ranking stability. We release standardized evaluation scripts, model outputs, and aggregation tools at https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench to support reproducibility. CLIP-CC-Bench provides a practical evaluation framework for long-form video description, filling a gap left by existing short-clip and QA-only benchmarks.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "视频描述评测基准，与AI应用工程实践距离较远，对应用层选型参考价值有限。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "3062765d881f0dd0",
+    "source": "hf-daily-papers",
+    "title": "Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors",
+    "url": "https://huggingface.co/papers/2608.00675",
+    "published_at": "2026-08-01T13:49:46Z",
+    "summary": "Autoregressive models accumulate error over long rollouts, yet at deployment there is no ground truth to measure it against. We train a single conditional latent diffusion model that steps a dynamical system forward or backward in time via a direction flag, and show that this bidirectionality supplies a measurement-free test-time error signal: rolling forward i steps and then backward i steps must return the model to its start, so the round-trip discrepancy C_i is a self-supervised proxy for the unobservable rollout error: no ensembles, no held-out data, no governing equations, for one extra rollout. We validate on compressible magnetohydrodynamics (MHD), an astrophysical turbulent radiative mixing layer, and natural face videos (CelebV-HQ). On held-out MHD trajectories, C_i ranks rollout error (Spearman 0.91-0.98 at fixed depth; 0.69 pm 0.16 within trajectories), and a simple calibrator fit on training rollouts predicts its magnitude to within 1.14times (68%) and 1.29times (95%) with near-nominal coverage - one nat beyond a depth-only predictor, transferring to all six decoded physical fields. The same signal flags the out-of-distribution Orszag-Tang vortex (AUROC 0.98; 1.0 by depth 10) exactly where sampling-dispersion baselines invert, and it cuts incurred error by 15% at 80% coverage - three times the depth-only baseline. Bidirectional training comes at negative cost, beating direction specialists in both directions, and the backward direction doubles as a fast inverse so",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "双向扩散模型自检 rollout 误差，偏生成模型理论，与 LLM agent 应用工程距离较远。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 6
+    }
+   },
+   {
+    "id": "b61369e5df01ad67",
+    "source": "glm-github",
+    "title": "新仓库 zai-org/AISE-Bench",
+    "url": "https://github.com/zai-org/AISE-Bench",
+    "published_at": "2026-08-06T11:48:00Z",
+    "summary": "Official Code for AISE-Bench: A Full-Cycle Curated Benchmark for Information Seeking on Academic Knowledge Graphs (KDD 2026)",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "学术知识图谱检索基准，与应用工程距离远，且仓库刚创建 stars 极少",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "stars": 3
+    }
+   },
+   {
+    "id": "4c7aeff29cb2bfdb",
+    "source": "hf-daily-papers",
+    "title": "Can MLLMs Decode the Creative Leap? Introducing C4 for Cross-Concept Understanding",
+    "url": "https://huggingface.co/papers/2608.06501",
+    "published_at": "2026-08-06T00:00:00Z",
+    "summary": "Creative capabilities of MLLMs matter in design, communication, education, and human--AI collaboration, yet remain difficult to evaluate because explicit targets and reward signals are scarce compared with accuracy-oriented tasks. Cross-concept understanding is a core cognitive capacity underlying receptive creativity. It enables a perceiver to recover intended meaning from non-obvious but meaningful conceptual relations. We operationalize item construction as cross-concept encoding and model inference as cross-concept decoding. We introduce C4, a cognition-inspired evaluation framework for Chengyu (Chinese idiom)-based Cross-Concept Creativity. Its encoding component maps target slots to imageable substitute concepts along bridge paths in a manually annotated and third-party-reviewed cross-concept network, enabling batch generation with explicit structure, difficulty indexed by bridge count and depth, and exact answers. Using this framework, we instantiate the C4 Evaluation Set (C4-Eval), comprising 184 synthetic items and 37 human-created cross-concept chengyu figures collected from online sources. We manually construct and review cross-concept relations, bridge paths, and reasoning processes for the collected figures. Each C4-Eval item is instantiated in five task settings, yielding 884 primary answer-recovery cases. Across ten evaluated MLLMs, the strongest closed models reach 50.7% and 48.0% primary accuracy, while open-source models remain substantially lower. Candidate",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "MLLM 创造力评估基准，与应用工程距离远，信号弱。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "091504b5d14a953f",
+    "source": "hf-daily-papers",
+    "title": "Uncertainty-Aware World Model for Aerial Image-Goal Navigation",
+    "url": "https://huggingface.co/papers/2608.05597",
+    "published_at": "2026-08-06T00:00:00Z",
+    "summary": "Aerial image-goal navigation requires an unmanned aerial vehicle (UAV) to reach a target location specified by a goal image. Existing world-model-based methods rank candidate trajectories using predicted futures, but typically rely on only one or a few point predictions, which is inadequate for large-scale outdoor environments with substantial future-state uncertainty. To address this limitation, we propose the Uncertainty-Aware Navigation World Model (UA-NWM), an efficient latent world model for aerial image-goal navigation, which formulates trajectory scoring as conditional out-of-distribution detection. UA-NWM represents plausible futures with an uncertainty subspace and decomposes the prediction--goal discrepancy into uncertainty-explainable and unexplainable components. Only the unexplainable residual is used for scoring, enabling robust selection without multiple future samples. Extensive experiments demonstrate that UA-NWM consistently outperforms existing navigation world models while maintaining low inference latency. Real-world UAV experiments further validate its practical applicability. Project page: https://duryi.github.io/UA-NWM-Project-Page",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "无人机导航中的不确定性感知世界模型，领域特化，与应用工程无关。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 7
+    }
+   },
+   {
+    "id": "72555368bcf8bcc2",
+    "source": "hf-daily-papers",
+    "title": "Adversarial Attacks for Good: A Survey of Proactive Protection across the Visual Content Lifecycle",
+    "url": "https://huggingface.co/papers/2608.04314",
+    "published_at": "2026-08-05T00:00:00Z",
+    "summary": "Once visual content enters an AI pipeline, its owner often retains little technical control over how it is used. Legal and regulatory remedies can address misuse, but many technical interventions must be applied earlier, when content is released or accessed. This survey examines the protective paradigm that has grown around this intervention point, which we call adversarial attacks for good. Perturbations and structured signals long studied as attacks on learned models are instead applied by data owners, creators, platforms, or auditors to disrupt unauthorized automation or support later accountability. Five research communities have arrived at this inversion largely independently, each addressing a different stage of a visual asset's lifecycle: privacy filters against unwanted recognition at sharing time, unlearnable examples against unauthorized training, generative safeguards against malicious editing or imitation, adversarial CAPTCHAs for access control against automated agents, and provenance mechanisms for post-circulation attribution. Although developed in separate venues with incompatible success criteria, many of these methods exploit persistent gaps between human perception, semantic interpretation, and machine inference, suggesting that the paradigm remains relevant as visual pipelines evolve toward multimodal models and autonomous agents. To make their claims comparable, we evaluate all five families along shared axes of transferability, adaptability, and deployme",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "对抗攻击用于内容保护综述，与应用工程核心问题距离远。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "c394749c6a53aa4d",
+    "source": "hf-daily-papers",
+    "title": "Towards Interpretable Foundation Models for Retinal Fundus Images",
+    "url": "https://huggingface.co/papers/2603.18846",
+    "published_at": "2026-08-04T00:00:00Z",
+    "summary": "Foundation models are used to extract transferable representations from large amounts of unlabeled data, typically via self-supervised learning (SSL). However, many of these models rely on architectures that offer limited interpretability, a critical issue in high-stakes domains such as medical imaging. We propose DualIFM, a foundation model that is interpretable-by-design via a BagNet backbone whose small receptive fields generate class evidence maps that are faithful to the model's decision-making process. Additionally, DualIFM incorporates a 2D projection layer during pretraining that enables direct visualization of the representation space, providing a dataset-level view of the learned structure including meaningful clinical clusters as well as potential spurious correlations. We trained DualIFM on over 800,000 color fundus photographs from various sources to learn generalizable representations for different downstream tasks. Our model achieves performance comparable to RETFound, which has 16times more parameters, while providing interpretable predictions on out-of-distribution data. These results suggest that large-scale SSL pretraining paired with inherent interpretability can lead to robust representations for retinal imaging. Code and pretrained models are available at github.com/berenslab/interpretable_FM.",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "医学眼底图像可解释基础模型，垂直领域且与应用工程核心问题距离远。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "2aa17513751c1c56",
+    "source": "hf-daily-papers",
+    "title": "FATE: Frame-Level Audio-Visual Temporal Embedding",
+    "url": "https://huggingface.co/papers/2608.01310",
+    "published_at": "2026-08-02T00:00:00Z",
+    "summary": "When a dog opens its mouth and barks, humans naturally recognize what the sound is and when it occurs. Building audio-visual models with this same ability requires representations that capture both semantic and temporal alignment. Current approaches fall short on one side or the other: embedding models match semantic but lose temporal information; synchronization models capture temporal offsets but lack semantic understanding. To bridge this gap, we propose FATE, Frame-level Audio-visual Temporal Embedding. Unlike prior embedding models that pool each modality into a single embedding and discard temporal information, FATE retains frame-level sequences, aligns them on the physical timeline, and computes similarity over strictly aligned frame pairs. Unlike synchronization models that output only an offset prediction, FATE encodes synchronization in a reusable embedding space, trained with a joint objective combining cross-video semantic and within-video temporal contrastive learning to capture both what sounds and when it occurs. Across three tasks, FATE surpasses the strongest baseline on temporal and semantic retrieval by a large margin, matches fully supervised methods on event localization in a zero-shot setting, and achieves the best correlation with human judgments as a generation evaluation metric. The source code can be found at https://github.com/guankaisi/FATE.",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "音视频时序嵌入，多模态基础研究，与应用工程实践距离较远。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "6adc12a0abd9fe4d",
+    "source": "hf-daily-papers",
+    "title": "Complementary Matrix-Gated QKAN Fast-Weight Programmers for Quantum Dynamics Forecasting",
+    "url": "https://huggingface.co/papers/2607.27945",
+    "published_at": "2026-07-30T00:00:00Z",
+    "summary": "Sequence models must decide what to write into memory and what to retain. In quantum and quantum-inspired sequence learning, nonlinear recurrent updates often require repeated circuit evaluations and sequential backpropagation through time, making long contexts costly. Gated fast-weight programmers (FWPs) based on quantum-inspired Kolmogorov-Arnold networks (QKANs) alleviate this bottleneck by storing context in time-varying fast parameters. However, their scalar gate applies one retention-write balance to every fast-state coordinate, forcing all parameters to share a memory timescale. We introduce Self-Modulating QKAN-based FWPs, which replace this broadcast gate with low-rank-generated element-wise modulation of the new-proposal branch, a bounded old-state branch, or both. We further propose Complementary Matrix Gating (CMG), which uses one sigmoid matrix gate to retain the old state and its complement to write the new proposal. CMG provides coordinate-wise memory control while preserving the bounded convex update and affine prefix-scan structure of scalar gating, at the modulation-head cost of a single-branch rule. We compare four self-modulating rules with scalar gating across four FWP architectures combining classical and QKAN-based slow and fast programmers. Across seven single-step forecasting benchmarks and five sequence lengths, CMG gives the most consistent improvements for architectures whose fast programmer incorporates a QKAN-based module. In direct multi-step fo",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "量子动力学预测的序列模型，与应用工程几乎无关，纯理论方向。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   }
+  ]
+ },
+ "unscored": []
+}

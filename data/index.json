@@ -17,6 +17,15 @@
    "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
    "score": 7,
    "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
+  },
+  {
+   "id": "95f74aeac90a93bb",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Model ML completes finance work more efficiently with GPT-5.6 Sol",
+   "url": "https://openai.com/index/model-ml",
+   "score": 7,
+   "summary": "Model ML 利用 GPT-5.6 Sol 将金融工作从研究分析推进到可编辑、可追溯的 PowerPoint 演示文稿和 Excel 工作簿。其核心变化在于将大模型能力直接嵌入专业文档生成流程，实现端到端的自动化产出。这值得关注，因为它展示了 AI 在金融这类高精度场景中，从信息处理到最终交付物的完整闭环能力。"
   }
  ],
  "OpenAI": [
@@ -477,6 +486,15 @@
    "url": "https://www.langchain.com/blog/how-we-build-an-autonomous-sre-agent-for-kubernetes-deployments",
    "score": 7,
    "summary": "LangChain 发布了一款面向 Kubernetes 部署的自主 SRE 智能体，它基于 Deep Agents 构建，能够自主执行运维操作，并在执行变更前引入人工审批机制。该方案还集成了 LangSmith 进行链路追踪与评估，以确保智能体行为的可观测性与可靠性。这一实践展示了如何将大模型智能体应用于生产级基础设施管理，并平衡自主性与安全控制，对关注 AI 在运维领域落地的面试者具有参考价值"
+  },
+  {
+   "id": "b63273fd00b53bf8",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Managed Deep Agents is now in public beta",
+   "url": "https://www.langchain.com/blog/managed-deep-agents-is-now-in-public-beta",
+   "score": 7,
+   "summary": "LangChain 推出了 Managed Deep Agents 的公开测试版，这是一个将深度智能体部署到托管 LangSmith 运行时的服务。它提供了持久化执行、记忆、沙盒、通道、评估及生产级基础设施等关键能力。这一变化值得关注，因为它将复杂的智能体开发与运维工作流整合为一体化托管方案，有望显著降低从原型到生产环境的工程门槛。"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -1806,6 +1824,15 @@
    "url": "https://www.langchain.com/blog/how-we-build-an-autonomous-sre-agent-for-kubernetes-deployments",
    "score": 7,
    "summary": "LangChain 发布了一款面向 Kubernetes 部署的自主 SRE 智能体，它基于 Deep Agents 构建，能够自主执行运维操作，并在执行变更前引入人工审批机制。该方案还集成了 LangSmith 进行链路追踪与评估，以确保智能体行为的可观测性与可靠性。这一实践展示了如何将大模型智能体应用于生产级基础设施管理，并平衡自主性与安全控制，对关注 AI 在运维领域落地的面试者具有参考价值"
+  },
+  {
+   "id": "b63273fd00b53bf8",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Managed Deep Agents is now in public beta",
+   "url": "https://www.langchain.com/blog/managed-deep-agents-is-now-in-public-beta",
+   "score": 7,
+   "summary": "LangChain 推出了 Managed Deep Agents 的公开测试版，这是一个将深度智能体部署到托管 LangSmith 运行时的服务。它提供了持久化执行、记忆、沙盒、通道、评估及生产级基础设施等关键能力。这一变化值得关注，因为它将复杂的智能体开发与运维工作流整合为一体化托管方案，有望显著降低从原型到生产环境的工程门槛。"
   }
  ],
  "spend limits": [
@@ -2675,6 +2702,270 @@
    "url": "https://huggingface.co/papers/2608.03836",
    "score": 8,
    "summary": "这是一个关于工作流持久层中断与恢复语义的研究框架。它提出了“RESUME CONTRACT”，定义了六项机器可验证的属性，包括前缀延续、副作用精确一次执行和分叉确定性等，以规范检查点、中断和恢复行为。研究发现，包括LangGraph和CrewAI在内的五种主流智能体工作流框架，其实际行为均与自身声明不符，且没有两个框架共享相同的合规性配置。该工作通过TLA+模型在740万状态空间内进行了穷尽检查，"
+  }
+ ],
+ "Muse Glimmer": [
+  {
+   "id": "dfb586131bf3d3cb",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+   "url": "https://huggingface.co/blog/muse-glimmer",
+   "score": 9,
+   "summary": "这是 Meta 最新发布的开源多模态 AI 模型 Muse Glimmer，一个能在本地设备上运行、具备智能体能力、同时处理文本与图像的多模态模型。它延续了 Meta 一贯的开源策略，但这次的关键突破在于将“智能体”和“多模态”能力压缩到可本地部署的规模，让开发者能在个人设备上构建能看、能读、能自主决策的 AI 应用。\n\n此前，多模态模型和智能体系统长期面临一个核心矛盾：能力越强，对云端算力的依赖"
+  }
+ ],
+ "Meta": [
+  {
+   "id": "dfb586131bf3d3cb",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+   "url": "https://huggingface.co/blog/muse-glimmer",
+   "score": 9,
+   "summary": "这是 Meta 最新发布的开源多模态 AI 模型 Muse Glimmer，一个能在本地设备上运行、具备智能体能力、同时处理文本与图像的多模态模型。它延续了 Meta 一贯的开源策略，但这次的关键突破在于将“智能体”和“多模态”能力压缩到可本地部署的规模，让开发者能在个人设备上构建能看、能读、能自主决策的 AI 应用。\n\n此前，多模态模型和智能体系统长期面临一个核心矛盾：能力越强，对云端算力的依赖"
+  }
+ ],
+ "GPT-4V": [
+  {
+   "id": "dfb586131bf3d3cb",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+   "url": "https://huggingface.co/blog/muse-glimmer",
+   "score": 9,
+   "summary": "这是 Meta 最新发布的开源多模态 AI 模型 Muse Glimmer，一个能在本地设备上运行、具备智能体能力、同时处理文本与图像的多模态模型。它延续了 Meta 一贯的开源策略，但这次的关键突破在于将“智能体”和“多模态”能力压缩到可本地部署的规模，让开发者能在个人设备上构建能看、能读、能自主决策的 AI 应用。\n\n此前，多模态模型和智能体系统长期面临一个核心矛盾：能力越强，对云端算力的依赖"
+  }
+ ],
+ "Gemini": [
+  {
+   "id": "dfb586131bf3d3cb",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+   "url": "https://huggingface.co/blog/muse-glimmer",
+   "score": 9,
+   "summary": "这是 Meta 最新发布的开源多模态 AI 模型 Muse Glimmer，一个能在本地设备上运行、具备智能体能力、同时处理文本与图像的多模态模型。它延续了 Meta 一贯的开源策略，但这次的关键突破在于将“智能体”和“多模态”能力压缩到可本地部署的规模，让开发者能在个人设备上构建能看、能读、能自主决策的 AI 应用。\n\n此前，多模态模型和智能体系统长期面临一个核心矛盾：能力越强，对云端算力的依赖"
+  }
+ ],
+ "NVIDIA Magpie TTS": [
+  {
+   "id": "5890b1cfd4cc38aa",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+   "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+   "score": 8,
+   "summary": "这是一篇关于 NVIDIA Magpie TTS 开源文本转语音模型的技术发布，它提供了一套开放权重、支持多语种、低延迟的语音合成方案，让开发者能完全掌控从模型到部署的整个链路。\n\n在 Magpie TTS 出现之前，构建生产级语音智能体面临几个核心痛点。首先是延迟问题，传统的自回归 TTS 模型需要逐帧生成音频，导致首包延迟和总合成时间都偏高，在需要实时交互的语音对话场景中体验很差。其次是多语种"
+  }
+ ],
+ "Flow Matching": [
+  {
+   "id": "5890b1cfd4cc38aa",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+   "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+   "score": 8,
+   "summary": "这是一篇关于 NVIDIA Magpie TTS 开源文本转语音模型的技术发布，它提供了一套开放权重、支持多语种、低延迟的语音合成方案，让开发者能完全掌控从模型到部署的整个链路。\n\n在 Magpie TTS 出现之前，构建生产级语音智能体面临几个核心痛点。首先是延迟问题，传统的自回归 TTS 模型需要逐帧生成音频，导致首包延迟和总合成时间都偏高，在需要实时交互的语音对话场景中体验很差。其次是多语种"
+  }
+ ],
+ "TensorRT-LLM": [
+  {
+   "id": "5890b1cfd4cc38aa",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+   "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+   "score": 8,
+   "summary": "这是一篇关于 NVIDIA Magpie TTS 开源文本转语音模型的技术发布，它提供了一套开放权重、支持多语种、低延迟的语音合成方案，让开发者能完全掌控从模型到部署的整个链路。\n\n在 Magpie TTS 出现之前，构建生产级语音智能体面临几个核心痛点。首先是延迟问题，传统的自回归 TTS 模型需要逐帧生成音频，导致首包延迟和总合成时间都偏高，在需要实时交互的语音对话场景中体验很差。其次是多语种"
+  }
+ ],
+ "Triton 推理服务器": [
+  {
+   "id": "5890b1cfd4cc38aa",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+   "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+   "score": 8,
+   "summary": "这是一篇关于 NVIDIA Magpie TTS 开源文本转语音模型的技术发布，它提供了一套开放权重、支持多语种、低延迟的语音合成方案，让开发者能完全掌控从模型到部署的整个链路。\n\n在 Magpie TTS 出现之前，构建生产级语音智能体面临几个核心痛点。首先是延迟问题，传统的自回归 TTS 模型需要逐帧生成音频，导致首包延迟和总合成时间都偏高，在需要实时交互的语音对话场景中体验很差。其次是多语种"
+  }
+ ],
+ "Code-Switching": [
+  {
+   "id": "5890b1cfd4cc38aa",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+   "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+   "score": 8,
+   "summary": "这是一篇关于 NVIDIA Magpie TTS 开源文本转语音模型的技术发布，它提供了一套开放权重、支持多语种、低延迟的语音合成方案，让开发者能完全掌控从模型到部署的整个链路。\n\n在 Magpie TTS 出现之前，构建生产级语音智能体面临几个核心痛点。首先是延迟问题，传统的自回归 TTS 模型需要逐帧生成音频，导致首包延迟和总合成时间都偏高，在需要实时交互的语音对话场景中体验很差。其次是多语种"
+  }
+ ],
+ "Distil-abel": [
+  {
+   "id": "815edfe6383208a7",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+   "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+   "score": 8,
+   "summary": "知识蒸馏是一种用大模型（教师）教会小模型（学生）模仿其输出的技术，目的是让小模型在保持较高性能的同时大幅降低推理成本。这篇文章介绍了一个名为 Distil-abel 的新工具，它把知识蒸馏从过去需要大量手工编码和复杂工程搭建的繁琐流程，变成了一套可配置、可复用的标准化流水线，让团队能够以极低的工程成本在大规模数据上运行蒸馏任务。\n\n此前，知识蒸馏在实际落地中面临两个核心痛点。第一是工程门槛高，研究"
+  }
+ ],
+ "知识蒸馏": [
+  {
+   "id": "815edfe6383208a7",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+   "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+   "score": 8,
+   "summary": "知识蒸馏是一种用大模型（教师）教会小模型（学生）模仿其输出的技术，目的是让小模型在保持较高性能的同时大幅降低推理成本。这篇文章介绍了一个名为 Distil-abel 的新工具，它把知识蒸馏从过去需要大量手工编码和复杂工程搭建的繁琐流程，变成了一套可配置、可复用的标准化流水线，让团队能够以极低的工程成本在大规模数据上运行蒸馏任务。\n\n此前，知识蒸馏在实际落地中面临两个核心痛点。第一是工程门槛高，研究"
+  }
+ ],
+ "输出分布匹配": [
+  {
+   "id": "815edfe6383208a7",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+   "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+   "score": 8,
+   "summary": "知识蒸馏是一种用大模型（教师）教会小模型（学生）模仿其输出的技术，目的是让小模型在保持较高性能的同时大幅降低推理成本。这篇文章介绍了一个名为 Distil-abel 的新工具，它把知识蒸馏从过去需要大量手工编码和复杂工程搭建的繁琐流程，变成了一套可配置、可复用的标准化流水线，让团队能够以极低的工程成本在大规模数据上运行蒸馏任务。\n\n此前，知识蒸馏在实际落地中面临两个核心痛点。第一是工程门槛高，研究"
+  }
+ ],
+ "中间层特征对齐": [
+  {
+   "id": "815edfe6383208a7",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+   "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+   "score": 8,
+   "summary": "知识蒸馏是一种用大模型（教师）教会小模型（学生）模仿其输出的技术，目的是让小模型在保持较高性能的同时大幅降低推理成本。这篇文章介绍了一个名为 Distil-abel 的新工具，它把知识蒸馏从过去需要大量手工编码和复杂工程搭建的繁琐流程，变成了一套可配置、可复用的标准化流水线，让团队能够以极低的工程成本在大规模数据上运行蒸馏任务。\n\n此前，知识蒸馏在实际落地中面临两个核心痛点。第一是工程门槛高，研究"
+  }
+ ],
+ "基于偏好的蒸馏方法": [
+  {
+   "id": "815edfe6383208a7",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+   "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+   "score": 8,
+   "summary": "知识蒸馏是一种用大模型（教师）教会小模型（学生）模仿其输出的技术，目的是让小模型在保持较高性能的同时大幅降低推理成本。这篇文章介绍了一个名为 Distil-abel 的新工具，它把知识蒸馏从过去需要大量手工编码和复杂工程搭建的繁琐流程，变成了一套可配置、可复用的标准化流水线，让团队能够以极低的工程成本在大规模数据上运行蒸馏任务。\n\n此前，知识蒸馏在实际落地中面临两个核心痛点。第一是工程门槛高，研究"
+  }
+ ],
+ "Model ML": [
+  {
+   "id": "95f74aeac90a93bb",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Model ML completes finance work more efficiently with GPT-5.6 Sol",
+   "url": "https://openai.com/index/model-ml",
+   "score": 7,
+   "summary": "Model ML 利用 GPT-5.6 Sol 将金融工作从研究分析推进到可编辑、可追溯的 PowerPoint 演示文稿和 Excel 工作簿。其核心变化在于将大模型能力直接嵌入专业文档生成流程，实现端到端的自动化产出。这值得关注，因为它展示了 AI 在金融这类高精度场景中，从信息处理到最终交付物的完整闭环能力。"
+  }
+ ],
+ "Managed Deep Agents": [
+  {
+   "id": "b63273fd00b53bf8",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "Managed Deep Agents is now in public beta",
+   "url": "https://www.langchain.com/blog/managed-deep-agents-is-now-in-public-beta",
+   "score": 7,
+   "summary": "LangChain 推出了 Managed Deep Agents 的公开测试版，这是一个将深度智能体部署到托管 LangSmith 运行时的服务。它提供了持久化执行、记忆、沙盒、通道、评估及生产级基础设施等关键能力。这一变化值得关注，因为它将复杂的智能体开发与运维工作流整合为一体化托管方案，有望显著降低从原型到生产环境的工程门槛。"
+  }
+ ],
+ "DCAS": [
+  {
+   "id": "f771880554b4edea",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+   "url": "https://huggingface.co/papers/2608.06113",
+   "score": 8,
+   "summary": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨"
+  }
+ ],
+ "Decoupling CLI Agent Scaffolding": [
+  {
+   "id": "f771880554b4edea",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+   "url": "https://huggingface.co/papers/2608.06113",
+   "score": 8,
+   "summary": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨"
+  }
+ ],
+ "命令行智能体脚手架": [
+  {
+   "id": "f771880554b4edea",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+   "url": "https://huggingface.co/papers/2608.06113",
+   "score": 8,
+   "summary": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨"
+  }
+ ],
+ "后端替换拦截层": [
+  {
+   "id": "f771880554b4edea",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+   "url": "https://huggingface.co/papers/2608.06113",
+   "score": 8,
+   "summary": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨"
+  }
+ ],
+ "API 流量路由": [
+  {
+   "id": "f771880554b4edea",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+   "url": "https://huggingface.co/papers/2608.06113",
+   "score": 8,
+   "summary": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨"
+  }
+ ],
+ "跨脚手架评估": [
+  {
+   "id": "f771880554b4edea",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+   "url": "https://huggingface.co/papers/2608.06113",
+   "score": 8,
+   "summary": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨"
+  }
+ ],
+ "规划感知的轨迹收集": [
+  {
+   "id": "f771880554b4edea",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+   "url": "https://huggingface.co/papers/2608.06113",
+   "score": 8,
+   "summary": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨"
+  }
+ ],
+ "规划感知轨迹微调": [
+  {
+   "id": "f771880554b4edea",
+   "date": "2026-08-11",
+   "run_type": "midweek",
+   "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+   "url": "https://huggingface.co/papers/2608.06113",
+   "score": 8,
+   "summary": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨"
   }
  ]
 }
