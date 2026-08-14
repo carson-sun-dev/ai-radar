@@ -26,6 +26,15 @@
    "url": "https://openai.com/index/model-ml",
    "score": 7,
    "summary": "Model ML 利用 GPT-5.6 Sol 将金融工作从研究分析推进到可编辑、可追溯的 PowerPoint 演示文稿和 Excel 工作簿。其核心变化在于将大模型能力直接嵌入专业文档生成流程，实现端到端的自动化产出。这值得关注，因为它展示了 AI 在金融这类高精度场景中，从信息处理到最终交付物的完整闭环能力。"
+  },
+  {
+   "id": "c0986f6628d189a1",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+   "url": "https://openai.com/index/previewing-ultrafast",
+   "score": 6,
+   "summary": "OpenAI 推出了名为 Ultrafast 的新 API 服务层级，预览阶段运行 GPT-5.6 Sol 模型，速度最高可提升 14 倍。该服务由 Cerebras 提供算力支持，每秒可输出高达 750 个 token。这一变化值得关注，因为它显著降低了高吞吐量应用场景的延迟，为实时交互类 AI 产品提供了更强的性能基础。"
   }
  ],
  "OpenAI": [
@@ -170,6 +179,15 @@
    "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
    "score": 8,
    "summary": "Model Routing Is Simple. Until It Isn’t. 是一篇来自 Hugging Face 博客的技术文章，探讨了模型路由在实际应用中的复杂性。文章指出，虽然路由的基本概念简单，但在动态选择最优模型时，会面临延迟、成本与性能权衡等挑战。这值得关注，因为它揭示了在构建高效、可扩展的 AI 应用时，模型调度策略远比表面看起来更具工程难度。"
+  },
+  {
+   "id": "57f8b7f378e9c39a",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "What We Learned by Reproducing 2,200 papers from ICML",
+   "url": "https://huggingface.co/blog/icml-2026-open-reproductions",
+   "score": 7,
+   "summary": "这是一篇来自 Hugging Face 的博客，总结了团队复现 ICML 会议 2,200 篇论文的实践经验。核心发现是，许多论文因代码缺失、环境配置复杂或依赖冲突而难以复现，暴露了当前机器学习研究在可复现性上的系统性挑战。这项工作值得关注，因为它不仅量化了复现危机的严重程度，还推动了社区对开放代码和标准化实验流程的重视。"
   }
  ],
  "LongStraw": [
@@ -495,6 +513,15 @@
    "url": "https://www.langchain.com/blog/managed-deep-agents-is-now-in-public-beta",
    "score": 7,
    "summary": "LangChain 推出了 Managed Deep Agents 的公开测试版，这是一个将深度智能体部署到托管 LangSmith 运行时的服务。它提供了持久化执行、记忆、沙盒、通道、评估及生产级基础设施等关键能力。这一变化值得关注，因为它将复杂的智能体开发与运维工作流整合为一体化托管方案，有望显著降低从原型到生产环境的工程门槛。"
+  },
+  {
+   "id": "26b283e0296ba33f",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "How many of your agent's calls actually need a frontier model?",
+   "url": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
+   "score": 8,
+   "summary": "在 AI 应用开发中，模型路由（model routing）是指根据任务复杂度自动将请求分发给不同规格的大语言模型，而非所有请求都走最贵最强的模型。LangChain 团队近期在一项基准测试中，使用 NVIDIA 的 NeMo Switchyard 路由系统对 145 个智能体任务进行了评估，结果发现只有 7% 的对话轮次真正需要调用前沿模型（frontier model，指能力最强但成本也最高的"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -561,6 +588,15 @@
    "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
    "score": 8,
    "summary": "好的，这是对这篇 LangChain 博客文章的深度分析。\n\n这篇文章提出了一个核心观点：提升 AI 智能体（Agent）性能的关键，在于将其视为一个“数据挖掘问题”。它并非在讨论模型架构的突破，而是聚焦于如何系统性地从智能体与环境的交互数据中，挖掘出改进信号。\n\n此前，开发和优化智能体的主要痛点在于其行为的“不透明性”。与确定性代码不同，我们无法仅通过阅读智能体的定义（提示词和工具）来预测其行为"
+  },
+  {
+   "id": "26b283e0296ba33f",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "How many of your agent's calls actually need a frontier model?",
+   "url": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
+   "score": 8,
+   "summary": "在 AI 应用开发中，模型路由（model routing）是指根据任务复杂度自动将请求分发给不同规格的大语言模型，而非所有请求都走最贵最强的模型。LangChain 团队近期在一项基准测试中，使用 NVIDIA 的 NeMo Switchyard 路由系统对 145 个智能体任务进行了评估，结果发现只有 7% 的对话轮次真正需要调用前沿模型（frontier model，指能力最强但成本也最高的"
   }
  ],
  "脚手架工程 (Harness Engineering)": [
@@ -685,6 +721,15 @@
    "url": "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/",
    "score": 8,
    "summary": "We’re introducing new Gemini models, including Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber."
+  },
+  {
+   "id": "d8531b3bebbaf664",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.7 Flash",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+   "score": 7,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.7 Flash，一款面向大规模生产部署的高效多模态模型，主打低延迟、低成本与强推理能力的平衡。\n\n此前，AI 应用在落地时面临一个核心矛盾：大模型虽然能力强，但推理延迟高、成本昂贵，难以支撑高并发、实时响应的生产场景；而轻量模型虽然快，却在复杂推理、多模态理解上明显掉队。开发者不得不在“能力”和“效率”之间做痛苦取舍，要么牺牲用户体验"
   }
  ],
  "token 效率": [
@@ -1877,6 +1922,15 @@
    "url": "https://www.langchain.com/blog/introducing-llm-gateway",
    "score": 8,
    "summary": "在 AI 应用开发领域，LangChain 刚刚为其 LangSmith 平台推出了 LLM Gateway 功能，这是一个内嵌于智能体（agent）完整生命周期中的运行时治理层，旨在为生产环境中的 AI 智能体提供实时管控能力。\n\n此前，将 AI 智能体部署到生产环境面临一个核心痛点：开发者缺乏对智能体运行时行为的细粒度控制与可见性。传统的监控方案往往只能做事后分析，当智能体调用大语言模型（LL"
+  },
+  {
+   "id": "26b283e0296ba33f",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "How many of your agent's calls actually need a frontier model?",
+   "url": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
+   "score": 8,
+   "summary": "在 AI 应用开发中，模型路由（model routing）是指根据任务复杂度自动将请求分发给不同规格的大语言模型，而非所有请求都走最贵最强的模型。LangChain 团队近期在一项基准测试中，使用 NVIDIA 的 NeMo Switchyard 路由系统对 145 个智能体任务进行了评估，结果发现只有 7% 的对话轮次真正需要调用前沿模型（frontier model，指能力最强但成本也最高的"
   }
  ],
  "CoRT": [
@@ -2966,6 +3020,292 @@
    "url": "https://huggingface.co/papers/2608.06113",
    "score": 8,
    "summary": "DCAS 是一项针对命令行智能体脚手架依赖问题的研究，它提出了一种后端替换拦截层，能在不修改脚手架的情况下，将 API 流量路由到任意后端模型，从而支持跨脚手架评估和规划感知的轨迹收集。核心发现是，现有模型在单一训练脚手架下微调后，会过度依赖该脚手架的显式与隐式规划结构，导致部署到其他脚手架时性能大幅下降。通过 DCAS 的受控实验，研究证实规划质量是影响跨脚手架泛化的关键杠杆，基于少量规划感知轨"
+  }
+ ],
+ "Gemini 3.7 Flash": [
+  {
+   "id": "d8531b3bebbaf664",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.7 Flash",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+   "score": 7,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.7 Flash，一款面向大规模生产部署的高效多模态模型，主打低延迟、低成本与强推理能力的平衡。\n\n此前，AI 应用在落地时面临一个核心矛盾：大模型虽然能力强，但推理延迟高、成本昂贵，难以支撑高并发、实时响应的生产场景；而轻量模型虽然快，却在复杂推理、多模态理解上明显掉队。开发者不得不在“能力”和“效率”之间做痛苦取舍，要么牺牲用户体验"
+  }
+ ],
+ "自适应推理深度": [
+  {
+   "id": "d8531b3bebbaf664",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.7 Flash",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+   "score": 7,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.7 Flash，一款面向大规模生产部署的高效多模态模型，主打低延迟、低成本与强推理能力的平衡。\n\n此前，AI 应用在落地时面临一个核心矛盾：大模型虽然能力强，但推理延迟高、成本昂贵，难以支撑高并发、实时响应的生产场景；而轻量模型虽然快，却在复杂推理、多模态理解上明显掉队。开发者不得不在“能力”和“效率”之间做痛苦取舍，要么牺牲用户体验"
+  }
+ ],
+ "多模态模型": [
+  {
+   "id": "d8531b3bebbaf664",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.7 Flash",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+   "score": 7,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.7 Flash，一款面向大规模生产部署的高效多模态模型，主打低延迟、低成本与强推理能力的平衡。\n\n此前，AI 应用在落地时面临一个核心矛盾：大模型虽然能力强，但推理延迟高、成本昂贵，难以支撑高并发、实时响应的生产场景；而轻量模型虽然快，却在复杂推理、多模态理解上明显掉队。开发者不得不在“能力”和“效率”之间做痛苦取舍，要么牺牲用户体验"
+  }
+ ],
+ "快思考与慢思考": [
+  {
+   "id": "d8531b3bebbaf664",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.7 Flash",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+   "score": 7,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.7 Flash，一款面向大规模生产部署的高效多模态模型，主打低延迟、低成本与强推理能力的平衡。\n\n此前，AI 应用在落地时面临一个核心矛盾：大模型虽然能力强，但推理延迟高、成本昂贵，难以支撑高并发、实时响应的生产场景；而轻量模型虽然快，却在复杂推理、多模态理解上明显掉队。开发者不得不在“能力”和“效率”之间做痛苦取舍，要么牺牲用户体验"
+  }
+ ],
+ "NeMo Switchyard": [
+  {
+   "id": "26b283e0296ba33f",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "How many of your agent's calls actually need a frontier model?",
+   "url": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
+   "score": 8,
+   "summary": "在 AI 应用开发中，模型路由（model routing）是指根据任务复杂度自动将请求分发给不同规格的大语言模型，而非所有请求都走最贵最强的模型。LangChain 团队近期在一项基准测试中，使用 NVIDIA 的 NeMo Switchyard 路由系统对 145 个智能体任务进行了评估，结果发现只有 7% 的对话轮次真正需要调用前沿模型（frontier model，指能力最强但成本也最高的"
+  }
+ ],
+ "NVIDIA": [
+  {
+   "id": "26b283e0296ba33f",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "How many of your agent's calls actually need a frontier model?",
+   "url": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
+   "score": 8,
+   "summary": "在 AI 应用开发中，模型路由（model routing）是指根据任务复杂度自动将请求分发给不同规格的大语言模型，而非所有请求都走最贵最强的模型。LangChain 团队近期在一项基准测试中，使用 NVIDIA 的 NeMo Switchyard 路由系统对 145 个智能体任务进行了评估，结果发现只有 7% 的对话轮次真正需要调用前沿模型（frontier model，指能力最强但成本也最高的"
+  }
+ ],
+ "模型路由": [
+  {
+   "id": "26b283e0296ba33f",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "How many of your agent's calls actually need a frontier model?",
+   "url": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
+   "score": 8,
+   "summary": "在 AI 应用开发中，模型路由（model routing）是指根据任务复杂度自动将请求分发给不同规格的大语言模型，而非所有请求都走最贵最强的模型。LangChain 团队近期在一项基准测试中，使用 NVIDIA 的 NeMo Switchyard 路由系统对 145 个智能体任务进行了评估，结果发现只有 7% 的对话轮次真正需要调用前沿模型（frontier model，指能力最强但成本也最高的"
+  }
+ ],
+ "CoinRAG": [
+  {
+   "id": "b46c164357ac3039",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+   "url": "https://huggingface.co/papers/2608.07458",
+   "score": 8,
+   "summary": "这是一篇关于长上下文检索增强生成效率优化的论文，提出了一个名为 CoinRAG 的方法。它要解决的核心问题是：现有 RAG 系统在处理长检索结果时，通常采用粗粒度的分块级 KV 缓存复用策略来降低计算开销，但这种粗粒度方式仍然包含大量冗余和噪声信息，在推理延迟和答案质量之间难以达到理想的平衡。\n\n此前的痛点在于，RAG 系统面临一个典型的效率与效果权衡。当检索到的上下文很长时，大语言模型需要对这些"
+  }
+ ],
+ "KV cache 复用": [
+  {
+   "id": "b46c164357ac3039",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+   "url": "https://huggingface.co/papers/2608.07458",
+   "score": 8,
+   "summary": "这是一篇关于长上下文检索增强生成效率优化的论文，提出了一个名为 CoinRAG 的方法。它要解决的核心问题是：现有 RAG 系统在处理长检索结果时，通常采用粗粒度的分块级 KV 缓存复用策略来降低计算开销，但这种粗粒度方式仍然包含大量冗余和噪声信息，在推理延迟和答案质量之间难以达到理想的平衡。\n\n此前的痛点在于，RAG 系统面临一个典型的效率与效果权衡。当检索到的上下文很长时，大语言模型需要对这些"
+  }
+ ],
+ "信息金块": [
+  {
+   "id": "b46c164357ac3039",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+   "url": "https://huggingface.co/papers/2608.07458",
+   "score": 8,
+   "summary": "这是一篇关于长上下文检索增强生成效率优化的论文，提出了一个名为 CoinRAG 的方法。它要解决的核心问题是：现有 RAG 系统在处理长检索结果时，通常采用粗粒度的分块级 KV 缓存复用策略来降低计算开销，但这种粗粒度方式仍然包含大量冗余和噪声信息，在推理延迟和答案质量之间难以达到理想的平衡。\n\n此前的痛点在于，RAG 系统面临一个典型的效率与效果权衡。当检索到的上下文很长时，大语言模型需要对这些"
+  }
+ ],
+ "两阶段检索": [
+  {
+   "id": "b46c164357ac3039",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+   "url": "https://huggingface.co/papers/2608.07458",
+   "score": 8,
+   "summary": "这是一篇关于长上下文检索增强生成效率优化的论文，提出了一个名为 CoinRAG 的方法。它要解决的核心问题是：现有 RAG 系统在处理长检索结果时，通常采用粗粒度的分块级 KV 缓存复用策略来降低计算开销，但这种粗粒度方式仍然包含大量冗余和噪声信息，在推理延迟和答案质量之间难以达到理想的平衡。\n\n此前的痛点在于，RAG 系统面临一个典型的效率与效果权衡。当检索到的上下文很长时，大语言模型需要对这些"
+  }
+ ],
+ "组合式组装": [
+  {
+   "id": "b46c164357ac3039",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+   "url": "https://huggingface.co/papers/2608.07458",
+   "score": 8,
+   "summary": "这是一篇关于长上下文检索增强生成效率优化的论文，提出了一个名为 CoinRAG 的方法。它要解决的核心问题是：现有 RAG 系统在处理长检索结果时，通常采用粗粒度的分块级 KV 缓存复用策略来降低计算开销，但这种粗粒度方式仍然包含大量冗余和噪声信息，在推理延迟和答案质量之间难以达到理想的平衡。\n\n此前的痛点在于，RAG 系统面临一个典型的效率与效果权衡。当检索到的上下文很长时，大语言模型需要对这些"
+  }
+ ],
+ "LongBench": [
+  {
+   "id": "b46c164357ac3039",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+   "url": "https://huggingface.co/papers/2608.07458",
+   "score": 8,
+   "summary": "这是一篇关于长上下文检索增强生成效率优化的论文，提出了一个名为 CoinRAG 的方法。它要解决的核心问题是：现有 RAG 系统在处理长检索结果时，通常采用粗粒度的分块级 KV 缓存复用策略来降低计算开销，但这种粗粒度方式仍然包含大量冗余和噪声信息，在推理延迟和答案质量之间难以达到理想的平衡。\n\n此前的痛点在于，RAG 系统面临一个典型的效率与效果权衡。当检索到的上下文很长时，大语言模型需要对这些"
+  }
+ ],
+ "Ultrafast": [
+  {
+   "id": "c0986f6628d189a1",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+   "url": "https://openai.com/index/previewing-ultrafast",
+   "score": 6,
+   "summary": "OpenAI 推出了名为 Ultrafast 的新 API 服务层级，预览阶段运行 GPT-5.6 Sol 模型，速度最高可提升 14 倍。该服务由 Cerebras 提供算力支持，每秒可输出高达 750 个 token。这一变化值得关注，因为它显著降低了高吞吐量应用场景的延迟，为实时交互类 AI 产品提供了更强的性能基础。"
+  }
+ ],
+ "Cerebras": [
+  {
+   "id": "c0986f6628d189a1",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+   "url": "https://openai.com/index/previewing-ultrafast",
+   "score": 6,
+   "summary": "OpenAI 推出了名为 Ultrafast 的新 API 服务层级，预览阶段运行 GPT-5.6 Sol 模型，速度最高可提升 14 倍。该服务由 Cerebras 提供算力支持，每秒可输出高达 750 个 token。这一变化值得关注，因为它显著降低了高吞吐量应用场景的延迟，为实时交互类 AI 产品提供了更强的性能基础。"
+  }
+ ],
+ "SkillZip": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "Contract-Preserving Graph Compression": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "ReZip": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "可执行程序段": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "过程契约": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "边界签名": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "依赖闭包": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "验证可达性": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "移植宏": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "宏可逆展开": [
+  {
+   "id": "3d67560a6eb9f20e",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+   "url": "https://huggingface.co/papers/2608.05604",
+   "score": 8,
+   "summary": "SkillZip 是一种面向智能体技能库的图压缩框架，核心创新在于以“可执行程序段”而非文本为压缩单元，在保持过程契约（边界签名、依赖闭包、验证可达性）的前提下，将重复出现的合约有效子图重写为可逆的移植宏。该方法解决了现有系统在技能压缩时难以保留可执行性、可扩展性与契约一致性的问题，并通过 ReZip 机制利用执行证据持续集成新技能和修正风险宏。实验显示，SkillZip 在技术和具身智能体基准上"
+  }
+ ],
+ "ICML": [
+  {
+   "id": "57f8b7f378e9c39a",
+   "date": "2026-08-14",
+   "run_type": "midweek",
+   "title": "What We Learned by Reproducing 2,200 papers from ICML",
+   "url": "https://huggingface.co/blog/icml-2026-open-reproductions",
+   "score": 7,
+   "summary": "这是一篇来自 Hugging Face 的博客，总结了团队复现 ICML 会议 2,200 篇论文的实践经验。核心发现是，许多论文因代码缺失、环境配置复杂或依赖冲突而难以复现，暴露了当前机器学习研究在可复现性上的系统性挑战。这项工作值得关注，因为它不仅量化了复现危机的严重程度，还推动了社区对开放代码和标准化实验流程的重视。"
   }
  ]
 }
