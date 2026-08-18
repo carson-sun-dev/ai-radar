@@ -851,6 +851,15 @@
    "url": "https://huggingface.co/papers/2607.18754",
    "score": 9,
    "summary": "LLM agent failures are difficult to debug because the step where an error surfaces is often not the one that caused it. Existing observability tools replay execution traces but provide little support "
+  },
+  {
+   "id": "1aa5adc4d37f94af",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Second Thought: Reasoning in Parallel as LLM Agents Act and Observe",
+   "url": "https://huggingface.co/papers/2608.13667",
+   "score": 7,
+   "summary": "这是一篇关于 LLM Agent 推理框架优化的论文，提出了名为 Second Thought 的方法。它的核心思想是在 ReAct 范式（一种让大模型交替进行“思考-行动-观察”的智能体工作模式）中，利用 Agent 执行动作并等待环境返回观察结果的空闲时间，并行地进行额外的推理，从而在不增加主流程串行解码时间的前提下，提升推理质量和任务效率。\n\n此前，ReAct 范式下的 LLM Agent "
   }
  ],
  "根因诊断": [
@@ -3306,6 +3315,303 @@
    "url": "https://huggingface.co/blog/icml-2026-open-reproductions",
    "score": 7,
    "summary": "这是一篇来自 Hugging Face 的博客，总结了团队复现 ICML 会议 2,200 篇论文的实践经验。核心发现是，许多论文因代码缺失、环境配置复杂或依赖冲突而难以复现，暴露了当前机器学习研究在可复现性上的系统性挑战。这项工作值得关注，因为它不仅量化了复现危机的严重程度，还推动了社区对开放代码和标准化实验流程的重视。"
+  }
+ ],
+ "DFM Mimir v1": [
+  {
+   "id": "fa6e8367fe797ea1",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+   "url": "https://huggingface.co/papers/2608.13517",
+   "score": 7,
+   "summary": "这是一篇关于 DFM Mimir v1 模型的技术分析，它介绍了一个在严格数据合规约束下，用 10 亿参数达到前沿性能的开源分层推理模型。\n\n它解决的核心痛点，是当前大模型研发对海量、且往往版权存疑或伦理上不可商用的“非许可数据”的深度依赖。这给那些坚持开源精神、追求数据来源完全合规的研究者与机构，筑起了极高的参与门槛。Mimir v1 的诞生，就是为了证明在完全不触碰这些灰色数据的前提下，仅依靠"
+  }
+ ],
+ "HRM-Text 1B": [
+  {
+   "id": "fa6e8367fe797ea1",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+   "url": "https://huggingface.co/papers/2608.13517",
+   "score": 7,
+   "summary": "这是一篇关于 DFM Mimir v1 模型的技术分析，它介绍了一个在严格数据合规约束下，用 10 亿参数达到前沿性能的开源分层推理模型。\n\n它解决的核心痛点，是当前大模型研发对海量、且往往版权存疑或伦理上不可商用的“非许可数据”的深度依赖。这给那些坚持开源精神、追求数据来源完全合规的研究者与机构，筑起了极高的参与门槛。Mimir v1 的诞生，就是为了证明在完全不触碰这些灰色数据的前提下，仅依靠"
+  }
+ ],
+ "Qwen 3.5 4B": [
+  {
+   "id": "fa6e8367fe797ea1",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+   "url": "https://huggingface.co/papers/2608.13517",
+   "score": 7,
+   "summary": "这是一篇关于 DFM Mimir v1 模型的技术分析，它介绍了一个在严格数据合规约束下，用 10 亿参数达到前沿性能的开源分层推理模型。\n\n它解决的核心痛点，是当前大模型研发对海量、且往往版权存疑或伦理上不可商用的“非许可数据”的深度依赖。这给那些坚持开源精神、追求数据来源完全合规的研究者与机构，筑起了极高的参与门槛。Mimir v1 的诞生，就是为了证明在完全不触碰这些灰色数据的前提下，仅依靠"
+  }
+ ],
+ "Gemma 4 E2B": [
+  {
+   "id": "fa6e8367fe797ea1",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+   "url": "https://huggingface.co/papers/2608.13517",
+   "score": 7,
+   "summary": "这是一篇关于 DFM Mimir v1 模型的技术分析，它介绍了一个在严格数据合规约束下，用 10 亿参数达到前沿性能的开源分层推理模型。\n\n它解决的核心痛点，是当前大模型研发对海量、且往往版权存疑或伦理上不可商用的“非许可数据”的深度依赖。这给那些坚持开源精神、追求数据来源完全合规的研究者与机构，筑起了极高的参与门槛。Mimir v1 的诞生，就是为了证明在完全不触碰这些灰色数据的前提下，仅依靠"
+  }
+ ],
+ "分层推理模型": [
+  {
+   "id": "fa6e8367fe797ea1",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+   "url": "https://huggingface.co/papers/2608.13517",
+   "score": 7,
+   "summary": "这是一篇关于 DFM Mimir v1 模型的技术分析，它介绍了一个在严格数据合规约束下，用 10 亿参数达到前沿性能的开源分层推理模型。\n\n它解决的核心痛点，是当前大模型研发对海量、且往往版权存疑或伦理上不可商用的“非许可数据”的深度依赖。这给那些坚持开源精神、追求数据来源完全合规的研究者与机构，筑起了极高的参与门槛。Mimir v1 的诞生，就是为了证明在完全不触碰这些灰色数据的前提下，仅依靠"
+  }
+ ],
+ "许可数据": [
+  {
+   "id": "fa6e8367fe797ea1",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+   "url": "https://huggingface.co/papers/2608.13517",
+   "score": 7,
+   "summary": "这是一篇关于 DFM Mimir v1 模型的技术分析，它介绍了一个在严格数据合规约束下，用 10 亿参数达到前沿性能的开源分层推理模型。\n\n它解决的核心痛点，是当前大模型研发对海量、且往往版权存疑或伦理上不可商用的“非许可数据”的深度依赖。这给那些坚持开源精神、追求数据来源完全合规的研究者与机构，筑起了极高的参与门槛。Mimir v1 的诞生，就是为了证明在完全不触碰这些灰色数据的前提下，仅依靠"
+  }
+ ],
+ "后训练数据策略": [
+  {
+   "id": "fa6e8367fe797ea1",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+   "url": "https://huggingface.co/papers/2608.13517",
+   "score": 7,
+   "summary": "这是一篇关于 DFM Mimir v1 模型的技术分析，它介绍了一个在严格数据合规约束下，用 10 亿参数达到前沿性能的开源分层推理模型。\n\n它解决的核心痛点，是当前大模型研发对海量、且往往版权存疑或伦理上不可商用的“非许可数据”的深度依赖。这给那些坚持开源精神、追求数据来源完全合规的研究者与机构，筑起了极高的参与门槛。Mimir v1 的诞生，就是为了证明在完全不触碰这些灰色数据的前提下，仅依靠"
+  }
+ ],
+ "Nanbeige4.2-3B": [
+  {
+   "id": "f5cbdc381c2ebae9",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+   "url": "https://huggingface.co/papers/2608.13987",
+   "score": 7,
+   "summary": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过"
+  }
+ ],
+ "Looped Transformer": [
+  {
+   "id": "f5cbdc381c2ebae9",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+   "url": "https://huggingface.co/papers/2608.13987",
+   "score": 7,
+   "summary": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过"
+  }
+ ],
+ "Apple Silicon": [
+  {
+   "id": "f5cbdc381c2ebae9",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+   "url": "https://huggingface.co/papers/2608.13987",
+   "score": 7,
+   "summary": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过"
+  }
+ ],
+ "MPS": [
+  {
+   "id": "f5cbdc381c2ebae9",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+   "url": "https://huggingface.co/papers/2608.13987",
+   "score": 7,
+   "summary": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过"
+  }
+ ],
+ "RoPE": [
+  {
+   "id": "f5cbdc381c2ebae9",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+   "url": "https://huggingface.co/papers/2608.13987",
+   "score": 7,
+   "summary": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过"
+  }
+ ],
+ "分块预填充": [
+  {
+   "id": "f5cbdc381c2ebae9",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+   "url": "https://huggingface.co/papers/2608.13987",
+   "score": 7,
+   "summary": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过"
+  }
+ ],
+ "MCPMark": [
+  {
+   "id": "f5cbdc381c2ebae9",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+   "url": "https://huggingface.co/papers/2608.13987",
+   "score": 7,
+   "summary": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过"
+  }
+ ],
+ "BFCL": [
+  {
+   "id": "f5cbdc381c2ebae9",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+   "url": "https://huggingface.co/papers/2608.13987",
+   "score": 7,
+   "summary": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过"
+  }
+ ],
+ "Second Thought": [
+  {
+   "id": "1aa5adc4d37f94af",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Second Thought: Reasoning in Parallel as LLM Agents Act and Observe",
+   "url": "https://huggingface.co/papers/2608.13667",
+   "score": 7,
+   "summary": "这是一篇关于 LLM Agent 推理框架优化的论文，提出了名为 Second Thought 的方法。它的核心思想是在 ReAct 范式（一种让大模型交替进行“思考-行动-观察”的智能体工作模式）中，利用 Agent 执行动作并等待环境返回观察结果的空闲时间，并行地进行额外的推理，从而在不增加主流程串行解码时间的前提下，提升推理质量和任务效率。\n\n此前，ReAct 范式下的 LLM Agent "
+  }
+ ],
+ "ReAct 范式": [
+  {
+   "id": "1aa5adc4d37f94af",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Second Thought: Reasoning in Parallel as LLM Agents Act and Observe",
+   "url": "https://huggingface.co/papers/2608.13667",
+   "score": 7,
+   "summary": "这是一篇关于 LLM Agent 推理框架优化的论文，提出了名为 Second Thought 的方法。它的核心思想是在 ReAct 范式（一种让大模型交替进行“思考-行动-观察”的智能体工作模式）中，利用 Agent 执行动作并等待环境返回观察结果的空闲时间，并行地进行额外的推理，从而在不增加主流程串行解码时间的前提下，提升推理质量和任务效率。\n\n此前，ReAct 范式下的 LLM Agent "
+  }
+ ],
+ "推理空闲窗口": [
+  {
+   "id": "1aa5adc4d37f94af",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Second Thought: Reasoning in Parallel as LLM Agents Act and Observe",
+   "url": "https://huggingface.co/papers/2608.13667",
+   "score": 7,
+   "summary": "这是一篇关于 LLM Agent 推理框架优化的论文，提出了名为 Second Thought 的方法。它的核心思想是在 ReAct 范式（一种让大模型交替进行“思考-行动-观察”的智能体工作模式）中，利用 Agent 执行动作并等待环境返回观察结果的空闲时间，并行地进行额外的推理，从而在不增加主流程串行解码时间的前提下，提升推理质量和任务效率。\n\n此前，ReAct 范式下的 LLM Agent "
+  }
+ ],
+ "Pass@1": [
+  {
+   "id": "1aa5adc4d37f94af",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Second Thought: Reasoning in Parallel as LLM Agents Act and Observe",
+   "url": "https://huggingface.co/papers/2608.13667",
+   "score": 7,
+   "summary": "这是一篇关于 LLM Agent 推理框架优化的论文，提出了名为 Second Thought 的方法。它的核心思想是在 ReAct 范式（一种让大模型交替进行“思考-行动-观察”的智能体工作模式）中，利用 Agent 执行动作并等待环境返回观察结果的空闲时间，并行地进行额外的推理，从而在不增加主流程串行解码时间的前提下，提升推理质量和任务效率。\n\n此前，ReAct 范式下的 LLM Agent "
+  }
+ ],
+ "State of Open Models: Summer 2026 Observations": [
+  {
+   "id": "bc290ba394fd0d91",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "State of Open Models: Summer 2026 Observations",
+   "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
+   "score": 5,
+   "summary": "这是一个关于2026年夏季开源模型生态现状的观察报告。核心变化在于，开源模型在性能上已全面逼近甚至超越闭源商业模型，同时多模态能力和推理效率成为新的竞争焦点。值得关注的是，该报告揭示了开源社区正从单纯追赶转向定义新的技术标准，这标志着AI技术民主化进入了全新阶段。"
+  }
+ ],
+ "请求调度顺序优化": [
+  {
+   "id": "bf50ec5ce617ac83",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+   "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+   "score": 6,
+   "summary": "这是一篇关于大模型推理服务优化的技术博客，核心发现是通过调整请求的调度顺序，在不改变硬件集群的前提下，将 GPU 利用率提升了 33 个百分点。该方法聚焦于请求排序策略，而非增加算力或压缩模型，揭示了调度算法对推理效率的巨大影响。这值得关注，因为它提供了一种低成本、高回报的优化路径，直接提升大模型线上服务的吞吐与资源利用率。"
+  }
+ ],
+ "GPU 利用率提升": [
+  {
+   "id": "bf50ec5ce617ac83",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+   "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+   "score": 6,
+   "summary": "这是一篇关于大模型推理服务优化的技术博客，核心发现是通过调整请求的调度顺序，在不改变硬件集群的前提下，将 GPU 利用率提升了 33 个百分点。该方法聚焦于请求排序策略，而非增加算力或压缩模型，揭示了调度算法对推理效率的巨大影响。这值得关注，因为它提供了一种低成本、高回报的优化路径，直接提升大模型线上服务的吞吐与资源利用率。"
+  }
+ ],
+ "CLR": [
+  {
+   "id": "0abbd139e7fefc34",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Claim-Level Reliability Assessment for Efficient Test-Time Reasoning",
+   "url": "https://huggingface.co/papers/2608.11994",
+   "score": 7,
+   "summary": "我们提出了一种基于声明级证伪的测试时推理框架 CLR，它不依赖额外训练，通过将完整推理链压缩为一组决策关键声明，把算力从重复采样转向针对性验证。该方法利用“构造正确解需要完整无误路径，而推翻错误声明只需发现一处致命缺陷”的不对称性，通过非线性可靠性评分系统性地压缩高置信度错误解的生存空间。在四个大模型和四个推理基准上，CLR 在匹配预算下普遍优于 pass@1 和自一致性方法，例如在 GPT-OS"
+  }
+ ],
+ "GPT-OSS-20B": [
+  {
+   "id": "0abbd139e7fefc34",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Claim-Level Reliability Assessment for Efficient Test-Time Reasoning",
+   "url": "https://huggingface.co/papers/2608.11994",
+   "score": 7,
+   "summary": "我们提出了一种基于声明级证伪的测试时推理框架 CLR，它不依赖额外训练，通过将完整推理链压缩为一组决策关键声明，把算力从重复采样转向针对性验证。该方法利用“构造正确解需要完整无误路径，而推翻错误声明只需发现一处致命缺陷”的不对称性，通过非线性可靠性评分系统性地压缩高置信度错误解的生存空间。在四个大模型和四个推理基准上，CLR 在匹配预算下普遍优于 pass@1 和自一致性方法，例如在 GPT-OS"
+  }
+ ],
+ "声明级证伪": [
+  {
+   "id": "0abbd139e7fefc34",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Claim-Level Reliability Assessment for Efficient Test-Time Reasoning",
+   "url": "https://huggingface.co/papers/2608.11994",
+   "score": 7,
+   "summary": "我们提出了一种基于声明级证伪的测试时推理框架 CLR，它不依赖额外训练，通过将完整推理链压缩为一组决策关键声明，把算力从重复采样转向针对性验证。该方法利用“构造正确解需要完整无误路径，而推翻错误声明只需发现一处致命缺陷”的不对称性，通过非线性可靠性评分系统性地压缩高置信度错误解的生存空间。在四个大模型和四个推理基准上，CLR 在匹配预算下普遍优于 pass@1 和自一致性方法，例如在 GPT-OS"
+  }
+ ],
+ "测试时推理": [
+  {
+   "id": "0abbd139e7fefc34",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Claim-Level Reliability Assessment for Efficient Test-Time Reasoning",
+   "url": "https://huggingface.co/papers/2608.11994",
+   "score": 7,
+   "summary": "我们提出了一种基于声明级证伪的测试时推理框架 CLR，它不依赖额外训练，通过将完整推理链压缩为一组决策关键声明，把算力从重复采样转向针对性验证。该方法利用“构造正确解需要完整无误路径，而推翻错误声明只需发现一处致命缺陷”的不对称性，通过非线性可靠性评分系统性地压缩高置信度错误解的生存空间。在四个大模型和四个推理基准上，CLR 在匹配预算下普遍优于 pass@1 和自一致性方法，例如在 GPT-OS"
+  }
+ ],
+ "非线性可靠性评分": [
+  {
+   "id": "0abbd139e7fefc34",
+   "date": "2026-08-18",
+   "run_type": "midweek",
+   "title": "Claim-Level Reliability Assessment for Efficient Test-Time Reasoning",
+   "url": "https://huggingface.co/papers/2608.11994",
+   "score": 7,
+   "summary": "我们提出了一种基于声明级证伪的测试时推理框架 CLR，它不依赖额外训练，通过将完整推理链压缩为一组决策关键声明，把算力从重复采样转向针对性验证。该方法利用“构造正确解需要完整无误路径，而推翻错误声明只需发现一处致命缺陷”的不对称性，通过非线性可靠性评分系统性地压缩高置信度错误解的生存空间。在四个大模型和四个推理基准上，CLR 在匹配预算下普遍优于 pass@1 和自一致性方法，例如在 GPT-OS"
   }
  ]
 }

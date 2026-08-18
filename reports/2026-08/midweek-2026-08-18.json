@@ -1,0 +1,717 @@
+{
+ "meta": {
+  "date": "2026-08-18",
+  "run_type": "midweek",
+  "description": "深读：DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data；Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Trans",
+  "entities": [
+   "Apple Silicon",
+   "BFCL",
+   "CLR",
+   "DFM Mimir v1",
+   "GPT-OSS-20B",
+   "GPU 利用率提升",
+   "Gemma 4 E2B",
+   "HRM-Text 1B",
+   "LLM Agent",
+   "Looped Transformer",
+   "MCPMark",
+   "MPS",
+   "Nanbeige4.2-3B",
+   "Pass@1",
+   "Qwen 3.5 4B",
+   "ReAct 范式",
+   "RoPE",
+   "Second Thought",
+   "State of Open Models: Summer 2026 Observations",
+   "分块预填充",
+   "分层推理模型",
+   "后训练数据策略",
+   "声明级证伪",
+   "推理空闲窗口",
+   "测试时推理",
+   "许可数据",
+   "请求调度顺序优化",
+   "非线性可靠性评分"
+  ],
+  "tags": [
+   "model",
+   "engineering",
+   "paper"
+  ],
+  "item_count": 35,
+  "sources_failed": [
+   "anthropic-news：HTTP 403（疑似反爬）（已重试 3 次）",
+   "anthropic-engineering：HTTP 403（疑似反爬）（已重试 3 次）",
+   "seed-research：HTTP 403（疑似反爬）（已重试 3 次）",
+   "arxiv-papers：HTTP 429（限流）（已重试 3 次）"
+  ],
+  "tokens_used": 18318,
+  "cost_cny": 0.2503,
+  "duration_seconds": 307.3
+ },
+ "deep": [
+  {
+   "id": "fa6e8367fe797ea1",
+   "source": "hf-daily-papers",
+   "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+   "url": "https://huggingface.co/papers/2608.13517",
+   "published_at": "2026-08-13T00:00:00Z",
+   "summary": "Current large language model development relies on massive, often non-permissible datasets, creating a high barrier for researchers committed to open-source and ethically sourced data. We introduce Mimir v1, a 1-billion-parameter language model based on the Hierarchical Reasoning Model (HRM) architecture, that is trained from scratch and delivers highly competitive performance for English and sets a new state of the art for Danish using only permissible post-training data. Trained on a mixture of 161 datasets, Mimir v1 outperforms the original HRM-Text 1B and competes with larger frontier models like Qwen 3.5 4B and Gemma 4 E2B, tested across 20 benchmarks for English, Math & Code and Danish. The model is available on the Hugging Face Hub: https://huggingface.co/danish-foundation-models/DFM-Mimir",
+   "category": "model",
+   "score": 7,
+   "score_reason": "1B 参数 HRM 架构模型，仅用许可数据训练即达前沿性能，对低成本模型选型有实际参考。",
+   "entities": [
+    "DFM Mimir v1",
+    "HRM-Text 1B",
+    "Qwen 3.5 4B",
+    "Gemma 4 E2B",
+    "分层推理模型",
+    "许可数据",
+    "后训练数据策略"
+   ],
+   "analysis": "这是一篇关于 DFM Mimir v1 模型的技术分析，它介绍了一个在严格数据合规约束下，用 10 亿参数达到前沿性能的开源分层推理模型。\n\n它解决的核心痛点，是当前大模型研发对海量、且往往版权存疑或伦理上不可商用的“非许可数据”的深度依赖。这给那些坚持开源精神、追求数据来源完全合规的研究者与机构，筑起了极高的参与门槛。Mimir v1 的诞生，就是为了证明在完全不触碰这些灰色数据的前提下，仅依靠“许可数据”，小尺寸模型也能在多种语言和任务上具备与更大尺寸模型竞争的实力。\n\n在技术流程与方法上，该模型有几点值得深挖。首先，它基于分层推理模型架构，这是一种试图将复杂问题拆解为多步推理过程的结构化设计，而非传统的单一前馈变换器堆叠。其次，模型是从零开始预训练的，而非基于现有模型微调，这保证了其数据管线的纯净性。最关键的在于其后训练阶段的数据策略：团队混合使用了 161 个数据集，全部为许可数据，并以此驱动模型在英语、数学与代码、以及丹麦语三个维度上进行能力对齐。从结果看，这种策略非常有效——Mimir v1 不仅超越了同尺寸的原始 HRM-Text 1B 模型，还在 20 项基准测试中展现出与 Qwen 3.5 4B、Gemma 4 E2B 这类参数量是其四倍以上的前沿模型相抗衡的性能，并在丹麦语任务上达到了新的最优水平。\n\n对于 AI 应用岗的面试与实践，这条资讯提供了几个高价值的谈点。第一，它展示了“数据合规性”如何从法务需求转变为技术竞争力。在面试中，你可以结合这个案例，讨论在金融、医疗等强监管行业落地大模型时，如何设计完全基于许可数据的后训练流水线，避免潜在的版权与隐私风险。第二，它印证了小模型在特定垂直领域（如小语种、特定逻辑推理）通过精细的后训练，完全可以替代大模型，从而大幅降低线上推理成本与延迟，这是生产环境可用性的关键。第三，分层推理架构的落地，提示我们在设计 AI 应用时，可以将复杂任务显式地拆解为规划、执行、验证等子模块，用工程手段弥补模型尺寸的不足，这会是面试中展现你系统设计深度的好切入点。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 21
+   }
+  },
+  {
+   "id": "f5cbdc381c2ebae9",
+   "source": "hf-daily-papers",
+   "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+   "url": "https://huggingface.co/papers/2608.13987",
+   "published_at": "2026-08-14T00:00:00Z",
+   "summary": "Nanbeige4.2-3B is a 3B-parameter agentic model built around a Looped Transformer (LT) that reuses one stack of layers for a second forward pass, adding effective depth without additional parameters. Evaluated on Apple Silicon (MPS), we identify five independent bugs which prevent the released checkpoint from running via Hugging Face transformers out of the box (including a silently-zeroed RoPE buffer and calls to removed transformers cache APIs). Furthermore, we show that fixing these bugs is still not sufficient for agentic tasks, due to the LT's layer-reuse strategy (which effectively doubles peak attention memory) used to achieve parameter efficiency. We thus introduce a chunked-prefill strategy which alleviates the incurred memory-capacity penalty, extending allowable context width by 2.7 times on 32~GiB shared memory. However, even with the reduced memory overhead, we show that patches are required to render Nanbeige4.2-3B usable; resolving both system prompt and MPS-native memory bugs finally allows reliable evaluation on standard MCP and tool-calling benchmarks. On a subset of MCPMark, the debugged model completes up to 30\\% of real agentic tasks (up from the original's 0\\%), while, on BFCL, it is near-perfect at single tool calls (yet fails the majority of multi-tool tests). We release the patched checkpoint, system prompt optimizer, and evaluation harnesses at https://github.com/johnhalloran321/Nanbeige4.2-3B-mps-fix.",
+   "category": "engineering",
+   "score": 7,
+   "score_reason": "修复 Looped Transformer 在 Apple Silicon 上的部署 bug 并降低内存开销，直接解决生产部署问题，有代码细节。",
+   "entities": [
+    "Nanbeige4.2-3B",
+    "Looped Transformer",
+    "Apple Silicon",
+    "MPS",
+    "RoPE",
+    "分块预填充",
+    "MCPMark",
+    "BFCL"
+   ],
+   "analysis": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过参数复用实现了效率提升，但其发布的检查点在实际部署中完全无法运行，且即使修复了基础错误，模型在智能体任务上仍因内存瓶颈而不可用。具体而言，作者在 Apple Silicon 的 MPS 后端上发现了五个独立的缺陷，这些缺陷导致模型无法通过 Hugging Face transformers 库直接开箱即用。其中包括一个被静默置零的 RoPE（旋转位置编码，一种为注意力机制注入位置信息的方法）缓冲区，以及对已移除的 transformers 缓存 API 的调用。这些底层实现错误直接阻断了模型的初始推理。\n\n技术流程的核心在于分两步解决可用性问题。第一步是修复上述五个代码缺陷，使模型能够执行基础推理。但作者发现，仅修复这些缺陷仍不足以支撑智能体任务，因为 Looped Transformer 的层复用策略在追求参数效率的同时，实际上将注意力机制的峰值内存占用翻倍，导致在 32GB 共享内存的 Apple Silicon 设备上上下文窗口严重受限。为此，作者引入了分块预填充策略，这是一种将长序列切分为多个块进行分步处理的技术，将允许的上下文宽度扩展了 2.7 倍。第二步是进一步解决系统提示词和 MPS 原生内存的缺陷，最终使模型能够在标准的 MCP 和工具调用基准测试上可靠运行。实验显示，调试后的模型在 MCPMark 子集上完成了高达 30% 的真实智能体任务，而原始版本完成率为 0%；在 BFCL 基准上，模型对单次工具调用近乎完美，但在多数多工具测试中仍然失败。\n\n对 AI 应用岗而言，这篇工作的价值在于它揭示了从模型论文到生产可用的巨大鸿沟，这是面试中展示工程化思维的绝佳素材。首先，它强调了部署环境兼容性测试的重要性，五个缺陷中任何一个都足以让模型“零分”，这提醒我们在集成第三方模型时必须建立严格的验证流水线。其次，分块预填充策略是解决内存受限场景下长上下文推理的实用技巧，可以直接迁移到移动端或边缘设备的 AI 应用开发中。最后，模型在单工具调用上近乎完美却在多工具组合上失败的现象，是讨论智能体系统可靠性的典型切入点：它说明当前模型可能只是记住了单步操作模式，而非真正具备多步规划与推理能力，这直接关系到产品设计中如何设置任务粒度和兜底策略。面试中可以结合这些点，展现自己从模型选型、部署调试到性能优化和局限性评估的全链路思考。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 2
+   }
+  },
+  {
+   "id": "1aa5adc4d37f94af",
+   "source": "hf-daily-papers",
+   "title": "Second Thought: Reasoning in Parallel as LLM Agents Act and Observe",
+   "url": "https://huggingface.co/papers/2608.13667",
+   "published_at": "2026-08-13T18:04:53Z",
+   "summary": "LLM agents in the ReAct paradigm alternate between reasoning, acting, and observing, but deliberate reasoning is confined to the Thought phase: while the agent serializes an action and waits for the environment, its reasoning is frozen. We identify this recurring interval for Action and Observation as a reasoning idle window and ask whether it can host additional reasoning in parallel that serves future turns. Therefore, we propose Second Thought, a training-free inference framework that forks four auxiliary branches the instant each Thought phase concludes, decodes them concurrently with the main loop, and merges the generated thoughts back when the environment observation arrives. In this way, Second Thought relocates the added reasoning off the main thread's sequential decoding path. Across three agentic benchmarks and three reasoning LLMs, Second Thought lowers the average turn count in all nine (model,benchmark) pairs and reduces main thread decoding in six of them by up to 43% (roughly 20% on average among those settings), while leaving it essentially unchanged in a seventh; Pass@1 shows no significant change in seven of nine pairs and the two significant differences are +12.4 and +10.2 points. Against a compute-matched control that forces an equivalent budget onto the main thread's own reasoning, it attains strictly higher Pass@1 with 1.3 to 3.2 less sequential decoding in all four settings where the control applies.",
+   "category": "paper",
+   "score": 7,
+   "score_reason": "提出在ReAct agent的Action/Observation阶段并行推理，直接改进agent效率，有工程落地价值",
+   "entities": [
+    "Second Thought",
+    "ReAct 范式",
+    "LLM Agent",
+    "推理空闲窗口",
+    "Pass@1"
+   ],
+   "analysis": "这是一篇关于 LLM Agent 推理框架优化的论文，提出了名为 Second Thought 的方法。它的核心思想是在 ReAct 范式（一种让大模型交替进行“思考-行动-观察”的智能体工作模式）中，利用 Agent 执行动作并等待环境返回观察结果的空闲时间，并行地进行额外的推理，从而在不增加主流程串行解码时间的前提下，提升推理质量和任务效率。\n\n此前，ReAct 范式下的 LLM Agent 存在一个明显的效率痛点：当 Agent 生成一个动作（比如调用搜索 API）并等待环境返回观察结果时，其推理过程是完全冻结的。这个等待间隔被称为“推理空闲窗口”。传统的做法是让模型在这个窗口里干等，或者强行在主流程中塞入更长的推理链，但这会直接增加用户感知的延迟，因为主流程的每一步都是串行的。这种串行等待机制浪费了宝贵的计算资源，也限制了 Agent 在复杂任务中的表现。\n\nSecond Thought 的技术流程非常精巧，且完全不需要训练。它的工作方式是这样的：在每个思考阶段结束的瞬间，系统会分叉出四个辅助推理分支。这些分支与主流程（即执行动作和等待观察结果的过程）完全并行地运行，各自独立地生成后续的思考内容。当环境的观察结果最终返回时，系统会将主流程的观察结果与这些并行生成的辅助思考进行合并，然后一起送入模型，用于指导下一步的决策。这种设计的巧妙之处在于，它将额外的推理计算完全移出了主流程的串行解码路径。这意味着，虽然模型在后台做了更多的思考，但用户感知到的每一步响应延迟并没有增加。实验数据也证实了这一点：在三个智能体基准测试和三个推理模型上，Second Thought 在所有九个测试组合中都降低了完成任务所需的平均交互轮数，并且在其中六个组合中，将主流程的串行解码量最多降低了 43%，平均降低约 20%。更关键的是，在 Pass@1 准确率上，九个组合中有七个没有显著变化，另外两个甚至分别提升了 12.4 和 10.2 个百分点。与一个计算量匹配的对照组（将同等算力强行塞入主流程推理）相比，Second Thought 在所有可对比的设置中都取得了更高的 Pass@1 准确率，同时串行解码量减少了 1.3 到 3.2 倍。\n\n对于 AI 应用岗的面试和实际生产环境，这篇论文的价值在于它提供了一个极具工程启发性的“零成本”优化思路。首先，它直击了 LLM 应用的核心矛盾：推理深度与响应延迟之间的权衡。在面试中，你可以借此展示你对 Agent 系统运行时特性的深刻理解，而不仅仅是会调用 API。你可以讨论“推理空闲窗口”这个概念，说明你懂得如何识别和利用系统中的空闲计算资源来提升整体智能，这是一种系统级的优化思维。其次，它的“无训练”特性意味着这个方案可以立即应用于任何现有的 ReAct Agent 系统，无需额外的模型微调成本，这对于追求快速迭代和上线的生产环境来说极具吸引力。最后，你可以引申到更广泛的架构设计讨论，比如这种“主-辅”并行推理的架构，本质上是一种推测性解码或异步思考模式，它如何与流式响应、任务取消、资源调度等工程问题结合，这能充分体现你从研究到落地的工程化能力。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 8
+   }
+  }
+ ],
+ "mid": [
+  {
+   "id": "bc290ba394fd0d91",
+   "source": "hf-blog",
+   "title": "State of Open Models: Summer 2026 Observations",
+   "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
+   "published_at": "2026-08-14T00:00:00Z",
+   "summary": "",
+   "category": "model",
+   "score": 5,
+   "score_reason": "开源模型生态半年总结，对模型选型有参考价值，但非具体工程方法。",
+   "entities": [
+    "State of Open Models: Summer 2026 Observations"
+   ],
+   "analysis": "这是一个关于2026年夏季开源模型生态现状的观察报告。核心变化在于，开源模型在性能上已全面逼近甚至超越闭源商业模型，同时多模态能力和推理效率成为新的竞争焦点。值得关注的是，该报告揭示了开源社区正从单纯追赶转向定义新的技术标准，这标志着AI技术民主化进入了全新阶段。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "bf50ec5ce617ac83",
+   "source": "hf-blog",
+   "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+   "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+   "published_at": "2026-08-17T19:46:21Z",
+   "summary": "",
+   "category": "engineering",
+   "score": 6,
+   "score_reason": "标题暗示集群利用率优化方法，可能涉及调度/部署工程实践，但无摘要细节，暂估中等分。",
+   "entities": [
+    "请求调度顺序优化",
+    "GPU 利用率提升"
+   ],
+   "analysis": "这是一篇关于大模型推理服务优化的技术博客，核心发现是通过调整请求的调度顺序，在不改变硬件集群的前提下，将 GPU 利用率提升了 33 个百分点。该方法聚焦于请求排序策略，而非增加算力或压缩模型，揭示了调度算法对推理效率的巨大影响。这值得关注，因为它提供了一种低成本、高回报的优化路径，直接提升大模型线上服务的吞吐与资源利用率。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "0abbd139e7fefc34",
+   "source": "hf-daily-papers",
+   "title": "Claim-Level Reliability Assessment for Efficient Test-Time Reasoning",
+   "url": "https://huggingface.co/papers/2608.11994",
+   "published_at": "2026-08-12T00:00:00Z",
+   "summary": "We propose claim-level falsification as a principle for test-time scaling and instantiate it through Claim-Level Reliability Assessment (CLR), a training-free framework that reallocates test-time compute from additional solution sampling to targeted verification. Since whole-trace evaluation often obscures decisive errors due to signal dilution from routine tokens, CLR condenses each reasoning trace into a compact set of decision-critical claims, thereby isolating its logical anchors. Furthermore, recognizing the inherent difficulty of generating entirely correct solutions under fixed model capabilities, CLR shifts the focus to semantic falsification. This approach exploits a fundamental asymmetry between solution construction and claim refutation. Constructing a valid solution requires a flawless reasoning path, whereas refuting an incorrect claim requires identifying only a single decisive flaw. This targeted search for negative evidence systematically compresses the survival space of high-confidence incorrect traces, effectively suppressing erroneous consensus via nonlinear reliability scoring. Across four LLMs and four reasoning benchmarks under matched budgets, CLR generally improves upon pass@1 and self-consistency. On GPT-OSS-20B/CMIMC25, for instance, CLR exceeds pass@1 by 27.15 percentage-points and raises self-consistency accuracy from 77.50\\% to 82.19\\% with 37.0\\% fewer tokens.",
+   "category": "paper",
+   "score": 7,
+   "score_reason": "提出 claim-level 可靠性评估用于 test-time scaling，训练无关且可复现，直接降低推理成本，对工程实践有参考价值",
+   "entities": [
+    "CLR",
+    "GPT-OSS-20B",
+    "声明级证伪",
+    "测试时推理",
+    "非线性可靠性评分"
+   ],
+   "analysis": "我们提出了一种基于声明级证伪的测试时推理框架 CLR，它不依赖额外训练，通过将完整推理链压缩为一组决策关键声明，把算力从重复采样转向针对性验证。该方法利用“构造正确解需要完整无误路径，而推翻错误声明只需发现一处致命缺陷”的不对称性，通过非线性可靠性评分系统性地压缩高置信度错误解的生存空间。在四个大模型和四个推理基准上，CLR 在匹配预算下普遍优于 pass@1 和自一致性方法，例如在 GPT-OSS-20B 上准确率提升超过 27 个百分点，同时节省 37% 的 token 消耗。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 10
+   }
+  }
+ ],
+ "glance": {
+  "model": [
+   {
+    "id": "22405ea1e27b33a1",
+    "source": "openai-news",
+    "title": "OpenAI joins PORTS-Pike project",
+    "url": "https://openai.com/index/openai-joins-ports-pike-project",
+    "published_at": "2026-08-17T05:00:00Z",
+    "summary": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
+    "category": "model",
+    "score": 1,
+    "score_reason": "社区投资与就业新闻，与 AI 应用工程完全无关。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "3ff02964da6b7f4f",
+    "source": "openai-news",
+    "title": "New policy ideas for the Intelligence Age",
+    "url": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age",
+    "published_at": "2026-08-17T03:15:00Z",
+    "summary": "OpenAI funds 14 independent projects exploring new AI policy ideas to expand economic opportunity and strengthen societal resilience in the Intelligence Age.",
+    "category": "model",
+    "score": 1,
+    "score_reason": "AI 政策研究资助新闻，与工程实践无关。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "engineering": [
+   {
+    "id": "2d5ee61a05111f0a",
+    "source": "langchain-blog",
+    "title": "AgentCore Payments middleware for LangChain agents",
+    "url": "https://www.langchain.com/blog/langchain-agentcore-payments",
+    "published_at": "2026-08-17T14:52:56Z",
+    "summary": "Let your LangChain agents pay for APIs with deterministic session budgets. AgentCore Payments middleware signs x402 payments; LangSmith traces every one.",
+    "category": "engineering",
+    "score": 3,
+    "score_reason": "LangChain 的支付中间件插件，功能性强但场景窄，对大多数 AI 应用工程师参考价值有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "1380f7766171a5a6",
+    "source": "openai-news",
+    "title": "The Defender’s Window",
+    "url": "https://openai.com/index/the-defenders-window",
+    "published_at": "2026-08-17T05:30:00Z",
+    "summary": "AI is reshaping cybersecurity for attackers and defenders alike. Learn how OpenAI is strengthening its defenses and what security teams can do now.",
+    "category": "engineering",
+    "score": 3,
+    "score_reason": "OpenAI 安全博客，偏宏观安全策略讨论，无具体可复现工程方法，对应用层实践帮助有限。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "paper": [
+   {
+    "id": "9bf22cfb6e874ebd",
+    "source": "hf-daily-papers",
+    "title": "MobileMem: Learning from a Year of Mobile Experiences",
+    "url": "https://huggingface.co/papers/2608.13606",
+    "published_at": "2026-08-11T00:00:00Z",
+    "summary": "The next generation of AI agents is increasingly moving beyond systems that answer isolated questions toward persistent personal assistants that can understand, remember, and continuously learn from users' experiences. Such assistants require long-term memory to accumulate and leverage user-specific experiences over time, yet existing benchmarks remain inadequate for realistic mobile settings, where experiences are heterogeneous, multimodal, evolving, and deeply personal. We introduce MobileMem, a benchmark and framework for studying on-device long-term memory, grounded in a year-scale collection of mobile experiences. MobileMem employs a knowledge-grounded synthesis pipeline to construct coherent and temporally consistent long-horizon trajectories from user-app sessions. It provides complementary text and multimodal settings covering multi-hop and temporal reasoning, knowledge updating, and implicit preference inference. Specifically, MobileMem enables agents to remember the past, understand the present, and adapt to the future. By modeling experiences rather than isolated facts, MobileMem moves memory beyond information retrieval toward experiential intelligence for continuous personal learning.",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "移动端AI agent长期记忆基准，直接相关agent记忆工程，有参考价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 20
+    }
+   },
+   {
+    "id": "3548dd86c697882a",
+    "source": "hf-daily-papers",
+    "title": "Agents Catching Agents: Shortcut Cascades and Benchmark Gaming in Clinical Multi-Agent Systems",
+    "url": "https://huggingface.co/papers/2608.03744",
+    "published_at": "2026-08-04T14:37:16Z",
+    "summary": "Clinical decision support is moving toward committees of language-model agents deliberating on a shared workspace. We ask whether such committees can be gamed by shortcuts, cues a benchmark rewards but a clinician would ignore. Across seven cohorts on six public datasets spanning text (MedQA-USMLE, MedMCQA, MIMIC-CXR reports), imaging (NIH ChestX-ray14, MIMIC-CXR-JPG, CheXpert) and tabular ICU records (SUPPORT2), Gemini committees resist these cues in isolation (flip 5-16%), yet a socially plausible shortcut spreads: when two peers assert the same wrong answer, the holdout under test adopts it in 38% of cases, as does a false \"pre-screen\" system flag, on both capability tiers. Of three oversight agents, a gate cannot separate adoption from honest agreement (false-positive rate 100%); a same-lineage judge reading only the transcript flags adoption on text (precision 100%, recall 93%) but collapses onto the gate in imaging; a referee that privately re-queries the holdout transfers to imaging (77-88% precision, 13-21% false-positive rate). Tripling a cue's visual salience does not move contagion, whereas a second peer voice raises it by half again. Gaming a hidden rubric is near-silent: only 1/10 text and 1/134 imaging drifters name the rubric they moved toward. What games a committee is social plausibility, and only a referee independent of self-report catches it. Code: https://github.com/criticaldata/benchmaxxing",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "揭示多智能体临床系统中的 shortcut 作弊问题，对构建可靠 multi-agent 系统有重要警示。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 4
+    }
+   },
+   {
+    "id": "29b0e35036ac799d",
+    "source": "hf-daily-papers",
+    "title": "SimpleOPD: Simple Tokenizer-Agnostic On-Policy Distillation for Long-Context Reasoning",
+    "url": "https://huggingface.co/papers/2608.14277",
+    "published_at": "2026-08-14T00:00:00Z",
+    "summary": "On-policy distillation (OPD) offers a promising way to transfer reasoning capabilities from stronger teacher models, but applying it to long-context reasoning teachers and short-context students introduces practical challenges, including tokenizer mismatch, teacher-student distribution mismatch, response length explosion, and training instability. In this work, we study this setting by transferring proof-reasoning capabilities from the long-context reasoning model SU-01 to short-context student models. To handle tokenizer differences, we perform OPD in a shared text space and align only tokens that occupy identical text spans under the student and teacher tokenizers. To mitigate the problem of excessive generation length and frequent truncation, we introduce a student reference KL loss and mask the advantages of special termination tokens such as </think> and <|im_end|>. This strategy constrains the student from drifting excessively from its initial policy, thereby mitigating the teacher-student distribution mismatch problem and fostering steady length growth. Experiments on both same-family and different-family student models, including Qwen3, Qwen3.5, Intern-S2, GLM-4.7, Gemma-4, show consistent gains in mathematical reasoning, especially natural-language math proving. Notably, Intern-S2-Preview improves by 21.2 points on ProofBench, reaching 55.2 and surpassing Gemini-2.5-Pro. It also improves on science benchmarks such as HLE and HiPhO, suggesting that OPD transfers reaso",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "长上下文推理蒸馏方法，解决tokenizer不匹配等工程问题，有参考价值但方法较专，非通用工程实践",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 23
+    }
+   },
+   {
+    "id": "6eafb44f11381306",
+    "source": "hf-daily-papers",
+    "title": "Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models",
+    "url": "https://huggingface.co/papers/2608.13760",
+    "published_at": "2026-08-13T00:00:00Z",
+    "summary": "Which reasoning behaviors are associated with correct answers in reasoning models, and does reasoning-oriented training amplify those behaviors? This distinction is important because reasoning-oriented training can make traces look more deliberative without amplifying the behaviors most tied to model correctness. We quantify this mismatch with Behavioral Lift, a metric that measures how much correctness changes when a behavior is present versus absent in a model's reasoning trace. Across 15 models and 6 benchmarks spanning text-only and vision-language reasoning, we annotate 15,282 traces with a taxonomy whose core behaviors are defined for both LLM and VLM traces. We find evidence for an Amplification-Lift Gap, in which thinking models strongly amplify self-correction, hypothesis testing, and uncertainty acknowledgment, while the highest-lift behaviors are confidence calibration, knowledge alignment, and self-awareness. Confidence calibration is among the strongest positive signals of correctness in both modalities, yet is barely amplified; uncertainty acknowledgment is amplified by 3--7times, yet is weakly or negatively associated with correctness. We find that reasoning-oriented training does not preferentially amplify the highest-Lift behaviors, motivating process-level objectives that reward calibrated and grounded reasoning rather than surface form alone.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "分析推理模型的行为与正确性的关系，对理解 reasoning model 的工程选型有参考价值。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "eb5abb075dad0f05",
+    "source": "hf-daily-papers",
+    "title": "Who Speaks Matters: Authority-Aware Multi-View RAG over Italian Parliamentary Proceedings",
+    "url": "https://huggingface.co/papers/2608.13410",
+    "published_at": "2026-08-13T00:00:00Z",
+    "summary": "Parliamentary proceedings are a primary record of democratic deliberation, yet their volume and fragmentation make multi-perspective access difficult for citizens, journalists, and researchers. Applying Retrieval-Augmented Generation (RAG) to parliamentary transcripts introduces three specific risks: dominance of the most frequent speakers, inability to weight speakers according to topical expertise, and citation misattribution in politically sensitive text. We present ParliamentRAG, a RAG system for the Italian Chamber of Deputies that addresses these risks jointly. Its core contribution is a topic-dependent authority model that estimates each speaker's authority as a function of the current query, combining interpretable components such as profession, education, and previous interventions. Given a user query, the system retrieves relevant speech chunks, identifies topic-relevant experts across parliamentary groups, and generates a summary synthesizing their perspectives, accompanied by supporting quotations. ParliamentRAG is evaluated against Google NotebookLM on 15 policy topics via a two-level protocol combining automated metrics and blind A/B human evaluation by six domain experts. The system achieves higher coverage across political groups (0.97 vs. 0.95), perfect quotation faithfulness (1.00 vs. 0.95), and stronger expert preferences on source-related dimensions, while NotebookLM remains stronger on prose-oriented dimensions.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "提出权威感知的多视角 RAG 方法，解决检索中发言者权重问题，对 RAG 工程有参考价值。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "55ea285b61fddc84",
+    "source": "hf-daily-papers",
+    "title": "Beyond Final Scores: A Systematic Evaluation of Agents for Long-Horizon AI Research and Development",
+    "url": "https://huggingface.co/papers/2608.13417",
+    "published_at": "2026-08-13T00:00:00Z",
+    "summary": "Autonomous agents are increasingly capable of improving models, systems, and other technical artifacts through long-horizon experimentation. To understand the current state of this capability, however, evaluation must go beyond final scores, which neither reveal where progress is gained or lost nor indicate whether accumulated experience improves later decisions. We therefore present a systematic evaluation of seven frontier models on 36 long-horizon tasks based on a new framework that uses rule-based metrics to characterize within-run behavior through Solution Framing, Execution, and Feedback Control and controlled comparisons to assess experience reuse within and across tasks. The results show that current agents operate more like engineering optimizers than fully autonomous researchers: they can formulate and implement practical solutions, but their performance varies substantially across runs, their strongest solutions mainly adapt or combine established techniques, and genuine methodological novelty remains rare. Detailed analysis reveals that observed performance is shaped by multiple factors, including distinct process bottlenecks behind similar final outcomes, experience reuse that can help or mislead subsequent decisions, and harness designs that affect performance stability. These findings suggest concrete directions for improving model training, inference-time strategies, experience management, and harness design.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "对长周期 AI 研究 agent 的系统评估方法论，有参考价值但偏评估框架而非可直接复用的工程方法",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 42
+    }
+   },
+   {
+    "id": "bedc1897fdd8a769",
+    "source": "hf-daily-papers",
+    "title": "Is this Citation on Point?",
+    "url": "https://huggingface.co/papers/2608.12571",
+    "published_at": "2026-08-12T00:00:00Z",
+    "summary": "In 2023, a New York judge sanctioned two attorneys in Mata v. Avianca for filing a brief with hallucinated citations generated by ChatGPT. Such failures are largely caught by database lookups; the harder problem is detecting citations that point to real cases but do not support the propositions for which they are offered -- a failure mode that existing evaluations of LLMs for legal use cases largely overlook. In this paper, we study proposition-level citation support verification through controlled perturbations of real legal citations obtained from two legal corpora, either replacing the cited case or changing only the pinpoint page within the same case. We evaluate fourteen model configurations on the resulting examples. Models catch 93-100% of wrong-case corruptions. They catch only 37-61% of wrong-pinpoint corruptions on court opinions and 52-83% on legal briefs. When models fail to catch wrong-pinpoint corruptions, they accept the citation based on topical overlap rather than page-level support. Scale and extended reasoning narrow the gap but do not close it: GPT-5.4 with high reasoning effort still misses 40% of pinpoint mismatches on court opinions and 18% on briefs. Prompting the model to verify support at the cited page improves recall, but it also raises the false positive rate. Recognizing the right legal topic and verifying support for the cited proposition are distinct capabilities, and current models conflate them.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "研究 LLM 引用幻觉的检测方法，涉及 RAG 质量评估，对生产级检索系统有参考价值。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 0
+    }
+   },
+   {
+    "id": "d64b0a4ae140ebfd",
+    "source": "hf-daily-papers",
+    "title": "UniProbe: A Learnable Token-Level Hallucination Detector for Large VLMs using Multi-Structural Internal Representations",
+    "url": "https://huggingface.co/papers/2608.10835",
+    "published_at": "2026-08-11T12:01:59Z",
+    "summary": "Large Vision-Language Models (LVLMs) achieve impressive visual reasoning and dialogue capabilities, yet frequently hallucinate content unsupported by the visual input. Effective mitigation requires token-level localization, enabling targeted intervention without discarding the entire response. Existing detectors require expensive full-model fine-tuning, rely on external verifiers that ignore the model's generation process, or reduce internal signals to isolated features and hand-crafted statistics, discarding spatial, sequential, and relational structure. We introduce UniProbe, a lightweight, unified, learnable detector that models a frozen LVLM's heterogeneous computational trace from a single forward pass. UniProbe constructs a directed graph over image patches, query tokens, and generated tokens, with attention weights encoding their relations. It processes this trace with alternating structure-aware modules: a GNN for relational evidence, a ViT for 2-D visual geometry, and a GRU for response order. Interleaving them allows spatial, relational, and sequential evidence to interact throughout the detector. We further develop a streaming variant for hallucination-aware decoding, which detects and resamples hallucinated tokens during generation, and a self-adaptation strategy aligning the detector with the LVLM's own generations. Across diverse LVLM backbones, UniProbe achieves state-of-the-art token-level and object-hallucination detection. During decoding, it reduces object ",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "VLM幻觉检测方法，token级别定位有工程价值，但需额外训练成本，非即用方案",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "8290cf0b5c7834ac",
+    "source": "hf-daily-papers",
+    "title": "CPI-Bench: A Comprehensive,Practical and Intelligent Benchmark for Real-World Image Editing",
+    "url": "https://huggingface.co/papers/2608.14546",
+    "published_at": "2026-08-14T00:00:00Z",
+    "summary": "With the rapid advancement of image editing models and their widespread application across various domains, there is an increasingly urgent need to deploy these model capabilities directly into real-world scenarios. However, existing benchmarks remain confined to simple single-image tasks, suffering from limited coverage dimensions and an inability to effectively differentiate performance among diverse models. Consequently, they fail to reliably evaluate model performance in complex multi-image editing, highly demanding reasoning instructions, and practical deployment settings. To address these limitations, we propose CPI-Bench, a Comprehensive, Practical andIntelligent benchmark for real-world image editing. CPI-Bench comprises three core subsets: CPI-General-Bench, which comprehensively covers diverse editing tasks and pioneers the inclusion of multi-image editing evaluation; CPI-Practical-Bench, which focuses on high-frequency real-user application scenarios; and CPI-Intelligent-Bench, which is dedicated to evaluating capabilities in highly demanding reasoning-based editing. Evaluation results of mainstream image editing models based on CPI-Bench demonstrate that CPI-Bench enhances performance differentiation among models. It provides a comprehensive and reliable quantification of gaps in general editing capabilities, practical deployment efficacy, and advanced reasoning-based editing, offering invaluable guidance for the future optimization of image editing models. Crucia",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "图像编辑基准，与LLM/RAG/Agent应用工程关联弱",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 12
+    }
+   },
+   {
+    "id": "9ce70283542cb8e7",
+    "source": "hf-daily-papers",
+    "title": "Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning",
+    "url": "https://huggingface.co/papers/2608.14290",
+    "published_at": "2026-08-14T00:00:00Z",
+    "summary": "We introduce Mobius-v0, an architecture that comprises a globally shared Memory (FFN) that stores knowledge vectors and multiple Reasoners (Self-Attn) that iteratively achieve compositional reasoning. Using hidden states as cache and carrier, reasoners repeatedly query memory for required knowledge-vectors, while the knowledge is transmitted back to reasoning operators. Through this knowledge-reasoning-separation architecture, Mobius achieves better knowledge compression and reasoning efficiency. Built upon Mobius-v0 architecture: 1) Our 7B model trained-from-scratch achieves similar downstream score as a 7B Transformer baseline with 62.6% of baseline's training data. 2) Our Intern-S2-Mobius, continually-pretrained from Qwen3.5-35B, achieves similar downstream score while delivering nearly 4x end-to-end inference speedup.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "知识-推理解耦的架构设计，有创新性但尚处早期阶段，短期内难以直接用于应用工程",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 31
+    }
+   },
+   {
+    "id": "c2cfd504d6ca36ba",
+    "source": "hf-daily-papers",
+    "title": "Latent On-Policy Self-Distillation",
+    "url": "https://huggingface.co/papers/2608.13040",
+    "published_at": "2026-08-13T00:00:00Z",
+    "summary": "Enabling agents to learn from experience and internalize it into their policy has become a central problem in self-evolving AI. On-policy self-distillation (OPSD) offers an effective pathway by using a privileged self-teacher to provide dense supervision on the student's own trajectories; however, existing methods still rely heavily on designer-specified privileged artifacts (e.g., answers, feedback, skills, or trajectories), limiting the end-to-end learnability and scalability required for continual self-improvement. In this work, we introduce Latent On-Policy Self-Distillation (LOPD), which, rather than proposing another hand-crafted OPSD variant with a newly prescribed form of privileged context, makes the teacher's privileged context itself learnable end-to-end from experience. Technically, LOPD retrieves relevant experiences and composes them into continuous latent tokens that condition a self-teacher, while the student generates trajectories from the task and interaction history and receives dense token-level supervision at every visited prefix. We further introduce a privileged-margin objective to stabilize and regulate the learning of latent context. Empirically, LOPD demonstrates (I) strong performance, outperforming RLVR and representative OPSD methods including OPSD, SDPO, and Skill-SD across both agentic tool use and code generation; and (II) high learning efficiency, surpassing GRPO and Skill-SD with less than 30% of their rollout budget. Ablation studies further",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "自蒸馏方法改进，偏强化学习训练技术，对应用层直接帮助有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 11
+    }
+   },
+   {
+    "id": "87d24a43cfaa428b",
+    "source": "hf-daily-papers",
+    "title": "Generation as Auxiliary Supervision: Enhancing Visual Understanding at Zero Inference Overhead via Decoupled Embedding Prediction",
+    "url": "https://huggingface.co/papers/2608.12209",
+    "published_at": "2026-08-12T00:00:00Z",
+    "summary": "While Multimodal Large Language Models (MLLMs) have achieved remarkable progress, visual understanding and generation are typically treated as divergent objectives. Existing unified frameworks often rely on discrete visual tokenization or diffusion objectives whose generative targets differ from the continuous representations consumed by visual understanding models, making direct transfer to enhance existing pretrained MLLMs non-trivial. In this work, we present GAS, a generation-guided training framework that reinterprets visual generation as auxiliary supervision for representation learning. Concretely, GAS adapts Next Embedding Prediction (NEP) as a cross-modal generation paradigm within a decoupled Mixture-of-Transformers (MoT) architecture. By maintaining a shared lower trunk and parallel upper layers, GAS lets generation losses enrich the shared visual pathway with finer spatial precision and stronger visual retention while shielding the upper understanding layers from direct generation gradients. To maximize this synergy, we further construct highly correlated generation tasks that demand deep cognitive grounding rather than generic synthesis alone. Across model scales and training stages, GAS improves aggregate multimodal understanding, with its most reliable gains on perception and spatial comprehension. Crucially, because the auxiliary generation branch is discarded after training, these gains incur zero inference overhead. Extensive controlled comparisons and repre",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "MLLM视觉理解增强方法，零推理开销有吸引力，但偏视觉领域",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 0
+    }
+   },
+   {
+    "id": "d1735793bde9046e",
+    "source": "hf-daily-papers",
+    "title": "Apodex Discovery: Reality Benchmarks and Environments for Evaluating and Building Discoverative Artificial Intelligence",
+    "url": "https://huggingface.co/papers/2608.11341",
+    "published_at": "2026-08-11T00:00:00Z",
+    "summary": "Apollo did not reach the Moon merely because its engineers could solve difficult equations. It succeeded by turning a distant ambition into a mission architecture of explicit objectives, simulation, verification, and repeated correction. AI now faces a similar transition: frontier models can solve difficult tasks once the problem, tools, and success criteria are specified, yet consequential real-world challenges rarely arrive in an executable or verifiable form. We introduce Apodex Discovery, a framework for building and evaluating discoverative AI through the heavy-duty solver, a system comprising a foundation model, harness, tools, and control policies that pursues extended, stateful, verifiable investigations. It has three core components. First, a problem-scouting process surveyed 561 industries across 16 sectors, assembled 423 high-value real-world problems, and selected 20 for the initial release. Second, a common environment-task-episode abstraction provides data, tools, constraints, feedback, trajectory recording, and verification of intermediate artifacts and final submissions. Third, HDS6 evaluates Tools, Repair, Alternatives, Coherence, Evidence, and Scope independently of final-task success. In AAV capsid design, Apodex surpassed the published state of the art by 7% across viability, tropism, structure prediction, and generative design. In drug repurposing and reformulation, a task-specific biomedical environment improved the mean normalized prediction score of GP",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "提出评估和构建发现式 AI 的基准与环境，概念性框架，与应用工程距离较远。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 25
+    }
+   },
+   {
+    "id": "631aee54d26f4e8d",
+    "source": "hf-daily-papers",
+    "title": "UNMASK: Discovering and Causally Verifying Spurious Shortcuts in Text Classifiers",
+    "url": "https://huggingface.co/papers/2608.09209",
+    "published_at": "2026-08-10T00:00:00Z",
+    "summary": "Neural language models trained on large crowdsourced corpora frequently exploit spurious surface patterns tied to target labels without true linguistic or causal relevance, boosting benchmark performance while failing on adversarial or out-of-distribution inputs. Existing approaches either require manual specification of the feature vocabulary or automate discovery only partially, leaving the gap between dataset-level correlation and model-level exploitation unaddressed. We present U N M ASK, a fully automated pipeline that discovers, causally verifies, and mitigates spurious correlations in text classifiers without additional human annotation. Given unlabeled training examples, U N M ASK generates candidate surface patterns as executable boolean expressions, filters them through a statistical validation protocol with independent replication, and establishes causal model dependence via verified counterfactual interventions. Causally confirmed features then serve as annotation-free group definitions for Deep Feature Reweighting, eliminating the group labels that standard DFR requires. Applied to BERT and RoBERTa trained on MNLI, our pipeline independently rediscovers established lexical-overlap and negation biases, verifying 9 of 10 features on BERT and 6 on RoBERTa, and improving HANS accuracy by up to 12.58 pp. On CivilComments-WILDS, programmatic groups match the 70.1% worst- group accuracy of hand-labeled DFR (Kirichenko et al., 2023) without demographic annotation. We fur",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "文本分类器虚假捷径发现与验证方法，对模型鲁棒性有参考但非直接工程方法。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "18f9531a908b56d8",
+    "source": "hf-daily-papers",
+    "title": "Multimodal Model Diffing for Feature Discovery and Control",
+    "url": "https://huggingface.co/papers/2608.09928",
+    "published_at": "2026-08-10T00:00:00Z",
+    "summary": "Multimodal Large Language Models (MLLMs) exhibit strong visual understanding, yet the internal features that cause these behaviors remain difficult to identify, audit, or control. While applicable to post-hoc inspection, hidden states that are decomposed into interpretable feature directions using sparse autoencoders (SAEs) neither readily isolate which features are changed by multimodal training, nor are they directly useful for targeted control. We introduce MMDiff, a multimodal model-diffing framework that trains multimodal SAEs and turns them into feature-level interfaces for discovering and controlling multimodal behavior. MMDiff supports three uses: (i) feature isolation, by diffing a base-LM SAE against its multimodal-adapted counterpart to identify features altered by multimodal training; (ii) task-specific feature detection, via per-token contrastive firing analysis that isolates causal features; and (iii) feature-level control, by causally removing or steering the discovered feature directions. We train multimodal SAEs for three MLLM families, LLaVA-MORE, PaliGemma 2, and InternVL3.5, and evaluate on visual-spatial understanding, multimodal safety, and OCR. MMDiff discovers sparse, causally specific features whose removal selectively degrades target behaviors by an average of 12% on spatial tasks and 17% on OCR, and reduces attack success rate by 24% on multimodal safety attacks, with no impact on VQA performance. Steering these features improves spatial and OCR acc",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "多模态模型特征发现与控制，偏可解释性研究，对应用工程间接参考",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 8
+    }
+   },
+   {
+    "id": "686fddb3d0b9d699",
+    "source": "hf-daily-papers",
+    "title": "Verifier-Induced Support Reshaping in On-Policy Optimization",
+    "url": "https://huggingface.co/papers/2608.00220",
+    "published_at": "2026-07-31T00:00:00Z",
+    "summary": "We show that on-policy reinforcement learning with verifiable rewards (RLVR) can improve the current objective while making successful behaviors for later objectives too rare to sample and reinforce. We call this verifier-induced support reshaping and define effective rewardable support as successful trajectories reachable within a fixed rollout budget. Across two model families, we study this effect through repeated verifier-scored sampling and bidirectional training on mathematical reasoning and constrained instruction following, including sequential training with the opposite verifier. Math-RLVR raises average instruction-following success but reduces the number of prompts with any successful response under repeated sampling. On IFEval with Qwen3-8B-Base, pass@1 rises by 6.5 percentage points while best@32 falls by 9.8 percentage points, and the same divergence appears across both models and IF benchmarks. Conversely, IF-RLVR shifts math responses from step-by-step openings toward direct answers, lowers best@k across sampling budgets, and reduces reward variation for later Math-RLVR. Token-distribution analyses and controlled opening interventions show that these changes concentrate in the first few response tokens. RLVR mainly reranks openings already available in the base policy, and the selected opening causally affects math searchability. The tested reference-policy constraints, routing priors, and on-policy distillation preserve cross-task support only partially; Math",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "RLVR中验证器导致的支持坍缩问题，偏强化学习理论，对应用工程参考有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 4
+    }
+   },
+   {
+    "id": "46a42e7a2a7c12cd",
+    "source": "hf-daily-papers",
+    "title": "A Pathway to General-Purpose Scientific AI: Multimodal Comprehension of Scientific Images",
+    "url": "https://huggingface.co/papers/2608.14075",
+    "published_at": "2026-08-14T08:34:33Z",
+    "summary": "Scientific figures and tables encode essential experimental evidence, yet remain difficult for digital libraries and multimodal AI systems to retrieve and interpret. The ALD/E-ImageMiner benchmark and ICDAR 2026 Competition on Information Extraction from Atomic Layer Deposition/Etching Scientific Figures provide 1,951 figures from 205 publications, expert-annotated for classification, data table extraction, summarization, and visual question answering. In these companion proceedings, we present a forward-looking perspective on how the benchmark can guide future scientific-image challenges. We examine how its tasks probe capabilities from visual and quantitative reading to domain-grounded reasoning and evidential justification, and how Bloom-informed question design can support deeper scientific understanding. We propose \"scientific conceptual understanding from images\" as a long-term benchmark objective, with future directions including broader domains and figure types, contextual and cross-document synthesis, hypothesis evaluation, provenance, uncertainty, counterfactual grounding, and open-ended multimodal research. This perspective connects the ICDAR 2026 challenge to a broader agenda for machine-actionable scientific visual knowledge and verifiable multimodal scientific AI.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "科学图像理解基准，偏学术竞赛，与应用工程实践关联弱。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "d435e808d759d4f7",
+    "source": "hf-daily-papers",
+    "title": "Self-Supervised Visual On-Policy Distillation",
+    "url": "https://huggingface.co/papers/2608.14144",
+    "published_at": "2026-08-14T00:00:00Z",
+    "summary": "Visual on-policy distillation relies heavily on an informative teacher-student asymmetry, through either a larger, stronger teacher or privileged supervision, such as reference answers or ground-truth regions of interest. This raises a fundamental question: where can informative asymmetry come from when nothing privileged is available? We answer this by inverting where the asymmetry comes from. Rather than adding privileged information to the teacher, we subtract information from the student. This asymmetry creates the same effective learning signal for free as a teacher with access to information unavailable to the student, without ground-truth annotations, rewards, or a separate stronger teacher model. Building on this principle, we introduce Self-Supervised Visual On-Policy Distillation (S^2VOPD), a simple yet effective method that constructs on-policy learning signals from asymmetric augmented views. S^2VOPD distills the teacher's distribution conditioned on the original image on-policy into the student distribution conditioned on a strongly augmented view of the same image. We systematically explore a broad design space of visual augmentations and uncover that (1) asymmetry matters: all four augmentation families improve performance, while symmetric self-distillation degrades it; (2) strength matters: performance peaks at a moderate strength; and (3) the gap must remain task-consistent: augmentations that completely remove the question-relevant evidence can induce large ",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "自监督视觉策略蒸馏，偏强化学习/机器人领域，与应用工程距离较远。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 147
+    }
+   },
+   {
+    "id": "6fb8c5667efcbaa3",
+    "source": "hf-daily-papers",
+    "title": "Forecast Collapse in Time-Series Foundation Models",
+    "url": "https://huggingface.co/papers/2608.14106",
+    "published_at": "2026-08-14T00:00:00Z",
+    "summary": "When forecasting hourly returns for 1,000 US equities, we observe an unexpected phenomenon: predictions become nearly flat and show poor stock ranking, as measured by cross-sectional correlation. We call this forecast collapse. Surprisingly, the phenomenon largely disappears when forecasting trading volume under the same setting. We investigate forecast collapse across time-series foundation models (TSFMs), twelve deep-learning forecasting models, and 97 public benchmark configurations, and find that it is closely tied to target predictability. We identify two distinct reasons behind it: low predictability limits the amplitude of calibrated point forecasts, while per-series objectives leave cross-series structure unidentified. These findings reveal a calibration-ranking tradeoff: optimizing squared error leads to flat predictions, whereas directly optimizing cross-sectional correlation improves ranking but can inflate forecast amplitude by more than an order of magnitude. To address this tradeoff, we introduce CalibRank, a simple objective that balances calibration and ranking. On Finance1K, CalibRank nearly triples cross-sectional correlation while keeping amplitude close to the target, and improves correlation on all tested models. Our results reveal a blind spot in conventional time-series evaluation: per-series metrics can hide failures in cross-series structure needed by downstream decisions.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "时序基础模型的预测坍塌现象，领域较窄，对通用AI应用工程参考有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 7
+    }
+   },
+   {
+    "id": "69bbeee0b007c97c",
+    "source": "hf-daily-papers",
+    "title": "Scaling Domain Data Repetition in LLM Pretraining",
+    "url": "https://huggingface.co/papers/2608.14071",
+    "published_at": "2026-08-14T00:00:00Z",
+    "summary": "As large language models scale, their training-token budgets must also increase to maintain an appropriate tokens-per-parameter ratio (\\(TPP\\)). However, high-quality domain data is much harder to scale than general web data. As model size and the training-token budget increase, its fraction in the training mixture tends to decrease. Repeating the available high-quality data provides an effective way to counteract this dilution, but excessive repetition may lead to overfitting. We study this trade-off under practical LLM scaling, where the training-token budget grows proportionally with model size. For a fixed domain, we first find that, surprisingly at a fixed \\(TPP\\), the optimal repetition count mildly increases with model size. Across different domains, we find that the optimal repetition count is strongly negatively correlated with the final validation loss of a domain: domains with lower loss can generally benefit from more repetitions. In contrast, the amount of unique domain data is only weakly related to the optimal repetition count. These findings suggest that repetition counts tuned on smaller proxy models with the same \\(TPP\\) can provide a practical estimate for larger models.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "预训练数据重复策略，与模型训练相关，非应用层工程",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 5
+    }
+   },
+   {
+    "id": "ff70f8bc7be00b42",
+    "source": "hf-daily-papers",
+    "title": "Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination",
+    "url": "https://huggingface.co/papers/2608.14391",
+    "published_at": "2026-08-14T00:00:00Z",
+    "summary": "Recent video generators can fabricate realistic depictions of wars, disasters, public emergencies, and other real-world crises, creating substantial risks of misinformation. Existing benchmarks, however, provide limited evidence on detector and generator behavior in such settings, including how detectability varies with generation conditions, how people perceive generated videos, and whether detectors remain reliable during social dissemination. To address this gap, we introduce RA-Bench, a benchmark for AI-generated video detection that uses Real videos as Anchors. RA-Bench contains 17,886 videos, comprising 1,830 real-video anchors across 10 social-risk categories and 16,056 generated clips from four open-source and five closed-source generators. Based on RA-Bench, we organize our evaluation along three dimensions. We first assess detector generalization across seven traditional detectors, ten zero-shot multimodal models under three review settings, and two MLLMs specifically fine-tuned on AI-generated video detection. Across these methods, none of the three detector families generalizes consistently across RA-Bench instances. We then examine how detectability varies with generation quality, conditioning information, and sampling seeds. These analyses show that generation properties affect detector families differently, while source-level detection patterns remain stable across seeds. Finally, we study human authenticity judgments and detector reliability during social diss",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "AI生成视频检测研究，upvotes高但属安全/检测方向，非应用工程核心",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 258
+    }
+   },
+   {
+    "id": "ccf87b7f824ad2e3",
+    "source": "hf-daily-papers",
+    "title": "SPARGen: Unifying Spatial Perception and Reasoning through Native Multimodal Generation",
+    "url": "https://huggingface.co/papers/2608.14138",
+    "published_at": "2026-08-14T00:00:00Z",
+    "summary": "Spatial perception and reasoning from visual observations require recovering geometric structure, establishing correspondences, and understanding spatial relations. Existing approaches typically address these capabilities separately using task-specific architectures or external geometric modules, limiting knowledge transfer among complementary representations of the same physical scene. We introduce SPARGen, a unified multimodal framework that casts 3D reconstruction, dense correspondence, and spatial reasoning as instruction-conditioned generation tasks. SPARGen serializes compact structured and linguistic outputs as token sequences while generating dense geometric fields in image-aligned forms, enabling spatial supervision to jointly shape shared representations within a native multimodal generative model. Experiments across benchmarks for 3D reconstruction, correspondence, and spatial reasoning show that SPARGen achieves competitive performance across heterogeneous spatial tasks within a single native multimodal generative framework.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "多模态空间感知与推理的生成式统一框架，偏学术探索，与当前 AI 应用工程实践距离较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "34433ee803fbfe41",
+    "source": "hf-daily-papers",
+    "title": "PRM-as-a-Judge 1.5: A Toolkit for Robot Process Assessment",
+    "url": "https://huggingface.co/papers/2608.14284",
+    "published_at": "2026-08-14T00:00:00Z",
+    "summary": "Fine-grained robotic evaluation matters for understanding embodied models, going beyond binary success rates and rule-based process scores. We present PRM-as-a-Judge 1.5, a toolkit for robot process assessment that turns rollout videos into dense progress curves and derives multiple fine metrics. PRM-as-a-Judge 1.5 introduces three metrics, building on version 1.0, that characterize failure-side progress, post-drawdown recovery, and success-side execution quality, helping users understand embodied model capability. Based on the rollout videos from benchmarks, we perform a comprehensive assessment of the embodied models, providing some fine-grained metric results and key findings. We further introduce RoboPulse++ to evaluate the reliability of process reward models (PRM), providing evaluators with a more accurate testing platform. Moreover, we release a user-friendly assessment suite, including the benchmark, metric implementation, and visualization tools, to support reproducible manipulation process evaluation. We call on the community to rethink how robots are evaluated and establish transparent, procedural, and reproducible assessment as a foundation for the next generation of embodied intelligence.",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "机器人流程评估工具，与AI应用工程（LLM/RAG/Agent）无关",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 10
+    }
+   },
+   {
+    "id": "81fe84e0c35594d4",
+    "source": "hf-daily-papers",
+    "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
+    "url": "https://huggingface.co/papers/2608.13545",
+    "published_at": "2026-08-13T00:00:00Z",
+    "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining corpus tailored to U.S. elementary school material, explicitly excluding concepts, facts, and vocabulary taught above Grade 5. Training a 5B-parameter LLM from scratch on LITTLECURRICULUM yields LITTLELEARNER, a model with sufficient language competence for open-ended evaluation, yet with clear knowledge and capability boundaries mapped to interpretable curriculum guidelines. We release LITTLECURRICULUM and LITTLELEARNER as a developmentally restricted sandbox to study how models acquire, represent, and use data under a well-defined training scope. We illustrate the sandbox's utility in a first suite of experiments on injecting new knowledge through post-training and in-context learning. These methods let LITTLELEARNER better utilize existing knowledge, but do not raise out-of-scope capabilities. Our findings underscore the value of this controlled environment for future investigations.",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "预训练语料构建研究，与AI应用工程距离远，对应用层选型无直接影响",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 6
+    }
+   },
+   {
+    "id": "c54bb1e44726bee3",
+    "source": "hf-daily-papers",
+    "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark",
+    "url": "https://huggingface.co/papers/2608.13555",
+    "published_at": "2026-08-13T00:00:00Z",
+    "summary": "Humanoid motion tracking is central to teleoperation and whole-body imitation, yet evaluation often disagrees with what people perceive in videos. Kinematic errors average per-frame pose differences but miss the physical artifacts that matter most, particularly unstable support and incorrect contacts such as foot skating and mistimed touch-downs. Meanwhile, widely used test suites are small and lack the diversity needed to stress contact-rich, long-horizon behaviors. We introduce HumanTracker to make humanoid tracking evaluation both perceptually aligned and scalable. The HumanTracker benchmark contains approximately 153 hours of optical motion trajectories from multiple professional performers, organized into four motion families with text labels for fine-grained diagnosis. We further propose HumanScore, a preference-aligned metric trained on 12K motion pairs containing 24K motions. Across representative state-of-the-art trackers, HumanScore better predicts human preferences and reveals contact and stability failures that kinematic metrics often miss.",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "人形运动跟踪基准，与AI应用工程（LLM/RAG/Agent）无关",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 15
+    }
+   }
+  ]
+ },
+ "unscored": []
+}
