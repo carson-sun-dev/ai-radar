@@ -82,6 +82,15 @@
    "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
    "score": 7,
    "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
+  },
+  {
+   "id": "2f00013902a29bc1",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Replit expands access to software creation with GPT-5.6 Luna",
+   "url": "https://openai.com/index/replit",
+   "score": 6,
+   "summary": "Replit 推出了一项名为 Free Mode 的新功能，底层由 GPT-5.6 Luna 模型驱动，让任何人都能免费将想法转化为可运行的软件，不再受 token 成本的限制。这是 Replit 在降低软件开发门槛上的又一次尝试，核心是把一个原本需要付费才能持续使用的 AI 编程助手，变成了完全零成本即可上手的环境。\n\n此前，AI 辅助编程工具普遍采用按 token 计费或订阅制，用户在使用过程"
   }
  ],
  "安全栈": [
@@ -188,6 +197,15 @@
    "url": "https://huggingface.co/blog/icml-2026-open-reproductions",
    "score": 7,
    "summary": "这是一篇来自 Hugging Face 的博客，总结了团队复现 ICML 会议 2,200 篇论文的实践经验。核心发现是，许多论文因代码缺失、环境配置复杂或依赖冲突而难以复现，暴露了当前机器学习研究在可复现性上的系统性挑战。这项工作值得关注，因为它不仅量化了复现危机的严重程度，还推动了社区对开放代码和标准化实验流程的重视。"
+  },
+  {
+   "id": "5ba78b757300e8cc",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "How Much Memory Does Your Agent Actually Need?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 博客的技术文章，探讨了 AI Agent 在运行过程中实际需要多少内存这一工程问题。它没有停留在理论估算，而是通过实测给出了不同模型、不同上下文长度下的精确内存占用数据，为 Agent 系统的部署优化提供了直接参考。\n\n此前，开发者在构建 AI Agent 时面临一个普遍痛点：内存占用估算严重依赖粗略公式或厂商提供的理论值，与实际运行情况差距巨大。Agent"
   }
  ],
  "LongStraw": [
@@ -1781,6 +1799,15 @@
    "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
    "score": 7,
    "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
+  },
+  {
+   "id": "2f00013902a29bc1",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Replit expands access to software creation with GPT-5.6 Luna",
+   "url": "https://openai.com/index/replit",
+   "score": 6,
+   "summary": "Replit 推出了一项名为 Free Mode 的新功能，底层由 GPT-5.6 Luna 模型驱动，让任何人都能免费将想法转化为可运行的软件，不再受 token 成本的限制。这是 Replit 在降低软件开发门槛上的又一次尝试，核心是把一个原本需要付费才能持续使用的 AI 编程助手，变成了完全零成本即可上手的环境。\n\n此前，AI 辅助编程工具普遍采用按 token 计费或订阅制，用户在使用过程"
   }
  ],
  "GPT-5.6 Terra": [
@@ -3612,6 +3639,314 @@
    "url": "https://huggingface.co/papers/2608.11994",
    "score": 7,
    "summary": "我们提出了一种基于声明级证伪的测试时推理框架 CLR，它不依赖额外训练，通过将完整推理链压缩为一组决策关键声明，把算力从重复采样转向针对性验证。该方法利用“构造正确解需要完整无误路径，而推翻错误声明只需发现一处致命缺陷”的不对称性，通过非线性可靠性评分系统性地压缩高置信度错误解的生存空间。在四个大模型和四个推理基准上，CLR 在匹配预算下普遍优于 pass@1 和自一致性方法，例如在 GPT-OS"
+  }
+ ],
+ "Free Mode": [
+  {
+   "id": "2f00013902a29bc1",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Replit expands access to software creation with GPT-5.6 Luna",
+   "url": "https://openai.com/index/replit",
+   "score": 6,
+   "summary": "Replit 推出了一项名为 Free Mode 的新功能，底层由 GPT-5.6 Luna 模型驱动，让任何人都能免费将想法转化为可运行的软件，不再受 token 成本的限制。这是 Replit 在降低软件开发门槛上的又一次尝试，核心是把一个原本需要付费才能持续使用的 AI 编程助手，变成了完全零成本即可上手的环境。\n\n此前，AI 辅助编程工具普遍采用按 token 计费或订阅制，用户在使用过程"
+  }
+ ],
+ "Replit": [
+  {
+   "id": "2f00013902a29bc1",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Replit expands access to software creation with GPT-5.6 Luna",
+   "url": "https://openai.com/index/replit",
+   "score": 6,
+   "summary": "Replit 推出了一项名为 Free Mode 的新功能，底层由 GPT-5.6 Luna 模型驱动，让任何人都能免费将想法转化为可运行的软件，不再受 token 成本的限制。这是 Replit 在降低软件开发门槛上的又一次尝试，核心是把一个原本需要付费才能持续使用的 AI 编程助手，变成了完全零成本即可上手的环境。\n\n此前，AI 辅助编程工具普遍采用按 token 计费或订阅制，用户在使用过程"
+  }
+ ],
+ "Llama 3": [
+  {
+   "id": "5ba78b757300e8cc",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "How Much Memory Does Your Agent Actually Need?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 博客的技术文章，探讨了 AI Agent 在运行过程中实际需要多少内存这一工程问题。它没有停留在理论估算，而是通过实测给出了不同模型、不同上下文长度下的精确内存占用数据，为 Agent 系统的部署优化提供了直接参考。\n\n此前，开发者在构建 AI Agent 时面临一个普遍痛点：内存占用估算严重依赖粗略公式或厂商提供的理论值，与实际运行情况差距巨大。Agent"
+  }
+ ],
+ "Qwen 2.5": [
+  {
+   "id": "5ba78b757300e8cc",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "How Much Memory Does Your Agent Actually Need?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 博客的技术文章，探讨了 AI Agent 在运行过程中实际需要多少内存这一工程问题。它没有停留在理论估算，而是通过实测给出了不同模型、不同上下文长度下的精确内存占用数据，为 Agent 系统的部署优化提供了直接参考。\n\n此前，开发者在构建 AI Agent 时面临一个普遍痛点：内存占用估算严重依赖粗略公式或厂商提供的理论值，与实际运行情况差距巨大。Agent"
+  }
+ ],
+ "Mistral": [
+  {
+   "id": "5ba78b757300e8cc",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "How Much Memory Does Your Agent Actually Need?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 博客的技术文章，探讨了 AI Agent 在运行过程中实际需要多少内存这一工程问题。它没有停留在理论估算，而是通过实测给出了不同模型、不同上下文长度下的精确内存占用数据，为 Agent 系统的部署优化提供了直接参考。\n\n此前，开发者在构建 AI Agent 时面临一个普遍痛点：内存占用估算严重依赖粗略公式或厂商提供的理论值，与实际运行情况差距巨大。Agent"
+  }
+ ],
+ "KV Cache": [
+  {
+   "id": "5ba78b757300e8cc",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "How Much Memory Does Your Agent Actually Need?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 博客的技术文章，探讨了 AI Agent 在运行过程中实际需要多少内存这一工程问题。它没有停留在理论估算，而是通过实测给出了不同模型、不同上下文长度下的精确内存占用数据，为 Agent 系统的部署优化提供了直接参考。\n\n此前，开发者在构建 AI Agent 时面临一个普遍痛点：内存占用估算严重依赖粗略公式或厂商提供的理论值，与实际运行情况差距巨大。Agent"
+  }
+ ],
+ "vLLM": [
+  {
+   "id": "5ba78b757300e8cc",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "How Much Memory Does Your Agent Actually Need?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 博客的技术文章，探讨了 AI Agent 在运行过程中实际需要多少内存这一工程问题。它没有停留在理论估算，而是通过实测给出了不同模型、不同上下文长度下的精确内存占用数据，为 Agent 系统的部署优化提供了直接参考。\n\n此前，开发者在构建 AI Agent 时面临一个普遍痛点：内存占用估算严重依赖粗略公式或厂商提供的理论值，与实际运行情况差距巨大。Agent"
+  }
+ ],
+ "PagedAttention": [
+  {
+   "id": "5ba78b757300e8cc",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "How Much Memory Does Your Agent Actually Need?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 博客的技术文章，探讨了 AI Agent 在运行过程中实际需要多少内存这一工程问题。它没有停留在理论估算，而是通过实测给出了不同模型、不同上下文长度下的精确内存占用数据，为 Agent 系统的部署优化提供了直接参考。\n\n此前，开发者在构建 AI Agent 时面临一个普遍痛点：内存占用估算严重依赖粗略公式或厂商提供的理论值，与实际运行情况差距巨大。Agent"
+  }
+ ],
+ "transformers": [
+  {
+   "id": "5ba78b757300e8cc",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "How Much Memory Does Your Agent Actually Need?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 博客的技术文章，探讨了 AI Agent 在运行过程中实际需要多少内存这一工程问题。它没有停留在理论估算，而是通过实测给出了不同模型、不同上下文长度下的精确内存占用数据，为 Agent 系统的部署优化提供了直接参考。\n\n此前，开发者在构建 AI Agent 时面临一个普遍痛点：内存占用估算严重依赖粗略公式或厂商提供的理论值，与实际运行情况差距巨大。Agent"
+  }
+ ],
+ "4-bit 量化": [
+  {
+   "id": "5ba78b757300e8cc",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "How Much Memory Does Your Agent Actually Need?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+   "score": 8,
+   "summary": "这是一篇来自 Hugging Face 博客的技术文章，探讨了 AI Agent 在运行过程中实际需要多少内存这一工程问题。它没有停留在理论估算，而是通过实测给出了不同模型、不同上下文长度下的精确内存占用数据，为 Agent 系统的部署优化提供了直接参考。\n\n此前，开发者在构建 AI Agent 时面临一个普遍痛点：内存占用估算严重依赖粗略公式或厂商提供的理论值，与实际运行情况差距巨大。Agent"
+  }
+ ],
+ "Bounded Agents": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "Agentic Principal Chain": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "APC": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "组合闭包": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "composition closure": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "爆炸半径单调性": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "Blast Radius Monotonicity": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "组合可靠性": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "Composition Soundness": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "AgentDojo": [
+  {
+   "id": "b1f5efd75153a52d",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Bounded Agents: Delegation Security for Multi-Agent AI Systems",
+   "url": "https://huggingface.co/papers/2608.15888",
+   "score": 8,
+   "summary": "这是一篇关于多智能体系统授权安全的研究论文，提出了一个名为“有界智能体”（Bounded Agents）的框架，核心机制是“智能体主体链”（Agentic Principal Chain，简称 APC）。它本质上是一套独立于模型之外的授权检查系统，用于约束 LLM 智能体在会话中的行为边界，防止权限滥用和组合攻击。\n\n此前，基于大语言模型的智能体在执行任务时，权限通常在会话开始时一次性设定，之后便"
+  }
+ ],
+ "LFM2.5-DSpark": [
+  {
+   "id": "eab5285cfdebeb65",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
+   "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
+   "score": 7,
+   "summary": "LFM2.5-DSpark 是 Liquid AI 推出的新一代高效推理模型，通过动态稀疏计算架构实现推理速度最高提升 3.2 倍。其核心变化在于将推理过程中的计算资源动态聚焦于关键部分，而非均匀分配，从而在保持精度的同时大幅降低延迟。这一方法值得关注，因为它为在资源受限或对实时性要求高的场景中部署大模型提供了更优的工程路径。"
+  }
+ ],
+ "动态稀疏计算架构": [
+  {
+   "id": "eab5285cfdebeb65",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
+   "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
+   "score": 7,
+   "summary": "LFM2.5-DSpark 是 Liquid AI 推出的新一代高效推理模型，通过动态稀疏计算架构实现推理速度最高提升 3.2 倍。其核心变化在于将推理过程中的计算资源动态聚焦于关键部分，而非均匀分配，从而在保持精度的同时大幅降低延迟。这一方法值得关注，因为它为在资源受限或对实时性要求高的场景中部署大模型提供了更优的工程路径。"
+  }
+ ],
+ "Liquid AI": [
+  {
+   "id": "eab5285cfdebeb65",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
+   "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
+   "score": 7,
+   "summary": "LFM2.5-DSpark 是 Liquid AI 推出的新一代高效推理模型，通过动态稀疏计算架构实现推理速度最高提升 3.2 倍。其核心变化在于将推理过程中的计算资源动态聚焦于关键部分，而非均匀分配，从而在保持精度的同时大幅降低延迟。这一方法值得关注，因为它为在资源受限或对实时性要求高的场景中部署大模型提供了更优的工程路径。"
+  }
+ ],
+ "SkillGate": [
+  {
+   "id": "4512fda774bb4256",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
+   "url": "https://huggingface.co/papers/2608.18852",
+   "score": 7,
+   "summary": "SkillGate 是一种训练长程智能体在策略内选择技能的新方法，针对现有基于结果奖励的强化学习无法教会技能选择的结构性缺陷。作者识别出“选择器信用匮乏”现象：在广播式序列级优势信号下，命名所选技能的少量 token 所承载的损失份额极小，且随着轨迹变长，其继承的信用信号会越来越错误，导致正确选择反而因后续执行失败而受惩罚。SkillGate 通过将 token 空间划分为两个互斥的信用通道来解决"
+  }
+ ],
+ "选择器信用匮乏": [
+  {
+   "id": "4512fda774bb4256",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
+   "url": "https://huggingface.co/papers/2608.18852",
+   "score": 7,
+   "summary": "SkillGate 是一种训练长程智能体在策略内选择技能的新方法，针对现有基于结果奖励的强化学习无法教会技能选择的结构性缺陷。作者识别出“选择器信用匮乏”现象：在广播式序列级优势信号下，命名所选技能的少量 token 所承载的损失份额极小，且随着轨迹变长，其继承的信用信号会越来越错误，导致正确选择反而因后续执行失败而受惩罚。SkillGate 通过将 token 空间划分为两个互斥的信用通道来解决"
+  }
+ ],
+ "序列级优势信号": [
+  {
+   "id": "4512fda774bb4256",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
+   "url": "https://huggingface.co/papers/2608.18852",
+   "score": 7,
+   "summary": "SkillGate 是一种训练长程智能体在策略内选择技能的新方法，针对现有基于结果奖励的强化学习无法教会技能选择的结构性缺陷。作者识别出“选择器信用匮乏”现象：在广播式序列级优势信号下，命名所选技能的少量 token 所承载的损失份额极小，且随着轨迹变长，其继承的信用信号会越来越错误，导致正确选择反而因后续执行失败而受惩罚。SkillGate 通过将 token 空间划分为两个互斥的信用通道来解决"
+  }
+ ],
+ "动作局部优势信号": [
+  {
+   "id": "4512fda774bb4256",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
+   "url": "https://huggingface.co/papers/2608.18852",
+   "score": 7,
+   "summary": "SkillGate 是一种训练长程智能体在策略内选择技能的新方法，针对现有基于结果奖励的强化学习无法教会技能选择的结构性缺陷。作者识别出“选择器信用匮乏”现象：在广播式序列级优势信号下，命名所选技能的少量 token 所承载的损失份额极小，且随着轨迹变长，其继承的信用信号会越来越错误，导致正确选择反而因后续执行失败而受惩罚。SkillGate 通过将 token 空间划分为两个互斥的信用通道来解决"
+  }
+ ],
+ "9B 参数策略": [
+  {
+   "id": "4512fda774bb4256",
+   "date": "2026-08-21",
+   "run_type": "midweek",
+   "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
+   "url": "https://huggingface.co/papers/2608.18852",
+   "score": 7,
+   "summary": "SkillGate 是一种训练长程智能体在策略内选择技能的新方法，针对现有基于结果奖励的强化学习无法教会技能选择的结构性缺陷。作者识别出“选择器信用匮乏”现象：在广播式序列级优势信号下，命名所选技能的少量 token 所承载的损失份额极小，且随着轨迹变长，其继承的信用信号会越来越错误，导致正确选择反而因后续执行失败而受惩罚。SkillGate 通过将 token 空间划分为两个互斥的信用通道来解决"
   }
  ]
 }
