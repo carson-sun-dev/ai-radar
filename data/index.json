@@ -540,6 +540,15 @@
    "url": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
    "score": 8,
    "summary": "在 AI 应用开发中，模型路由（model routing）是指根据任务复杂度自动将请求分发给不同规格的大语言模型，而非所有请求都走最贵最强的模型。LangChain 团队近期在一项基准测试中，使用 NVIDIA 的 NeMo Switchyard 路由系统对 145 个智能体任务进行了评估，结果发现只有 7% 的对话轮次真正需要调用前沿模型（frontier model，指能力最强但成本也最高的"
+  },
+  {
+   "id": "4235792e910ea51a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+   "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+   "score": 7,
+   "summary": "在生产环境中评估 AI 应用的质量，通常需要引入一个“评判模型”——也就是用一个更强大的模型去检查另一个模型的输出是否符合预期。这篇文章介绍的是 LangChain 与 Fireworks 合作，通过微调一个开源模型来充当“追踪评判器”，专门从生产环境的调用链（trace）中挖掘用户感知到的错误信号，最终在效果上追平了前沿闭源模型，但成本仅为后者的百分之一。\n\n此前，团队做线上评估时面临一个核心痛"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -615,6 +624,15 @@
    "url": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
    "score": 8,
    "summary": "在 AI 应用开发中，模型路由（model routing）是指根据任务复杂度自动将请求分发给不同规格的大语言模型，而非所有请求都走最贵最强的模型。LangChain 团队近期在一项基准测试中，使用 NVIDIA 的 NeMo Switchyard 路由系统对 145 个智能体任务进行了评估，结果发现只有 7% 的对话轮次真正需要调用前沿模型（frontier model，指能力最强但成本也最高的"
+  },
+  {
+   "id": "4235792e910ea51a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+   "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+   "score": 7,
+   "summary": "在生产环境中评估 AI 应用的质量，通常需要引入一个“评判模型”——也就是用一个更强大的模型去检查另一个模型的输出是否符合预期。这篇文章介绍的是 LangChain 与 Fireworks 合作，通过微调一个开源模型来充当“追踪评判器”，专门从生产环境的调用链（trace）中挖掘用户感知到的错误信号，最终在效果上追平了前沿闭源模型，但成本仅为后者的百分之一。\n\n此前，团队做线上评估时面临一个核心痛"
   }
  ],
  "脚手架工程 (Harness Engineering)": [
@@ -1345,6 +1363,15 @@
    "url": "https://www.langchain.com/blog/how-we-build-an-autonomous-sre-agent-for-kubernetes-deployments",
    "score": 7,
    "summary": "LangChain 发布了一款面向 Kubernetes 部署的自主 SRE 智能体，它基于 Deep Agents 构建，能够自主执行运维操作，并在执行变更前引入人工审批机制。该方案还集成了 LangSmith 进行链路追踪与评估，以确保智能体行为的可观测性与可靠性。这一实践展示了如何将大模型智能体应用于生产级基础设施管理，并平衡自主性与安全控制，对关注 AI 在运维领域落地的面试者具有参考价值"
+  },
+  {
+   "id": "6d8abedbe0ad0261",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Toyota Scales Enterprise AI with Deep Agents and LangSmith",
+   "url": "https://www.langchain.com/blog/how-toyota-north-america-put-enterprise-ai-on-the-balance-sheet-with-deep-agents-and-langsmith",
+   "score": 6,
+   "summary": "丰田北美公司展示了如何利用Deep Agents和LangSmith平台，将企业级AI代理从概念验证扩展到50多个生产级代理。其核心变化在于将AI应用的交付周期从6个月大幅缩短至4天，并建立了可追踪AI投资回报率的体系。这一案例值得关注，因为它为大型企业如何规模化落地AI代理、并量化其商业价值提供了可复用的实践路径。"
   }
  ],
  "基准测试": [
@@ -1914,6 +1941,24 @@
    "url": "https://www.langchain.com/blog/managed-deep-agents-is-now-in-public-beta",
    "score": 7,
    "summary": "LangChain 推出了 Managed Deep Agents 的公开测试版，这是一个将深度智能体部署到托管 LangSmith 运行时的服务。它提供了持久化执行、记忆、沙盒、通道、评估及生产级基础设施等关键能力。这一变化值得关注，因为它将复杂的智能体开发与运维工作流整合为一体化托管方案，有望显著降低从原型到生产环境的工程门槛。"
+  },
+  {
+   "id": "4235792e910ea51a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+   "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+   "score": 7,
+   "summary": "在生产环境中评估 AI 应用的质量，通常需要引入一个“评判模型”——也就是用一个更强大的模型去检查另一个模型的输出是否符合预期。这篇文章介绍的是 LangChain 与 Fireworks 合作，通过微调一个开源模型来充当“追踪评判器”，专门从生产环境的调用链（trace）中挖掘用户感知到的错误信号，最终在效果上追平了前沿闭源模型，但成本仅为后者的百分之一。\n\n此前，团队做线上评估时面临一个核心痛"
+  },
+  {
+   "id": "6d8abedbe0ad0261",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Toyota Scales Enterprise AI with Deep Agents and LangSmith",
+   "url": "https://www.langchain.com/blog/how-toyota-north-america-put-enterprise-ai-on-the-balance-sheet-with-deep-agents-and-langsmith",
+   "score": 6,
+   "summary": "丰田北美公司展示了如何利用Deep Agents和LangSmith平台，将企业级AI代理从概念验证扩展到50多个生产级代理。其核心变化在于将AI应用的交付周期从6个月大幅缩短至4天，并建立了可追踪AI投资回报率的体系。这一案例值得关注，因为它为大型企业如何规模化落地AI代理、并量化其商业价值提供了可复用的实践路径。"
   }
  ],
  "spend limits": [
@@ -1967,6 +2012,15 @@
    "url": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
    "score": 8,
    "summary": "在 AI 应用开发中，模型路由（model routing）是指根据任务复杂度自动将请求分发给不同规格的大语言模型，而非所有请求都走最贵最强的模型。LangChain 团队近期在一项基准测试中，使用 NVIDIA 的 NeMo Switchyard 路由系统对 145 个智能体任务进行了评估，结果发现只有 7% 的对话轮次真正需要调用前沿模型（frontier model，指能力最强但成本也最高的"
+  },
+  {
+   "id": "0bc3fdbe934bdf82",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
+   "url": "https://arxiv.org/abs/2608.19662v1",
+   "score": 8,
+   "summary": "这是一篇关于 ReCache 框架的论文，它提出了一种针对工具增强型大语言模型智能体的高效键值缓存复用与压缩方案。\n\n在工具增强型智能体（Tool-Augmented LLM Agents）的实际应用中，智能体需要反复调用各种外部工具或技能，每次调用时都要在提示词中携带这些工具的模式定义（schema）。这些模式定义在不同请求中会以不同组合和顺序反复出现，但由于传统的前缀缓存（prefix cac"
   }
  ],
  "CoRT": [
@@ -2077,6 +2131,15 @@
    "url": "https://huggingface.co/papers/2607.28272",
    "score": 7,
    "summary": "MemHarness 提出了一种让大模型智能体主动“重构”记忆而非简单“回放”记忆的框架。其核心变化在于，每一步决策时，模型会根据当前状态对检索到的过往经验进行批判与重建，生成贴合当下情境的指导，并通过 GRPO 端到端训练自然涌现这种重构能力。这项工作值得关注，因为它解决了传统记忆增强方法中静态回放导致的负迁移问题，在 ALFWorld 和 WebShop 等任务上显著优于纯强化学习与静态记忆基"
+  },
+  {
+   "id": "8afcbe3f0488fb6a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+   "url": "https://huggingface.co/papers/2607.21596",
+   "score": 8,
+   "summary": "FlowEvo 是一个无需额外训练的智能体框架，让工作流与可执行技能在推理时协同进化。它把成功执行的工作流编译为可调用的技能存入持久化技能库，后续可通过直接执行或作为上下文来构建新工作流，并追踪技能的下游效用以抑制负迁移。在共享 GPT-4o-mini 基座下，FlowEvo 在 ALFWorld、HumanEval、MBPP、GSM8K 和 MATH-500 五个标准评测集上取得最高准确率，其中"
   }
  ],
  "WebShop": [
@@ -3947,6 +4010,237 @@
    "url": "https://huggingface.co/papers/2608.18852",
    "score": 7,
    "summary": "SkillGate 是一种训练长程智能体在策略内选择技能的新方法，针对现有基于结果奖励的强化学习无法教会技能选择的结构性缺陷。作者识别出“选择器信用匮乏”现象：在广播式序列级优势信号下，命名所选技能的少量 token 所承载的损失份额极小，且随着轨迹变长，其继承的信用信号会越来越错误，导致正确选择反而因后续执行失败而受惩罚。SkillGate 通过将 token 空间划分为两个互斥的信用通道来解决"
+  }
+ ],
+ "GPT‑5.6": [
+  {
+   "id": "abd52c9f1dde403e",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+   "url": "https://openai.com/index/gpt-5-6-in-kiro",
+   "score": 7,
+   "summary": "GPT‑5.6 现已集成到 Kiro 开发平台中，这是一次面向开发者工作流的模型能力升级，核心卖点是在规划、构建、审查和测试软件这四个关键环节上，以更优的性价比提供更强的 AI 辅助。\n\n此前开发者在日常编码中面临一个现实矛盾：通用大模型虽然能力越来越强，但在实际开发场景中要么响应延迟影响编码节奏，要么调用成本让团队在频繁使用时有预算压力。更关键的是，模型往往只擅长单一环节——比如代码生成尚可，但"
+  }
+ ],
+ "Kiro": [
+  {
+   "id": "abd52c9f1dde403e",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+   "url": "https://openai.com/index/gpt-5-6-in-kiro",
+   "score": 7,
+   "summary": "GPT‑5.6 现已集成到 Kiro 开发平台中，这是一次面向开发者工作流的模型能力升级，核心卖点是在规划、构建、审查和测试软件这四个关键环节上，以更优的性价比提供更强的 AI 辅助。\n\n此前开发者在日常编码中面临一个现实矛盾：通用大模型虽然能力越来越强，但在实际开发场景中要么响应延迟影响编码节奏，要么调用成本让团队在频繁使用时有预算压力。更关键的是，模型往往只擅长单一环节——比如代码生成尚可，但"
+  }
+ ],
+ "Kiro 开发平台": [
+  {
+   "id": "abd52c9f1dde403e",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+   "url": "https://openai.com/index/gpt-5-6-in-kiro",
+   "score": 7,
+   "summary": "GPT‑5.6 现已集成到 Kiro 开发平台中，这是一次面向开发者工作流的模型能力升级，核心卖点是在规划、构建、审查和测试软件这四个关键环节上，以更优的性价比提供更强的 AI 辅助。\n\n此前开发者在日常编码中面临一个现实矛盾：通用大模型虽然能力越来越强，但在实际开发场景中要么响应延迟影响编码节奏，要么调用成本让团队在频繁使用时有预算压力。更关键的是，模型往往只擅长单一环节——比如代码生成尚可，但"
+  }
+ ],
+ "Fireworks": [
+  {
+   "id": "4235792e910ea51a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+   "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+   "score": 7,
+   "summary": "在生产环境中评估 AI 应用的质量，通常需要引入一个“评判模型”——也就是用一个更强大的模型去检查另一个模型的输出是否符合预期。这篇文章介绍的是 LangChain 与 Fireworks 合作，通过微调一个开源模型来充当“追踪评判器”，专门从生产环境的调用链（trace）中挖掘用户感知到的错误信号，最终在效果上追平了前沿闭源模型，但成本仅为后者的百分之一。\n\n此前，团队做线上评估时面临一个核心痛"
+  }
+ ],
+ "模型蒸馏": [
+  {
+   "id": "4235792e910ea51a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+   "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+   "score": 7,
+   "summary": "在生产环境中评估 AI 应用的质量，通常需要引入一个“评判模型”——也就是用一个更强大的模型去检查另一个模型的输出是否符合预期。这篇文章介绍的是 LangChain 与 Fireworks 合作，通过微调一个开源模型来充当“追踪评判器”，专门从生产环境的调用链（trace）中挖掘用户感知到的错误信号，最终在效果上追平了前沿闭源模型，但成本仅为后者的百分之一。\n\n此前，团队做线上评估时面临一个核心痛"
+  }
+ ],
+ "MLOps": [
+  {
+   "id": "4235792e910ea51a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+   "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+   "score": 7,
+   "summary": "在生产环境中评估 AI 应用的质量，通常需要引入一个“评判模型”——也就是用一个更强大的模型去检查另一个模型的输出是否符合预期。这篇文章介绍的是 LangChain 与 Fireworks 合作，通过微调一个开源模型来充当“追踪评判器”，专门从生产环境的调用链（trace）中挖掘用户感知到的错误信号，最终在效果上追平了前沿闭源模型，但成本仅为后者的百分之一。\n\n此前，团队做线上评估时面临一个核心痛"
+  }
+ ],
+ "感知错误": [
+  {
+   "id": "4235792e910ea51a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+   "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+   "score": 7,
+   "summary": "在生产环境中评估 AI 应用的质量，通常需要引入一个“评判模型”——也就是用一个更强大的模型去检查另一个模型的输出是否符合预期。这篇文章介绍的是 LangChain 与 Fireworks 合作，通过微调一个开源模型来充当“追踪评判器”，专门从生产环境的调用链（trace）中挖掘用户感知到的错误信号，最终在效果上追平了前沿闭源模型，但成本仅为后者的百分之一。\n\n此前，团队做线上评估时面临一个核心痛"
+  }
+ ],
+ "Trace Judge": [
+  {
+   "id": "4235792e910ea51a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+   "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+   "score": 7,
+   "summary": "在生产环境中评估 AI 应用的质量，通常需要引入一个“评判模型”——也就是用一个更强大的模型去检查另一个模型的输出是否符合预期。这篇文章介绍的是 LangChain 与 Fireworks 合作，通过微调一个开源模型来充当“追踪评判器”，专门从生产环境的调用链（trace）中挖掘用户感知到的错误信号，最终在效果上追平了前沿闭源模型，但成本仅为后者的百分之一。\n\n此前，团队做线上评估时面临一个核心痛"
+  }
+ ],
+ "监督微调": [
+  {
+   "id": "4235792e910ea51a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+   "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+   "score": 7,
+   "summary": "在生产环境中评估 AI 应用的质量，通常需要引入一个“评判模型”——也就是用一个更强大的模型去检查另一个模型的输出是否符合预期。这篇文章介绍的是 LangChain 与 Fireworks 合作，通过微调一个开源模型来充当“追踪评判器”，专门从生产环境的调用链（trace）中挖掘用户感知到的错误信号，最终在效果上追平了前沿闭源模型，但成本仅为后者的百分之一。\n\n此前，团队做线上评估时面临一个核心痛"
+  }
+ ],
+ "ReCache": [
+  {
+   "id": "0bc3fdbe934bdf82",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
+   "url": "https://arxiv.org/abs/2608.19662v1",
+   "score": 8,
+   "summary": "这是一篇关于 ReCache 框架的论文，它提出了一种针对工具增强型大语言模型智能体的高效键值缓存复用与压缩方案。\n\n在工具增强型智能体（Tool-Augmented LLM Agents）的实际应用中，智能体需要反复调用各种外部工具或技能，每次调用时都要在提示词中携带这些工具的模式定义（schema）。这些模式定义在不同请求中会以不同组合和顺序反复出现，但由于传统的前缀缓存（prefix cac"
+  }
+ ],
+ "Resource-wise Attention": [
+  {
+   "id": "0bc3fdbe934bdf82",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
+   "url": "https://arxiv.org/abs/2608.19662v1",
+   "score": 8,
+   "summary": "这是一篇关于 ReCache 框架的论文，它提出了一种针对工具增强型大语言模型智能体的高效键值缓存复用与压缩方案。\n\n在工具增强型智能体（Tool-Augmented LLM Agents）的实际应用中，智能体需要反复调用各种外部工具或技能，每次调用时都要在提示词中携带这些工具的模式定义（schema）。这些模式定义在不同请求中会以不同组合和顺序反复出现，但由于传统的前缀缓存（prefix cac"
+  }
+ ],
+ "工具增强型大语言模型智能体": [
+  {
+   "id": "0bc3fdbe934bdf82",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
+   "url": "https://arxiv.org/abs/2608.19662v1",
+   "score": 8,
+   "summary": "这是一篇关于 ReCache 框架的论文，它提出了一种针对工具增强型大语言模型智能体的高效键值缓存复用与压缩方案。\n\n在工具增强型智能体（Tool-Augmented LLM Agents）的实际应用中，智能体需要反复调用各种外部工具或技能，每次调用时都要在提示词中携带这些工具的模式定义（schema）。这些模式定义在不同请求中会以不同组合和顺序反复出现，但由于传统的前缀缓存（prefix cac"
+  }
+ ],
+ "前缀缓存": [
+  {
+   "id": "0bc3fdbe934bdf82",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
+   "url": "https://arxiv.org/abs/2608.19662v1",
+   "score": 8,
+   "summary": "这是一篇关于 ReCache 框架的论文，它提出了一种针对工具增强型大语言模型智能体的高效键值缓存复用与压缩方案。\n\n在工具增强型智能体（Tool-Augmented LLM Agents）的实际应用中，智能体需要反复调用各种外部工具或技能，每次调用时都要在提示词中携带这些工具的模式定义（schema）。这些模式定义在不同请求中会以不同组合和顺序反复出现，但由于传统的前缀缓存（prefix cac"
+  }
+ ],
+ "丰田北美公司": [
+  {
+   "id": "6d8abedbe0ad0261",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "Toyota Scales Enterprise AI with Deep Agents and LangSmith",
+   "url": "https://www.langchain.com/blog/how-toyota-north-america-put-enterprise-ai-on-the-balance-sheet-with-deep-agents-and-langsmith",
+   "score": 6,
+   "summary": "丰田北美公司展示了如何利用Deep Agents和LangSmith平台，将企业级AI代理从概念验证扩展到50多个生产级代理。其核心变化在于将AI应用的交付周期从6个月大幅缩短至4天，并建立了可追踪AI投资回报率的体系。这一案例值得关注，因为它为大型企业如何规模化落地AI代理、并量化其商业价值提供了可复用的实践路径。"
+  }
+ ],
+ "FlowEvo": [
+  {
+   "id": "8afcbe3f0488fb6a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+   "url": "https://huggingface.co/papers/2607.21596",
+   "score": 8,
+   "summary": "FlowEvo 是一个无需额外训练的智能体框架，让工作流与可执行技能在推理时协同进化。它把成功执行的工作流编译为可调用的技能存入持久化技能库，后续可通过直接执行或作为上下文来构建新工作流，并追踪技能的下游效用以抑制负迁移。在共享 GPT-4o-mini 基座下，FlowEvo 在 ALFWorld、HumanEval、MBPP、GSM8K 和 MATH-500 五个标准评测集上取得最高准确率，其中"
+  }
+ ],
+ "GPT-4o-mini": [
+  {
+   "id": "8afcbe3f0488fb6a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+   "url": "https://huggingface.co/papers/2607.21596",
+   "score": 8,
+   "summary": "FlowEvo 是一个无需额外训练的智能体框架，让工作流与可执行技能在推理时协同进化。它把成功执行的工作流编译为可调用的技能存入持久化技能库，后续可通过直接执行或作为上下文来构建新工作流，并追踪技能的下游效用以抑制负迁移。在共享 GPT-4o-mini 基座下，FlowEvo 在 ALFWorld、HumanEval、MBPP、GSM8K 和 MATH-500 五个标准评测集上取得最高准确率，其中"
+  }
+ ],
+ "HumanEval": [
+  {
+   "id": "8afcbe3f0488fb6a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+   "url": "https://huggingface.co/papers/2607.21596",
+   "score": 8,
+   "summary": "FlowEvo 是一个无需额外训练的智能体框架，让工作流与可执行技能在推理时协同进化。它把成功执行的工作流编译为可调用的技能存入持久化技能库，后续可通过直接执行或作为上下文来构建新工作流，并追踪技能的下游效用以抑制负迁移。在共享 GPT-4o-mini 基座下，FlowEvo 在 ALFWorld、HumanEval、MBPP、GSM8K 和 MATH-500 五个标准评测集上取得最高准确率，其中"
+  }
+ ],
+ "MBPP": [
+  {
+   "id": "8afcbe3f0488fb6a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+   "url": "https://huggingface.co/papers/2607.21596",
+   "score": 8,
+   "summary": "FlowEvo 是一个无需额外训练的智能体框架，让工作流与可执行技能在推理时协同进化。它把成功执行的工作流编译为可调用的技能存入持久化技能库，后续可通过直接执行或作为上下文来构建新工作流，并追踪技能的下游效用以抑制负迁移。在共享 GPT-4o-mini 基座下，FlowEvo 在 ALFWorld、HumanEval、MBPP、GSM8K 和 MATH-500 五个标准评测集上取得最高准确率，其中"
+  }
+ ],
+ "GSM8K": [
+  {
+   "id": "8afcbe3f0488fb6a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+   "url": "https://huggingface.co/papers/2607.21596",
+   "score": 8,
+   "summary": "FlowEvo 是一个无需额外训练的智能体框架，让工作流与可执行技能在推理时协同进化。它把成功执行的工作流编译为可调用的技能存入持久化技能库，后续可通过直接执行或作为上下文来构建新工作流，并追踪技能的下游效用以抑制负迁移。在共享 GPT-4o-mini 基座下，FlowEvo 在 ALFWorld、HumanEval、MBPP、GSM8K 和 MATH-500 五个标准评测集上取得最高准确率，其中"
+  }
+ ],
+ "MATH-500": [
+  {
+   "id": "8afcbe3f0488fb6a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+   "url": "https://huggingface.co/papers/2607.21596",
+   "score": 8,
+   "summary": "FlowEvo 是一个无需额外训练的智能体框架，让工作流与可执行技能在推理时协同进化。它把成功执行的工作流编译为可调用的技能存入持久化技能库，后续可通过直接执行或作为上下文来构建新工作流，并追踪技能的下游效用以抑制负迁移。在共享 GPT-4o-mini 基座下，FlowEvo 在 ALFWorld、HumanEval、MBPP、GSM8K 和 MATH-500 五个标准评测集上取得最高准确率，其中"
+  }
+ ],
+ "ExpeL": [
+  {
+   "id": "8afcbe3f0488fb6a",
+   "date": "2026-08-25",
+   "run_type": "midweek",
+   "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+   "url": "https://huggingface.co/papers/2607.21596",
+   "score": 8,
+   "summary": "FlowEvo 是一个无需额外训练的智能体框架，让工作流与可执行技能在推理时协同进化。它把成功执行的工作流编译为可调用的技能存入持久化技能库，后续可通过直接执行或作为上下文来构建新工作流，并追踪技能的下游效用以抑制负迁移。在共享 GPT-4o-mini 基座下，FlowEvo 在 ALFWorld、HumanEval、MBPP、GSM8K 和 MATH-500 五个标准评测集上取得最高准确率，其中"
   }
  ]
 }
