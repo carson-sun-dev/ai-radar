@@ -2502,6 +2502,15 @@
    "url": "https://arxiv.org/abs/2608.00585v1",
    "score": 8,
    "summary": "这篇论文揭示了当前检索增强生成中普遍采用的逐块过滤验证方法在多跳问答场景下的根本性失败。核心发现是，逐块验证假设单个文本块足以作为回答的前提，但多跳问题故意设计成没有任何单一文本块包含完整答案，导致蕴含评分在多跳数据集上表现极差，甚至不如不过滤。研究通过七项对照实验排除了模型能力、前提长度等其他因素的干扰，并证明随着生成器能力增强，逐块过滤的负面影响反而加剧。修复方案是将验证条件从原始问题改为分解"
+  },
+  {
+   "id": "f0c419d69dae4bf4",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Detecting and Repairing Hallucinations in Retrieval-Augmented Generation",
+   "url": "https://arxiv.org/abs/2608.29307v1",
+   "score": 8,
+   "summary": "这篇论文研究检索增强生成中的幻觉检测与修复问题。作者基于人工标注的 RAGTruth 基准，将回答拆分为事实性声明并与检索源逐一比对，比较了删除、替换和重写三种修复策略。实验发现，删除策略能最大程度减少无依据内容，但仅保留原文的 64.3%，而重写策略保留 80.1% 但减少效果最弱。三种策略并非质量高低之分，而是在“依据保留”与“内容完整”之间形成不同取舍，为实际应用中的修复选择提供了实证依据。"
   }
  ],
  "蕴含评分": [
@@ -4502,6 +4511,270 @@
    "url": "https://huggingface.co/papers/2608.27448",
    "score": 8,
    "summary": "TTPO（Test-Time Policy Optimization）是一种无需真实标签的测试时训练方法，旨在提升大语言模型的数学推理能力。其核心创新在于提出非对称优化目标：对与多数投票伪标签一致的推理路径使用在线策略自蒸馏进行强化，对不一致的路径则通过分组强化学习施加惩罚，并辅以令牌级选择来细化更新。该方法解决了传统后训练方法依赖真实标签、而伪标签易因错误投票导致模型被误导的脆弱性问题。值得关注"
+  }
+ ],
+ "Budget-Aware Compression Pipeline": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "单卡推理流水线": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "逐层剪枝 (layer-wise pruning)": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "权重量化": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "KV 缓存压缩": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "稀疏化 (sparsification)": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "INT8 量化": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "静态向量量化器": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "70B 模型": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "A40 (48GB 显存)": [
+  {
+   "id": "dea6b2b543d05a36",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
+   "url": "https://arxiv.org/abs/2608.30076v1",
+   "score": 8,
+   "summary": "在单张消费级或入门企业级 GPU 上跑 70B 参数的大语言模型，这件事本身就是一个“预算分配”问题——显存、长上下文吞吐、工程集成成本三者互相制约。这篇论文没有发明新的压缩算法，而是把剪枝、量化、KV 缓存压缩三种已有技术放在一起，系统性地研究了它们在真实推理管线中的耦合效应，并据此拼出一条可落地的单卡推理流水线。\n\n此前的痛点在于，各种压缩方法通常是孤立评估的：剪枝论文只关心权重稀疏度与困惑度"
+  }
+ ],
+ "CAST": [
+  {
+   "id": "7a25b641e9fdec30",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "CAST: Critique-Aware Supervision for Training Reliable Long-Horizon Tool-Calling Agents",
+   "url": "https://arxiv.org/abs/2608.30147v1",
+   "score": 8,
+   "summary": "这是一篇关于训练可靠长周期工具调用智能体的新方法 CAST 的论文。它提出了一种“批判感知监督”框架，专门用来提升大语言模型智能体在需要多步操作、状态持续变化的复杂任务中的可靠性。\n\n此前，让大模型智能体执行长周期任务时，最大的痛点在于“一步错，步步错”。比如在客服场景中，智能体可能错误地给用户退款，这种操作一旦执行就不可逆，会造成实际损失。更棘手的是，这类错误往往不是每次都出现，而是在多次重复运"
+  }
+ ],
+ "Critique-Aware Supervision": [
+  {
+   "id": "7a25b641e9fdec30",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "CAST: Critique-Aware Supervision for Training Reliable Long-Horizon Tool-Calling Agents",
+   "url": "https://arxiv.org/abs/2608.30147v1",
+   "score": 8,
+   "summary": "这是一篇关于训练可靠长周期工具调用智能体的新方法 CAST 的论文。它提出了一种“批判感知监督”框架，专门用来提升大语言模型智能体在需要多步操作、状态持续变化的复杂任务中的可靠性。\n\n此前，让大模型智能体执行长周期任务时，最大的痛点在于“一步错，步步错”。比如在客服场景中，智能体可能错误地给用户退款，这种操作一旦执行就不可逆，会造成实际损失。更棘手的是，这类错误往往不是每次都出现，而是在多次重复运"
+  }
+ ],
+ "Qwen3": [
+  {
+   "id": "7a25b641e9fdec30",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "CAST: Critique-Aware Supervision for Training Reliable Long-Horizon Tool-Calling Agents",
+   "url": "https://arxiv.org/abs/2608.30147v1",
+   "score": 8,
+   "summary": "这是一篇关于训练可靠长周期工具调用智能体的新方法 CAST 的论文。它提出了一种“批判感知监督”框架，专门用来提升大语言模型智能体在需要多步操作、状态持续变化的复杂任务中的可靠性。\n\n此前，让大模型智能体执行长周期任务时，最大的痛点在于“一步错，步步错”。比如在客服场景中，智能体可能错误地给用户退款，这种操作一旦执行就不可逆，会造成实际损失。更棘手的是，这类错误往往不是每次都出现，而是在多次重复运"
+  }
+ ],
+ "GPT-OSS-120B": [
+  {
+   "id": "7a25b641e9fdec30",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "CAST: Critique-Aware Supervision for Training Reliable Long-Horizon Tool-Calling Agents",
+   "url": "https://arxiv.org/abs/2608.30147v1",
+   "score": 8,
+   "summary": "这是一篇关于训练可靠长周期工具调用智能体的新方法 CAST 的论文。它提出了一种“批判感知监督”框架，专门用来提升大语言模型智能体在需要多步操作、状态持续变化的复杂任务中的可靠性。\n\n此前，让大模型智能体执行长周期任务时，最大的痛点在于“一步错，步步错”。比如在客服场景中，智能体可能错误地给用户退款，这种操作一旦执行就不可逆，会造成实际损失。更棘手的是，这类错误往往不是每次都出现，而是在多次重复运"
+  }
+ ],
+ "StarHarness": [
+  {
+   "id": "d3aaf1ba44d6c883",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments",
+   "url": "https://huggingface.co/papers/2608.24804",
+   "score": 8,
+   "summary": "StarHarness 是一个在固定模型权重下，通过分层搜索策略演化特定环境智能体框架的方法。其核心变化在于，它不调整模型本身，而是通过分层采样任务构建紧凑演化池，并分离搜索与选择任务，来迭代优化提示、工具接口、子智能体结构等框架组件。该方法值得关注，因为它能在多个企业运维与自动化基准上将性能提升 20 到 35 个百分点，且这些增益可泛化到未参与演化的任务，并跨模型家族迁移，为减少工具密集型场景"
+  }
+ ],
+ "分层搜索策略": [
+  {
+   "id": "d3aaf1ba44d6c883",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments",
+   "url": "https://huggingface.co/papers/2608.24804",
+   "score": 8,
+   "summary": "StarHarness 是一个在固定模型权重下，通过分层搜索策略演化特定环境智能体框架的方法。其核心变化在于，它不调整模型本身，而是通过分层采样任务构建紧凑演化池，并分离搜索与选择任务，来迭代优化提示、工具接口、子智能体结构等框架组件。该方法值得关注，因为它能在多个企业运维与自动化基准上将性能提升 20 到 35 个百分点，且这些增益可泛化到未参与演化的任务，并跨模型家族迁移，为减少工具密集型场景"
+  }
+ ],
+ "分层采样任务": [
+  {
+   "id": "d3aaf1ba44d6c883",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments",
+   "url": "https://huggingface.co/papers/2608.24804",
+   "score": 8,
+   "summary": "StarHarness 是一个在固定模型权重下，通过分层搜索策略演化特定环境智能体框架的方法。其核心变化在于，它不调整模型本身，而是通过分层采样任务构建紧凑演化池，并分离搜索与选择任务，来迭代优化提示、工具接口、子智能体结构等框架组件。该方法值得关注，因为它能在多个企业运维与自动化基准上将性能提升 20 到 35 个百分点，且这些增益可泛化到未参与演化的任务，并跨模型家族迁移，为减少工具密集型场景"
+  }
+ ],
+ "紧凑演化池": [
+  {
+   "id": "d3aaf1ba44d6c883",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments",
+   "url": "https://huggingface.co/papers/2608.24804",
+   "score": 8,
+   "summary": "StarHarness 是一个在固定模型权重下，通过分层搜索策略演化特定环境智能体框架的方法。其核心变化在于，它不调整模型本身，而是通过分层采样任务构建紧凑演化池，并分离搜索与选择任务，来迭代优化提示、工具接口、子智能体结构等框架组件。该方法值得关注，因为它能在多个企业运维与自动化基准上将性能提升 20 到 35 个百分点，且这些增益可泛化到未参与演化的任务，并跨模型家族迁移，为减少工具密集型场景"
+  }
+ ],
+ "提示优化": [
+  {
+   "id": "d3aaf1ba44d6c883",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments",
+   "url": "https://huggingface.co/papers/2608.24804",
+   "score": 8,
+   "summary": "StarHarness 是一个在固定模型权重下，通过分层搜索策略演化特定环境智能体框架的方法。其核心变化在于，它不调整模型本身，而是通过分层采样任务构建紧凑演化池，并分离搜索与选择任务，来迭代优化提示、工具接口、子智能体结构等框架组件。该方法值得关注，因为它能在多个企业运维与自动化基准上将性能提升 20 到 35 个百分点，且这些增益可泛化到未参与演化的任务，并跨模型家族迁移，为减少工具密集型场景"
+  }
+ ],
+ "工具接口优化": [
+  {
+   "id": "d3aaf1ba44d6c883",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments",
+   "url": "https://huggingface.co/papers/2608.24804",
+   "score": 8,
+   "summary": "StarHarness 是一个在固定模型权重下，通过分层搜索策略演化特定环境智能体框架的方法。其核心变化在于，它不调整模型本身，而是通过分层采样任务构建紧凑演化池，并分离搜索与选择任务，来迭代优化提示、工具接口、子智能体结构等框架组件。该方法值得关注，因为它能在多个企业运维与自动化基准上将性能提升 20 到 35 个百分点，且这些增益可泛化到未参与演化的任务，并跨模型家族迁移，为减少工具密集型场景"
+  }
+ ],
+ "子智能体结构优化": [
+  {
+   "id": "d3aaf1ba44d6c883",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments",
+   "url": "https://huggingface.co/papers/2608.24804",
+   "score": 8,
+   "summary": "StarHarness 是一个在固定模型权重下，通过分层搜索策略演化特定环境智能体框架的方法。其核心变化在于，它不调整模型本身，而是通过分层采样任务构建紧凑演化池，并分离搜索与选择任务，来迭代优化提示、工具接口、子智能体结构等框架组件。该方法值得关注，因为它能在多个企业运维与自动化基准上将性能提升 20 到 35 个百分点，且这些增益可泛化到未参与演化的任务，并跨模型家族迁移，为减少工具密集型场景"
+  }
+ ],
+ "RAGTruth": [
+  {
+   "id": "f0c419d69dae4bf4",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Detecting and Repairing Hallucinations in Retrieval-Augmented Generation",
+   "url": "https://arxiv.org/abs/2608.29307v1",
+   "score": 8,
+   "summary": "这篇论文研究检索增强生成中的幻觉检测与修复问题。作者基于人工标注的 RAGTruth 基准，将回答拆分为事实性声明并与检索源逐一比对，比较了删除、替换和重写三种修复策略。实验发现，删除策略能最大程度减少无依据内容，但仅保留原文的 64.3%，而重写策略保留 80.1% 但减少效果最弱。三种策略并非质量高低之分，而是在“依据保留”与“内容完整”之间形成不同取舍，为实际应用中的修复选择提供了实证依据。"
+  }
+ ],
+ "幻觉检测": [
+  {
+   "id": "f0c419d69dae4bf4",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Detecting and Repairing Hallucinations in Retrieval-Augmented Generation",
+   "url": "https://arxiv.org/abs/2608.29307v1",
+   "score": 8,
+   "summary": "这篇论文研究检索增强生成中的幻觉检测与修复问题。作者基于人工标注的 RAGTruth 基准，将回答拆分为事实性声明并与检索源逐一比对，比较了删除、替换和重写三种修复策略。实验发现，删除策略能最大程度减少无依据内容，但仅保留原文的 64.3%，而重写策略保留 80.1% 但减少效果最弱。三种策略并非质量高低之分，而是在“依据保留”与“内容完整”之间形成不同取舍，为实际应用中的修复选择提供了实证依据。"
+  }
+ ],
+ "幻觉修复": [
+  {
+   "id": "f0c419d69dae4bf4",
+   "date": "2026-09-01",
+   "run_type": "midweek",
+   "title": "Detecting and Repairing Hallucinations in Retrieval-Augmented Generation",
+   "url": "https://arxiv.org/abs/2608.29307v1",
+   "score": 8,
+   "summary": "这篇论文研究检索增强生成中的幻觉检测与修复问题。作者基于人工标注的 RAGTruth 基准，将回答拆分为事实性声明并与检索源逐一比对，比较了删除、替换和重写三种修复策略。实验发现，删除策略能最大程度减少无依据内容，但仅保留原文的 64.3%，而重写策略保留 80.1% 但减少效果最弱。三种策略并非质量高低之分，而是在“依据保留”与“内容完整”之间形成不同取舍，为实际应用中的修复选择提供了实证依据。"
   }
  ]
 }
