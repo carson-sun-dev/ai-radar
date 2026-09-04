@@ -576,6 +576,15 @@
    "url": "https://www.langchain.com/blog/how-to-design-an-agent-for-production",
    "score": 8,
    "summary": "这篇文章介绍了如何使用 LangChain 框架设计生产级 AI 代理，并以 Cal.ai 的日程安排助手为案例，详细阐述了其技术架构。核心方法包括利用 OpenAI 的函数调用能力、设计工具与提示词，并构建可靠的代理架构。该指南值得关注，因为它为将 AI 代理从原型落地到实际生产环境提供了具体的技术路径和最佳实践。"
+  },
+  {
+   "id": "5b9d60084bc37024",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "MCP in LangChain: Stateless Protocol, Elicitation, and More!",
+   "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
+   "score": 8,
+   "summary": "LangChain 正式将 MCP（Model Context Protocol，模型上下文协议）支持集成到 `langchain.mcp` 模块中，底层基于 FastMCP 实现，并遵循 2026 年 7 月 28 日发布的 MCP 规范。MCP 是一种开放协议，旨在标准化 AI 模型与外部工具、数据源之间的交互方式，让模型能够动态发现和调用外部能力。这次集成意味着 LangChain 生态内的"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -749,6 +758,15 @@
    "url": "https://www.langchain.com/blog/rebuilding-chat-langchain",
    "score": 8,
    "summary": "去年 LangChain 团队彻底重写了自家的文档问答聊天机器人，从早期基于简单 RAG 的版本升级为基于 Deep Agents 和子图架构的新系统。这次重构的核心目标很明确：把端到端响应时间压到 15 秒以内，同时保证回答中引用的文档片段精确可追溯。\n\n此前他们面临的主要痛点是传统 RAG 模式在复杂查询下的表现不稳定。旧版聊天机器人采用“检索-生成”的线性流程，但用户提问往往不是一步就能解决"
+  },
+  {
+   "id": "5b9d60084bc37024",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "MCP in LangChain: Stateless Protocol, Elicitation, and More!",
+   "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
+   "score": 8,
+   "summary": "LangChain 正式将 MCP（Model Context Protocol，模型上下文协议）支持集成到 `langchain.mcp` 模块中，底层基于 FastMCP 实现，并遵循 2026 年 7 月 28 日发布的 MCP 规范。MCP 是一种开放协议，旨在标准化 AI 模型与外部工具、数据源之间的交互方式，让模型能够动态发现和调用外部能力。这次集成意味着 LangChain 生态内的"
   }
  ],
  "Gemini 3.6 Flash": [
@@ -2075,6 +2093,15 @@
    "url": "https://huggingface.co/papers/2608.26530",
    "score": 8,
    "summary": "这是一篇关于让长周期AI智能体在运行过程中实时自我改进的新研究，提出了一个名为PILOT的监督者-工作者架构。\n\n它解决的核心痛点是现有自我改进方法的滞后性。目前，大多数AI智能体在执行长周期任务时，会将运行过程中产生的经验数据保存下来，但分析和改进都发生在任务完全结束后。这就好比一个学生在考试结束后才去对答案，虽然对下次考试有帮助，但无法挽救本次考试中的错误。这种事后处理模式无法在任务执行中途纠"
+  },
+  {
+   "id": "5b9d60084bc37024",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "MCP in LangChain: Stateless Protocol, Elicitation, and More!",
+   "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
+   "score": 8,
+   "summary": "LangChain 正式将 MCP（Model Context Protocol，模型上下文协议）支持集成到 `langchain.mcp` 模块中，底层基于 FastMCP 实现，并遵循 2026 年 7 月 28 日发布的 MCP 规范。MCP 是一种开放协议，旨在标准化 AI 模型与外部工具、数据源之间的交互方式，让模型能够动态发现和调用外部能力。这次集成意味着 LangChain 生态内的"
   }
  ],
  "CoRT": [
@@ -4775,6 +4802,237 @@
    "url": "https://arxiv.org/abs/2608.29307v1",
    "score": 8,
    "summary": "这篇论文研究检索增强生成中的幻觉检测与修复问题。作者基于人工标注的 RAGTruth 基准，将回答拆分为事实性声明并与检索源逐一比对，比较了删除、替换和重写三种修复策略。实验发现，删除策略能最大程度减少无依据内容，但仅保留原文的 64.3%，而重写策略保留 80.1% 但减少效果最弱。三种策略并非质量高低之分，而是在“依据保留”与“内容完整”之间形成不同取舍，为实际应用中的修复选择提供了实证依据。"
+  }
+ ],
+ "GPT-6 Astra": [
+  {
+   "id": "39210f987919e80e",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Safety overview: GPT-6 Astra",
+   "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+   "score": 7,
+   "summary": "GPT-6 Astra 是 OpenAI 目前能力最强且已广泛部署的模型，也是其首个在“预备框架”下达到网络安全能力“关键”级别的系统。这里的“预备框架”是 OpenAI 内部用于评估和管控前沿模型潜在灾难性风险的一套分级标准，而“关键”级别意味着该模型在特定高危领域已展现出足以引发严重安全事件的能力。\n\n此前，大语言模型在网络安全领域的应用主要停留在辅助脚本生成、漏洞解释等低风险层面，真正的自主"
+  }
+ ],
+ "预备框架": [
+  {
+   "id": "39210f987919e80e",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Safety overview: GPT-6 Astra",
+   "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+   "score": 7,
+   "summary": "GPT-6 Astra 是 OpenAI 目前能力最强且已广泛部署的模型，也是其首个在“预备框架”下达到网络安全能力“关键”级别的系统。这里的“预备框架”是 OpenAI 内部用于评估和管控前沿模型潜在灾难性风险的一套分级标准，而“关键”级别意味着该模型在特定高危领域已展现出足以引发严重安全事件的能力。\n\n此前，大语言模型在网络安全领域的应用主要停留在辅助脚本生成、漏洞解释等低风险层面，真正的自主"
+  }
+ ],
+ "网络安全能力评估": [
+  {
+   "id": "39210f987919e80e",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Safety overview: GPT-6 Astra",
+   "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+   "score": 7,
+   "summary": "GPT-6 Astra 是 OpenAI 目前能力最强且已广泛部署的模型，也是其首个在“预备框架”下达到网络安全能力“关键”级别的系统。这里的“预备框架”是 OpenAI 内部用于评估和管控前沿模型潜在灾难性风险的一套分级标准，而“关键”级别意味着该模型在特定高危领域已展现出足以引发严重安全事件的能力。\n\n此前，大语言模型在网络安全领域的应用主要停留在辅助脚本生成、漏洞解释等低风险层面，真正的自主"
+  }
+ ],
+ "MCP (Model Context Protocol)": [
+  {
+   "id": "5b9d60084bc37024",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "MCP in LangChain: Stateless Protocol, Elicitation, and More!",
+   "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
+   "score": 8,
+   "summary": "LangChain 正式将 MCP（Model Context Protocol，模型上下文协议）支持集成到 `langchain.mcp` 模块中，底层基于 FastMCP 实现，并遵循 2026 年 7 月 28 日发布的 MCP 规范。MCP 是一种开放协议，旨在标准化 AI 模型与外部工具、数据源之间的交互方式，让模型能够动态发现和调用外部能力。这次集成意味着 LangChain 生态内的"
+  }
+ ],
+ "FastMCP": [
+  {
+   "id": "5b9d60084bc37024",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "MCP in LangChain: Stateless Protocol, Elicitation, and More!",
+   "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
+   "score": 8,
+   "summary": "LangChain 正式将 MCP（Model Context Protocol，模型上下文协议）支持集成到 `langchain.mcp` 模块中，底层基于 FastMCP 实现，并遵循 2026 年 7 月 28 日发布的 MCP 规范。MCP 是一种开放协议，旨在标准化 AI 模型与外部工具、数据源之间的交互方式，让模型能够动态发现和调用外部能力。这次集成意味着 LangChain 生态内的"
+  }
+ ],
+ "LatentPress": [
+  {
+   "id": "a7aad8cbbaafe858",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "LatentPress: Context Compression Beyond Text and Vision",
+   "url": "https://huggingface.co/papers/2609.01507",
+   "score": 8,
+   "summary": "这是一项关于上下文压缩的新研究，提出了一种名为 LatentPress 的方法。它的核心思路是：不再把压缩后的上下文保存为人类可读的文本或需要解码的图像，而是直接写成一种“连续记忆令牌”（continuous memory tokens），让下游的语言模型通过其输入嵌入接口直接读取，推理时完全不需要重建文本。\n\n此前，当我们想让大模型处理长对话历史或长文档时，通常有两种压缩方式：一是生成文本摘要，"
+  }
+ ],
+ "continuous memory tokens": [
+  {
+   "id": "a7aad8cbbaafe858",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "LatentPress: Context Compression Beyond Text and Vision",
+   "url": "https://huggingface.co/papers/2609.01507",
+   "score": 8,
+   "summary": "这是一项关于上下文压缩的新研究，提出了一种名为 LatentPress 的方法。它的核心思路是：不再把压缩后的上下文保存为人类可读的文本或需要解码的图像，而是直接写成一种“连续记忆令牌”（continuous memory tokens），让下游的语言模型通过其输入嵌入接口直接读取，推理时完全不需要重建文本。\n\n此前，当我们想让大模型处理长对话历史或长文档时，通常有两种压缩方式：一是生成文本摘要，"
+  }
+ ],
+ "writer": [
+  {
+   "id": "a7aad8cbbaafe858",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "LatentPress: Context Compression Beyond Text and Vision",
+   "url": "https://huggingface.co/papers/2609.01507",
+   "score": 8,
+   "summary": "这是一项关于上下文压缩的新研究，提出了一种名为 LatentPress 的方法。它的核心思路是：不再把压缩后的上下文保存为人类可读的文本或需要解码的图像，而是直接写成一种“连续记忆令牌”（continuous memory tokens），让下游的语言模型通过其输入嵌入接口直接读取，推理时完全不需要重建文本。\n\n此前，当我们想让大模型处理长对话历史或长文档时，通常有两种压缩方式：一是生成文本摘要，"
+  }
+ ],
+ "LongMemEval": [
+  {
+   "id": "a7aad8cbbaafe858",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "LatentPress: Context Compression Beyond Text and Vision",
+   "url": "https://huggingface.co/papers/2609.01507",
+   "score": 8,
+   "summary": "这是一项关于上下文压缩的新研究，提出了一种名为 LatentPress 的方法。它的核心思路是：不再把压缩后的上下文保存为人类可读的文本或需要解码的图像，而是直接写成一种“连续记忆令牌”（continuous memory tokens），让下游的语言模型通过其输入嵌入接口直接读取，推理时完全不需要重建文本。\n\n此前，当我们想让大模型处理长对话历史或长文档时，通常有两种压缩方式：一是生成文本摘要，"
+  }
+ ],
+ "LongBench-QA": [
+  {
+   "id": "a7aad8cbbaafe858",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "LatentPress: Context Compression Beyond Text and Vision",
+   "url": "https://huggingface.co/papers/2609.01507",
+   "score": 8,
+   "summary": "这是一项关于上下文压缩的新研究，提出了一种名为 LatentPress 的方法。它的核心思路是：不再把压缩后的上下文保存为人类可读的文本或需要解码的图像，而是直接写成一种“连续记忆令牌”（continuous memory tokens），让下游的语言模型通过其输入嵌入接口直接读取，推理时完全不需要重建文本。\n\n此前，当我们想让大模型处理长对话历史或长文档时，通常有两种压缩方式：一是生成文本摘要，"
+  }
+ ],
+ "UltraChat": [
+  {
+   "id": "a7aad8cbbaafe858",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "LatentPress: Context Compression Beyond Text and Vision",
+   "url": "https://huggingface.co/papers/2609.01507",
+   "score": 8,
+   "summary": "这是一项关于上下文压缩的新研究，提出了一种名为 LatentPress 的方法。它的核心思路是：不再把压缩后的上下文保存为人类可读的文本或需要解码的图像，而是直接写成一种“连续记忆令牌”（continuous memory tokens），让下游的语言模型通过其输入嵌入接口直接读取，推理时完全不需要重建文本。\n\n此前，当我们想让大模型处理长对话历史或长文档时，通常有两种压缩方式：一是生成文本摘要，"
+  }
+ ],
+ "Gemini 3.8 Flash": [
+  {
+   "id": "355be2cf6d2d139c",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+   "score": 7,
+   "summary": "这是谷歌 DeepMind 推出的新一代 Gemini 3.8 Flash 系列模型，包含基础版与专为网络安全任务优化的 Cyber 版本。其核心变化在于通过架构与训练优化，在保持低延迟和高性价比的同时，显著提升了推理、代码及多模态能力。该发布值得关注，因为它标志着轻量级模型开始深度渗透垂直安全领域，为自动化防御和威胁分析提供了更高效的工具。"
+  }
+ ],
+ "Gemini 3.8 Flash Cyber": [
+  {
+   "id": "355be2cf6d2d139c",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+   "score": 7,
+   "summary": "这是谷歌 DeepMind 推出的新一代 Gemini 3.8 Flash 系列模型，包含基础版与专为网络安全任务优化的 Cyber 版本。其核心变化在于通过架构与训练优化，在保持低延迟和高性价比的同时，显著提升了推理、代码及多模态能力。该发布值得关注，因为它标志着轻量级模型开始深度渗透垂直安全领域，为自动化防御和威胁分析提供了更高效的工具。"
+  }
+ ],
+ "谷歌 DeepMind": [
+  {
+   "id": "355be2cf6d2d139c",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+   "score": 7,
+   "summary": "这是谷歌 DeepMind 推出的新一代 Gemini 3.8 Flash 系列模型，包含基础版与专为网络安全任务优化的 Cyber 版本。其核心变化在于通过架构与训练优化，在保持低延迟和高性价比的同时，显著提升了推理、代码及多模态能力。该发布值得关注，因为它标志着轻量级模型开始深度渗透垂直安全领域，为自动化防御和威胁分析提供了更高效的工具。"
+  }
+ ],
+ "Schneider Electric": [
+  {
+   "id": "a40b0782a69ab874",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Scaling Agents in Europe & The Middle East: Lessons from Schneider Electric, Vodafone, and monday.com",
+   "url": "https://www.langchain.com/blog/scaling-agents-in-europe-the-middle-east-lessons-from-schneider-electric-vodafone-and-monday-com",
+   "score": 7,
+   "summary": "这是一份关于在欧洲和中东地区规模化落地AI智能体的实践指南，分析了施耐德电气、沃达丰和monday.com三家企业的生产级AI部署经验。其核心方法在于从构建共享智能体平台和LLMOps实践入手，转向设计具备更强可观测性、评估和控制能力的多智能体架构。该内容值得关注，因为它揭示了大型企业如何系统性地解决AI智能体从实验走向大规模生产时所面临的工程化与治理挑战。"
+  }
+ ],
+ "Vodafone": [
+  {
+   "id": "a40b0782a69ab874",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Scaling Agents in Europe & The Middle East: Lessons from Schneider Electric, Vodafone, and monday.com",
+   "url": "https://www.langchain.com/blog/scaling-agents-in-europe-the-middle-east-lessons-from-schneider-electric-vodafone-and-monday-com",
+   "score": 7,
+   "summary": "这是一份关于在欧洲和中东地区规模化落地AI智能体的实践指南，分析了施耐德电气、沃达丰和monday.com三家企业的生产级AI部署经验。其核心方法在于从构建共享智能体平台和LLMOps实践入手，转向设计具备更强可观测性、评估和控制能力的多智能体架构。该内容值得关注，因为它揭示了大型企业如何系统性地解决AI智能体从实验走向大规模生产时所面临的工程化与治理挑战。"
+  }
+ ],
+ "monday.com": [
+  {
+   "id": "a40b0782a69ab874",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Scaling Agents in Europe & The Middle East: Lessons from Schneider Electric, Vodafone, and monday.com",
+   "url": "https://www.langchain.com/blog/scaling-agents-in-europe-the-middle-east-lessons-from-schneider-electric-vodafone-and-monday-com",
+   "score": 7,
+   "summary": "这是一份关于在欧洲和中东地区规模化落地AI智能体的实践指南，分析了施耐德电气、沃达丰和monday.com三家企业的生产级AI部署经验。其核心方法在于从构建共享智能体平台和LLMOps实践入手，转向设计具备更强可观测性、评估和控制能力的多智能体架构。该内容值得关注，因为它揭示了大型企业如何系统性地解决AI智能体从实验走向大规模生产时所面临的工程化与治理挑战。"
+  }
+ ],
+ "LLMOps": [
+  {
+   "id": "a40b0782a69ab874",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Scaling Agents in Europe & The Middle East: Lessons from Schneider Electric, Vodafone, and monday.com",
+   "url": "https://www.langchain.com/blog/scaling-agents-in-europe-the-middle-east-lessons-from-schneider-electric-vodafone-and-monday-com",
+   "score": 7,
+   "summary": "这是一份关于在欧洲和中东地区规模化落地AI智能体的实践指南，分析了施耐德电气、沃达丰和monday.com三家企业的生产级AI部署经验。其核心方法在于从构建共享智能体平台和LLMOps实践入手，转向设计具备更强可观测性、评估和控制能力的多智能体架构。该内容值得关注，因为它揭示了大型企业如何系统性地解决AI智能体从实验走向大规模生产时所面临的工程化与治理挑战。"
+  }
+ ],
+ "多智能体架构": [
+  {
+   "id": "a40b0782a69ab874",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "Scaling Agents in Europe & The Middle East: Lessons from Schneider Electric, Vodafone, and monday.com",
+   "url": "https://www.langchain.com/blog/scaling-agents-in-europe-the-middle-east-lessons-from-schneider-electric-vodafone-and-monday-com",
+   "score": 7,
+   "summary": "这是一份关于在欧洲和中东地区规模化落地AI智能体的实践指南，分析了施耐德电气、沃达丰和monday.com三家企业的生产级AI部署经验。其核心方法在于从构建共享智能体平台和LLMOps实践入手，转向设计具备更强可观测性、评估和控制能力的多智能体架构。该内容值得关注，因为它揭示了大型企业如何系统性地解决AI智能体从实验走向大规模生产时所面临的工程化与治理挑战。"
+  }
+ ],
+ "HarnessDev": [
+  {
+   "id": "0e91a157b5aa6d15",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+   "url": "https://huggingface.co/papers/2609.01437",
+   "score": 8,
+   "summary": "HarnessDev 是一个将评估重心从任务输出转移到可运行执行基础设施的基准，它考察大模型能否自行构建并演化自身的智能体执行框架。该基准包含两个阶段：创建阶段要求模型从最小种子和少量示例出发构建完整执行系统，演化阶段则基于下游执行反馈迭代改进自建框架，以提升基准性能。研究发现，在代码、搜索与研究领域，生成框架仍明显落后于成熟的人工参考实现，但在写作和机器学习实验任务上已能匹敌甚至超越参考框架，同"
+  }
+ ],
+ "LLMs": [
+  {
+   "id": "0e91a157b5aa6d15",
+   "date": "2026-09-04",
+   "run_type": "midweek",
+   "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+   "url": "https://huggingface.co/papers/2609.01437",
+   "score": 8,
+   "summary": "HarnessDev 是一个将评估重心从任务输出转移到可运行执行基础设施的基准，它考察大模型能否自行构建并演化自身的智能体执行框架。该基准包含两个阶段：创建阶段要求模型从最小种子和少量示例出发构建完整执行系统，演化阶段则基于下游执行反馈迭代改进自建框架，以提升基准性能。研究发现，在代码、搜索与研究领域，生成框架仍明显落后于成熟的人工参考实现，但在写作和机器学习实验任务上已能匹敌甚至超越参考框架，同"
   }
  ]
 }
