@@ -100,6 +100,24 @@
    "url": "https://www.langchain.com/blog/how-to-design-an-agent-for-production",
    "score": 8,
    "summary": "这篇文章介绍了如何使用 LangChain 框架设计生产级 AI 代理，并以 Cal.ai 的日程安排助手为案例，详细阐述了其技术架构。核心方法包括利用 OpenAI 的函数调用能力、设计工具与提示词，并构建可靠的代理架构。该指南值得关注，因为它为将 AI 代理从原型落地到实际生产环境提供了具体的技术路径和最佳实践。"
+  },
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  },
+  {
+   "id": "3784d7aba9718af9",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Research acceleration: The view inside OpenAI",
+   "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+   "score": 5,
+   "summary": "OpenAI 内部正在使用编码智能体重塑 AI 研究流程。文章展示了智能体使用、实验速度、任务复杂度与研究加速的早期数据。这一变化揭示了前沿 AI 实验室如何通过自动化提升研发效率，值得关注其对行业研究范式的潜在影响。"
   }
  ],
  "安全栈": [
@@ -1468,6 +1486,15 @@
    "url": "https://www.anthropic.com/news/claude-opus-5",
    "score": 9,
    "summary": "Claude Opus 5 是 Anthropic 最新发布的大语言模型，定位为“深思熟虑且主动”的日常主力模型，以接近旗舰模型 Fable 5 的智能水平、但仅需一半成本提供。它取代了前代 Opus 4.8，成为 Claude Max 的默认模型和 Claude Pro 上最强的模型。\n\n此前，AI 应用开发面临一个核心矛盾：要获得顶级智能，往往需要调用最昂贵、最慢的旗舰模型，这在成本敏感或需要"
+  },
+  {
+   "id": "ef6493de68cc63c4",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction",
+   "url": "https://huggingface.co/papers/2609.04611",
+   "score": 8,
+   "summary": "这是来自 Hugging Face Daily Papers 的一篇新基准论文，提出了 τ^τ-bench（读作 hyper-tau-bench），一个将“构建 AI Agent”本身作为评测任务的端到端基准。与以往只评测单个 Agent 在固定任务上的表现不同，τ^τ-bench 评测的是一个开发者 Agent 能否在真实客户交付条件下，从零交付一个可用的客服 Agent。\n\n此前，Agent "
   }
  ],
  "Anthropic": [
@@ -1589,6 +1616,24 @@
    "url": "https://huggingface.co/papers/2607.21557",
    "score": 8,
    "summary": "OpenForgeRL 是一个开源框架，专门用来端到端地训练那些运行在复杂推理脚手架（inference harness）上的 AI 智能体。所谓推理脚手架，就是像 Claude Code、Codex 或 OpenClaw 这类系统，它们负责驱动智能体的多轮推理、工具调用以及与外部环境的交互。OpenForgeRL 的核心价值在于，它让研究人员能够直接在这些真实部署环境中训练和优化智能体，而不需要"
+  },
+  {
+   "id": "0e48367e6ecf6533",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Dr. Claw: An AI Scientist Workspace for Vibe Research",
+   "url": "https://huggingface.co/papers/2609.00365",
+   "score": 8,
+   "summary": "这是一篇关于 Dr. Claw 的论文，它提出了一个面向 AI 辅助科研的工作空间框架，核心思路不是再造一个更聪明的自主 Agent，而是给现有的命令行编码 Agent（比如 Claude Code、Gemini CLI）套上一层可控、可审计、人机协同的编排层。\n\n此前，用 AI 做端到端科研的最大痛点在于流程碎片化。研究人员要在聊天工具里讨论思路、在 IDE 里写代码、在终端里跑实验、在写作环境"
+  },
+  {
+   "id": "ef6493de68cc63c4",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction",
+   "url": "https://huggingface.co/papers/2609.04611",
+   "score": 8,
+   "summary": "这是来自 Hugging Face Daily Papers 的一篇新基准论文，提出了 τ^τ-bench（读作 hyper-tau-bench），一个将“构建 AI Agent”本身作为评测任务的端到端基准。与以往只评测单个 Agent 在固定任务上的表现不同，τ^τ-bench 评测的是一个开发者 Agent 能否在真实客户交付条件下，从零交付一个可用的客服 Agent。\n\n此前，Agent "
   }
  ],
  "Codex": [
@@ -4813,6 +4858,15 @@
    "url": "https://openai.com/index/safety-overview-gpt-6-astra",
    "score": 7,
    "summary": "GPT-6 Astra 是 OpenAI 目前能力最强且已广泛部署的模型，也是其首个在“预备框架”下达到网络安全能力“关键”级别的系统。这里的“预备框架”是 OpenAI 内部用于评估和管控前沿模型潜在灾难性风险的一套分级标准，而“关键”级别意味着该模型在特定高危领域已展现出足以引发严重安全事件的能力。\n\n此前，大语言模型在网络安全领域的应用主要停留在辅助脚本生成、漏洞解释等低风险层面，真正的自主"
+  },
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
   }
  ],
  "预备框架": [
@@ -5033,6 +5087,215 @@
    "url": "https://huggingface.co/papers/2609.01437",
    "score": 8,
    "summary": "HarnessDev 是一个将评估重心从任务输出转移到可运行执行基础设施的基准，它考察大模型能否自行构建并演化自身的智能体执行框架。该基准包含两个阶段：创建阶段要求模型从最小种子和少量示例出发构建完整执行系统，演化阶段则基于下游执行反馈迭代改进自建框架，以提升基准性能。研究发现，在代码、搜索与研究领域，生成框架仍明显落后于成熟的人工参考实现，但在写作和机器学习实验任务上已能匹敌甚至超越参考框架，同"
+  }
+ ],
+ "计算机操作": [
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  }
+ ],
+ "编程": [
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  }
+ ],
+ "网络安全": [
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  }
+ ],
+ "科学研究": [
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  }
+ ],
+ "对齐": [
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  }
+ ],
+ "多模态能力": [
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  }
+ ],
+ "复杂推理": [
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  }
+ ],
+ "偏好优化": [
+  {
+   "id": "039a4975e102cb53",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  }
+ ],
+ "Dr. Claw": [
+  {
+   "id": "0e48367e6ecf6533",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Dr. Claw: An AI Scientist Workspace for Vibe Research",
+   "url": "https://huggingface.co/papers/2609.00365",
+   "score": 8,
+   "summary": "这是一篇关于 Dr. Claw 的论文，它提出了一个面向 AI 辅助科研的工作空间框架，核心思路不是再造一个更聪明的自主 Agent，而是给现有的命令行编码 Agent（比如 Claude Code、Gemini CLI）套上一层可控、可审计、人机协同的编排层。\n\n此前，用 AI 做端到端科研的最大痛点在于流程碎片化。研究人员要在聊天工具里讨论思路、在 IDE 里写代码、在终端里跑实验、在写作环境"
+  }
+ ],
+ "Gemini CLI": [
+  {
+   "id": "0e48367e6ecf6533",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Dr. Claw: An AI Scientist Workspace for Vibe Research",
+   "url": "https://huggingface.co/papers/2609.00365",
+   "score": 8,
+   "summary": "这是一篇关于 Dr. Claw 的论文，它提出了一个面向 AI 辅助科研的工作空间框架，核心思路不是再造一个更聪明的自主 Agent，而是给现有的命令行编码 Agent（比如 Claude Code、Gemini CLI）套上一层可控、可审计、人机协同的编排层。\n\n此前，用 AI 做端到端科研的最大痛点在于流程碎片化。研究人员要在聊天工具里讨论思路、在 IDE 里写代码、在终端里跑实验、在写作环境"
+  }
+ ],
+ "AGPL-3.0": [
+  {
+   "id": "0e48367e6ecf6533",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Dr. Claw: An AI Scientist Workspace for Vibe Research",
+   "url": "https://huggingface.co/papers/2609.00365",
+   "score": 8,
+   "summary": "这是一篇关于 Dr. Claw 的论文，它提出了一个面向 AI 辅助科研的工作空间框架，核心思路不是再造一个更聪明的自主 Agent，而是给现有的命令行编码 Agent（比如 Claude Code、Gemini CLI）套上一层可控、可审计、人机协同的编排层。\n\n此前，用 AI 做端到端科研的最大痛点在于流程碎片化。研究人员要在聊天工具里讨论思路、在 IDE 里写代码、在终端里跑实验、在写作环境"
+  }
+ ],
+ "τ^τ-bench": [
+  {
+   "id": "ef6493de68cc63c4",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction",
+   "url": "https://huggingface.co/papers/2609.04611",
+   "score": 8,
+   "summary": "这是来自 Hugging Face Daily Papers 的一篇新基准论文，提出了 τ^τ-bench（读作 hyper-tau-bench），一个将“构建 AI Agent”本身作为评测任务的端到端基准。与以往只评测单个 Agent 在固定任务上的表现不同，τ^τ-bench 评测的是一个开发者 Agent 能否在真实客户交付条件下，从零交付一个可用的客服 Agent。\n\n此前，Agent "
+  }
+ ],
+ "hyper-tau-bench": [
+  {
+   "id": "ef6493de68cc63c4",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction",
+   "url": "https://huggingface.co/papers/2609.04611",
+   "score": 8,
+   "summary": "这是来自 Hugging Face Daily Papers 的一篇新基准论文，提出了 τ^τ-bench（读作 hyper-tau-bench），一个将“构建 AI Agent”本身作为评测任务的端到端基准。与以往只评测单个 Agent 在固定任务上的表现不同，τ^τ-bench 评测的是一个开发者 Agent 能否在真实客户交付条件下，从零交付一个可用的客服 Agent。\n\n此前，Agent "
+  }
+ ],
+ "编码智能体": [
+  {
+   "id": "3784d7aba9718af9",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Research acceleration: The view inside OpenAI",
+   "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+   "score": 5,
+   "summary": "OpenAI 内部正在使用编码智能体重塑 AI 研究流程。文章展示了智能体使用、实验速度、任务复杂度与研究加速的早期数据。这一变化揭示了前沿 AI 实验室如何通过自动化提升研发效率，值得关注其对行业研究范式的潜在影响。"
+  }
+ ],
+ "Bilevel Coordinated Reflection": [
+  {
+   "id": "6bf8b1e90f30dda5",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems",
+   "url": "https://huggingface.co/papers/2609.02750",
+   "score": 8,
+   "summary": "Bilevel Coordinated Reflection 将多智能体大模型系统中的协调与反思建模为双层协调博弈，其中工作智能体的局部更新近似为势博弈，其均衡松弛由任务分解质量控制。该研究将反思视为语义记忆状态上的随机运动，为自由形式反思推导了有限时间上界并证明了最坏情况紧致性，同时揭示了一个信息论不可能结果：仅观察生成文本的验证门无法在文本不可区分环境中一致改进，而基于环境反馈的门则可以。基于"
+  }
+ ],
+ "多智能体大模型系统": [
+  {
+   "id": "6bf8b1e90f30dda5",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems",
+   "url": "https://huggingface.co/papers/2609.02750",
+   "score": 8,
+   "summary": "Bilevel Coordinated Reflection 将多智能体大模型系统中的协调与反思建模为双层协调博弈，其中工作智能体的局部更新近似为势博弈，其均衡松弛由任务分解质量控制。该研究将反思视为语义记忆状态上的随机运动，为自由形式反思推导了有限时间上界并证明了最坏情况紧致性，同时揭示了一个信息论不可能结果：仅观察生成文本的验证门无法在文本不可区分环境中一致改进，而基于环境反馈的门则可以。基于"
+  }
+ ],
+ "双层协调博弈": [
+  {
+   "id": "6bf8b1e90f30dda5",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems",
+   "url": "https://huggingface.co/papers/2609.02750",
+   "score": 8,
+   "summary": "Bilevel Coordinated Reflection 将多智能体大模型系统中的协调与反思建模为双层协调博弈，其中工作智能体的局部更新近似为势博弈，其均衡松弛由任务分解质量控制。该研究将反思视为语义记忆状态上的随机运动，为自由形式反思推导了有限时间上界并证明了最坏情况紧致性，同时揭示了一个信息论不可能结果：仅观察生成文本的验证门无法在文本不可区分环境中一致改进，而基于环境反馈的门则可以。基于"
+  }
+ ],
+ "势博弈": [
+  {
+   "id": "6bf8b1e90f30dda5",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems",
+   "url": "https://huggingface.co/papers/2609.02750",
+   "score": 8,
+   "summary": "Bilevel Coordinated Reflection 将多智能体大模型系统中的协调与反思建模为双层协调博弈，其中工作智能体的局部更新近似为势博弈，其均衡松弛由任务分解质量控制。该研究将反思视为语义记忆状态上的随机运动，为自由形式反思推导了有限时间上界并证明了最坏情况紧致性，同时揭示了一个信息论不可能结果：仅观察生成文本的验证门无法在文本不可区分环境中一致改进，而基于环境反馈的门则可以。基于"
+  }
+ ],
+ "随机反思记忆上升算法": [
+  {
+   "id": "6bf8b1e90f30dda5",
+   "date": "2026-09-08",
+   "run_type": "midweek",
+   "title": "Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems",
+   "url": "https://huggingface.co/papers/2609.02750",
+   "score": 8,
+   "summary": "Bilevel Coordinated Reflection 将多智能体大模型系统中的协调与反思建模为双层协调博弈，其中工作智能体的局部更新近似为势博弈，其均衡松弛由任务分解质量控制。该研究将反思视为语义记忆状态上的随机运动，为自由形式反思推导了有限时间上界并证明了最坏情况紧致性，同时揭示了一个信息论不可能结果：仅观察生成文本的验证门无法在文本不可区分环境中一致改进，而基于环境反馈的门则可以。基于"
   }
  ]
 }

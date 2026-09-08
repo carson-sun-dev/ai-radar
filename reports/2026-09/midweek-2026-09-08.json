@@ -1,0 +1,676 @@
+{
+ "meta": {
+  "date": "2026-09-08",
+  "run_type": "midweek",
+  "description": "深读：GPT-6 Astra: A new generation of intelligence；Dr. Claw: An AI Scientist Workspace for Vibe Research；τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction",
+  "entities": [
+   "AGPL-3.0",
+   "Bilevel Coordinated Reflection",
+   "Claude Code",
+   "Claude Opus 5",
+   "Dr. Claw",
+   "GPT-6 Astra",
+   "Gemini CLI",
+   "OpenAI",
+   "hyper-tau-bench",
+   "τ^τ-bench",
+   "偏好优化",
+   "势博弈",
+   "双层协调博弈",
+   "复杂推理",
+   "多智能体大模型系统",
+   "多模态能力",
+   "对齐",
+   "科学研究",
+   "编码智能体",
+   "编程",
+   "网络安全",
+   "计算机操作",
+   "随机反思记忆上升算法"
+  ],
+  "tags": [
+   "model",
+   "engineering",
+   "paper"
+  ],
+  "item_count": 33,
+  "sources_failed": [
+   "anthropic-news：HTTP 403（疑似反爬）（已重试 3 次）",
+   "anthropic-engineering：HTTP 403（疑似反爬）（已重试 3 次）",
+   "seed-research：HTTP 403（疑似反爬）（已重试 3 次）",
+   "arxiv-papers：HTTP 429（限流）（已重试 3 次）"
+  ],
+  "tokens_used": 16833,
+  "cost_cny": 0.2273,
+  "duration_seconds": 298.1
+ },
+ "deep": [
+  {
+   "id": "039a4975e102cb53",
+   "source": "openai-news",
+   "title": "GPT-6 Astra: A new generation of intelligence",
+   "url": "https://openai.com/index/gpt-6-astra",
+   "published_at": "2026-09-03T11:00:00Z",
+   "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
+   "category": "model",
+   "score": 9,
+   "score_reason": "GPT-6 Astra是新一代旗舰正式发布，主版本号跃迁，直接影响模型选型与应用架构",
+   "entities": [
+    "GPT-6 Astra",
+    "OpenAI",
+    "计算机操作",
+    "编程",
+    "网络安全",
+    "科学研究",
+    "对齐",
+    "多模态能力",
+    "复杂推理",
+    "偏好优化"
+   ],
+   "analysis": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表现不错，但很难像人类一样在真实数字工作流中无缝切换——比如看懂屏幕上的界面、理解一段代码的上下文、同时判断操作是否安全。三是复杂推理的深度不足，面对需要多步规划、跨领域知识融合的任务（如漏洞挖掘或科学假设生成），模型容易在中间步骤出现逻辑断裂。\n\nGPT-6 Astra 的技术方法要点在于系统性地提升了上述三个维度。在“对齐”方面，资料明确指出它是“最对齐的模型”，这意味着 OpenAI 在训练流程中引入了更精细的偏好优化和安全性约束，让模型在理解指令意图和拒绝有害请求之间取得更好平衡。在能力整合上，Astra 将“计算机使用”作为一项原生能力，这不同于简单的 API 调用——它意味着模型可以直接理解图形界面、操作软件、执行多步自动化任务，同时结合编程能力进行实时调整。编程和网络安全两个方向被单独强调，说明模型在代码生成、漏洞检测、攻击路径分析等专业场景中经过了专项强化，可能采用了领域特化的预训练数据或针对性的强化学习策略。科学能力的提升则暗示模型在长链推理、数学推导、跨学科知识关联上有了质的突破，这通常需要更长的上下文窗口、更稳定的思维链推理以及更丰富的科学文献训练语料。\n\n对 AI 应用岗而言，GPT-6 Astra 的发布传递了几个关键信号。首先是“计算机使用”能力的工程化落地，这意味着面试中可能被问到如何设计一个基于大模型的 RPA（机器人流程自动化）系统，或者如何利用模型的多模态理解能力改造传统 GUI 测试、运维自动化等场景。其次是安全对齐与业务价值的平衡，面试官很可能考察你如何在应用层设计安全护栏，既不让模型过度拒绝导致用户体验差，又能防止越权操作或代码注入风险。最后是领域特化能力的评估方法，编程和网络安全这两个方向说明大模型正在从通用走向垂直深耕，面试中你可以主动讨论如何为特定业务场景构建评测集、如何衡量模型在专业任务上的可靠性，以及如何将通用模型的强推理能力迁移到企业内部的知识库和工作流中。这些点都能直接体现你对生产级 AI 系统设计的理解深度。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "0e48367e6ecf6533",
+   "source": "hf-daily-papers",
+   "title": "Dr. Claw: An AI Scientist Workspace for Vibe Research",
+   "url": "https://huggingface.co/papers/2609.00365",
+   "published_at": "2026-08-31T00:00:00Z",
+   "summary": "Command-line coding agents (e.g., Claude Code, Gemini CLI) can already read and write files and sustain long sessions, yet end-to-end research still fragments across chat tools, IDEs, terminals, and writing environments, and the decisions that make it auditable are rarely preserved. We present Dr. Claw, an open-source workspace that wraps existing coding-agent executors in a controllable and auditable human-in-the-loop workflow rather than introducing another autonomous agent. Persistent state objects, a reusable skill library, and multi-executor coordination link human decisions to AI execution, turning planning, execution, and writing into one traceable, recoverable loop. We demonstrate Dr. Claw through an interactive three-view scenario and a failure-recovery walkthrough, and evaluate it against a bare command-line agent sharing the same backend executor, so the comparison contrasts the whole orchestration layer (task graph, state objects, and skill library) with the agent it wraps. Holding the executor fixed, Dr. Claw scores higher on research completeness while persisting an auditable, recoverable process trail. Demo access: repository https://github.com/OpenLAIR/dr-claw, released under AGPL-3.0 with GPL-3.0 upstream components.",
+   "category": "engineering",
+   "score": 8,
+   "score_reason": "开源AI科研工作空间，可审计可复现，对构建agent工作流有直接工程参考价值",
+   "entities": [
+    "Dr. Claw",
+    "Claude Code",
+    "Gemini CLI",
+    "AGPL-3.0"
+   ],
+   "analysis": "这是一篇关于 Dr. Claw 的论文，它提出了一个面向 AI 辅助科研的工作空间框架，核心思路不是再造一个更聪明的自主 Agent，而是给现有的命令行编码 Agent（比如 Claude Code、Gemini CLI）套上一层可控、可审计、人机协同的编排层。\n\n此前，用 AI 做端到端科研的最大痛点在于流程碎片化。研究人员要在聊天工具里讨论思路、在 IDE 里写代码、在终端里跑实验、在写作环境里整理论文，而 AI Agent 在这些工具间来回切换时，关键的决策过程、中间状态和失败原因往往丢失，导致整个研究过程难以追溯和复现。现有的命令行 Agent 虽然能读写文件、维持长会话，但它们缺乏对研究全流程的结构化管控，人很难在关键节点介入修正，一旦出错就得从头再来。\n\nDr. Claw 的解法是在现有 Agent 执行器之上构建三个核心机制。第一是持久化状态对象，它把研究过程中的规划、执行、写作等环节的状态都保存下来，而不是让它们散落在不同工具的临时会话里。第二是可复用的技能库，将常见的研究操作封装成标准化技能，减少重复配置。第三是多执行器协调，让同一个后端执行器可以被不同的任务图节点调用，人的决策通过任务图与 AI 的执行动作显式关联。这样一来，规划、执行、写作被整合进一个可追踪、可恢复的闭环。论文通过一个交互式三视图场景和一个失败恢复演练来演示这套机制，并在对比实验中固定了后端执行器，单独比较有无 Dr. Claw 编排层的差异，结果显示 Dr. Claw 在研究完整性和过程可审计性上得分更高。\n\n对 AI 应用岗而言，这个工作的启示在于它直面了“生产可用性”的核心矛盾：不是模型不够强，而是工作流不够稳。面试中可以谈的点包括：人机协同的编排层设计如何平衡自动化与可控性；持久化状态对象如何实现研究过程的审计与断点恢复；技能库的抽象如何降低重复性配置成本；以及开源协议（AGPL-3.0）对商业落地的约束考量。这些都是在面试中展示你对 AI 应用工程化思考深度的好素材。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 8
+   }
+  },
+  {
+   "id": "ef6493de68cc63c4",
+   "source": "hf-daily-papers",
+   "title": "τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction",
+   "url": "https://huggingface.co/papers/2609.04611",
+   "published_at": "2026-09-04T00:00:00Z",
+   "summary": "LLM agents are rapidly becoming production software, deployed to handle customer service, adjudicate disputes, and operate internal systems. Notably, the work of building them is increasingly handed to coding agents, yet existing benchmarks say little about whether an AI system can deliver one under the conditions of a real client engagement. We introduce τ^τ-bench (pronounced hyper-tau-bench), a benchmark that makes agent construction the task. A developer agent is given the records a business actually keeps, a client who holds requirements, a production API that operations must run through, a codebase to inherit, and limits on serving cost and models: the same starting point a real engagement provides. From these it must deliver a complete customer-service agent, scored by deploying that agent against held-out simulated users. Across 53 tasks spanning four domains, the strongest configuration, Claude Opus 5 under Claude Code, passes just 23.9% of evaluation simulations. Meanwhile, an expert-authored reference ceiling scores 82.2%. The failures mirror ones human agent developers see: models issue shallow queries in place of deep comprehension of the records, communicate almost nothing to the client, and experiment too little with agent architecture and serving spend, shipping the first design that runs. We aim for τ^τ-bench to turn the work of cooperative agent building into a measurable target for coding agents.",
+   "category": "paper",
+   "score": 8,
+   "score_reason": "端到端Agent构建基准测试，直接面向生产级Agent交付评估，对工程实践有重要参考价值",
+   "entities": [
+    "τ^τ-bench",
+    "hyper-tau-bench",
+    "Claude Opus 5",
+    "Claude Code"
+   ],
+   "analysis": "这是来自 Hugging Face Daily Papers 的一篇新基准论文，提出了 τ^τ-bench（读作 hyper-tau-bench），一个将“构建 AI Agent”本身作为评测任务的端到端基准。与以往只评测单个 Agent 在固定任务上的表现不同，τ^τ-bench 评测的是一个开发者 Agent 能否在真实客户交付条件下，从零交付一个可用的客服 Agent。\n\n此前，Agent 评测的痛点在于脱离实际生产环境。现有基准通常给 Agent 一个干净的任务描述和理想化的 API，考察它能否完成某个单一对话或操作，但这完全忽略了真实场景中构建 Agent 的复杂性。在实际客户项目中，开发者面对的是企业已有的杂乱业务记录、客户模糊且多变的需求、必须通过特定生产 API 操作系统的限制、需要继承的遗留代码库，以及严格的推理成本和模型选型约束。一个能跑通 demo 的 Agent，放到这些条件下往往完全不可用。更关键的是，现在越来越多的 Agent 构建工作本身被交给编码 Agent 来完成，但没有任何基准能衡量一个 AI 系统是否能在真实客户交付条件下完成这项工程任务。\n\nτ^τ-bench 的技术方法正是围绕这一痛点设计。它把 Agent 构建变成一个完整的任务闭环：给开发者 Agent 提供企业实际保留的业务记录、一个持有具体需求的模拟客户、一套生产环境必须使用的 API、一份需要继承的代码库，以及服务成本和可用模型的限制——这完全复刻了真实客户项目的起点条件。开发者 Agent 必须从这些输入出发，交付一个完整的客服 Agent。评分方式不是看中间产出，而是将交付的 Agent 部署到一组留出的模拟用户上进行实际交互测试，根据最终服务质量打分。整个基准覆盖 4 个领域的 53 个任务，并设有一个由人类专家编写的参考实现作为天花板，得分 82.2%。目前最强的配置——Claude Opus 5 配合 Claude Code——仅通过 23.9% 的评测模拟，差距巨大。论文揭示的失败模式与人类 Agent 开发者常遇到的问题高度一致：模型只会做浅层查询而非深度理解业务记录，几乎不与客户沟通澄清需求，对 Agent 架构和服务成本的实验探索极少，倾向于直接交付第一个能跑通的设计。\n\n对 AI 应用岗而言，这个基准的意义在于它直接指向生产可用性。面试中可谈的点包括：第一，它揭示了当前编码 Agent 在工程化交付上的系统性短板，不是某个 prompt 调优能解决的，而是缺乏需求澄清、架构探索、成本权衡等工程思维；第二，它提供了一个可量化的 Agent 构建能力评估框架，未来团队在选型编码 Agent 工具或评估 AI 工程师能力时，可以参照这种“给定真实约束、交付完整系统、用留出用户实测”的评测范式；第三，它强调了 Agent 开发中“与客户协作”的重要性，当前模型几乎不主动沟通，这在实际项目中会导致大量返工，是面试中讨论 AI 应用落地挑战时的绝佳案例。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 4
+   }
+  }
+ ],
+ "mid": [
+  {
+   "id": "3784d7aba9718af9",
+   "source": "openai-news",
+   "title": "Research acceleration: The view inside OpenAI",
+   "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+   "published_at": "2026-09-06T08:00:00Z",
+   "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+   "category": "engineering",
+   "score": 5,
+   "score_reason": "OpenAI内部使用coding agent加速研究的经验数据，有一定参考价值但缺乏可复现细节",
+   "entities": [
+    "OpenAI",
+    "编码智能体"
+   ],
+   "analysis": "OpenAI 内部正在使用编码智能体重塑 AI 研究流程。文章展示了智能体使用、实验速度、任务复杂度与研究加速的早期数据。这一变化揭示了前沿 AI 实验室如何通过自动化提升研发效率，值得关注其对行业研究范式的潜在影响。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "6bf8b1e90f30dda5",
+   "source": "hf-daily-papers",
+   "title": "Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems",
+   "url": "https://huggingface.co/papers/2609.02750",
+   "published_at": "2026-09-02T00:00:00Z",
+   "summary": "Multi-agent LLM systems commonly use an orchestrator to decompose a task for a team of workers and then improve through textual reflection. Despite strong empirical results, these systems lack a unified account of coordination, memory improvement, and the role of external verification. We model orchestrator-worker interaction as a bilevel coordination game: under bounded coupling, the workers' local-update game is an approximate potential game whose equilibrium slack is controlled by decomposition quality. We then analyse reflection as stochastic movement over semantic memory states. For free-form reflection, we derive a finite-time upper bound, prove worst-case tightness, and give a positive lower bound under a falsifiable persistent-harm condition. We further prove an information-theoretic impossibility result: no gate that observes only the generated transcript can improve uniformly over text-indistinguishable environments, whereas an environment-grounded gate can. Motivated by this separation, we introduce Stochastic Reflective Memory Ascent (SRMA), which accepts a candidate memory only after a grounded evaluation risk strictly decreases. Under calibration and non-degenerate corrective mass, SRMA converges exactly, geometrically or polynomially; matching constructions show that both rate regimes are order-tight. We also provide confidence gating for stochastic evaluation and re-anchoring guarantees for piecewise-stationary environments. Experiments instantiate these objec",
+   "category": "paper",
+   "score": 8,
+   "score_reason": "多智能体LLM系统的博弈论协调框架，upvotes高达94，对agent编排有重要工程启发",
+   "entities": [
+    "Bilevel Coordinated Reflection",
+    "多智能体大模型系统",
+    "双层协调博弈",
+    "势博弈",
+    "随机反思记忆上升算法"
+   ],
+   "analysis": "Bilevel Coordinated Reflection 将多智能体大模型系统中的协调与反思建模为双层协调博弈，其中工作智能体的局部更新近似为势博弈，其均衡松弛由任务分解质量控制。该研究将反思视为语义记忆状态上的随机运动，为自由形式反思推导了有限时间上界并证明了最坏情况紧致性，同时揭示了一个信息论不可能结果：仅观察生成文本的验证门无法在文本不可区分环境中一致改进，而基于环境反馈的门则可以。基于这一分离，作者提出了随机反思记忆上升算法，在校准与非退化修正质量条件下可实现精确、几何或多项式收敛，并给出了匹配构造证明两种速率均为阶紧的。这项工作为理解多智能体协调、记忆改进与外部验证的角色提供了统一的理论框架，对构建更可靠的多智能体系统具有重要指导意义。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 94
+   }
+  }
+ ],
+ "glance": {
+  "model": [
+   {
+    "id": "e0f75446731d598c",
+    "source": "openai-news",
+    "title": "An Alien Mind",
+    "url": "https://openai.com/index/an-alien-mind",
+    "published_at": "2026-09-06T09:00:00Z",
+    "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+    "category": "model",
+    "score": 3,
+    "score_reason": "对齐与安全方向的宏观思考，无具体工程方法或模型细节",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "engineering": [
+   {
+    "id": "073b13b14ae0138b",
+    "source": "openai-news",
+    "title": "Supporting independent journalism in Ukraine",
+    "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+    "published_at": "2026-09-07T00:00:00Z",
+    "summary": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
+    "category": "engineering",
+    "score": 1,
+    "score_reason": "与AI应用工程无关的社会公益新闻，无技术参考价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "paper": [
+   {
+    "id": "7e8e741b48ab2968",
+    "source": "hf-daily-papers",
+    "title": "When Models Edit Too Much: On the Fidelity of Minimal Code Edits",
+    "url": "https://huggingface.co/papers/2609.04061",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "Large language models (LLMs) are increasingly used to edit existing code, but correctness alone is not enough: useful repairs should also be minimal, reviewable, and faithful to the original implementation. We study over-editing, the tendency of a model to rewrite code beyond what is required to fix a bug. We construct an evaluation framework from 400 BigCodeBench problems by injecting controlled AST-level corruptions into reference solutions, giving each repair task a known minimal patch. Across frontier LLMs, over-editing is widespread even among strong models like GPT-5.5: high Pass@1 can coexist with unnecessarily large edits and added cognitive complexity. A preservation instruction substantially reduces this behavior, lowering average excess Levenshtein distance from 0.195 to 0.131, reducing added cognitive complexity by 26.6%, and increasing Pass@1 by 2.3 points. However, these gains do not simply follow from a larger reasoning budget or larger models. We next ask whether minimal editing can be learned directly during post-training. We observe that supervised fine-tuning overfits to seen corruption patterns, whereas reinforcement learning gives the best out-of-domain edit-fidelity and performance-retention trade-off. These results position edit fidelity as a distinct axis of code-repair quality and show that it can be measured and learned.",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "LLM代码编辑过度修改问题研究，对生产级代码Agent的reviewability有直接指导意义",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 4
+    }
+   },
+   {
+    "id": "543e50da9548a1d9",
+    "source": "hf-daily-papers",
+    "title": "Iris: Climbing to the Search Frontier",
+    "url": "https://huggingface.co/papers/2609.04304",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "We present Iris-mini and Iris-pro, two search agents trained at the 35B-A3B and 397B-A17B scales, together with the data pipeline and training recipe behind them. Tasks are reverse-constructed from the hyperlink structure of a web corpus: we author multi-hop chains over an entity graph distilled from a seed page and its out-links, rewrite every non-answer entity into a descriptive reference so that no clue can be resolved by string matching, and admit only questions that a reference model fails closed-book yet solves once the supporting evidence is supplied. These questions are then turned into trajectories, which are filtered at both the trajectory and the turn level before SFT. The policy is then optimized by RL against live search, with the reward judge and the observation summarizer served inside the training cluster, and with over-long rollouts interrupted at the request level and resumed from their committed prefix at the next step. We alternate the two stages in a procedure we call SFT-RL climbing, returning the hardest solved and most efficient rollouts of each RL round to the next supervised pass. Because inference-time context management is worth more on these benchmarks than most reported differences between systems, we evaluate every benchmark both with and without it, holding the tool set, the context limit, and the judge fixed. All results come from a single ReAct agent, with no sub-agents and no test-time verification. With management enabled, on BrowseComp, Br",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "两个搜索 agent（35B/397B）附带完整数据流水线和训练配方，对构建搜索型 agent 有直接参考价值，但方法细节需看全文确认可复现性。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 50
+    }
+   },
+   {
+    "id": "1873662d2f880500",
+    "source": "hf-daily-papers",
+    "title": "Enoki: Efficient Multi-Level Hallucination Detection",
+    "url": "https://huggingface.co/papers/2609.00581",
+    "published_at": "2026-09-01T02:21:28Z",
+    "summary": "Ensuring factuality remains a critical challenge for deploying LLMs in high-stakes settings. Existing hallucination detectors usually operate at a single level: claim-level methods provide interpretable factual units, while span-level methods localize unsupported text. Bridging these views is costly, as LLM-heavy pipelines require multiple decomposition and verification calls, and modular systems need additional claim-to-span alignment. We propose Enoki, an Open Information Extraction framework for multi-level hallucination detection. Enoki extracts text-anchored relational facts, verifies them against evidence, and projects unsupported facts back to hallucinated spans. This shared representation enables claim-level verification and span-level localization without requiring separate alignment. Enoki supports LLM-based, encoder-based, and rule-based extraction regimes, balancing accuracy and inference cost through a common interface. Experiments show that Enoki remains competitive with strong claim-level systems while using fewer resources and achieves superior performance on fine-grained span- and entity-level localization. We also release EnokiQA, a dual-granularity dataset with aligned claim-level verification and span-level localization annotations.",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "多层级幻觉检测方法，解决高价值生产场景中的事实性问题，方法可复现",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 16
+    }
+   },
+   {
+    "id": "cba592a991edab3e",
+    "source": "hf-daily-papers",
+    "title": "Refuse without Refusal: A Structural Analysis of Safety-Tuning Responses for Reducing False Refusals in Language Models",
+    "url": "https://huggingface.co/papers/2609.04714",
+    "published_at": "2026-09-04T00:00:00Z",
+    "summary": "Striking a balance between helpfulness and safety remains a fundamental challenge in aligning large language models. To achieve this balance, models should refuse harmful queries (e.g., \"How do I shoot someone?\") while remaining responsive to benign inputs, even those superficially resembling harmful queries (e.g., \"Where can I shoot a good photo?\"). However, models often struggle to distinguish genuinely harmful queries from benign queries that contain superficially risky language, resulting in false refusals. In this paper, we address the issue by decomposing a response in the safety-tuning dataset into two distinct components: (i) a boilerplate refusal statement and (ii) a rationale explaining the refusal. Our experiments and analyses show that refusal statements impede accurate discrimination between harmful and benign queries by inducing reliance on superficial cues. In contrast, training solely on rationales reduces false refusals while maintaining a comparable level of safety performance. Rationale-Only benefits also appear in our ICL configuration and remain compatible with the evaluated inference-time mitigation methods. The results emphasize the necessity of precisely curated, fine-grained safety supervision datasets and outline directions for constructing aligned agents that better reconcile helpfulness with safety.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "分析安全微调导致过度拒绝的结构性原因，对生产环境模型对齐有实际参考意义",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "3d6ede7d25fa2344",
+    "source": "hf-daily-papers",
+    "title": "Ask Before You Optimize: Dynamic Pre-Formulation Clarification for Interactive Optimization",
+    "url": "https://huggingface.co/papers/2609.05258",
+    "published_at": "2026-09-04T00:00:00Z",
+    "summary": "Large language models (LLMs) are increasingly used to formulate optimization models from natural-language problem descriptions, yet realistic operations research (OR) requests are often incomplete: missing objectives, constraints, or business rules can change the resulting mathematical program. Existing evaluations largely assume a complete specification and therefore overlook whether an agent knows when clarification is needed before modeling. We introduce OR-Clarify, a benchmark for pre-formulation clarification. Each task presents a partial public problem description, withholds structured hidden slots, and evaluates agents through bounded interaction with a simulated user. The benchmark supports both openended and choice-based clarification, and measures slot recovery, stopping behavior, silent assumptions, and interaction cost. We further propose Interactive Optimization (InterOPT), a two-stage framework that identifies unresolved formulation-critical gaps and uses them to guide whether to ask the next question or to stop. In our choice-based experiments, InterOPT substantially outperforms all baselines in exact slot recovery; in the open-ended setting, it remains competitive with strong prior methods. Together, OR-Clarify and InterOPT reframe OR assistance as a selective completeness decision: clarify when needed, stop when ready, and quantify what remains missing.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "LLM用于优化建模时的不完整需求处理，对Agent交互设计有参考价值但场景较窄",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 15
+    }
+   },
+   {
+    "id": "b84262c2a2fd901e",
+    "source": "hf-daily-papers",
+    "title": "Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference",
+    "url": "https://huggingface.co/papers/2609.05275",
+    "published_at": "2026-09-04T00:00:00Z",
+    "summary": "Layer dropout (a.k.a. stochastic depth) has been shown to enable faster training, higher accuracy, and robustness to zero-shot layer pruning in both language and vision transformers. However, as models and datasets have scaled, dropout - particularly layer dropout - has largely disappeared from large language models (LLMs) pre-training recipes. While some prior work has reported that dropout can degrade accuracy, no comprehensive study has quantified, let alone mitigated, this effect. In this study, we show that layer dropout should be used in state-of-the-art LLM training, establishing best practices and scaling analysis for both training and post-training benefits. Concretely, with optimal layer distribution, time schedule, and optimizer hyperparameters, we observe that at the same training FLOPs layer dropout leads to lower loss. For a given number of training steps, LLMs can achieve lower or similar validation loss while saving upto 25% of training FLOPs. Moreover, layer dropout enables significant post-training optimizations, such as early exit, intermediate-layer skipping, and self-speculative decoding, yielding up to 1.5x inference speedup with negligible accuracy loss. Across more than 2400 training experiments, spanning models from 271M to 8.2B parameters and datasets up to 160B tokens, we demonstrate that these findings extend reliably to large-scale training regimes. All pre-training experiments were run on Cerebras CS-3 systems.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "Layer Dropout在LLM训练中的重新评估，对训练效率有参考价值但非应用层工程",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 15
+    }
+   },
+   {
+    "id": "41ff4d29a316ac41",
+    "source": "hf-daily-papers",
+    "title": "Knowing What Not to Answer: Selective Non-Compliance in Vision-Language Models",
+    "url": "https://huggingface.co/papers/2609.04720",
+    "published_at": "2026-09-04T00:00:00Z",
+    "summary": "Vision-language models (VLMs) are expected to respond helpfully to appropriate requests while withholding compliance with requests that are incorrect, unsafe, infeasible, or unanswerable. However, existing benchmarks predominantly evaluate non-compliance at the level of the query as a whole, assuming that each request either warrants compliance or requires withholding compliance. In practice, real-world queries can contain a mixture of answerable content and components for which compliance should be withheld. In this paper, we introduce KoNA, a benchmark for evaluating selective non-compliance in VLMs across five categories: False Premise, Visual Inaccessibility, Universal Unknown, Task Feasibility, and Safety. Each task evaluates two capabilities: query-level non-compliance and component-level non-compliance under paired single and compound queries. Our evaluation across diverse VLMs shows that models often fail to refuse, correct, or abstain appropriately, and these failures become more pronounced when queries require selective non-compliance. To address this challenge, we fine-tune VLMs using KoNA examples that require selective non-compliance, together with a fully answerable set that should receive direct answers. Our fine-tuned models achieve substantial improvements in non-compliance accuracy while largely maintaining performance on fully answerable tasks. These results suggest that the fine-tuned models can distinguish between answerable components and those requiring",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "VLM选择性不遵从问题，对应用层安全合规有参考价值但方法偏学术",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "9f5f5ff80ba5bcbd",
+    "source": "hf-daily-papers",
+    "title": "Beneath the Surface of Chains-of-Thought: A Mechanistic Interpretation of Reasoning Operations in LLMs",
+    "url": "https://huggingface.co/papers/2609.04753",
+    "published_at": "2026-09-04T00:00:00Z",
+    "summary": "Reasoning in large language models unfolds through diverse functional operations, such as problem formulation, goal decomposition, and deduction. Although these operations are explicitly distinguished in text, little is known about how they are geometrically organized in representation spaces. To this end, we investigate whether distinct reasoning operations exhibit corresponding geometric structure in hidden representations. We find that operations are separable in held-out representations, with separability peaking in middle layers, and verify that this structure is not explained by lexical or positional confounds. Across layers, token-wise operation-alignment becomes more distributed over spans, while identical surface tokens are represented differently depending on the operation of its surrounding chunk. Attention-masking interventions further show that operation-aligned representations at chunk onset depend on preceding reasoning context. Consequently, our work demonstrates that language models maintain representational correspondence between linguistic reasoning expressions and their internal geometric structures. Code and project materials are available at https://github.com/naver-ai/beneath-cot.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "对CoT推理操作的几何机制解释，偏理论理解，工程直接可用性低",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 10
+    }
+   },
+   {
+    "id": "bb225ef43d752c35",
+    "source": "hf-daily-papers",
+    "title": "RISE: Recursive Improvement via Self-Extrapolating Policy Distillation",
+    "url": "https://huggingface.co/papers/2609.05295",
+    "published_at": "2026-09-04T00:00:00Z",
+    "summary": "On-policy distillation (OPD) provides dense, per-token supervision for language model post-training, but its effectiveness is bottlenecked by teacher quality: external teachers suffer from distribution mismatch, while self-distillation with privileged conditioning is limited by in-context learning capacity. We propose RISE (Recursive Improvement via Self-Extrapolating Policy Distillation), which constructs a synthetic teacher directly from the model's own RLVR training trajectory. By extrapolating the displacement between the current checkpoint and a trailing anchor---in parameter space or output logit space---RISE converts a sparse outcome-induced parameter update into a dense token-level target, without any external model or privileged conditioning. RISE combines RLVR and OPD in a complementary loop: outcome rewards ground the extrapolation toward correct reasoning, while the extrapolated teacher refines token-level decisions. Moreover, since the teacher is refreshed every iteration as the student improves, distillation becomes a recursive improvement mechanism rather than a one-shot compression step. Experiments spanning mathematical reasoning, multi-domain STEM, code generation, and multi-turn agentic tasks show that RISE outperforms RLVR-only training and on-policy self-distillation across all settings.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "语言模型后训练的自蒸馏方法，偏训练技术，与应用层工程实践距离较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 9
+    }
+   },
+   {
+    "id": "91078ae8ed566fc8",
+    "source": "hf-daily-papers",
+    "title": "One Editor, Many Edits: A Unified Training-Free Framework for Diverse Video Editing",
+    "url": "https://huggingface.co/papers/2609.04190",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "Video editing spans diverse editing paradigms, yet achieving high-quality instruction-guided and subject-guided editing within a single unified framework remains challenging. We introduce EditVid, a training-free framework combining sparse causal memory for local coherence, correspondence-based post-attention token injection for long-range identity preservation, and soft latent blending for edit locality. The same framework supports instruction-guided and reference-guided edits, including style transfer, attribute modification, object insertion, part-level editing, and subject replacement. On FiVE, EditVid achieves 78.16 FiVE-Acc, compared with 58.95 for the strongest evaluated training-free baseline, while obtaining competitive results on IVEBench. A user study further shows a 51.8\\% overall preference for EditVid over 7 competing methods.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "统一视频编辑框架，训练免微调，对多模态应用有参考价值但非核心",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 6
+    }
+   },
+   {
+    "id": "eb2c67da4b477d9d",
+    "source": "hf-daily-papers",
+    "title": "MaxKernel: Agentic Kernel Generation for TPUs",
+    "url": "https://huggingface.co/papers/2609.04523",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "Designing and authoring high-performance custom kernels for accelerators is a complex task that requires deep hardware-level expertise. Large Language Models (LLM) can be leveraged together with real-time compiler feedback to build agentic systems for kernel generation. In this work, we present MaxKernel, a multi-agent system that implements three distinct paradigms for TPU kernel development: (1) a Human-in-the-Loop (HITL) agent for collaborative, step-by-step design; (2) an Autonomous (Auto) agent that executes a fully automated, metric/trace-driven optimization loop; and (3) a Graph-Based Autonomous Search that scales the Auto agent for global exploration of the design space. All three paradigms leverage a shared pool of specialized sub-agents to handle planning, implementation, self-debugging, testing, and hardware profiling. We evaluate MaxKernel on JaxBench, a comprehensive suite of 50 diverse kernel tasks for TPUs, alongside complex, real-world workloads from state-of-the-art open-source models. We demonstrate that MaxKernel consistently generates highly optimized implementations, matching expert hand-tuned baselines and delivering significant performance across the benchmark. Our agent is open-sourced and available https://github.com/AI-Hypercomputer/accelerator-agents/tree/main/MaxKernel.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "TPU内核生成的多Agent系统，偏硬件底层，对通用AI应用工程参考有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 9
+    }
+   },
+   {
+    "id": "96593950fabb5ab9",
+    "source": "hf-daily-papers",
+    "title": "ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding",
+    "url": "https://huggingface.co/papers/2609.02780",
+    "published_at": "2026-09-02T00:00:00Z",
+    "summary": "Streaming video understanding is a critical capability for real-world applications, including embodied intelligence, autonomous driving, industrial monitoring, surveillance and early warning, and wearable assistants. However, processing continuous video streams with multimodal large language models (MLLMs) is computationally expensive. Existing efforts have explored reducing streaming overhead through visual token pruning, token merging, quantization, on-demand frame retrieval, and context offloading. However, most existing methods overlook the dimension of model depth. Repeatedly executing full-depth MLLM prefill over incoming frames is prohibitively expensive, incurring substantial computational overhead and causing the KV cache to grow at a rate directly proportional to the prefill depth. To address these challenges, we propose ShallowStream, a novel framework that leverages the shallow layers of an MLLM to simultaneously perform frame encoding and retrieval index building. During stream processing, ShallowStream maintains an always-on lightweight index using the KV cache of shallow layers. During query-time answering, we leverage the attention scores generated by the shallow layers to score context frames and employ a diversity-aware selection strategy to retrieve precise and comprehensive evidence. ShallowStream achieves performance on par with the strongest existing streaming methods, while reducing per-frame prefill latency and 10-second end-to-end latency by up to 52.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "流式视频理解加速方法，思路有参考价值但场景偏边缘端，非主流应用工程方向",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "1d0d661b4f5458e6",
+    "source": "hf-daily-papers",
+    "title": "Group Adaptive Clipping Policy Optimization",
+    "url": "https://huggingface.co/papers/2609.00444",
+    "published_at": "2026-08-31T00:00:00Z",
+    "summary": "Group relative policy optimization for reinforcement learning with verifiable rewards (RLVR) typically uses a fixed importance-sampling (IS) ratio clipping boundary across all rollouts. We identify a key limitation: rare correct rollouts on harder problems and abundant correct rollouts on easier problems are clipped at comparable rates, despite contributing very different learning signals. Rollouts with low group success exhibit larger IS ratios and carry stronger gradient signal for exploration and solving new problems, yet are disproportionately suppressed by fixed clipping. To address this, we propose Group Adaptive Clipping Policy Optimization (GAPO), a plug-in modification to GRPO methods that adapts the clipping boundary to the rollout advantage. GAPO is motivated by a reverse-KL trust-region perspective, which suggests that rollouts with larger learning signal should receive proportionally greater update headroom. GAPO requires no reward shaping and preserves the standard PPO/GSPO surrogate while adapting only the clipping threshold. Across Qwen and Llama models, GAPO consistently improves both Pass@1 and Pass@k over fixed clipping and advantage-shaping baselines on math reasoning and coding benchmarks where the pass rates by the base model are relatively low.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "RLVR策略优化改进，偏强化学习训练技术，与应用层工程实践距离较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 5
+    }
+   },
+   {
+    "id": "2193f898dff56875",
+    "source": "hf-daily-papers",
+    "title": "Unfold The World: Factorize 4D Properties in Reinforcing Spatial Reasoning",
+    "url": "https://huggingface.co/papers/2609.03729",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "Despite the remarkable prowess of Vision-Language Models (VLMs) in general multimodal tasks, they remain fundamentally ``flat'' when reasoning about the physical world. We argue that this spatial bottleneck stems from a profound dimensional mismatch: while VLMs are trained to interpret 2D projections, true spatial reasoning demands the recovery of latent 3D geometry and temporal continuity. To conquer this high-dimensional complexity, we advocate a shift from monolithic learning to a ``divide and conquer'' paradigm. We present FactoSR, a factorized reinforcement learning framework that explicitly interpret the dimensions collapsed by visual projection. At its core, FactoSR decomposes the monolithic problem of world-consistent reasoning into three orthogonal, geometric sub-objectives: planar correspondence (XY), depth consistency (Z), and temporal reversibility (T). By optimizing these verifiable constraints within a unified policy learning mechanism, we effectively transform an ill-posed projection recovery problem into a series of tangible reasoning steps. Extensive evaluations on multi-view and video benchmarks demonstrate that this elegant decomposition yields substantial gains in 3D and 4D reasoning, achieving a 5.9% boost on VSI-Bench and 4.5% on All-Angles-Bench. Our findings suggest that reinforcing explicit, factorized 4D consistency is a critical step toward evolving VLMs into robust, world-aware reasoners.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "VLM空间推理的维度匹配问题，偏理论研究，工程落地距离远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "50d724c92fce6b45",
+    "source": "hf-daily-papers",
+    "title": "HarvestBench: Measuring Whether LLM Agents Will Pay to Avoid Killing Animals",
+    "url": "https://huggingface.co/papers/2609.04444",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "Benchmarks for the side effects an agent causes on the way to a goal already exist, but HarvestBench is the first to put a price on avoiding the side effect and to name that side effect as a living creature. It is a farm simulation: LLM sub-agents drive a crew of two tractors through a cooperative corn harvest, with animals in the field. The environment is a reinforcement learning gridworld, every decision is made without memory, and the harm is never named in the goal. When an animal blocks a tractor's route the autopilot stops and asks the model whether to drive on, at no fuel cost, or swerve around it for a posted fuel price. Kills are compared against two controls: rocks, which damage the tractor and are hit under 1% of the time by every model, and hay bales, which are harmless and not alive. Models can also take crops from the neighbor's field instead of their own, a second test of what they treat as moral. Across nine models and 7,201 priced decisions, 3,951 involved an animal rather than a hay bale or a rock. Kill rates range from 0.4% to 98.8%, with Terra and Sol the most merciful and GPT-4o-mini the most cruel, and they are not ordered by capability. Four of six models were sensitive to price at the 5% level, with elasticities from 0.09 to 1.69. All nine drove over wild animals more often than farmed animals on the default map, and the direction held at every map geometry in every model with room to move. The briefing mattered most: under the morality briefing the ki",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "LLM agent副作用评估基准，新颖但小众，对主流应用工程参考价值有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "8877a9af509a3831",
+    "source": "hf-daily-papers",
+    "title": "The Attention Triangle in Audio-Video Models",
+    "url": "https://huggingface.co/papers/2609.03586",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "Audio-video diffusion models rely on cross-modal attention to coordinate text, sound, and visual content, yet this same mechanism can introduce subtle and systematic semantic leakage. We study these models by probing and analyzing the ``attention triangle,'' comprising the three cross-attention edges connecting the text, audio, and video streams, and examine how semantic information is routed across modalities during generation. Our analysis reveals that routing along the audio-video edge is bidirectional: audio can influence video generation, while video can influence audio generation. This edge is shaped by biases encoded in the model's parameters and emerges as a major contributor to leakage: when prompts are in tension with learned priors, cross-modal interactions may override the intended conditioning and reroute semantics toward visually canonical but incorrect outcomes. These effects suggest that semantic artifacts arise not merely from attention spreading beyond its intended target, but from structured, bias-driven interactions along specific pathways. Building on this perspective, we extract attention-derived signals that expose how semantics are distributed and grounded across modalities, and use them as a diagnostic tool to both analyze and deliberately incur leakage under controlled conditions. This enables us to probe the internal dynamics of cross-modal routing and isolate the role of individual interactions. We further leverage these signals to guide inference-",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "音频-视频扩散模型的注意力三角分析，偏理论探测，与AI应用工程实践距离较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 25
+    }
+   },
+   {
+    "id": "0732cab751554c9c",
+    "source": "hf-daily-papers",
+    "title": "When Quantization Breaks Memory: Recurrent-State Write-Back in Low-Precision Temporal Inference",
+    "url": "https://huggingface.co/papers/2609.04490",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "Quantization is widely used to reduce the computational and memory demands of neural-network inference. In recurrent networks, however, the quantized state is stored and returned at the next time step, so the rule used to store that state can alter subsequent computations. Here, we introduce recurrent-state write-back to denote this rule and isolate its effect in a compact GRU encoder--decoder for fluorescence lifetime imaging, a molecular imaging modality used in quantitative biological imaging. A central task is estimating two lifetime parameters, the short-lived component τ1 and the long-lived component τ2, from high-noise time-resolved fluorescence signals. Holding the trained model fixed, replacing continuous state propagation with deterministic 4-bit state storage increases estimation errors for τ1 and τ2 by approximately 70x and 300x, respectively. Failure occurs when repeated small updates remain below the write threshold, leaving the stored state nearly fixed while the network continues to propose change. Error feedback, residual memory, and direction memory carry information from these suppressed updates across time and recover accuracy without retraining. Precision sweeps show that increasing state precision can worsen a fixed recurrent solution, while matched training shows that compatibility with the state interface can be learned. To test whether this behavior extends beyond the GRU, we repeat the post-training intervention in an independently trained LSTM, wher",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "量化对循环网络推理的影响分析，偏模型推理优化，非当前主流应用工程关注点",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "8a67428c5c191c4d",
+    "source": "hf-daily-papers",
+    "title": "RoboTok: An Internet-Scale Data Engine for Human Demonstration Retrieval and Dexterous Manipulation Learning",
+    "url": "https://huggingface.co/papers/2609.03199",
+    "published_at": "2026-09-02T00:00:00Z",
+    "summary": "Robot learning increasingly depends on broad and diverse demonstrations, yet collecting robot data remains expensive and poorly suited to covering the long tail of real-world tasks. To address this bottleneck, we introduce RoboTok, an internet-scale data engine that, given a query human manipulation video, retrieves manipulation-relevant human demonstrations from web videos for training dexterous robot policies. Specifically, we learn a latent motion space from 3D hand trajectories expressed in estimated actor-centered reference frames. This representation enables manipulation behaviors to be compared across variations in camera viewpoint, scene appearance, and actor occlusions, while remaining compact enough for efficient search and continual indexing over internet-scale video collections. We evaluate RoboTok against existing robot-data retrieval approaches on retrieval benchmarks and downstream robot policy performance. Our results show that RoboTok retrieves more relevant manipulation demonstrations and improves downstream task success, establishing hand-pose trajectory-aware retrieval as a way to make web video a scalable and continuously growing source of supervision for robot learning.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "机器人操作数据引擎，与 AI 应用工程（LLM agent/RAG/上下文工程）距离较远，属于机器人领域专用方法。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 116
+    }
+   },
+   {
+    "id": "d5b93634958702ec",
+    "source": "hf-daily-papers",
+    "title": "Motion-Omni: End-to-End Joint Speech and Full-Body Motion for Spoken Dialogue",
+    "url": "https://huggingface.co/papers/2609.04250",
+    "published_at": "2026-08-28T00:00:00Z",
+    "summary": "An avatar that holds a conversation should decide what to say and to move while saying it, yet these abilities live in separate model families: spoken dialogue models produce speech without motion, and co-speech motion models produce motion only from audio handed to them. The standard remedy is a cascade that first generates the spoken response and then runs a motion model over the finished audio, which requires a second full inference pass and precludes any joint optimisation between the two. We present Motion-Omni, an end-to-end framework in which a spoken dialogue model natively outputs explicit facial expression together with hand, upper-body and lower-body motion, generated directly from the hidden states that produce the speech. Joint training is not optional here: with the speech pathway frozen, motion remains misaligned with the audio, and co-adapting the LLM, Speech Generator and Motion Generator under both objectives is what recovers alignment while retaining spoken-dialogue ability. Supervision comes from a scalable, model-agnostic pipeline that pseudo-labels consistent-voice speech responses with a replaceable motion teacher, yielding 422,856 quality-ranked pairs (1,402 hours). We further release SwDA-500 and, to our knowledge, the first public evaluation protocol for stochastic open-ended full-body spoken dialogue, matching audio across motion systems while unifying rendering, automatic metrics, human evaluation, and latency measurement. Instantiated with a Qwen2",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "语音+全身动作联合生成，偏多模态生成研究，非主流应用工程方向",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 36
+    }
+   },
+   {
+    "id": "931e105f0c64db05",
+    "source": "hf-daily-papers",
+    "title": "UniMate: One Unified Model to Animate Diverse Skeletons",
+    "url": "https://huggingface.co/papers/2609.05415",
+    "published_at": "2026-09-04T00:00:00Z",
+    "summary": "Recent advances in automatic rigging now deliver animation-ready 3D assets at scale, yet generating the motion to drive them remains a bottleneck. Existing learned animators are topology-constrained: they rely on category-specific templates or require per-skeleton fine-tuning and reference motions at inference. We present UniMate, a unified foundation model that synthesizes articulated motion for arbitrary skeletons from a rigged 3D asset and a text prompt, with no test-time optimization or per-skeleton retraining. UniMate introduces a topology-aware diffusion transformer, which integrates skeletal topology into attention via three mechanisms: (1) a graph-aware attention bias from pairwise joint relations and geodesic distances; (2) a spectral rotary position embedding generalizing RoPE to arbitrary kinematic trees via the graph Laplacian; and (3) a global topological conditioner attention-pooled from the rest-pose skeleton. We also curate UniML3D, 13,006 motion sequences spanning bipedal, quadrupedal, avian, marine, insectoid, serpentine, and articulated rigid objects with unified canonicalization and text pairing. Trained on this dataset, UniMate outperforms state-of-the-art baselines in quality, generalization, and efficiency, and supports zero-shot cross-topology transfer, in-betweening, expansion, and text-guided editing. Our project page is available at https://linzhanmou.com/unimate/.",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "3D骨骼动画生成，领域垂直，与主流AI应用工程关联弱",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 12
+    }
+   },
+   {
+    "id": "cbcec04eaca67da5",
+    "source": "hf-daily-papers",
+    "title": "WorldSculpt: Generating Compositional Worlds from Grounded Videos",
+    "url": "https://huggingface.co/papers/2609.05416",
+    "published_at": "2026-09-04T00:00:00Z",
+    "summary": "We study the problem of generating a compositional 3D representation of a cluttered scene containing hundreds of objects. The goal is to represent the scene as a collection of individual object meshes placed in a shared world frame, as required by downstream applications such as gaming, AR/VR, simulation, and robotics. This task is challenging in densely cluttered scenes, where objects heavily occlude one another and each view reveals only a fraction of their geometry. Geometry-based approaches typically reconstruct the scene as a single representation and leave incomplete geometry in occluded regions, while existing compositional methods with generative priors are largely limited to relatively simple scenes. We show that complex scenes with hundreds of objects can instead be generated compositionally by adapting a strong single-object 3D generative prior to multi-view observations. We instantiate this paradigm with Pixal3D, extending it with a multi-view conditioning pathway that grounds object generation in multiple posed observations. Although the model is finetuned entirely on single objects in canonical space, it generalizes to large scenes with severe occlusion without any scene-level training, demonstrating the feasibility and scalability of this paradigm. We further introduce UE-MeshyScene, a photorealistic benchmark of densely cluttered scenes with hundreds of objects, per-object annotations, and ground-truth meshes. Across single-object, controlled multi-object, and",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "3D场景组合生成，与LLM应用工程核心关注点无关",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 21
+    }
+   },
+   {
+    "id": "800d5d224c0c3b2f",
+    "source": "hf-daily-papers",
+    "title": "AdaptVPR: Route-Aware Hard Positive Generation for Robust Visual Place Recognition",
+    "url": "https://huggingface.co/papers/2609.04369",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "Visual Place Recognition (VPR) localizes a query image by retrieving database images of the same or nearby place, yet its robustness is often degraded by domain shifts arising from illumination, weather, seasonal changes, and dynamic occlusions. One contributing factor is the limited appearance diversity of the same place in existing training data. To address this issue, we propose AdaptVPR, a route-aware generative augmentation framework that constructs same-place hard positives for robust VPR training. AdaptVPR first uses a vision language model to parse scene attributes and estimate editing feasibility, while a rule-based scheduler determines the generation route according to editability scores and risk constraints. The generation process is decomposed into three complementary routes: the Global Appearance Route introduces global scene changes in weather, illumination, and time of day; the Local Occlusion Route inserts plausible dynamic occluders; and the Dual Route combines both types of perturbations to produce more challenging appearance shifts. Each generated candidate is evaluated using a VPR-oriented verification scheme based on geometric consistency and appearance diversity, reducing the risk of structural drift while ensuring sufficient appearance variation. Global candidates are generated once and rejected if verification fails, while Local Occlusion and Dual candidates use verification feedback for limited prompt refinement and regeneration. Using this framework,",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "视觉位置识别领域论文，与LLM应用工程核心关注点无关",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "3e9ebe7c4a16ccd4",
+    "source": "hf-daily-papers",
+    "title": "To See a World in a Living Context: Unified Indoor-Outdoor Urban World Generation",
+    "url": "https://huggingface.co/papers/2608.05879",
+    "published_at": "2026-08-29T00:00:00Z",
+    "summary": "Text-driven 3D generation has advanced rapidly in creating large-scale outdoor environments and detailed indoor scenes, but these domains are usually synthesized independently, lacking the correspondence required for a coherent urban world. We present HoloWorld, a unified indoor-outdoor urban world generation framework built on a continuously updated cross-scale world context. Initializing from a user description, HoloWorld progressively represents and updates the diverse world information, from city-scale planning to individual buildings, allowing generated interiors to maintain explicit correspondence with their associated exterior buildings. Conditioned on the evolving context and previously generated neighboring blocks, HoloWorld autoregressively generates urban exteriors with consistent spatial organization and visual identity across blocks. The generated exterior representations are further grounded in 3D building instances and footprints, enabling building-specific indoor generation with geometry-constrained layouts and inherited appearance characteristics. To our knowledge, HoloWorld is the first framework to unify indoor and outdoor generation within a coherent 3D urban world. Extensive experiments demonstrate that HoloWorld achieves superior urban exterior generation performance, improving the average AQS score over the SOTA by 7.68\\% and obtaining the highest average RDR score, while maintaining strong building-level indoor-outdoor correspondence and cross-block co",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "3D场景生成论文，与LLM应用工程核心关注点（RAG/Agent/成本/幻觉）无关",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "80eb9e13c3b1d5eb",
+    "source": "hf-daily-papers",
+    "title": "Real-World Knowledge-Guided Change Data Synthesis for Remote Sensing",
+    "url": "https://huggingface.co/papers/2608.24263",
+    "published_at": "2026-08-25T00:00:00Z",
+    "summary": "Change data synthesis provides a cost-effective solution for expanding training data and improving the performance of change detection models. However, existing synthesis methods typically rely on handcrafted rules to simulate changes, where limited coverage of class transitions restricts the diversity of synthesized data, while predefined transition designs limit their flexibility in accommodating varied change types. In this work, we introduce KnowChange, a knowledge-guided change data synthesis framework that leverages pretrained vision-language models as knowledge sources to reason about plausible change locations and class transitions from pre-change scenes and desired change types. By integrating knowledge-guided change simulation with generalizable synthesis models, KnowChange enables flexible synthesis of diverse change types within a unified framework. Extensive experiments demonstrate that KnowChange-generated data consistently outperforms existing synthetic datasets in both synthetic-to-real transfer and synthetic data augmentation, despite being generated at a compact scale. Further analyses show that the knowledge-guided change simulation can be seamlessly integrated into existing synthesis pipelines and enhance the downstream utility of synthesized data.",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "遥感变化检测数据合成，领域过于垂直，与通用AI应用工程关联弱",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "e27069316d761016",
+    "source": "hf-daily-papers",
+    "title": "The 2026 PNPL Competition: Word Classification and Efficient Cross-Subject Generalisation in LibriBrain100",
+    "url": "https://huggingface.co/papers/2609.03231",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "The ambition of the 2025 PNPL competition (Landau et al., 2025) was to launch a multi-year curriculum for non-invasive speech decoding. Designed to progress from foundational tasks toward the linguistic complexity required for a practical brain-computer interface (BCI), it set the stage with speech detection and phoneme classification tasks. Winning submissions reached F1-macro scores of 95.6% and 73.6% on the respective tasks (Elvers et al., 2026), highly significant advances. This success was built on the LibriBrain dataset (Özdogan et al., 2025), the largest within-subject MEG dataset recorded at the time with {sim}50 hours of data for one subject. However, while within-subject scale drives strong decoding performance, a practical BCI must generalise to new users from minutes of data, not hours. The 2026 PNPL competition responds to this challenge with LibriBrain100 (Mantegna et al., 2026), an extended LibriBrain dataset with 32 additional subjects ({sim}40 minutes each) plus even more within-subject data ({sim}80 hours). Advancing the curriculum of tasks to focus on word classification, two complementary tracks are presented in this competition: the Deep track targets within-subject word classification at scale, aiming at the best possible performance; the Broad track targets cross-subject generalisation, progressively reducing the amount of subject-specific fine-tuning data from {sim}40 to {sim}20 to {sim}10 minutes, a duration that falls within a clinically feasible ran",
+    "category": "paper",
+    "score": 2,
+    "score_reason": "脑机接口语音解码竞赛，与AI应用工程完全无关",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "826ff0c1c6aa5bdc",
+    "source": "hf-daily-papers",
+    "title": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
+    "url": "https://huggingface.co/papers/2609.02887",
+    "published_at": "2026-09-02T00:00:00Z",
+    "summary": "Speech brain-computer interfaces (speech BCIs) translate neural activity into language, offering a path towards restoring speech for people with paralysis and, more broadly, enabling new forms of natural human-computer interaction. Despite this promise, the field lacks a common measure of progress because systems use different datasets, recording methods, types of speech, and vocabularies, so their reported scores are rarely comparable. Underlying this measurement problem are two unresolved questions: (i) what distribution of words should a speech BCI enable a user to communicate, and (ii) how much information from this distribution can a system convey. We address both by deriving open-vocabulary mutual information (OVMI), an information-theoretic quantity that measures the information conveyed by a decoder relative to a reference distribution over the words a user may wish to communicate. This allows capabilities measured under different conditions, such as distinct vocabularies, to be evaluated on a common communication scale. We show that ordinarily reported accuracy, word error rate (WER), and other metrics computed only over the words a system supports can overstate how much of a user's intended speech the system can communicate. We then use OVMI to compare existing systems, expose trade-offs between how much of the user's language a system supports and how accurately it decodes those words, show that these comparisons depend on what the user is expected to communicate, ",
+    "category": "paper",
+    "score": 2,
+    "score_reason": "脑机接口领域的评估标准论文，与 AI 应用工程（LLM 应用、agent、RAG）完全无关，属于生物医学工程方向。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 10
+    }
+   }
+  ]
+ },
+ "unscored": []
+}
