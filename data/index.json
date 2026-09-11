@@ -118,6 +118,24 @@
    "url": "https://openai.com/index/research-acceleration-view-inside-openai",
    "score": 5,
    "summary": "OpenAI 内部正在使用编码智能体重塑 AI 研究流程。文章展示了智能体使用、实验速度、任务复杂度与研究加速的早期数据。这一变化揭示了前沿 AI 实验室如何通过自动化提升研发效率，值得关注其对行业研究范式的潜在影响。"
+  },
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  },
+  {
+   "id": "b32e9b8471353987",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "Introducing the Agents API",
+   "url": "https://openai.com/index/introducing-the-agents-api",
+   "score": 9,
+   "summary": "OpenAI 发布了 Agents API，这是一个托管式云服务，让开发者可以直接构建和部署能在云端长期运行、自主调用工具的 AI 智能体。它基于 Codex harness 进行编排，核心是把过去需要自己搭建的智能体运行环境变成了开箱即用的基础设施。\n\n在此之前，用大模型构建智能体的痛点非常明显。开发者通常要自己处理会话状态的持久化、工具调用的生命周期管理、以及长时间任务的调度与监控。比如一个需"
   }
  ],
  "安全栈": [
@@ -162,6 +180,15 @@
    "url": "https://openai.com/index/previewing-gpt-5-6-sol",
    "score": 9,
    "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  },
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
   }
  ],
  "对齐技术": [
@@ -2583,6 +2610,15 @@
    "url": "https://arxiv.org/abs/2608.29307v1",
    "score": 8,
    "summary": "这篇论文研究检索增强生成中的幻觉检测与修复问题。作者基于人工标注的 RAGTruth 基准，将回答拆分为事实性声明并与检索源逐一比对，比较了删除、替换和重写三种修复策略。实验发现，删除策略能最大程度减少无依据内容，但仅保留原文的 64.3%，而重写策略保留 80.1% 但减少效果最弱。三种策略并非质量高低之分，而是在“依据保留”与“内容完整”之间形成不同取舍，为实际应用中的修复选择提供了实证依据。"
+  },
+  {
+   "id": "28b9e154ef91c2b9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "VikingRAG: Accurate and Token-efficient Retrieval-augmented Generation over Structured Documents",
+   "url": "https://arxiv.org/abs/2609.11390v1",
+   "score": 8,
+   "summary": "VikingRAG 是一种面向结构化文档的检索增强生成系统，其核心目标是在不牺牲回答准确性的前提下，大幅降低 RAG 流程中消耗的 token 数量。它通过将文档的目录结构信息深度融入检索与生成过程，并引入多轮检索轨迹复用与自适应升级策略，实现了对现有方法 token 开销的显著压缩。\n\n传统 RAG 方法在处理结构化文档（如技术手册、学术论文、法律文书）时，往往面临一个两难困境：要获取足够准确的"
   }
  ],
  "蕴含评分": [
@@ -4484,6 +4520,15 @@
    "url": "https://huggingface.co/papers/2608.26530",
    "score": 8,
    "summary": "这是一篇关于让长周期AI智能体在运行过程中实时自我改进的新研究，提出了一个名为PILOT的监督者-工作者架构。\n\n它解决的核心痛点是现有自我改进方法的滞后性。目前，大多数AI智能体在执行长周期任务时，会将运行过程中产生的经验数据保存下来，但分析和改进都发生在任务完全结束后。这就好比一个学生在考试结束后才去对答案，虽然对下次考试有帮助，但无法挽救本次考试中的错误。这种事后处理模式无法在任务执行中途纠"
+  },
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
   }
  ],
  "Kimi-K2.6": [
@@ -4867,6 +4912,15 @@
    "url": "https://openai.com/index/gpt-6-astra",
    "score": 9,
    "summary": "GPT-6 Astra 是 OpenAI 最新发布的旗舰大模型，被定位为“新一代智能”，在计算机操作、编程、网络安全和科学研究等方向上达到了当前最先进的水平。\n\n此前，大模型在实际应用中面临几个核心痛点。一是“对齐”问题，模型有时会输出不符合人类意图或安全规范的内容，尤其在代码生成、系统操作等高风险场景中，这种不可控性直接阻碍了生产落地。二是多模态能力的割裂，模型往往在文本、代码、视觉等单一领域表"
+  },
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
   }
  ],
  "预备框架": [
@@ -5296,6 +5350,292 @@
    "url": "https://huggingface.co/papers/2609.02750",
    "score": 8,
    "summary": "Bilevel Coordinated Reflection 将多智能体大模型系统中的协调与反思建模为双层协调博弈，其中工作智能体的局部更新近似为势博弈，其均衡松弛由任务分解质量控制。该研究将反思视为语义记忆状态上的随机运动，为自由形式反思推导了有限时间上界并证明了最坏情况紧致性，同时揭示了一个信息论不可能结果：仅观察生成文本的验证门无法在文本不可区分环境中一致改进，而基于环境反馈的门则可以。基于"
+  }
+ ],
+ "高级推理能力": [
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  }
+ ],
+ "计算机使用能力": [
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  }
+ ],
+ "写作与设计判断力": [
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  }
+ ],
+ "思考链": [
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  }
+ ],
+ "多模态 Agent": [
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  }
+ ],
+ "RPA": [
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  }
+ ],
+ "RLHF": [
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  }
+ ],
+ "偏好对齐": [
+  {
+   "id": "333ccaae81484d3a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "GPT-6 Astra: The next generation in intelligence for work",
+   "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+   "score": 9,
+   "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  }
+ ],
+ "Agents API": [
+  {
+   "id": "b32e9b8471353987",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "Introducing the Agents API",
+   "url": "https://openai.com/index/introducing-the-agents-api",
+   "score": 9,
+   "summary": "OpenAI 发布了 Agents API，这是一个托管式云服务，让开发者可以直接构建和部署能在云端长期运行、自主调用工具的 AI 智能体。它基于 Codex harness 进行编排，核心是把过去需要自己搭建的智能体运行环境变成了开箱即用的基础设施。\n\n在此之前，用大模型构建智能体的痛点非常明显。开发者通常要自己处理会话状态的持久化、工具调用的生命周期管理、以及长时间任务的调度与监控。比如一个需"
+  }
+ ],
+ "Codex harness": [
+  {
+   "id": "b32e9b8471353987",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "Introducing the Agents API",
+   "url": "https://openai.com/index/introducing-the-agents-api",
+   "score": 9,
+   "summary": "OpenAI 发布了 Agents API，这是一个托管式云服务，让开发者可以直接构建和部署能在云端长期运行、自主调用工具的 AI 智能体。它基于 Codex harness 进行编排，核心是把过去需要自己搭建的智能体运行环境变成了开箱即用的基础设施。\n\n在此之前，用大模型构建智能体的痛点非常明显。开发者通常要自己处理会话状态的持久化、工具调用的生命周期管理、以及长时间任务的调度与监控。比如一个需"
+  }
+ ],
+ "VikingRAG": [
+  {
+   "id": "28b9e154ef91c2b9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "VikingRAG: Accurate and Token-efficient Retrieval-augmented Generation over Structured Documents",
+   "url": "https://arxiv.org/abs/2609.11390v1",
+   "score": 8,
+   "summary": "VikingRAG 是一种面向结构化文档的检索增强生成系统，其核心目标是在不牺牲回答准确性的前提下，大幅降低 RAG 流程中消耗的 token 数量。它通过将文档的目录结构信息深度融入检索与生成过程，并引入多轮检索轨迹复用与自适应升级策略，实现了对现有方法 token 开销的显著压缩。\n\n传统 RAG 方法在处理结构化文档（如技术手册、学术论文、法律文书）时，往往面临一个两难困境：要获取足够准确的"
+  }
+ ],
+ "目录感知语义数据管理": [
+  {
+   "id": "28b9e154ef91c2b9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "VikingRAG: Accurate and Token-efficient Retrieval-augmented Generation over Structured Documents",
+   "url": "https://arxiv.org/abs/2609.11390v1",
+   "score": 8,
+   "summary": "VikingRAG 是一种面向结构化文档的检索增强生成系统，其核心目标是在不牺牲回答准确性的前提下，大幅降低 RAG 流程中消耗的 token 数量。它通过将文档的目录结构信息深度融入检索与生成过程，并引入多轮检索轨迹复用与自适应升级策略，实现了对现有方法 token 开销的显著压缩。\n\n传统 RAG 方法在处理结构化文档（如技术手册、学术论文、法律文书）时，往往面临一个两难困境：要获取足够准确的"
+  }
+ ],
+ "经验边": [
+  {
+   "id": "28b9e154ef91c2b9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "VikingRAG: Accurate and Token-efficient Retrieval-augmented Generation over Structured Documents",
+   "url": "https://arxiv.org/abs/2609.11390v1",
+   "score": 8,
+   "summary": "VikingRAG 是一种面向结构化文档的检索增强生成系统，其核心目标是在不牺牲回答准确性的前提下，大幅降低 RAG 流程中消耗的 token 数量。它通过将文档的目录结构信息深度融入检索与生成过程，并引入多轮检索轨迹复用与自适应升级策略，实现了对现有方法 token 开销的显著压缩。\n\n传统 RAG 方法在处理结构化文档（如技术手册、学术论文、法律文书）时，往往面临一个两难困境：要获取足够准确的"
+  }
+ ],
+ "自适应升级策略": [
+  {
+   "id": "28b9e154ef91c2b9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "VikingRAG: Accurate and Token-efficient Retrieval-augmented Generation over Structured Documents",
+   "url": "https://arxiv.org/abs/2609.11390v1",
+   "score": 8,
+   "summary": "VikingRAG 是一种面向结构化文档的检索增强生成系统，其核心目标是在不牺牲回答准确性的前提下，大幅降低 RAG 流程中消耗的 token 数量。它通过将文档的目录结构信息深度融入检索与生成过程，并引入多轮检索轨迹复用与自适应升级策略，实现了对现有方法 token 开销的显著压缩。\n\n传统 RAG 方法在处理结构化文档（如技术手册、学术论文、法律文书）时，往往面临一个两难困境：要获取足够准确的"
+  }
+ ],
+ "多轮检索轨迹复用": [
+  {
+   "id": "28b9e154ef91c2b9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "VikingRAG: Accurate and Token-efficient Retrieval-augmented Generation over Structured Documents",
+   "url": "https://arxiv.org/abs/2609.11390v1",
+   "score": 8,
+   "summary": "VikingRAG 是一种面向结构化文档的检索增强生成系统，其核心目标是在不牺牲回答准确性的前提下，大幅降低 RAG 流程中消耗的 token 数量。它通过将文档的目录结构信息深度融入检索与生成过程，并引入多轮检索轨迹复用与自适应升级策略，实现了对现有方法 token 开销的显著压缩。\n\n传统 RAG 方法在处理结构化文档（如技术手册、学术论文、法律文书）时，往往面临一个两难困境：要获取足够准确的"
+  }
+ ],
+ "GPT‑Live‑1": [
+  {
+   "id": "b8a75fb67d817922",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+   "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+   "score": 8,
+   "summary": "GPT‑Live‑1 是 OpenAI 在 API 中推出的新能力，为开发者提供自然、全双工的语音对话体验。其核心变化在于增强了指令遵循能力，并支持自定义语音与电话集成，使语音交互更贴近真人对话。这一更新值得关注，因为它将高级语音交互从封闭产品下沉到开放接口，有望推动更多应用场景落地。"
+  }
+ ],
+ "deepseek-recipe": [
+  {
+   "id": "00a1c944eb560a6a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "新仓库 deepseek-ai/deepseek-recipe",
+   "url": "https://github.com/deepseek-ai/deepseek-recipe",
+   "score": 8,
+   "summary": "DeepSeek 在 GitHub 发布了新仓库 deepseek-recipe，这是一个面向大模型训练与推理的开源“配方”项目。该仓库旨在提供可复现的实践方案，帮助开发者更高效地复现和优化 DeepSeek 系列模型的训练流程。这一发布值得关注，因为它将降低社区使用先进大模型技术的门槛，并推动相关工程经验的标准化与共享。"
+  }
+ ],
+ "DeepSeek": [
+  {
+   "id": "00a1c944eb560a6a",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "新仓库 deepseek-ai/deepseek-recipe",
+   "url": "https://github.com/deepseek-ai/deepseek-recipe",
+   "score": 8,
+   "summary": "DeepSeek 在 GitHub 发布了新仓库 deepseek-recipe，这是一个面向大模型训练与推理的开源“配方”项目。该仓库旨在提供可复现的实践方案，帮助开发者更高效地复现和优化 DeepSeek 系列模型的训练流程。这一发布值得关注，因为它将降低社区使用先进大模型技术的门槛，并推动相关工程经验的标准化与共享。"
+  }
+ ],
+ "T1": [
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
+  }
+ ],
+ "122B": [
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
+  }
+ ],
+ "混合专家模型": [
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
+  }
+ ],
+ "密集过程奖励": [
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
+  }
+ ],
+ "TITO": [
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
+  }
+ ],
+ "token 漂移": [
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
+  }
+ ],
+ "Terminal-Bench 2.1": [
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
+  }
+ ],
+ "GPT-5.4": [
+  {
+   "id": "9c97ed659acfe7d9",
+   "date": "2026-09-11",
+   "run_type": "midweek",
+   "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+   "url": "https://huggingface.co/papers/2609.11042",
+   "score": 8,
+   "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
   }
  ]
 }
