@@ -136,6 +136,15 @@
    "url": "https://openai.com/index/introducing-the-agents-api",
    "score": 9,
    "summary": "OpenAI 发布了 Agents API，这是一个托管式云服务，让开发者可以直接构建和部署能在云端长期运行、自主调用工具的 AI 智能体。它基于 Codex harness 进行编排，核心是把过去需要自己搭建的智能体运行环境变成了开箱即用的基础设施。\n\n在此之前，用大模型构建智能体的痛点非常明显。开发者通常要自己处理会话状态的持久化、工具调用的生命周期管理、以及长时间任务的调度与监控。比如一个需"
+  },
+  {
+   "id": "46fcf5bb7b99520f",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+   "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+   "score": 8,
+   "summary": "这篇文章介绍了 OpenAI 如何将 Habitat 从一个 Python 库演进为全球分布式存储平台，以支撑 ChatGPT 超过 10 亿用户和每秒 2200 万次请求的规模。其核心变化在于将存储系统从单机工具重构为可水平扩展的在线服务架构，解决了海量用户下的数据访问瓶颈。这值得关注是因为它展示了 AI 应用从实验性项目走向超大规模生产环境时，底层基础设施必须经历的关键工程化蜕变。"
   }
  ],
  "安全栈": [
@@ -630,6 +639,15 @@
    "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
    "score": 8,
    "summary": "LangChain 正式将 MCP（Model Context Protocol，模型上下文协议）支持集成到 `langchain.mcp` 模块中，底层基于 FastMCP 实现，并遵循 2026 年 7 月 28 日发布的 MCP 规范。MCP 是一种开放协议，旨在标准化 AI 模型与外部工具、数据源之间的交互方式，让模型能够动态发现和调用外部能力。这次集成意味着 LangChain 生态内的"
+  },
+  {
+   "id": "27f2f50d69e9ceef",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "How we built LangChain’s GTM Agent",
+   "url": "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent",
+   "score": 8,
+   "summary": "这是一篇来自 LangChain 官方博客的工程实践复盘，详细拆解了他们如何为自身市场推广（GTM，Go-To-Market）团队构建一个 AI Agent，最终实现了线索转化率提升 250%、每位销售代表每月节省 40 小时的效果。\n\n此前，LangChain 的销售团队面临一个典型的规模化困境：大量入站线索需要人工筛选、研究和个性化外联，这个过程高度重复且耗时。销售代表每天要花数小时查阅潜在客"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -812,6 +830,15 @@
    "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
    "score": 8,
    "summary": "LangChain 正式将 MCP（Model Context Protocol，模型上下文协议）支持集成到 `langchain.mcp` 模块中，底层基于 FastMCP 实现，并遵循 2026 年 7 月 28 日发布的 MCP 规范。MCP 是一种开放协议，旨在标准化 AI 模型与外部工具、数据源之间的交互方式，让模型能够动态发现和调用外部能力。这次集成意味着 LangChain 生态内的"
+  },
+  {
+   "id": "27f2f50d69e9ceef",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "How we built LangChain’s GTM Agent",
+   "url": "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent",
+   "score": 8,
+   "summary": "这是一篇来自 LangChain 官方博客的工程实践复盘，详细拆解了他们如何为自身市场推广（GTM，Go-To-Market）团队构建一个 AI Agent，最终实现了线索转化率提升 250%、每位销售代表每月节省 40 小时的效果。\n\n此前，LangChain 的销售团队面临一个典型的规模化困境：大量入站线索需要人工筛选、研究和个性化外联，这个过程高度重复且耗时。销售代表每天要花数小时查阅潜在客"
   }
  ],
  "Gemini 3.6 Flash": [
@@ -2663,6 +2690,15 @@
    "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
    "score": 7,
    "summary": "这是一则来自 OpenAI 官方的产品更新公告，核心是 ChatGPT 对 GPT-5.6 Sol 模型做了性能提升，同时将 GPT-5.6 Luna 模型向免费用户开放了更多使用权限。\n\n此前，大型语言模型在实际对话应用中面临两个典型痛点。一是模型在长对话或复杂任务中容易出现“前后不一致”的问题，比如同一问题换种问法就给出矛盾答案，或者在处理多步推理时中途偏离逻辑主线。二是高性能模型往往被限制在"
+  },
+  {
+   "id": "46fcf5bb7b99520f",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+   "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+   "score": 8,
+   "summary": "这篇文章介绍了 OpenAI 如何将 Habitat 从一个 Python 库演进为全球分布式存储平台，以支撑 ChatGPT 超过 10 亿用户和每秒 2200 万次请求的规模。其核心变化在于将存储系统从单机工具重构为可水平扩展的在线服务架构，解决了海量用户下的数据访问瓶颈。这值得关注是因为它展示了 AI 应用从实验性项目走向超大规模生产环境时，底层基础设施必须经历的关键工程化蜕变。"
   }
  ],
  "强化学习人类反馈": [
@@ -5636,6 +5672,248 @@
    "url": "https://huggingface.co/papers/2609.11042",
    "score": 8,
    "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
+  }
+ ],
+ "Occamy-1.0": [
+  {
+   "id": "cf484b750f712e3d",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+   "url": "https://huggingface.co/papers/2609.11977",
+   "score": 7,
+   "summary": "这是一篇关于 Occamy-1.0 模型的研究发布，该模型是一个专为“协同工作智能体”设计的 35B 参数开源模型，基于 Qwen3.6-35B-A3B 后训练得到，旨在以更低的成本实现接近前沿模型的复杂任务执行能力。\n\n此前的痛点在于，协同工作智能体在执行复杂工作流时，需要多次调用模型来完成信息收集、工具使用、代码编写和文件操作等步骤。成本和延迟会在整个执行周期中不断累积，因此智能体的实际价值不"
+  }
+ ],
+ "Qwen3.6-35B-A3B": [
+  {
+   "id": "cf484b750f712e3d",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+   "url": "https://huggingface.co/papers/2609.11977",
+   "score": 7,
+   "summary": "这是一篇关于 Occamy-1.0 模型的研究发布，该模型是一个专为“协同工作智能体”设计的 35B 参数开源模型，基于 Qwen3.6-35B-A3B 后训练得到，旨在以更低的成本实现接近前沿模型的复杂任务执行能力。\n\n此前的痛点在于，协同工作智能体在执行复杂工作流时，需要多次调用模型来完成信息收集、工具使用、代码编写和文件操作等步骤。成本和延迟会在整个执行周期中不断累积，因此智能体的实际价值不"
+  }
+ ],
+ "分阶段后训练": [
+  {
+   "id": "cf484b750f712e3d",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+   "url": "https://huggingface.co/papers/2609.11977",
+   "score": 7,
+   "summary": "这是一篇关于 Occamy-1.0 模型的研究发布，该模型是一个专为“协同工作智能体”设计的 35B 参数开源模型，基于 Qwen3.6-35B-A3B 后训练得到，旨在以更低的成本实现接近前沿模型的复杂任务执行能力。\n\n此前的痛点在于，协同工作智能体在执行复杂工作流时，需要多次调用模型来完成信息收集、工具使用、代码编写和文件操作等步骤。成本和延迟会在整个执行周期中不断累积，因此智能体的实际价值不"
+  }
+ ],
+ "帕累托前沿": [
+  {
+   "id": "cf484b750f712e3d",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+   "url": "https://huggingface.co/papers/2609.11977",
+   "score": 7,
+   "summary": "这是一篇关于 Occamy-1.0 模型的研究发布，该模型是一个专为“协同工作智能体”设计的 35B 参数开源模型，基于 Qwen3.6-35B-A3B 后训练得到，旨在以更低的成本实现接近前沿模型的复杂任务执行能力。\n\n此前的痛点在于，协同工作智能体在执行复杂工作流时，需要多次调用模型来完成信息收集、工具使用、代码编写和文件操作等步骤。成本和延迟会在整个执行周期中不断累积，因此智能体的实际价值不"
+  }
+ ],
+ "协同工作智能体": [
+  {
+   "id": "cf484b750f712e3d",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+   "url": "https://huggingface.co/papers/2609.11977",
+   "score": 7,
+   "summary": "这是一篇关于 Occamy-1.0 模型的研究发布，该模型是一个专为“协同工作智能体”设计的 35B 参数开源模型，基于 Qwen3.6-35B-A3B 后训练得到，旨在以更低的成本实现接近前沿模型的复杂任务执行能力。\n\n此前的痛点在于，协同工作智能体在执行复杂工作流时，需要多次调用模型来完成信息收集、工具使用、代码编写和文件操作等步骤。成本和延迟会在整个执行周期中不断累积，因此智能体的实际价值不"
+  }
+ ],
+ "基于执行的数据和环境": [
+  {
+   "id": "cf484b750f712e3d",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+   "url": "https://huggingface.co/papers/2609.11977",
+   "score": 7,
+   "summary": "这是一篇关于 Occamy-1.0 模型的研究发布，该模型是一个专为“协同工作智能体”设计的 35B 参数开源模型，基于 Qwen3.6-35B-A3B 后训练得到，旨在以更低的成本实现接近前沿模型的复杂任务执行能力。\n\n此前的痛点在于，协同工作智能体在执行复杂工作流时，需要多次调用模型来完成信息收集、工具使用、代码编写和文件操作等步骤。成本和延迟会在整个执行周期中不断累积，因此智能体的实际价值不"
+  }
+ ],
+ "LangChain GTM Agent": [
+  {
+   "id": "27f2f50d69e9ceef",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "How we built LangChain’s GTM Agent",
+   "url": "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent",
+   "score": 8,
+   "summary": "这是一篇来自 LangChain 官方博客的工程实践复盘，详细拆解了他们如何为自身市场推广（GTM，Go-To-Market）团队构建一个 AI Agent，最终实现了线索转化率提升 250%、每位销售代表每月节省 40 小时的效果。\n\n此前，LangChain 的销售团队面临一个典型的规模化困境：大量入站线索需要人工筛选、研究和个性化外联，这个过程高度重复且耗时。销售代表每天要花数小时查阅潜在客"
+  }
+ ],
+ "LLM-as-judge": [
+  {
+   "id": "27f2f50d69e9ceef",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "How we built LangChain’s GTM Agent",
+   "url": "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent",
+   "score": 8,
+   "summary": "这是一篇来自 LangChain 官方博客的工程实践复盘，详细拆解了他们如何为自身市场推广（GTM，Go-To-Market）团队构建一个 AI Agent，最终实现了线索转化率提升 250%、每位销售代表每月节省 40 小时的效果。\n\n此前，LangChain 的销售团队面临一个典型的规模化困境：大量入站线索需要人工筛选、研究和个性化外联，这个过程高度重复且耗时。销售代表每天要花数小时查阅潜在客"
+  }
+ ],
+ "GTM Agent": [
+  {
+   "id": "27f2f50d69e9ceef",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "How we built LangChain’s GTM Agent",
+   "url": "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent",
+   "score": 8,
+   "summary": "这是一篇来自 LangChain 官方博客的工程实践复盘，详细拆解了他们如何为自身市场推广（GTM，Go-To-Market）团队构建一个 AI Agent，最终实现了线索转化率提升 250%、每位销售代表每月节省 40 小时的效果。\n\n此前，LangChain 的销售团队面临一个典型的规模化困境：大量入站线索需要人工筛选、研究和个性化外联，这个过程高度重复且耗时。销售代表每天要花数小时查阅潜在客"
+  }
+ ],
+ "StepAudio 3 Gen": [
+  {
+   "id": "8b1a696090094056",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "StepAudio 3 Gen Technical Report",
+   "url": "https://huggingface.co/papers/2609.12945",
+   "score": 7,
+   "summary": "StepAudio 3 Gen 是阶跃星辰发布的一个通用音频生成模型，它在一个统一框架内支持零样本文本转语音、声音设计、歌声生成、音效、音乐、情绪语音以及多种音频类型的混合生成。与近期主流通用音频模型采用的扩散 Transformer 连续生成范式不同，它回归到离散自回归路线，直接在残差向量量化（RVQ，一种将连续信号压缩为多层离散编码的技术）的 token 上对音频进行建模。\n\n此前通用音频生成"
+  }
+ ],
+ "阶跃星辰": [
+  {
+   "id": "8b1a696090094056",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "StepAudio 3 Gen Technical Report",
+   "url": "https://huggingface.co/papers/2609.12945",
+   "score": 7,
+   "summary": "StepAudio 3 Gen 是阶跃星辰发布的一个通用音频生成模型，它在一个统一框架内支持零样本文本转语音、声音设计、歌声生成、音效、音乐、情绪语音以及多种音频类型的混合生成。与近期主流通用音频模型采用的扩散 Transformer 连续生成范式不同，它回归到离散自回归路线，直接在残差向量量化（RVQ，一种将连续信号压缩为多层离散编码的技术）的 token 上对音频进行建模。\n\n此前通用音频生成"
+  }
+ ],
+ "残差向量量化 (RVQ)": [
+  {
+   "id": "8b1a696090094056",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "StepAudio 3 Gen Technical Report",
+   "url": "https://huggingface.co/papers/2609.12945",
+   "score": 7,
+   "summary": "StepAudio 3 Gen 是阶跃星辰发布的一个通用音频生成模型，它在一个统一框架内支持零样本文本转语音、声音设计、歌声生成、音效、音乐、情绪语音以及多种音频类型的混合生成。与近期主流通用音频模型采用的扩散 Transformer 连续生成范式不同，它回归到离散自回归路线，直接在残差向量量化（RVQ，一种将连续信号压缩为多层离散编码的技术）的 token 上对音频进行建模。\n\n此前通用音频生成"
+  }
+ ],
+ "StepAudio Tokenizer": [
+  {
+   "id": "8b1a696090094056",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "StepAudio 3 Gen Technical Report",
+   "url": "https://huggingface.co/papers/2609.12945",
+   "score": 7,
+   "summary": "StepAudio 3 Gen 是阶跃星辰发布的一个通用音频生成模型，它在一个统一框架内支持零样本文本转语音、声音设计、歌声生成、音效、音乐、情绪语音以及多种音频类型的混合生成。与近期主流通用音频模型采用的扩散 Transformer 连续生成范式不同，它回归到离散自回归路线，直接在残差向量量化（RVQ，一种将连续信号压缩为多层离散编码的技术）的 token 上对音频进行建模。\n\n此前通用音频生成"
+  }
+ ],
+ "扩散 Transformer": [
+  {
+   "id": "8b1a696090094056",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "StepAudio 3 Gen Technical Report",
+   "url": "https://huggingface.co/papers/2609.12945",
+   "score": 7,
+   "summary": "StepAudio 3 Gen 是阶跃星辰发布的一个通用音频生成模型，它在一个统一框架内支持零样本文本转语音、声音设计、歌声生成、音效、音乐、情绪语音以及多种音频类型的混合生成。与近期主流通用音频模型采用的扩散 Transformer 连续生成范式不同，它回归到离散自回归路线，直接在残差向量量化（RVQ，一种将连续信号压缩为多层离散编码的技术）的 token 上对音频进行建模。\n\n此前通用音频生成"
+  }
+ ],
+ "RVQ Adaptor": [
+  {
+   "id": "8b1a696090094056",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "StepAudio 3 Gen Technical Report",
+   "url": "https://huggingface.co/papers/2609.12945",
+   "score": 7,
+   "summary": "StepAudio 3 Gen 是阶跃星辰发布的一个通用音频生成模型，它在一个统一框架内支持零样本文本转语音、声音设计、歌声生成、音效、音乐、情绪语音以及多种音频类型的混合生成。与近期主流通用音频模型采用的扩散 Transformer 连续生成范式不同，它回归到离散自回归路线，直接在残差向量量化（RVQ，一种将连续信号压缩为多层离散编码的技术）的 token 上对音频进行建模。\n\n此前通用音频生成"
+  }
+ ],
+ "时间轴自回归 + 码本轴并行": [
+  {
+   "id": "8b1a696090094056",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "StepAudio 3 Gen Technical Report",
+   "url": "https://huggingface.co/papers/2609.12945",
+   "score": 7,
+   "summary": "StepAudio 3 Gen 是阶跃星辰发布的一个通用音频生成模型，它在一个统一框架内支持零样本文本转语音、声音设计、歌声生成、音效、音乐、情绪语音以及多种音频类型的混合生成。与近期主流通用音频模型采用的扩散 Transformer 连续生成范式不同，它回归到离散自回归路线，直接在残差向量量化（RVQ，一种将连续信号压缩为多层离散编码的技术）的 token 上对音频进行建模。\n\n此前通用音频生成"
+  }
+ ],
+ "Habitat": [
+  {
+   "id": "46fcf5bb7b99520f",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+   "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+   "score": 8,
+   "summary": "这篇文章介绍了 OpenAI 如何将 Habitat 从一个 Python 库演进为全球分布式存储平台，以支撑 ChatGPT 超过 10 亿用户和每秒 2200 万次请求的规模。其核心变化在于将存储系统从单机工具重构为可水平扩展的在线服务架构，解决了海量用户下的数据访问瓶颈。这值得关注是因为它展示了 AI 应用从实验性项目走向超大规模生产环境时，底层基础设施必须经历的关键工程化蜕变。"
+  }
+ ],
+ "LLaDA-UI": [
+  {
+   "id": "04521f415e77f497",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "LLaDA-UI: Bringing Block-wise Diffusion to Vision-Language GUI Agents",
+   "url": "https://huggingface.co/papers/2609.13287",
+   "score": 7,
+   "summary": "LLaDA-UI 是一个基于块并行扩散机制的 16.7B 参数多模态 GUI 智能体，它将扩散大语言模型的高效并行解码能力引入视觉-语言任务。其核心方法采用两阶段训练：先用通用多模态预训练对齐原生分辨率视觉编码器与扩散语言骨干，再进行跨移动、桌面、网页等多种平台的 GUI 监督微调。该工作在多个主流定位与导航基准上显著超越 Qwen2.5-VL-7B，并在六项 GUI 基准中的四项优于 Qwen3"
+  }
+ ],
+ "块并行扩散": [
+  {
+   "id": "04521f415e77f497",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "LLaDA-UI: Bringing Block-wise Diffusion to Vision-Language GUI Agents",
+   "url": "https://huggingface.co/papers/2609.13287",
+   "score": 7,
+   "summary": "LLaDA-UI 是一个基于块并行扩散机制的 16.7B 参数多模态 GUI 智能体，它将扩散大语言模型的高效并行解码能力引入视觉-语言任务。其核心方法采用两阶段训练：先用通用多模态预训练对齐原生分辨率视觉编码器与扩散语言骨干，再进行跨移动、桌面、网页等多种平台的 GUI 监督微调。该工作在多个主流定位与导航基准上显著超越 Qwen2.5-VL-7B，并在六项 GUI 基准中的四项优于 Qwen3"
+  }
+ ],
+ "扩散大语言模型": [
+  {
+   "id": "04521f415e77f497",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "LLaDA-UI: Bringing Block-wise Diffusion to Vision-Language GUI Agents",
+   "url": "https://huggingface.co/papers/2609.13287",
+   "score": 7,
+   "summary": "LLaDA-UI 是一个基于块并行扩散机制的 16.7B 参数多模态 GUI 智能体，它将扩散大语言模型的高效并行解码能力引入视觉-语言任务。其核心方法采用两阶段训练：先用通用多模态预训练对齐原生分辨率视觉编码器与扩散语言骨干，再进行跨移动、桌面、网页等多种平台的 GUI 监督微调。该工作在多个主流定位与导航基准上显著超越 Qwen2.5-VL-7B，并在六项 GUI 基准中的四项优于 Qwen3"
+  }
+ ],
+ "Qwen2.5-VL-7B": [
+  {
+   "id": "04521f415e77f497",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "LLaDA-UI: Bringing Block-wise Diffusion to Vision-Language GUI Agents",
+   "url": "https://huggingface.co/papers/2609.13287",
+   "score": 7,
+   "summary": "LLaDA-UI 是一个基于块并行扩散机制的 16.7B 参数多模态 GUI 智能体，它将扩散大语言模型的高效并行解码能力引入视觉-语言任务。其核心方法采用两阶段训练：先用通用多模态预训练对齐原生分辨率视觉编码器与扩散语言骨干，再进行跨移动、桌面、网页等多种平台的 GUI 监督微调。该工作在多个主流定位与导航基准上显著超越 Qwen2.5-VL-7B，并在六项 GUI 基准中的四项优于 Qwen3"
+  }
+ ],
+ "Qwen3-VL-8B": [
+  {
+   "id": "04521f415e77f497",
+   "date": "2026-09-15",
+   "run_type": "midweek",
+   "title": "LLaDA-UI: Bringing Block-wise Diffusion to Vision-Language GUI Agents",
+   "url": "https://huggingface.co/papers/2609.13287",
+   "score": 7,
+   "summary": "LLaDA-UI 是一个基于块并行扩散机制的 16.7B 参数多模态 GUI 智能体，它将扩散大语言模型的高效并行解码能力引入视觉-语言任务。其核心方法采用两阶段训练：先用通用多模态预训练对齐原生分辨率视觉编码器与扩散语言骨干，再进行跨移动、桌面、网页等多种平台的 GUI 监督微调。该工作在多个主流定位与导航基准上显著超越 Qwen2.5-VL-7B，并在六项 GUI 基准中的四项优于 Qwen3"
   }
  ]
 }
