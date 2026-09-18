@@ -839,6 +839,15 @@
    "url": "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent",
    "score": 8,
    "summary": "这是一篇来自 LangChain 官方博客的工程实践复盘，详细拆解了他们如何为自身市场推广（GTM，Go-To-Market）团队构建一个 AI Agent，最终实现了线索转化率提升 250%、每位销售代表每月节省 40 小时的效果。\n\n此前，LangChain 的销售团队面临一个典型的规模化困境：大量入站线索需要人工筛选、研究和个性化外联，这个过程高度重复且耗时。销售代表每天要花数小时查阅潜在客"
+  },
+  {
+   "id": "2d050fdc6b13bc00",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "How Included Health Built Federated Healthcare Agents with LangGraph and Deep Agents",
+   "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+   "score": 7,
+   "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
   }
  ],
  "Gemini 3.6 Flash": [
@@ -1507,6 +1516,15 @@
    "url": "https://www.langchain.com/blog/rebuilding-chat-langchain",
    "score": 8,
    "summary": "去年 LangChain 团队彻底重写了自家的文档问答聊天机器人，从早期基于简单 RAG 的版本升级为基于 Deep Agents 和子图架构的新系统。这次重构的核心目标很明确：把端到端响应时间压到 15 秒以内，同时保证回答中引用的文档片段精确可追溯。\n\n此前他们面临的主要痛点是传统 RAG 模式在复杂查询下的表现不稳定。旧版聊天机器人采用“检索-生成”的线性流程，但用户提问往往不是一步就能解决"
+  },
+  {
+   "id": "2d050fdc6b13bc00",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "How Included Health Built Federated Healthcare Agents with LangGraph and Deep Agents",
+   "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+   "score": 7,
+   "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
   }
  ],
  "基准测试": [
@@ -2121,6 +2139,15 @@
    "url": "https://www.langchain.com/blog/how-toyota-north-america-put-enterprise-ai-on-the-balance-sheet-with-deep-agents-and-langsmith",
    "score": 6,
    "summary": "丰田北美公司展示了如何利用Deep Agents和LangSmith平台，将企业级AI代理从概念验证扩展到50多个生产级代理。其核心变化在于将AI应用的交付周期从6个月大幅缩短至4天，并建立了可追踪AI投资回报率的体系。这一案例值得关注，因为它为大型企业如何规模化落地AI代理、并量化其商业价值提供了可复用的实践路径。"
+  },
+  {
+   "id": "2d050fdc6b13bc00",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "How Included Health Built Federated Healthcare Agents with LangGraph and Deep Agents",
+   "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+   "score": 7,
+   "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
   }
  ],
  "spend limits": [
@@ -2201,6 +2228,15 @@
    "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
    "score": 8,
    "summary": "LangChain 正式将 MCP（Model Context Protocol，模型上下文协议）支持集成到 `langchain.mcp` 模块中，底层基于 FastMCP 实现，并遵循 2026 年 7 月 28 日发布的 MCP 规范。MCP 是一种开放协议，旨在标准化 AI 模型与外部工具、数据源之间的交互方式，让模型能够动态发现和调用外部能力。这次集成意味着 LangChain 生态内的"
+  },
+  {
+   "id": "0b0e1a2f613e23bb",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+   "url": "https://huggingface.co/papers/2609.19969",
+   "score": 8,
+   "summary": "DeepSeek-V4.1-Flash 是一个支持百万级上下文的多模态混合专家模型，拥有 5520 亿骨干参数，但在预填充阶段仅激活 80 亿参数，大幅降低了长上下文智能体工作负载的计算成本。其核心方法是通过因果编码器-解码器架构，结合压缩稀疏注意力中的跨层 KV 缓存复用与 FP4 量化，将全局 KV 缓存压缩至每令牌 890 字节，约为前代模型的四分之一。该工作值得关注，因为它同时解决了长上下"
   }
  ],
  "CoRT": [
@@ -5914,6 +5950,369 @@
    "url": "https://huggingface.co/papers/2609.13287",
    "score": 7,
    "summary": "LLaDA-UI 是一个基于块并行扩散机制的 16.7B 参数多模态 GUI 智能体，它将扩散大语言模型的高效并行解码能力引入视觉-语言任务。其核心方法采用两阶段训练：先用通用多模态预训练对齐原生分辨率视觉编码器与扩散语言骨干，再进行跨移动、桌面、网页等多种平台的 GUI 监督微调。该工作在多个主流定位与导航基准上显著超越 Qwen2.5-VL-7B，并在六项 GUI 基准中的四项优于 Qwen3"
+  }
+ ],
+ "Gemini 3.8 Live": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "Gemini 3.8 Live Extended Thinking": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "边想边说": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "实时多模态交互系统": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "流式语音生成与异步推理结果的时间对齐": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "中断策略": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "Extended Thinking": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "推理调度策略": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "多模态实时交互": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "思考可见性": [
+  {
+   "id": "6aae488b1bb65e59",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+   "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+   "score": 8,
+   "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  }
+ ],
+ "Included Health": [
+  {
+   "id": "2d050fdc6b13bc00",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "How Included Health Built Federated Healthcare Agents with LangGraph and Deep Agents",
+   "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+   "score": 7,
+   "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
+  }
+ ],
+ "Dot": [
+  {
+   "id": "2d050fdc6b13bc00",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "How Included Health Built Federated Healthcare Agents with LangGraph and Deep Agents",
+   "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+   "score": 7,
+   "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
+  }
+ ],
+ "联邦式架构": [
+  {
+   "id": "2d050fdc6b13bc00",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "How Included Health Built Federated Healthcare Agents with LangGraph and Deep Agents",
+   "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+   "score": 7,
+   "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
+  }
+ ],
+ "人在回路": [
+  {
+   "id": "2d050fdc6b13bc00",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "How Included Health Built Federated Healthcare Agents with LangGraph and Deep Agents",
+   "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+   "score": 7,
+   "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
+  }
+ ],
+ "多智能体系统": [
+  {
+   "id": "2d050fdc6b13bc00",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "How Included Health Built Federated Healthcare Agents with LangGraph and Deep Agents",
+   "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+   "score": 7,
+   "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
+  }
+ ],
+ "图结构控制流": [
+  {
+   "id": "2d050fdc6b13bc00",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "How Included Health Built Federated Healthcare Agents with LangGraph and Deep Agents",
+   "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+   "score": 7,
+   "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
+  }
+ ],
+ "Chronicle": [
+  {
+   "id": "6eace613dc324765",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+   "url": "https://arxiv.org/abs/2609.20625v1",
+   "score": 8,
+   "summary": "大型语言模型（LLM）智能体在执行任务时，其输出天然具有非确定性，这导致一个棘手的问题：一次运行中出现的失败很难被稳定复现。Chronicle 正是为解决这一问题而设计的工具，它通过一种称为“切点回放”（cut-point replay）的机制，将一次智能体运行的记录转化为可在持续集成（CI）中反复执行的回归测试。\n\n此前的痛点在于，LLM 智能体的失败依赖多个不可复现的因素：模型推理本身不是比特"
+  }
+ ],
+ "切点回放 (cut-point replay)": [
+  {
+   "id": "6eace613dc324765",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+   "url": "https://arxiv.org/abs/2609.20625v1",
+   "score": 8,
+   "summary": "大型语言模型（LLM）智能体在执行任务时，其输出天然具有非确定性，这导致一个棘手的问题：一次运行中出现的失败很难被稳定复现。Chronicle 正是为解决这一问题而设计的工具，它通过一种称为“切点回放”（cut-point replay）的机制，将一次智能体运行的记录转化为可在持续集成（CI）中反复执行的回归测试。\n\n此前的痛点在于，LLM 智能体的失败依赖多个不可复现的因素：模型推理本身不是比特"
+  }
+ ],
+ "LLM 智能体": [
+  {
+   "id": "6eace613dc324765",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+   "url": "https://arxiv.org/abs/2609.20625v1",
+   "score": 8,
+   "summary": "大型语言模型（LLM）智能体在执行任务时，其输出天然具有非确定性，这导致一个棘手的问题：一次运行中出现的失败很难被稳定复现。Chronicle 正是为解决这一问题而设计的工具，它通过一种称为“切点回放”（cut-point replay）的机制，将一次智能体运行的记录转化为可在持续集成（CI）中反复执行的回归测试。\n\n此前的痛点在于，LLM 智能体的失败依赖多个不可复现的因素：模型推理本身不是比特"
+  }
+ ],
+ "持续集成 (CI)": [
+  {
+   "id": "6eace613dc324765",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+   "url": "https://arxiv.org/abs/2609.20625v1",
+   "score": 8,
+   "summary": "大型语言模型（LLM）智能体在执行任务时，其输出天然具有非确定性，这导致一个棘手的问题：一次运行中出现的失败很难被稳定复现。Chronicle 正是为解决这一问题而设计的工具，它通过一种称为“切点回放”（cut-point replay）的机制，将一次智能体运行的记录转化为可在持续集成（CI）中反复执行的回归测试。\n\n此前的痛点在于，LLM 智能体的失败依赖多个不可复现的因素：模型推理本身不是比特"
+  }
+ ],
+ "回归测试": [
+  {
+   "id": "6eace613dc324765",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+   "url": "https://arxiv.org/abs/2609.20625v1",
+   "score": 8,
+   "summary": "大型语言模型（LLM）智能体在执行任务时，其输出天然具有非确定性，这导致一个棘手的问题：一次运行中出现的失败很难被稳定复现。Chronicle 正是为解决这一问题而设计的工具，它通过一种称为“切点回放”（cut-point replay）的机制，将一次智能体运行的记录转化为可在持续集成（CI）中反复执行的回归测试。\n\n此前的痛点在于，LLM 智能体的失败依赖多个不可复现的因素：模型推理本身不是比特"
+  }
+ ],
+ "非确定性边界": [
+  {
+   "id": "6eace613dc324765",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+   "url": "https://arxiv.org/abs/2609.20625v1",
+   "score": 8,
+   "summary": "大型语言模型（LLM）智能体在执行任务时，其输出天然具有非确定性，这导致一个棘手的问题：一次运行中出现的失败很难被稳定复现。Chronicle 正是为解决这一问题而设计的工具，它通过一种称为“切点回放”（cut-point replay）的机制，将一次智能体运行的记录转化为可在持续集成（CI）中反复执行的回归测试。\n\n此前的痛点在于，LLM 智能体的失败依赖多个不可复现的因素：模型推理本身不是比特"
+  }
+ ],
+ "模型调用": [
+  {
+   "id": "6eace613dc324765",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+   "url": "https://arxiv.org/abs/2609.20625v1",
+   "score": 8,
+   "summary": "大型语言模型（LLM）智能体在执行任务时，其输出天然具有非确定性，这导致一个棘手的问题：一次运行中出现的失败很难被稳定复现。Chronicle 正是为解决这一问题而设计的工具，它通过一种称为“切点回放”（cut-point replay）的机制，将一次智能体运行的记录转化为可在持续集成（CI）中反复执行的回归测试。\n\n此前的痛点在于，LLM 智能体的失败依赖多个不可复现的因素：模型推理本身不是比特"
+  }
+ ],
+ "工具调用": [
+  {
+   "id": "6eace613dc324765",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+   "url": "https://arxiv.org/abs/2609.20625v1",
+   "score": 8,
+   "summary": "大型语言模型（LLM）智能体在执行任务时，其输出天然具有非确定性，这导致一个棘手的问题：一次运行中出现的失败很难被稳定复现。Chronicle 正是为解决这一问题而设计的工具，它通过一种称为“切点回放”（cut-point replay）的机制，将一次智能体运行的记录转化为可在持续集成（CI）中反复执行的回归测试。\n\n此前的痛点在于，LLM 智能体的失败依赖多个不可复现的因素：模型推理本身不是比特"
+  }
+ ],
+ "比特级稳定回放": [
+  {
+   "id": "6eace613dc324765",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+   "url": "https://arxiv.org/abs/2609.20625v1",
+   "score": 8,
+   "summary": "大型语言模型（LLM）智能体在执行任务时，其输出天然具有非确定性，这导致一个棘手的问题：一次运行中出现的失败很难被稳定复现。Chronicle 正是为解决这一问题而设计的工具，它通过一种称为“切点回放”（cut-point replay）的机制，将一次智能体运行的记录转化为可在持续集成（CI）中反复执行的回归测试。\n\n此前的痛点在于，LLM 智能体的失败依赖多个不可复现的因素：模型推理本身不是比特"
+  }
+ ],
+ "AI智能体": [
+  {
+   "id": "a1d018f16fad79f9",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Your Agent Aced the Task. Will It Do It Again?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+   "score": 7,
+   "summary": "这篇文章探讨了AI智能体在任务执行中的可复现性挑战。其核心方法是通过分析智能体在重复任务中的表现波动，揭示了当前评估体系对一次性成功率的过度依赖。这值得关注，因为它指出了从“单次成功”转向“稳定复现”是智能体走向可靠生产环境部署的关键瓶颈。"
+  }
+ ],
+ "可复现性": [
+  {
+   "id": "a1d018f16fad79f9",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Your Agent Aced the Task. Will It Do It Again?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+   "score": 7,
+   "summary": "这篇文章探讨了AI智能体在任务执行中的可复现性挑战。其核心方法是通过分析智能体在重复任务中的表现波动，揭示了当前评估体系对一次性成功率的过度依赖。这值得关注，因为它指出了从“单次成功”转向“稳定复现”是智能体走向可靠生产环境部署的关键瓶颈。"
+  }
+ ],
+ "任务执行": [
+  {
+   "id": "a1d018f16fad79f9",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "Your Agent Aced the Task. Will It Do It Again?",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+   "score": 7,
+   "summary": "这篇文章探讨了AI智能体在任务执行中的可复现性挑战。其核心方法是通过分析智能体在重复任务中的表现波动，揭示了当前评估体系对一次性成功率的过度依赖。这值得关注，因为它指出了从“单次成功”转向“稳定复现”是智能体走向可靠生产环境部署的关键瓶颈。"
+  }
+ ],
+ "DeepSeek-V4.1-Flash": [
+  {
+   "id": "0b0e1a2f613e23bb",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+   "url": "https://huggingface.co/papers/2609.19969",
+   "score": 8,
+   "summary": "DeepSeek-V4.1-Flash 是一个支持百万级上下文的多模态混合专家模型，拥有 5520 亿骨干参数，但在预填充阶段仅激活 80 亿参数，大幅降低了长上下文智能体工作负载的计算成本。其核心方法是通过因果编码器-解码器架构，结合压缩稀疏注意力中的跨层 KV 缓存复用与 FP4 量化，将全局 KV 缓存压缩至每令牌 890 字节，约为前代模型的四分之一。该工作值得关注，因为它同时解决了长上下"
+  }
+ ],
+ "因果编码器-解码器架构": [
+  {
+   "id": "0b0e1a2f613e23bb",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+   "url": "https://huggingface.co/papers/2609.19969",
+   "score": 8,
+   "summary": "DeepSeek-V4.1-Flash 是一个支持百万级上下文的多模态混合专家模型，拥有 5520 亿骨干参数，但在预填充阶段仅激活 80 亿参数，大幅降低了长上下文智能体工作负载的计算成本。其核心方法是通过因果编码器-解码器架构，结合压缩稀疏注意力中的跨层 KV 缓存复用与 FP4 量化，将全局 KV 缓存压缩至每令牌 890 字节，约为前代模型的四分之一。该工作值得关注，因为它同时解决了长上下"
+  }
+ ],
+ "压缩稀疏注意力": [
+  {
+   "id": "0b0e1a2f613e23bb",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+   "url": "https://huggingface.co/papers/2609.19969",
+   "score": 8,
+   "summary": "DeepSeek-V4.1-Flash 是一个支持百万级上下文的多模态混合专家模型，拥有 5520 亿骨干参数，但在预填充阶段仅激活 80 亿参数，大幅降低了长上下文智能体工作负载的计算成本。其核心方法是通过因果编码器-解码器架构，结合压缩稀疏注意力中的跨层 KV 缓存复用与 FP4 量化，将全局 KV 缓存压缩至每令牌 890 字节，约为前代模型的四分之一。该工作值得关注，因为它同时解决了长上下"
+  }
+ ],
+ "跨层 KV 缓存复用": [
+  {
+   "id": "0b0e1a2f613e23bb",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+   "url": "https://huggingface.co/papers/2609.19969",
+   "score": 8,
+   "summary": "DeepSeek-V4.1-Flash 是一个支持百万级上下文的多模态混合专家模型，拥有 5520 亿骨干参数，但在预填充阶段仅激活 80 亿参数，大幅降低了长上下文智能体工作负载的计算成本。其核心方法是通过因果编码器-解码器架构，结合压缩稀疏注意力中的跨层 KV 缓存复用与 FP4 量化，将全局 KV 缓存压缩至每令牌 890 字节，约为前代模型的四分之一。该工作值得关注，因为它同时解决了长上下"
+  }
+ ],
+ "FP4 量化": [
+  {
+   "id": "0b0e1a2f613e23bb",
+   "date": "2026-09-18",
+   "run_type": "midweek",
+   "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+   "url": "https://huggingface.co/papers/2609.19969",
+   "score": 8,
+   "summary": "DeepSeek-V4.1-Flash 是一个支持百万级上下文的多模态混合专家模型，拥有 5520 亿骨干参数，但在预填充阶段仅激活 80 亿参数，大幅降低了长上下文智能体工作负载的计算成本。其核心方法是通过因果编码器-解码器架构，结合压缩稀疏注意力中的跨层 KV 缓存复用与 FP4 量化，将全局 KV 缓存压缩至每令牌 890 字节，约为前代模型的四分之一。该工作值得关注，因为它同时解决了长上下"
   }
  ]
 }
