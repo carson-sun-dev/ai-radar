@@ -1240,6 +1240,15 @@
    "url": "https://huggingface.co/papers/2607.18603",
    "score": 7,
    "summary": "AutoIndex 是一个学习文档表示程序的框架，这些程序是可执行的变换，能将原始文档映射为检索系统所使用的表示。与传统方法仅微调检索器或少量预处理超参数不同，它通过验证引导的程序搜索，让智能体诊断当前程序的失败并合成候选更新，仅保留能提升检索质量的修改。在固定使用 BM25 的 CRUMB 基准测试中，该方法在所有 8 项任务上均提升了召回率，平均 Recall@100 提升 8.4%，nDCG"
+  },
+  {
+   "id": "31d4e4e53563c894",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Re:CAP - Auditing Retrieval Coverage in Production RAG Pipelines",
+   "url": "https://arxiv.org/abs/2609.24122v1",
+   "score": 8,
+   "summary": "这是一篇关于检索增强生成（RAG）系统在生产环境中检索覆盖度审计的新方法研究，提出了名为 Re:CAP 的迭代探测框架。\n\nRAG 系统在生产环境中的检索质量监控一直是个棘手问题。传统做法依赖人工标注所有相关文档来评估召回率，但面对实时更新、包含数百万文档的非稳态语料库，穷举式标注根本不可行。这导致业界普遍将监控重心放在生成质量上，而检索环节的覆盖度——即系统是否遗漏了关键信息——长期处于“黑箱”"
   }
  ],
  "CRUMB": [
@@ -2237,6 +2246,15 @@
    "url": "https://huggingface.co/papers/2609.19969",
    "score": 8,
    "summary": "DeepSeek-V4.1-Flash 是一个支持百万级上下文的多模态混合专家模型，拥有 5520 亿骨干参数，但在预填充阶段仅激活 80 亿参数，大幅降低了长上下文智能体工作负载的计算成本。其核心方法是通过因果编码器-解码器架构，结合压缩稀疏注意力中的跨层 KV 缓存复用与 FP4 量化，将全局 KV 缓存压缩至每令牌 890 字节，约为前代模型的四分之一。该工作值得关注，因为它同时解决了长上下"
+  },
+  {
+   "id": "31d4e4e53563c894",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Re:CAP - Auditing Retrieval Coverage in Production RAG Pipelines",
+   "url": "https://arxiv.org/abs/2609.24122v1",
+   "score": 8,
+   "summary": "这是一篇关于检索增强生成（RAG）系统在生产环境中检索覆盖度审计的新方法研究，提出了名为 Re:CAP 的迭代探测框架。\n\nRAG 系统在生产环境中的检索质量监控一直是个棘手问题。传统做法依赖人工标注所有相关文档来评估召回率，但面对实时更新、包含数百万文档的非稳态语料库，穷举式标注根本不可行。这导致业界普遍将监控重心放在生成质量上，而检索环节的覆盖度——即系统是否遗漏了关键信息——长期处于“黑箱”"
   }
  ],
  "CoRT": [
@@ -3767,6 +3785,15 @@
    "url": "https://huggingface.co/papers/2608.13987",
    "score": 7,
    "summary": "这是一篇关于在 Apple Silicon 上部署 Nanbeige4.2-3B 模型并修复其部署缺陷的技术报告。Nanbeige4.2-3B 是一个 30 亿参数的智能体模型，其核心架构采用了 Looped Transformer（循环 Transformer，一种通过重复使用同一组层进行第二次前向传播来增加模型有效深度而不增加参数量的技术）。\n\n该工作解决的核心痛点是：尽管模型在理论设计上通过"
+  },
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
   }
  ],
  "MPS": [
@@ -4843,6 +4870,15 @@
    "url": "https://arxiv.org/abs/2608.30147v1",
    "score": 8,
    "summary": "这是一篇关于训练可靠长周期工具调用智能体的新方法 CAST 的论文。它提出了一种“批判感知监督”框架，专门用来提升大语言模型智能体在需要多步操作、状态持续变化的复杂任务中的可靠性。\n\n此前，让大模型智能体执行长周期任务时，最大的痛点在于“一步错，步步错”。比如在客服场景中，智能体可能错误地给用户退款，这种操作一旦执行就不可逆，会造成实际损失。更棘手的是，这类错误往往不是每次都出现，而是在多次重复运"
+  },
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
   }
  ],
  "GPT-OSS-120B": [
@@ -4993,6 +5029,15 @@
    "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
    "score": 9,
    "summary": "GPT-6 Astra 是 OpenAI 面向商业场景推出的新一代旗舰模型，定位为“为工作而生的下一代智能”。它不是通用对话模型的简单升级，而是在推理能力、计算机操作、写作与设计判断力三个维度做了针对性强化，目标是直接嵌入企业工作流。\n\n此前，大模型在企业落地时面临几个顽固痛点。一是推理深度不足，面对多步骤分析、数据交叉验证等任务容易产生表面化结论；二是模型只能“说”不能“做”，无法像人类员工一样"
+  },
+  {
+   "id": "8fe4474fdbb9c4c4",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+   "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+   "score": 5,
+   "summary": "Higgsfield AI 借助 GPT-6 Astra 模型，大幅提升了视频广告创作工具的交付速度，能在一天内上线新视频功能。其核心变化在于利用新一代模型的能力，让小型企业更轻松地制作视频广告，并加速创意工具的市场化进程。这值得关注，因为它展示了前沿大模型如何直接赋能中小企业，并显著压缩了产品迭代周期。"
   }
  ],
  "预备框架": [
@@ -5796,6 +5841,15 @@
    "url": "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent",
    "score": 8,
    "summary": "这是一篇来自 LangChain 官方博客的工程实践复盘，详细拆解了他们如何为自身市场推广（GTM，Go-To-Market）团队构建一个 AI Agent，最终实现了线索转化率提升 250%、每位销售代表每月节省 40 小时的效果。\n\n此前，LangChain 的销售团队面临一个典型的规模化困境：大量入站线索需要人工筛选、研究和个性化外联，这个过程高度重复且耗时。销售代表每天要花数小时查阅潜在客"
+  },
+  {
+   "id": "31d4e4e53563c894",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Re:CAP - Auditing Retrieval Coverage in Production RAG Pipelines",
+   "url": "https://arxiv.org/abs/2609.24122v1",
+   "score": 8,
+   "summary": "这是一篇关于检索增强生成（RAG）系统在生产环境中检索覆盖度审计的新方法研究，提出了名为 Re:CAP 的迭代探测框架。\n\nRAG 系统在生产环境中的检索质量监控一直是个棘手问题。传统做法依赖人工标注所有相关文档来评估召回率，但面对实时更新、包含数百万文档的非稳态语料库，穷举式标注根本不可行。这导致业界普遍将监控重心放在生成质量上，而检索环节的覆盖度——即系统是否遗漏了关键信息——长期处于“黑箱”"
   }
  ],
  "GTM Agent": [
@@ -6313,6 +6367,336 @@
    "url": "https://huggingface.co/papers/2609.19969",
    "score": 8,
    "summary": "DeepSeek-V4.1-Flash 是一个支持百万级上下文的多模态混合专家模型，拥有 5520 亿骨干参数，但在预填充阶段仅激活 80 亿参数，大幅降低了长上下文智能体工作负载的计算成本。其核心方法是通过因果编码器-解码器架构，结合压缩稀疏注意力中的跨层 KV 缓存复用与 FP4 量化，将全局 KV 缓存压缩至每令牌 890 字节，约为前代模型的四分之一。该工作值得关注，因为它同时解决了长上下"
+  }
+ ],
+ "Qwen-Image-2.1": [
+  {
+   "id": "2905592015494e06",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "新仓库 QwenLM/Qwen-Image-2.1",
+   "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "score": 7,
+   "summary": "这是阿里通义千问团队发布的最新开源图像生成模型 Qwen-Image-2.1，被官方定位为“Qwen 最强大的开源图像生成模型”。它不是一个简单的模型升级，而是一个面向生产环境的完整图像生成系统，同时支持文生图、图像编辑、多图合成等多种任务。\n\n此前开源图像生成领域存在几个核心痛点。一是单一模型能力割裂，文生图、图像编辑、风格迁移等任务往往需要不同模型，开发者在实际产品中要维护多个模型管线，成本高"
+  }
+ ],
+ "QwenLM/Qwen-Image-2.1": [
+  {
+   "id": "2905592015494e06",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "新仓库 QwenLM/Qwen-Image-2.1",
+   "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "score": 7,
+   "summary": "这是阿里通义千问团队发布的最新开源图像生成模型 Qwen-Image-2.1，被官方定位为“Qwen 最强大的开源图像生成模型”。它不是一个简单的模型升级，而是一个面向生产环境的完整图像生成系统，同时支持文生图、图像编辑、多图合成等多种任务。\n\n此前开源图像生成领域存在几个核心痛点。一是单一模型能力割裂，文生图、图像编辑、风格迁移等任务往往需要不同模型，开发者在实际产品中要维护多个模型管线，成本高"
+  }
+ ],
+ "文生图": [
+  {
+   "id": "2905592015494e06",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "新仓库 QwenLM/Qwen-Image-2.1",
+   "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "score": 7,
+   "summary": "这是阿里通义千问团队发布的最新开源图像生成模型 Qwen-Image-2.1，被官方定位为“Qwen 最强大的开源图像生成模型”。它不是一个简单的模型升级，而是一个面向生产环境的完整图像生成系统，同时支持文生图、图像编辑、多图合成等多种任务。\n\n此前开源图像生成领域存在几个核心痛点。一是单一模型能力割裂，文生图、图像编辑、风格迁移等任务往往需要不同模型，开发者在实际产品中要维护多个模型管线，成本高"
+  }
+ ],
+ "图像编辑": [
+  {
+   "id": "2905592015494e06",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "新仓库 QwenLM/Qwen-Image-2.1",
+   "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "score": 7,
+   "summary": "这是阿里通义千问团队发布的最新开源图像生成模型 Qwen-Image-2.1，被官方定位为“Qwen 最强大的开源图像生成模型”。它不是一个简单的模型升级，而是一个面向生产环境的完整图像生成系统，同时支持文生图、图像编辑、多图合成等多种任务。\n\n此前开源图像生成领域存在几个核心痛点。一是单一模型能力割裂，文生图、图像编辑、风格迁移等任务往往需要不同模型，开发者在实际产品中要维护多个模型管线，成本高"
+  }
+ ],
+ "多图合成": [
+  {
+   "id": "2905592015494e06",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "新仓库 QwenLM/Qwen-Image-2.1",
+   "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "score": 7,
+   "summary": "这是阿里通义千问团队发布的最新开源图像生成模型 Qwen-Image-2.1，被官方定位为“Qwen 最强大的开源图像生成模型”。它不是一个简单的模型升级，而是一个面向生产环境的完整图像生成系统，同时支持文生图、图像编辑、多图合成等多种任务。\n\n此前开源图像生成领域存在几个核心痛点。一是单一模型能力割裂，文生图、图像编辑、风格迁移等任务往往需要不同模型，开发者在实际产品中要维护多个模型管线，成本高"
+  }
+ ],
+ "视觉-语言理解与生成框架": [
+  {
+   "id": "2905592015494e06",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "新仓库 QwenLM/Qwen-Image-2.1",
+   "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "score": 7,
+   "summary": "这是阿里通义千问团队发布的最新开源图像生成模型 Qwen-Image-2.1，被官方定位为“Qwen 最强大的开源图像生成模型”。它不是一个简单的模型升级，而是一个面向生产环境的完整图像生成系统，同时支持文生图、图像编辑、多图合成等多种任务。\n\n此前开源图像生成领域存在几个核心痛点。一是单一模型能力割裂，文生图、图像编辑、风格迁移等任务往往需要不同模型，开发者在实际产品中要维护多个模型管线，成本高"
+  }
+ ],
+ "扩散生成": [
+  {
+   "id": "2905592015494e06",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "新仓库 QwenLM/Qwen-Image-2.1",
+   "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "score": 7,
+   "summary": "这是阿里通义千问团队发布的最新开源图像生成模型 Qwen-Image-2.1，被官方定位为“Qwen 最强大的开源图像生成模型”。它不是一个简单的模型升级，而是一个面向生产环境的完整图像生成系统，同时支持文生图、图像编辑、多图合成等多种任务。\n\n此前开源图像生成领域存在几个核心痛点。一是单一模型能力割裂，文生图、图像编辑、风格迁移等任务往往需要不同模型，开发者在实际产品中要维护多个模型管线，成本高"
+  }
+ ],
+ "通义千问": [
+  {
+   "id": "2905592015494e06",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "新仓库 QwenLM/Qwen-Image-2.1",
+   "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "score": 7,
+   "summary": "这是阿里通义千问团队发布的最新开源图像生成模型 Qwen-Image-2.1，被官方定位为“Qwen 最强大的开源图像生成模型”。它不是一个简单的模型升级，而是一个面向生产环境的完整图像生成系统，同时支持文生图、图像编辑、多图合成等多种任务。\n\n此前开源图像生成领域存在几个核心痛点。一是单一模型能力割裂，文生图、图像编辑、风格迁移等任务往往需要不同模型，开发者在实际产品中要维护多个模型管线，成本高"
+  }
+ ],
+ "SiliconBench": [
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
+  }
+ ],
+ "Qwen3.5": [
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
+  }
+ ],
+ "Gemma 4": [
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
+  }
+ ],
+ "vllm-metal": [
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
+  }
+ ],
+ "CUDA vLLM": [
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
+  }
+ ],
+ "SGLang": [
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
+  }
+ ],
+ "omlx": [
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
+  }
+ ],
+ "DGX Spark": [
+  {
+   "id": "3a61fc3d4d9b39e8",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+   "url": "https://huggingface.co/papers/2609.19169",
+   "score": 8,
+   "summary": "我们介绍的是 SiliconBench，一个专门针对统一内存架构桌面端（如 Apple Silicon 设备）的 LLM 本地并发推理评测基准。它不再只看吞吐速度，而是从速度、内存占用和输出保真度三个维度，系统评估了九款 Apple Silicon 推理引擎在聊天和智能体任务上的表现。\n\n此前，本地 LLM 推理的评测几乎只关注生成速度，忽略了两个关键痛点。第一，统一内存架构下，CPU 和 GPU"
+  }
+ ],
+ "Re:CAP": [
+  {
+   "id": "31d4e4e53563c894",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Re:CAP - Auditing Retrieval Coverage in Production RAG Pipelines",
+   "url": "https://arxiv.org/abs/2609.24122v1",
+   "score": 8,
+   "summary": "这是一篇关于检索增强生成（RAG）系统在生产环境中检索覆盖度审计的新方法研究，提出了名为 Re:CAP 的迭代探测框架。\n\nRAG 系统在生产环境中的检索质量监控一直是个棘手问题。传统做法依赖人工标注所有相关文档来评估召回率，但面对实时更新、包含数百万文档的非稳态语料库，穷举式标注根本不可行。这导致业界普遍将监控重心放在生成质量上，而检索环节的覆盖度——即系统是否遗漏了关键信息——长期处于“黑箱”"
+  }
+ ],
+ "RAG (检索增强生成)": [
+  {
+   "id": "31d4e4e53563c894",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Re:CAP - Auditing Retrieval Coverage in Production RAG Pipelines",
+   "url": "https://arxiv.org/abs/2609.24122v1",
+   "score": 8,
+   "summary": "这是一篇关于检索增强生成（RAG）系统在生产环境中检索覆盖度审计的新方法研究，提出了名为 Re:CAP 的迭代探测框架。\n\nRAG 系统在生产环境中的检索质量监控一直是个棘手问题。传统做法依赖人工标注所有相关文档来评估召回率，但面对实时更新、包含数百万文档的非稳态语料库，穷举式标注根本不可行。这导致业界普遍将监控重心放在生成质量上，而检索环节的覆盖度——即系统是否遗漏了关键信息——长期处于“黑箱”"
+  }
+ ],
+ "TREC-COVID": [
+  {
+   "id": "31d4e4e53563c894",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Re:CAP - Auditing Retrieval Coverage in Production RAG Pipelines",
+   "url": "https://arxiv.org/abs/2609.24122v1",
+   "score": 8,
+   "summary": "这是一篇关于检索增强生成（RAG）系统在生产环境中检索覆盖度审计的新方法研究，提出了名为 Re:CAP 的迭代探测框架。\n\nRAG 系统在生产环境中的检索质量监控一直是个棘手问题。传统做法依赖人工标注所有相关文档来评估召回率，但面对实时更新、包含数百万文档的非稳态语料库，穷举式标注根本不可行。这导致业界普遍将监控重心放在生成质量上，而检索环节的覆盖度——即系统是否遗漏了关键信息——长期处于“黑箱”"
+  }
+ ],
+ "MuSiQue": [
+  {
+   "id": "31d4e4e53563c894",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Re:CAP - Auditing Retrieval Coverage in Production RAG Pipelines",
+   "url": "https://arxiv.org/abs/2609.24122v1",
+   "score": 8,
+   "summary": "这是一篇关于检索增强生成（RAG）系统在生产环境中检索覆盖度审计的新方法研究，提出了名为 Re:CAP 的迭代探测框架。\n\nRAG 系统在生产环境中的检索质量监控一直是个棘手问题。传统做法依赖人工标注所有相关文档来评估召回率，但面对实时更新、包含数百万文档的非稳态语料库，穷举式标注根本不可行。这导致业界普遍将监控重心放在生成质量上，而检索环节的覆盖度——即系统是否遗漏了关键信息——长期处于“黑箱”"
+  }
+ ],
+ "Higgsfield AI": [
+  {
+   "id": "8fe4474fdbb9c4c4",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+   "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+   "score": 5,
+   "summary": "Higgsfield AI 借助 GPT-6 Astra 模型，大幅提升了视频广告创作工具的交付速度，能在一天内上线新视频功能。其核心变化在于利用新一代模型的能力，让小型企业更轻松地制作视频广告，并加速创意工具的市场化进程。这值得关注，因为它展示了前沿大模型如何直接赋能中小企业，并显著压缩了产品迭代周期。"
+  }
+ ],
+ "Jev": [
+  {
+   "id": "d1454c52da381c41",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Can Jev Be a Better Agent Evaluator?",
+   "url": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+   "score": 7,
+   "summary": "Jev 是一种被探索用作智能体评估器的新型方法，它属于“系统一”模型，与传统的基于大语言模型的评判器形成对比。这项测试从准确性、可重复性、延迟和成本四个维度，评估了 Jev 作为评判器的表现。其值得关注之处在于，它可能为智能体评估提供一种在效率和一致性上不同于现有大模型方案的新路径。"
+  }
+ ],
+ "智能体评估器": [
+  {
+   "id": "d1454c52da381c41",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Can Jev Be a Better Agent Evaluator?",
+   "url": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+   "score": 7,
+   "summary": "Jev 是一种被探索用作智能体评估器的新型方法，它属于“系统一”模型，与传统的基于大语言模型的评判器形成对比。这项测试从准确性、可重复性、延迟和成本四个维度，评估了 Jev 作为评判器的表现。其值得关注之处在于，它可能为智能体评估提供一种在效率和一致性上不同于现有大模型方案的新路径。"
+  }
+ ],
+ "系统一模型": [
+  {
+   "id": "d1454c52da381c41",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Can Jev Be a Better Agent Evaluator?",
+   "url": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+   "score": 7,
+   "summary": "Jev 是一种被探索用作智能体评估器的新型方法，它属于“系统一”模型，与传统的基于大语言模型的评判器形成对比。这项测试从准确性、可重复性、延迟和成本四个维度，评估了 Jev 作为评判器的表现。其值得关注之处在于，它可能为智能体评估提供一种在效率和一致性上不同于现有大模型方案的新路径。"
+  }
+ ],
+ "大语言模型评判器": [
+  {
+   "id": "d1454c52da381c41",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "Can Jev Be a Better Agent Evaluator?",
+   "url": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+   "score": 7,
+   "summary": "Jev 是一种被探索用作智能体评估器的新型方法，它属于“系统一”模型，与传统的基于大语言模型的评判器形成对比。这项测试从准确性、可重复性、延迟和成本四个维度，评估了 Jev 作为评判器的表现。其值得关注之处在于，它可能为智能体评估提供一种在效率和一致性上不同于现有大模型方案的新路径。"
+  }
+ ],
+ "FLARE": [
+  {
+   "id": "1629e3d38d198bb5",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "FLARE: A Full-Lifecycle Dense Supervision Paradigm for Long-Horizon Coding Agents via Generative Reward Model",
+   "url": "https://arxiv.org/abs/2609.23808v1",
+   "score": 7,
+   "summary": "FLARE 是一种面向长周期代码智能体的全生命周期密集监督范式，核心是引入一个轻量级生成式奖励模型来提供实时、步骤级的风险反馈。它通过离线因果诊断框架从失败轨迹中提取高质量监督信号，并在推理时作为主动支架拦截高风险步骤进行局部重执行，大幅降低计算开销。在训练后阶段，该模型的信号还被用作过程监督的排序分数和强化学习的密集奖励，以缓解稀疏环境下的策略崩溃。实验表明，FLARE 以单次推理就超越了五次全"
+  }
+ ],
+ "生成式奖励模型": [
+  {
+   "id": "1629e3d38d198bb5",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "FLARE: A Full-Lifecycle Dense Supervision Paradigm for Long-Horizon Coding Agents via Generative Reward Model",
+   "url": "https://arxiv.org/abs/2609.23808v1",
+   "score": 7,
+   "summary": "FLARE 是一种面向长周期代码智能体的全生命周期密集监督范式，核心是引入一个轻量级生成式奖励模型来提供实时、步骤级的风险反馈。它通过离线因果诊断框架从失败轨迹中提取高质量监督信号，并在推理时作为主动支架拦截高风险步骤进行局部重执行，大幅降低计算开销。在训练后阶段，该模型的信号还被用作过程监督的排序分数和强化学习的密集奖励，以缓解稀疏环境下的策略崩溃。实验表明，FLARE 以单次推理就超越了五次全"
+  }
+ ],
+ "全生命周期密集监督范式": [
+  {
+   "id": "1629e3d38d198bb5",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "FLARE: A Full-Lifecycle Dense Supervision Paradigm for Long-Horizon Coding Agents via Generative Reward Model",
+   "url": "https://arxiv.org/abs/2609.23808v1",
+   "score": 7,
+   "summary": "FLARE 是一种面向长周期代码智能体的全生命周期密集监督范式，核心是引入一个轻量级生成式奖励模型来提供实时、步骤级的风险反馈。它通过离线因果诊断框架从失败轨迹中提取高质量监督信号，并在推理时作为主动支架拦截高风险步骤进行局部重执行，大幅降低计算开销。在训练后阶段，该模型的信号还被用作过程监督的排序分数和强化学习的密集奖励，以缓解稀疏环境下的策略崩溃。实验表明，FLARE 以单次推理就超越了五次全"
+  }
+ ],
+ "离线因果诊断框架": [
+  {
+   "id": "1629e3d38d198bb5",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "FLARE: A Full-Lifecycle Dense Supervision Paradigm for Long-Horizon Coding Agents via Generative Reward Model",
+   "url": "https://arxiv.org/abs/2609.23808v1",
+   "score": 7,
+   "summary": "FLARE 是一种面向长周期代码智能体的全生命周期密集监督范式，核心是引入一个轻量级生成式奖励模型来提供实时、步骤级的风险反馈。它通过离线因果诊断框架从失败轨迹中提取高质量监督信号，并在推理时作为主动支架拦截高风险步骤进行局部重执行，大幅降低计算开销。在训练后阶段，该模型的信号还被用作过程监督的排序分数和强化学习的密集奖励，以缓解稀疏环境下的策略崩溃。实验表明，FLARE 以单次推理就超越了五次全"
+  }
+ ],
+ "主动支架": [
+  {
+   "id": "1629e3d38d198bb5",
+   "date": "2026-09-22",
+   "run_type": "midweek",
+   "title": "FLARE: A Full-Lifecycle Dense Supervision Paradigm for Long-Horizon Coding Agents via Generative Reward Model",
+   "url": "https://arxiv.org/abs/2609.23808v1",
+   "score": 7,
+   "summary": "FLARE 是一种面向长周期代码智能体的全生命周期密集监督范式，核心是引入一个轻量级生成式奖励模型来提供实时、步骤级的风险反馈。它通过离线因果诊断框架从失败轨迹中提取高质量监督信号，并在推理时作为主动支架拦截高风险步骤进行局部重执行，大幅降低计算开销。在训练后阶段，该模型的信号还被用作过程监督的排序分数和强化学习的密集奖励，以缓解稀疏环境下的策略崩溃。实验表明，FLARE 以单次推理就超越了五次全"
   }
  ]
 }
