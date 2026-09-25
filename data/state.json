@@ -1,7 +1,7 @@
 {
   "openai-news": {
-    "watermark": "2026-09-21T12:00:00Z",
-    "last_success_at": "2026-09-22T02:45:18.662035Z",
+    "watermark": "2026-09-23T16:00:00Z",
+    "last_success_at": "2026-09-25T02:52:40.927741Z",
     "last_error": null
   },
   "anthropic-news": {
@@ -15,38 +15,38 @@
     "last_error": "HTTP 403（疑似反爬）（已重试 3 次）"
   },
   "deepmind-blog": {
-    "watermark": "2026-09-15T17:05:57Z",
-    "last_success_at": "2026-09-22T02:45:59.371122Z",
+    "watermark": "2026-09-24T16:20:39Z",
+    "last_success_at": "2026-09-25T02:53:21.376735Z",
     "last_error": null
   },
   "hf-blog": {
-    "watermark": "2026-09-21T13:44:34Z",
-    "last_success_at": "2026-09-22T02:45:59.681874Z",
+    "watermark": "2026-09-24T14:08:57Z",
+    "last_success_at": "2026-09-25T02:53:21.539973Z",
     "last_error": null
   },
   "hf-daily-papers": {
-    "watermark": "2026-09-20T00:00:00Z",
-    "last_success_at": "2026-09-22T02:45:59.948172Z",
+    "watermark": "2026-09-24T00:00:00Z",
+    "last_success_at": "2026-09-25T02:53:21.601281Z",
     "last_error": null
   },
   "langgraph-releases": {
-    "watermark": "2026-09-21T14:43:40Z",
-    "last_success_at": "2026-09-22T02:46:00.570707Z",
+    "watermark": "2026-09-23T23:26:51Z",
+    "last_success_at": "2026-09-25T02:53:22.076844Z",
     "last_error": null
   },
   "deepseek-github": {
     "watermark": "2026-09-10T05:36:48Z",
-    "last_success_at": "2026-09-22T02:46:01.218395Z",
+    "last_success_at": "2026-09-25T02:53:22.564930Z",
     "last_error": null
   },
   "qwen-github": {
     "watermark": "2026-09-18T04:23:07Z",
-    "last_success_at": "2026-09-22T02:46:02.055050Z",
+    "last_success_at": "2026-09-25T02:53:23.233597Z",
     "last_error": null
   },
   "glm-github": {
     "watermark": "2026-09-20T12:01:16Z",
-    "last_success_at": "2026-09-22T02:46:02.765324Z",
+    "last_success_at": "2026-09-25T02:53:23.961357Z",
     "last_error": null
   },
   "seed-research": {
@@ -56,17 +56,17 @@
   },
   "kimi-github": {
     "watermark": "2026-07-27T08:01:37Z",
-    "last_success_at": "2026-09-22T02:46:23.605055Z",
+    "last_success_at": "2026-09-25T02:53:44.658297Z",
     "last_error": null
   },
   "arxiv-papers": {
-    "watermark": "2026-09-21T10:04:43Z",
-    "last_success_at": "2026-09-22T02:46:27.248772Z",
+    "watermark": "2026-09-24T17:50:40Z",
+    "last_success_at": "2026-09-25T02:53:48.407076Z",
     "last_error": null
   },
   "langchain-blog": {
-    "watermark": "2026-09-21T17:14:45Z",
-    "last_success_at": "2026-09-22T02:46:00.148909Z",
+    "watermark": "2026-09-24T17:22:02Z",
+    "last_success_at": "2026-09-25T02:53:21.717458Z",
     "last_error": null
   }
 }

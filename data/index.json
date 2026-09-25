@@ -145,6 +145,24 @@
    "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
    "score": 8,
    "summary": "这篇文章介绍了 OpenAI 如何将 Habitat 从一个 Python 库演进为全球分布式存储平台，以支撑 ChatGPT 超过 10 亿用户和每秒 2200 万次请求的规模。其核心变化在于将存储系统从单机工具重构为可水平扩展的在线服务架构，解决了海量用户下的数据访问瓶颈。这值得关注是因为它展示了 AI 应用从实验性项目走向超大规模生产环境时，底层基础设施必须经历的关键工程化蜕变。"
+  },
+  {
+   "id": "f9027d80e820682e",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Better prompt caching for GPT-6",
+   "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+   "score": 8,
+   "summary": "在 OpenAI 最新发布的 GPT-6 技术更新中，一项名为“更好的提示缓存”的功能被正式推出。简单来说，提示缓存是一种让模型记住之前处理过的提示前缀（即对话或请求中重复出现的开头部分）的技术，从而避免对相同内容重复计算，直接复用之前的结果。GPT-6 对这一机制进行了系统性升级，带来了更高的缓存命中率、全新的诊断工具、显式断点以及更精细的控制手段，最终目标是降低延迟和成本。\n\n此前，大语言模型"
+  },
+  {
+   "id": "73461b3e97af0d93",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing GPT-6 Sol and Luna",
+   "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+   "score": 9,
+   "summary": "GPT-6 Sol 和 Luna 是 OpenAI 推出的两款新模型，旨在将前沿智能融入日常工作场景。它们的核心变化在于提供了能力与成本的不同平衡组合，让用户可以根据任务需求进行选择。这一发布值得关注，因为它标志着大模型开始走向更精细化的产品分层，以适配多样化的商业应用。"
   }
  ],
  "安全栈": [
@@ -901,6 +919,15 @@
    "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
    "score": 7,
    "summary": "这是 Google DeepMind 发布的 Gemini 3.7 Flash，一款面向大规模生产部署的高效多模态模型，主打低延迟、低成本与强推理能力的平衡。\n\n此前，AI 应用在落地时面临一个核心矛盾：大模型虽然能力强，但推理延迟高、成本昂贵，难以支撑高并发、实时响应的生产场景；而轻量模型虽然快，却在复杂推理、多模态理解上明显掉队。开发者不得不在“能力”和“效率”之间做痛苦取舍，要么牺牲用户体验"
+  },
+  {
+   "id": "6add3dd62456569f",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live with Live Avatar",
+   "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 在 2026 年 9 月发布的 Gemini 3.8 Live 版本，核心亮点是引入了“Live Avatar”——一个能实时生成面部表情、唇形同步、头部姿态和手势的虚拟形象，与 Gemini 的语音对话能力深度耦合，形成完整的“听得见、看得着”的交互体验。\n\n此前，大模型的语音交互虽然已经做到低延迟、可打断，但用户面对的始终是一个“黑盒声音”。在客服、教育、"
   }
  ],
  "token 效率": [
@@ -2255,6 +2282,15 @@
    "url": "https://arxiv.org/abs/2609.24122v1",
    "score": 8,
    "summary": "这是一篇关于检索增强生成（RAG）系统在生产环境中检索覆盖度审计的新方法研究，提出了名为 Re:CAP 的迭代探测框架。\n\nRAG 系统在生产环境中的检索质量监控一直是个棘手问题。传统做法依赖人工标注所有相关文档来评估召回率，但面对实时更新、包含数百万文档的非稳态语料库，穷举式标注根本不可行。这导致业界普遍将监控重心放在生成质量上，而检索环节的覆盖度——即系统是否遗漏了关键信息——长期处于“黑箱”"
+  },
+  {
+   "id": "3329c9f72a939ee5",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+   "url": "https://arxiv.org/abs/2609.29913v1",
+   "score": 7,
+   "summary": "MILO 是一种面向多示例上下文学习场景的 KV 缓存压缩框架，核心方法是对 KV 缓存进行分块低秩压缩，并根据各块的信息熵动态分配秩预算，以保留关键块的高保真度。该技术针对的是在输入数千个示例时 KV 缓存线性增长带来的内存瓶颈，旨在提升推理效率。实验表明，在 Qwen2.5 模型上，MILO 可将 KV 缓存内存减少最高 50%、吞吐量提升 1.8 倍，且分类与推理基准上的性能退化可忽略不计，"
   }
  ],
  "CoRT": [
@@ -2700,6 +2736,15 @@
    "url": "https://arxiv.org/abs/2609.11390v1",
    "score": 8,
    "summary": "VikingRAG 是一种面向结构化文档的检索增强生成系统，其核心目标是在不牺牲回答准确性的前提下，大幅降低 RAG 流程中消耗的 token 数量。它通过将文档的目录结构信息深度融入检索与生成过程，并引入多轮检索轨迹复用与自适应升级策略，实现了对现有方法 token 开销的显著压缩。\n\n传统 RAG 方法在处理结构化文档（如技术手册、学术论文、法律文书）时，往往面临一个两难困境：要获取足够准确的"
+  },
+  {
+   "id": "f9f995ae01676850",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+   "url": "https://huggingface.co/papers/2609.27334",
+   "score": 8,
+   "summary": "这是一篇关于大模型智能体记忆系统的新研究，提出了一种从“写入时整理”转向“读取时合成”的记忆管理范式。\n\n此前的智能体记忆系统普遍采用“写入时整理”策略：任务完成后立即将完整执行轨迹压缩为固定的抽象产物，比如反思总结、工作流模板或推理策略，后续通过相似度检索复用。这种设计存在两个根本性痛点。第一是信息不可逆丢失，系统必须在知道未来查询需求之前就决定什么值得记住，一旦压缩完成，原始轨迹中的细节就被丢"
   }
  ],
  "蕴含评分": [
@@ -6015,6 +6060,15 @@
    "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
    "score": 8,
    "summary": "这是 Google DeepMind 发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，属于实时多模态交互系统的一次重要升级，核心是在保持低延迟语音对话能力的同时，首次引入了可中断的“边想边说”机制。\n\n此前实时语音 AI 的一个核心痛点是“快”和“深”难以兼得。标准实时模型为了维持流畅对话，推理过程通常很短，遇到复杂问题（如多步推理、代"
+  },
+  {
+   "id": "6add3dd62456569f",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live with Live Avatar",
+   "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 在 2026 年 9 月发布的 Gemini 3.8 Live 版本，核心亮点是引入了“Live Avatar”——一个能实时生成面部表情、唇形同步、头部姿态和手势的虚拟形象，与 Gemini 的语音对话能力深度耦合，形成完整的“听得见、看得着”的交互体验。\n\n此前，大模型的语音交互虽然已经做到低延迟、可打断，但用户面对的始终是一个“黑盒声音”。在客服、教育、"
   }
  ],
  "Gemini 3.8 Live Extended Thinking": [
@@ -6697,6 +6751,270 @@
    "url": "https://arxiv.org/abs/2609.23808v1",
    "score": 7,
    "summary": "FLARE 是一种面向长周期代码智能体的全生命周期密集监督范式，核心是引入一个轻量级生成式奖励模型来提供实时、步骤级的风险反馈。它通过离线因果诊断框架从失败轨迹中提取高质量监督信号，并在推理时作为主动支架拦截高风险步骤进行局部重执行，大幅降低计算开销。在训练后阶段，该模型的信号还被用作过程监督的排序分数和强化学习的密集奖励，以缓解稀疏环境下的策略崩溃。实验表明，FLARE 以单次推理就超越了五次全"
+  }
+ ],
+ "Live Avatar": [
+  {
+   "id": "6add3dd62456569f",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live with Live Avatar",
+   "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 在 2026 年 9 月发布的 Gemini 3.8 Live 版本，核心亮点是引入了“Live Avatar”——一个能实时生成面部表情、唇形同步、头部姿态和手势的虚拟形象，与 Gemini 的语音对话能力深度耦合，形成完整的“听得见、看得着”的交互体验。\n\n此前，大模型的语音交互虽然已经做到低延迟、可打断，但用户面对的始终是一个“黑盒声音”。在客服、教育、"
+  }
+ ],
+ "blendshape": [
+  {
+   "id": "6add3dd62456569f",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live with Live Avatar",
+   "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 在 2026 年 9 月发布的 Gemini 3.8 Live 版本，核心亮点是引入了“Live Avatar”——一个能实时生成面部表情、唇形同步、头部姿态和手势的虚拟形象，与 Gemini 的语音对话能力深度耦合，形成完整的“听得见、看得着”的交互体验。\n\n此前，大模型的语音交互虽然已经做到低延迟、可打断，但用户面对的始终是一个“黑盒声音”。在客服、教育、"
+  }
+ ],
+ "avatar token": [
+  {
+   "id": "6add3dd62456569f",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live with Live Avatar",
+   "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 在 2026 年 9 月发布的 Gemini 3.8 Live 版本，核心亮点是引入了“Live Avatar”——一个能实时生成面部表情、唇形同步、头部姿态和手势的虚拟形象，与 Gemini 的语音对话能力深度耦合，形成完整的“听得见、看得着”的交互体验。\n\n此前，大模型的语音交互虽然已经做到低延迟、可打断，但用户面对的始终是一个“黑盒声音”。在客服、教育、"
+  }
+ ],
+ "多模态输出": [
+  {
+   "id": "6add3dd62456569f",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live with Live Avatar",
+   "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 在 2026 年 9 月发布的 Gemini 3.8 Live 版本，核心亮点是引入了“Live Avatar”——一个能实时生成面部表情、唇形同步、头部姿态和手势的虚拟形象，与 Gemini 的语音对话能力深度耦合，形成完整的“听得见、看得着”的交互体验。\n\n此前，大模型的语音交互虽然已经做到低延迟、可打断，但用户面对的始终是一个“黑盒声音”。在客服、教育、"
+  }
+ ],
+ "流式渲染": [
+  {
+   "id": "6add3dd62456569f",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing Gemini 3.8 Live with Live Avatar",
+   "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 在 2026 年 9 月发布的 Gemini 3.8 Live 版本，核心亮点是引入了“Live Avatar”——一个能实时生成面部表情、唇形同步、头部姿态和手势的虚拟形象，与 Gemini 的语音对话能力深度耦合，形成完整的“听得见、看得着”的交互体验。\n\n此前，大模型的语音交互虽然已经做到低延迟、可打断，但用户面对的始终是一个“黑盒声音”。在客服、教育、"
+  }
+ ],
+ "GPT-6": [
+  {
+   "id": "f9027d80e820682e",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Better prompt caching for GPT-6",
+   "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+   "score": 8,
+   "summary": "在 OpenAI 最新发布的 GPT-6 技术更新中，一项名为“更好的提示缓存”的功能被正式推出。简单来说，提示缓存是一种让模型记住之前处理过的提示前缀（即对话或请求中重复出现的开头部分）的技术，从而避免对相同内容重复计算，直接复用之前的结果。GPT-6 对这一机制进行了系统性升级，带来了更高的缓存命中率、全新的诊断工具、显式断点以及更精细的控制手段，最终目标是降低延迟和成本。\n\n此前，大语言模型"
+  }
+ ],
+ "更好的提示缓存": [
+  {
+   "id": "f9027d80e820682e",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Better prompt caching for GPT-6",
+   "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+   "score": 8,
+   "summary": "在 OpenAI 最新发布的 GPT-6 技术更新中，一项名为“更好的提示缓存”的功能被正式推出。简单来说，提示缓存是一种让模型记住之前处理过的提示前缀（即对话或请求中重复出现的开头部分）的技术，从而避免对相同内容重复计算，直接复用之前的结果。GPT-6 对这一机制进行了系统性升级，带来了更高的缓存命中率、全新的诊断工具、显式断点以及更精细的控制手段，最终目标是降低延迟和成本。\n\n此前，大语言模型"
+  }
+ ],
+ "提示缓存": [
+  {
+   "id": "f9027d80e820682e",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Better prompt caching for GPT-6",
+   "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+   "score": 8,
+   "summary": "在 OpenAI 最新发布的 GPT-6 技术更新中，一项名为“更好的提示缓存”的功能被正式推出。简单来说，提示缓存是一种让模型记住之前处理过的提示前缀（即对话或请求中重复出现的开头部分）的技术，从而避免对相同内容重复计算，直接复用之前的结果。GPT-6 对这一机制进行了系统性升级，带来了更高的缓存命中率、全新的诊断工具、显式断点以及更精细的控制手段，最终目标是降低延迟和成本。\n\n此前，大语言模型"
+  }
+ ],
+ "显式断点": [
+  {
+   "id": "f9027d80e820682e",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Better prompt caching for GPT-6",
+   "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+   "score": 8,
+   "summary": "在 OpenAI 最新发布的 GPT-6 技术更新中，一项名为“更好的提示缓存”的功能被正式推出。简单来说，提示缓存是一种让模型记住之前处理过的提示前缀（即对话或请求中重复出现的开头部分）的技术，从而避免对相同内容重复计算，直接复用之前的结果。GPT-6 对这一机制进行了系统性升级，带来了更高的缓存命中率、全新的诊断工具、显式断点以及更精细的控制手段，最终目标是降低延迟和成本。\n\n此前，大语言模型"
+  }
+ ],
+ "Just-in-Time Memory": [
+  {
+   "id": "f9f995ae01676850",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+   "url": "https://huggingface.co/papers/2609.27334",
+   "score": 8,
+   "summary": "这是一篇关于大模型智能体记忆系统的新研究，提出了一种从“写入时整理”转向“读取时合成”的记忆管理范式。\n\n此前的智能体记忆系统普遍采用“写入时整理”策略：任务完成后立即将完整执行轨迹压缩为固定的抽象产物，比如反思总结、工作流模板或推理策略，后续通过相似度检索复用。这种设计存在两个根本性痛点。第一是信息不可逆丢失，系统必须在知道未来查询需求之前就决定什么值得记住，一旦压缩完成，原始轨迹中的细节就被丢"
+  }
+ ],
+ "JitMem": [
+  {
+   "id": "f9f995ae01676850",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+   "url": "https://huggingface.co/papers/2609.27334",
+   "score": 8,
+   "summary": "这是一篇关于大模型智能体记忆系统的新研究，提出了一种从“写入时整理”转向“读取时合成”的记忆管理范式。\n\n此前的智能体记忆系统普遍采用“写入时整理”策略：任务完成后立即将完整执行轨迹压缩为固定的抽象产物，比如反思总结、工作流模板或推理策略，后续通过相似度检索复用。这种设计存在两个根本性痛点。第一是信息不可逆丢失，系统必须在知道未来查询需求之前就决定什么值得记住，一旦压缩完成，原始轨迹中的细节就被丢"
+  }
+ ],
+ "任务自适应记忆": [
+  {
+   "id": "f9f995ae01676850",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+   "url": "https://huggingface.co/papers/2609.27334",
+   "score": 8,
+   "summary": "这是一篇关于大模型智能体记忆系统的新研究，提出了一种从“写入时整理”转向“读取时合成”的记忆管理范式。\n\n此前的智能体记忆系统普遍采用“写入时整理”策略：任务完成后立即将完整执行轨迹压缩为固定的抽象产物，比如反思总结、工作流模板或推理策略，后续通过相似度检索复用。这种设计存在两个根本性痛点。第一是信息不可逆丢失，系统必须在知道未来查询需求之前就决定什么值得记住，一旦压缩完成，原始轨迹中的细节就被丢"
+  }
+ ],
+ "读取时合成": [
+  {
+   "id": "f9f995ae01676850",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+   "url": "https://huggingface.co/papers/2609.27334",
+   "score": 8,
+   "summary": "这是一篇关于大模型智能体记忆系统的新研究，提出了一种从“写入时整理”转向“读取时合成”的记忆管理范式。\n\n此前的智能体记忆系统普遍采用“写入时整理”策略：任务完成后立即将完整执行轨迹压缩为固定的抽象产物，比如反思总结、工作流模板或推理策略，后续通过相似度检索复用。这种设计存在两个根本性痛点。第一是信息不可逆丢失，系统必须在知道未来查询需求之前就决定什么值得记住，一旦压缩完成，原始轨迹中的细节就被丢"
+  }
+ ],
+ "写入时整理": [
+  {
+   "id": "f9f995ae01676850",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+   "url": "https://huggingface.co/papers/2609.27334",
+   "score": 8,
+   "summary": "这是一篇关于大模型智能体记忆系统的新研究，提出了一种从“写入时整理”转向“读取时合成”的记忆管理范式。\n\n此前的智能体记忆系统普遍采用“写入时整理”策略：任务完成后立即将完整执行轨迹压缩为固定的抽象产物，比如反思总结、工作流模板或推理策略，后续通过相似度检索复用。这种设计存在两个根本性痛点。第一是信息不可逆丢失，系统必须在知道未来查询需求之前就决定什么值得记住，一旦压缩完成，原始轨迹中的细节就被丢"
+  }
+ ],
+ "记忆合成器": [
+  {
+   "id": "f9f995ae01676850",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+   "url": "https://huggingface.co/papers/2609.27334",
+   "score": 8,
+   "summary": "这是一篇关于大模型智能体记忆系统的新研究，提出了一种从“写入时整理”转向“读取时合成”的记忆管理范式。\n\n此前的智能体记忆系统普遍采用“写入时整理”策略：任务完成后立即将完整执行轨迹压缩为固定的抽象产物，比如反思总结、工作流模板或推理策略，后续通过相似度检索复用。这种设计存在两个根本性痛点。第一是信息不可逆丢失，系统必须在知道未来查询需求之前就决定什么值得记住，一旦压缩完成，原始轨迹中的细节就被丢"
+  }
+ ],
+ "长期信用分配": [
+  {
+   "id": "f9f995ae01676850",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+   "url": "https://huggingface.co/papers/2609.27334",
+   "score": 8,
+   "summary": "这是一篇关于大模型智能体记忆系统的新研究，提出了一种从“写入时整理”转向“读取时合成”的记忆管理范式。\n\n此前的智能体记忆系统普遍采用“写入时整理”策略：任务完成后立即将完整执行轨迹压缩为固定的抽象产物，比如反思总结、工作流模板或推理策略，后续通过相似度检索复用。这种设计存在两个根本性痛点。第一是信息不可逆丢失，系统必须在知道未来查询需求之前就决定什么值得记住，一旦压缩完成，原始轨迹中的细节就被丢"
+  }
+ ],
+ "GPT-6 Sol": [
+  {
+   "id": "73461b3e97af0d93",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing GPT-6 Sol and Luna",
+   "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+   "score": 9,
+   "summary": "GPT-6 Sol 和 Luna 是 OpenAI 推出的两款新模型，旨在将前沿智能融入日常工作场景。它们的核心变化在于提供了能力与成本的不同平衡组合，让用户可以根据任务需求进行选择。这一发布值得关注，因为它标志着大模型开始走向更精细化的产品分层，以适配多样化的商业应用。"
+  }
+ ],
+ "GPT-6 Luna": [
+  {
+   "id": "73461b3e97af0d93",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Introducing GPT-6 Sol and Luna",
+   "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+   "score": 9,
+   "summary": "GPT-6 Sol 和 Luna 是 OpenAI 推出的两款新模型，旨在将前沿智能融入日常工作场景。它们的核心变化在于提供了能力与成本的不同平衡组合，让用户可以根据任务需求进行选择。这一发布值得关注，因为它标志着大模型开始走向更精细化的产品分层，以适配多样化的商业应用。"
+  }
+ ],
+ "Transformers": [
+  {
+   "id": "689d78c6e007ab8e",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Transformers now runs llama.cpp quants",
+   "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+   "score": 8,
+   "summary": "Hugging Face 的 Transformers 库现已原生支持运行 llama.cpp 的量化模型。这意味着开发者可以直接在 Transformers 框架内加载和推理 GGUF 等格式的量化模型，无需额外转换或依赖外部工具。这一变化大幅降低了在消费级硬件上运行大语言模型的门槛，并统一了从训练到部署的工作流。"
+  }
+ ],
+ "llama.cpp": [
+  {
+   "id": "689d78c6e007ab8e",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Transformers now runs llama.cpp quants",
+   "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+   "score": 8,
+   "summary": "Hugging Face 的 Transformers 库现已原生支持运行 llama.cpp 的量化模型。这意味着开发者可以直接在 Transformers 框架内加载和推理 GGUF 等格式的量化模型，无需额外转换或依赖外部工具。这一变化大幅降低了在消费级硬件上运行大语言模型的门槛，并统一了从训练到部署的工作流。"
+  }
+ ],
+ "GGUF": [
+  {
+   "id": "689d78c6e007ab8e",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "Transformers now runs llama.cpp quants",
+   "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+   "score": 8,
+   "summary": "Hugging Face 的 Transformers 库现已原生支持运行 llama.cpp 的量化模型。这意味着开发者可以直接在 Transformers 框架内加载和推理 GGUF 等格式的量化模型，无需额外转换或依赖外部工具。这一变化大幅降低了在消费级硬件上运行大语言模型的门槛，并统一了从训练到部署的工作流。"
+  }
+ ],
+ "MILO": [
+  {
+   "id": "3329c9f72a939ee5",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+   "url": "https://arxiv.org/abs/2609.29913v1",
+   "score": 7,
+   "summary": "MILO 是一种面向多示例上下文学习场景的 KV 缓存压缩框架，核心方法是对 KV 缓存进行分块低秩压缩，并根据各块的信息熵动态分配秩预算，以保留关键块的高保真度。该技术针对的是在输入数千个示例时 KV 缓存线性增长带来的内存瓶颈，旨在提升推理效率。实验表明，在 Qwen2.5 模型上，MILO 可将 KV 缓存内存减少最高 50%、吞吐量提升 1.8 倍，且分类与推理基准上的性能退化可忽略不计，"
+  }
+ ],
+ "分块低秩压缩": [
+  {
+   "id": "3329c9f72a939ee5",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+   "url": "https://arxiv.org/abs/2609.29913v1",
+   "score": 7,
+   "summary": "MILO 是一种面向多示例上下文学习场景的 KV 缓存压缩框架，核心方法是对 KV 缓存进行分块低秩压缩，并根据各块的信息熵动态分配秩预算，以保留关键块的高保真度。该技术针对的是在输入数千个示例时 KV 缓存线性增长带来的内存瓶颈，旨在提升推理效率。实验表明，在 Qwen2.5 模型上，MILO 可将 KV 缓存内存减少最高 50%、吞吐量提升 1.8 倍，且分类与推理基准上的性能退化可忽略不计，"
+  }
+ ],
+ "Qwen2.5": [
+  {
+   "id": "3329c9f72a939ee5",
+   "date": "2026-09-25",
+   "run_type": "midweek",
+   "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+   "url": "https://arxiv.org/abs/2609.29913v1",
+   "score": 7,
+   "summary": "MILO 是一种面向多示例上下文学习场景的 KV 缓存压缩框架，核心方法是对 KV 缓存进行分块低秩压缩，并根据各块的信息熵动态分配秩预算，以保留关键块的高保真度。该技术针对的是在输入数千个示例时 KV 缓存线性增长带来的内存瓶颈，旨在提升推理效率。实验表明，在 Qwen2.5 模型上，MILO 可将 KV 缓存内存减少最高 50%、吞吐量提升 1.8 倍，且分类与推理基准上的性能退化可忽略不计，"
   }
  ]
 }
