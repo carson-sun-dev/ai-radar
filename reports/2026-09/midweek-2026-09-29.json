@@ -1,0 +1,750 @@
+{
+ "meta": {
+  "date": "2026-09-29",
+  "run_type": "midweek",
+  "description": "深读：Basis completes a tax workbook 2x faster with GPT-6 Astra；TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+  "entities": [
+   "AdaTutoRank",
+   "Anchor Synthesis Loop",
+   "Anchor-and-Confirm",
+   "Basis",
+   "Codex",
+   "Flash 大语言模型",
+   "GPT-5.6 Sol",
+   "GPT-6 Astra",
+   "GPT-Live-1",
+   "Jev",
+   "LangGraph",
+   "OpenAI",
+   "RAG",
+   "TraceDance",
+   "TypeSafe AI",
+   "三层九维评分标准",
+   "决策点续写",
+   "文档集重排序",
+   "深度研究",
+   "自适应辅导优化"
+  ],
+  "tags": [
+   "model",
+   "paper"
+  ],
+  "item_count": 38,
+  "sources_failed": [
+   "anthropic-news：HTTP 403（疑似反爬）（已重试 3 次）",
+   "anthropic-engineering：HTTP 403（疑似反爬）（已重试 3 次）",
+   "seed-research：HTTP 403（疑似反爬）（已重试 3 次）",
+   "arxiv-papers：超时（已重试 3 次）"
+  ],
+  "tokens_used": 16402,
+  "cost_cny": 0.2212,
+  "duration_seconds": 260.4
+ },
+ "deep": [
+  {
+   "id": "eb674100bb687fff",
+   "source": "openai-news",
+   "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+   "url": "https://openai.com/index/basis-tax-workbook-with-astra",
+   "published_at": "2026-09-28T00:00:00Z",
+   "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent gives Basis more confidence in real-world use.",
+   "category": "model",
+   "score": 8,
+   "score_reason": "GPT-6 Astra是OpenAI新一代旗舰模型，比GPT-5.6 Sol显著提升，对应用选型有直接影响",
+   "entities": [
+    "GPT-6 Astra",
+    "GPT-5.6 Sol",
+    "Basis"
+   ],
+   "analysis": "Basis 是一家专业税务软件公司，他们用 OpenAI 最新发布的 GPT-6 Astra 模型完成了一份包含 50 个工作表标签页的税务工作簿，速度比上一代 GPT-5.6 Sol 快了一倍。这不是一次简单的模型升级测试，而是直接在生产环境中对比两个模型处理同一复杂税务文档的表现。\n\n税务工作簿的自动化处理一直是个棘手问题。传统上，这类文档结构极其复杂，一个工作簿里往往嵌套着几十个互相关联的标签页，每个标签页内部又有大量跨表引用、条件公式和税务计算逻辑。此前的模型在处理这种多步骤、强依赖的任务时，容易出现理解偏差，比如搞错某个单元格引用的来源标签页，或者在长链条推理中丢失上下文。GPT-5.6 Sol 虽然已经能处理这类任务，但速度不够快，而且对用户意图的理解还不够稳定，导致 Basis 在实际部署时不得不加入大量人工校验环节，整体效率提升有限。\n\n这次测试的核心在于 GPT-6 Astra 的两个关键能力提升。第一是更强的用户意图理解，这意味着模型不再只是机械地解析指令，而是能更准确地把握“这个税务调整到底想达成什么目的”，从而减少反复澄清和纠错的轮次。第二是处理复杂长文档时的推理效率大幅提高，50 个标签页的税务工作簿涉及海量的跨表依赖关系，Astra 能在更少的推理步骤内完成全局一致性检查，直接体现为完成时间减半。资料中特别提到，这种速度提升不是靠牺牲准确性换来的，Basis 对 Astra 的输出结果表现出更高的信心，说明模型在理解税务业务逻辑的深度上确实有质的飞跃。\n\n对 AI 应用岗的面试者来说，这个案例有几点值得深挖。首先是“生产可用性”的衡量标准不再只看单次准确率，而是要看端到端任务完成速度和人工干预频率的乘积效应——Astra 不仅快了，还让 Basis 更有信心，这意味着校验成本同步下降，整体 ROI 是乘数级改善。其次，在面试中谈到模型选型或应用落地时，可以引用这个案例说明：当你的应用场景涉及长文档、多步骤推理和强领域知识时，模型对用户意图的理解深度比单纯的基准测试分数更重要。最后，如果你在准备系统设计类问题，可以思考如何围绕这种能力设计一个“模型降级 + 人工兜底”的流水线，比如当 Astra 置信度低于阈值时回退到 Sol 并标记人工复核，这样既能享受新模型的速度红利，又能控制风险。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "e04069610c4d9251",
+   "source": "hf-daily-papers",
+   "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+   "url": "https://huggingface.co/papers/2609.33295",
+   "published_at": "2026-09-27T00:00:00Z",
+   "summary": "An agent can complete a task while exhibiting undesirable behavior during execution. Developers need tests for the specific behaviors encountered in deployment, beyond fixed benchmark suites. We present TraceDance, an agent system that constructs targeted benchmarks from deployment traces for user-specified undesirable behaviors. For efficient construction, Anchor-and-Confirm combines programmable retrieval with candidate-level confirmation by a Flash large language model (LLM), while the Anchor Synthesis Loop generates and revises specifications for custom behaviors. The benchmarks use decision-point continuation to evaluate an LLM's next turn at a recorded decision point with a behavior-specific rubric, without a reference answer or environment replay. Experiments in coding and general tool use draw on 252,557 sessions and produce 107 benchmarks with 4,125 instances, fulfilling 95.3% of build-target requests. Both human annotators confirm the requested behavior in 84% of sampled instances, and the automated grader's agreement with human pass/fail judgments is comparable to that between the annotators. Nine frontier LLMs achieve a mean pass rate of only 26.7%, showing that they still struggle to respond appropriately at the evaluated decision points. Analysis across behavior-specific benchmarks further reveals weaknesses in how current LLMs behave as agents. By turning deployment problems into targeted benchmarks, TraceDance could serve as a key component of the recursive se",
+   "category": "paper",
+   "score": 8,
+   "score_reason": "从真实部署轨迹自动构建agent行为测试集，直接解决生产环境中agent行为测试的痛点，方法可复现，upvotes高佐证价值",
+   "entities": [
+    "TraceDance",
+    "Anchor-and-Confirm",
+    "Anchor Synthesis Loop",
+    "决策点续写",
+    "Flash 大语言模型"
+   ],
+   "analysis": "TraceDance 是一个自动化系统，能从真实 Agent 部署的运行轨迹中，针对用户指定的不良行为，自动构建出有针对性的评测基准。简单说，它把线上 Agent 实际“翻车”的瞬间，变成可复现、可评分的测试用例，让开发者能持续检验模型是否改掉了特定坏毛病。\n\n此前，Agent 行为评测主要依赖固定的基准套件，这些套件覆盖的场景有限，难以捕捉部署中实际暴露的、五花八门的不良行为。开发者即使观察到 Agent 在线上出现了某种问题（比如过度道歉、过早放弃、滥用某个工具），也缺乏高效手段将这类观察转化为可批量运行的测试。手工构造评测用例成本高、周期长，且难以跟上模型迭代和部署反馈的节奏。TraceDance 正是要解决这个“从部署问题到评测基准”的转化断层。\n\n技术实现上，TraceDance 的核心流程围绕两个关键机制展开。第一是“锚定-确认”（Anchor-and-Confirm）的构建策略：系统先用可编程检索方式，从海量部署轨迹中快速筛选出可能包含目标行为的候选片段，这称为“锚定”；随后用一个轻量级的 Flash 大语言模型对候选片段进行逐条确认，判断是否真正展现了用户指定的不良行为，以此保证构建出的实例质量。第二是“锚点合成循环”（Anchor Synthesis Loop）：当用户描述的行为比较抽象或个性化时，系统会迭代生成并修正针对该行为的规范说明，让检索和确认环节有更精准的判定依据。构建出的评测基准采用“决策点续写”的评估范式——在轨迹中某个记录下来的决策点，让被测模型接着往下走一步，然后用一套针对该行为定制的评分量规来判定其表现，整个过程不需要参考答案，也不需要重放环境，极大降低了评估成本。\n\n对 AI 应用岗而言，这条资讯的含金量很高。首先，它直指 Agent 产品化的核心痛点：线上行为不可控且难以系统化回归。面试中你可以强调，TraceDance 展示了一种“从运维数据反哺质量保障”的闭环思路，这比单纯谈模型精度更能体现工程化思维。其次，“决策点续写”的评估方式省去了环境模拟的沉重负担，是一种生产可用的轻量级回归测试方案，适合在 CI/CD 流程中快速集成。再者，实验中基于 25 万余次真实会话构建了 107 个基准、4125 个实例，构建目标达成率高达 95.3%，且自动评分器与人工判断的一致性接近人工标注者之间的一致性，这说明系统在自动化程度上已经达到了实用水准。最后，九个前沿大模型在这些基准上的平均通过率仅 26.7%，这个数据很有说服力，可以在面试中用来论证“当前 Agent 在真实决策点上仍有巨大改进空间”，并顺势引出你对 Agent 行为质量保障体系的设计思考。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 35
+   }
+  }
+ ],
+ "mid": [
+  {
+   "id": "9de028fbe46cac8b",
+   "source": "openai-news",
+   "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+   "url": "https://openai.com/index/proaction",
+   "published_at": "2026-09-25T19:00:00Z",
+   "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+   "category": "model",
+   "score": 5,
+   "score_reason": "Codex应用案例，有具体效果数据但缺乏工程细节，可作参考",
+   "entities": [
+    "Codex",
+    "GPT-Live-1",
+    "GPT-6 Astra",
+    "OpenAI"
+   ],
+   "analysis": "Proaction 利用 Codex、GPT-Live-1 和 GPT-6 Astra 构建并运营现代车队管理系统，实现了销售额提升 60% 并节省超过 75 小时的工作量。其核心方法是将多款 OpenAI 模型集成到业务流程中，以加速开发、运营和销售环节。这一案例值得关注，因为它展示了 AI 应用在垂直行业中直接驱动商业增长和效率提升的显著成效。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "86cb38b172aa5768",
+   "source": "langchain-blog",
+   "title": "Building Production Agents with Jev and LangGraph",
+   "url": "https://www.langchain.com/blog/building-prod-with-jev-and-langgraph",
+   "published_at": "2026-09-28T11:45:35Z",
+   "summary": "See how LangGraph orchestrates Jev, TypeSafe AI's decision model, to build faster, cheaper production agents.",
+   "category": "engineering",
+   "score": 5,
+   "score_reason": "LangGraph 构建生产 agent 的案例，有工程参考价值但本质是产品推广，方法细节可能不够深入。",
+   "entities": [
+    "LangGraph",
+    "Jev",
+    "TypeSafe AI"
+   ],
+   "analysis": "这是LangChain博客介绍的一篇技术实践文章，展示了如何将LangGraph与TypeSafe AI的决策模型Jev相结合，用于构建生产级AI智能体。其核心方法是利用LangGraph进行工作流编排，并集成Jev模型来优化决策环节，从而实现更快速、成本更低的智能体运行。这一组合值得关注，因为它为开发者提供了一条在保证生产环境稳定性的同时，显著提升智能体效率和经济性的可行路径。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {}
+  },
+  {
+   "id": "81200c4858b45293",
+   "source": "hf-daily-papers",
+   "title": "AdaTutoRank: Learning to Rerank Document Sets via Adaptive Tutoring Optimization for RAG and Deep Research",
+   "url": "https://huggingface.co/papers/2609.32472",
+   "published_at": "2026-09-26T00:00:00Z",
+   "summary": "Document rerankers determine what evidence reaches the downstream model in RAG and deep research, yet mainstream rerankers select by relevance matching, and individually relevant documents rarely constitute the complete, complementary, non-redundant set a complex information need demands. Prior work rewards a set by its aggregate rubric score, shifting the objective from ranking documents to composing sets. Yet that score is one scalar shared by every document in the set, so the supervision is sparse: a redundant document is rewarded with the rest whenever the set scores well, and a decisive one penalized with the rest whenever it does not; credit assignment leaves contributors indistinguishable from free riders. On-policy distillation could densify this supervision, but existing methods give every rollout the same fixed guidance, too prescriptive for strong rollouts and too abstract for weak ones. We therefore propose AdaTutoRank, a setwise reranker trained with Adaptive Tutoring Optimization (ATO) under a three-level hierarchy of nine rubric dimensions, which supplies silver labels for the cold start, rewards for reinforcement learning, and hints for distillation. ATO draws three hint forms of increasing specificity from the policy's own frozen snapshot: the rubrics alone, a self-selector's sibling-set chosen under rubrics, and a self-reflector's reflection contrasting the rollout with that sibling-set; each rollout receives the form matched to its quality. Re-scoring that ",
+   "category": "paper",
+   "score": 8,
+   "score_reason": "提出面向RAG和深度研究的文档集重排序方法，直接解决检索结果互补性和冗余性问题，对RAG系统质量提升有实用价值",
+   "entities": [
+    "AdaTutoRank",
+    "RAG",
+    "深度研究",
+    "文档集重排序",
+    "自适应辅导优化",
+    "三层九维评分标准"
+   ],
+   "analysis": "AdaTutoRank 是一种面向 RAG 与深度研究的文档集重排序方法，其核心变化在于将优化目标从单文档相关性匹配转向构建完整、互补且非冗余的文档集合。该方法提出自适应辅导优化，利用三层九维评分标准，为强化学习提供奖励并为蒸馏提供差异化提示，从而解决传统集合评分中监督信号稀疏、贡献难以区分的问题。其关键创新是根据生成结果的质量动态匹配三种不同具体程度的提示形式，使强结果获得更抽象的引导、弱结果获得更具体的纠正，以此实现更精细的集合级训练。",
+   "images": [],
+   "low_confidence": false,
+   "extra": {
+    "upvotes": 15
+   }
+  }
+ ],
+ "glance": {
+  "model": [
+   {
+    "id": "50d71cd52400f551",
+    "source": "openai-news",
+    "title": "How we will do better for Australia",
+    "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+    "published_at": "2026-09-28T19:00:00Z",
+    "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+    "category": "model",
+    "score": 1,
+    "score_reason": "纯公关声明，与AI应用工程完全无关",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "0adf5bb2a473897d",
+    "source": "openai-news",
+    "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+    "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+    "published_at": "2026-09-28T07:00:00Z",
+    "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+    "category": "model",
+    "score": 1,
+    "score_reason": "资助新闻机构项目，非工程相关内容",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "833e9419a34f8836",
+    "source": "openai-news",
+    "title": "Are you a Codex Original?",
+    "url": "https://openai.com/form/codex-originals",
+    "published_at": "2026-09-28T00:00:00Z",
+    "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things. If you want to be a part of the next chapter of the Codex Originals program, tell us more about your story and project below.",
+    "category": "model",
+    "score": 1,
+    "score_reason": "Codex用户故事征集，营销活动无技术价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "engineering": [
+   {
+    "id": "e16684fdeb069794",
+    "source": "langchain-blog",
+    "title": "New in LangSmith: Engine v2, Managed Deep Agents, Fine-Tuning, and more",
+    "url": "https://www.langchain.com/blog/langsmith-engine-agents-fine-tuning-trajectories",
+    "published_at": "2026-09-28T11:45:35Z",
+    "summary": "LangChain announced new updates to LangSmith. Updates include Engine v2 with red teaming and automatic testing, a new version of Managed Deep Agents, trajectories and more.",
+    "category": "engineering",
+    "score": 4,
+    "score_reason": "LangSmith 产品更新通稿，含 red teaming 和自动测试等新功能，对使用 LangSmith 的团队有参考价值，但本质是商业产品发布。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   }
+  ],
+  "paper": [
+   {
+    "id": "b96906590e8633f6",
+    "source": "hf-daily-papers",
+    "title": "Disaggregated Quantization: Specializing LLM Prefill and Decode",
+    "url": "https://huggingface.co/papers/2609.26333",
+    "published_at": "2026-09-22T00:00:00Z",
+    "summary": "Prefill and decode reward different approaches to quantization: low-precision arithmetic accelerates prompt processing, while compact weights reduce memory traffic during generation. We propose \"disaggregated quantization\" (DQ), which specializes computation formats, weights and storage placement to both of these phases. On Qwen 3 and Gemma 3, removing activation quantization specifically on decode improves accuracy on decode-heavy tasks without increasing inference cost. Training separate compute-native prefill weights accelerates prompt processing relative to weight-only inference while matching or exceeding its accuracy at 2-3-bit decode on both decode-heavy and prefill-heavy tasks. With released Qwen3.8-27B GGUF decoders, training an NVFP4 prefiller improves 1-bit accuracy by 32.5 points on MMLU-Pro and 35.3 on MMMU-Pro without modifying the decode checkpoint. To accommodate the additional checkpoint on a single device, offloaded disaggregated prefill (ODP) streams its weights from SSD, amortizing loading over prompt length. On the same 27B model, ODP delivers a 1.78x time-to-first-token speedup over the weight-only baseline at 8K prompt length in llama.cpp. We evaluate accuracy under disaggregated serving in vLLM and further validate shared-weight format disaggregation through post-training quantization on models up to 2.8T parameters.",
+    "category": "paper",
+    "score": 8,
+    "score_reason": "提出分离式量化策略，分别优化 prefill 和 decode 阶段，在 Qwen3/Gemma3 上验证，直接降低推理成本与延迟，upvotes 45 佐证关注度高，工程价值大。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 45
+    }
+   },
+   {
+    "id": "09d1d26fa19dd694",
+    "source": "hf-blog",
+    "title": "Holo4: powering generalist computer-use agents",
+    "url": "https://huggingface.co/blog/Hcompany/holo4",
+    "published_at": "2026-09-28T09:44:05Z",
+    "summary": "",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "通用计算机使用Agent方向，标题暗示有工程价值，值得深读具体方法",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {}
+   },
+   {
+    "id": "37dc20ae1349d016",
+    "source": "hf-daily-papers",
+    "title": "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
+    "url": "https://huggingface.co/papers/2609.34972",
+    "published_at": "2026-09-28T00:00:00Z",
+    "summary": "Long visual token sequences often account for a substantial fraction of the computational overhead in multimodal large language models~(MLLMs). Existing approaches reduce this cost by pruning redundant visual tokens, but permanently discard visual evidence that may become useful in subsequent layers. We instead ask whether all visual tokens can be preserved while reducing the cost of repeatedly evolving the representations through the Transformer. To answer this question, we perform low-rank interventions on visual-to-text information flow. We find that, after visual-to-text attention is blocked, restoring only a few directions recovers most of the lost accuracy, suggesting the relevant visual influence is concentrated in a low-dimensional subspace. We further observe strong predictability in layer-specific visual states: lightweight MLPs approximate them with high cosine similarity and low reconstruction error. Motivated by these findings, we propose δ-Vision, which replaces repeated Transformer evolution of visual tokens with lightweight low-rank adapters that construct layer-wise visual memories while preserving all visual tokens for text retrieval. Across image and video benchmarks, δ-Vision achieves higher accuracy than visual token pruning baselines at comparable or lower computation, while delivering competitive inference efficiency without discarding visual tokens.",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "用MLP高效重建视觉状态减少MLLM计算开销，对多模态应用部署有工程价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 8
+    }
+   },
+   {
+    "id": "e693eba6a01a93bf",
+    "source": "hf-daily-papers",
+    "title": "ControlScope: Workflow Revision and Reliability in LLM Agents",
+    "url": "https://huggingface.co/papers/2609.34313",
+    "published_at": "2026-09-28T00:00:00Z",
+    "summary": "How much of a running workflow should a language model agent revise? ControlScope compares continuing generated code, editing the next tool call's data arguments, and replacing the unfinished workflow from the same public execution state. The nested permissions separate available repairs from the actions an agent selects. We evaluate one-time and repeated reviews across filesystem tasks, ALFWorld, and AppWorld. Across two source programs per task and three reasoning-reviewer draws on 20 filesystem tasks, FULL completes 15-16 tasks versus 13 for KEEP; across four fast draws it completes 10-13 versus 13. Fresh student-record confirmation reproduces a batch-read repair. ALFWorld fast panels yield KEEP/ARG/FULL scores of 85/86/87 on 87 tasks across 52 scenes and 134/134/127 on 134 tasks across four scenes; reasoning on the 87-task cohort also yields 85/86/87 with substantial review cost. An AppWorld V1 official-test panel of 585 task instances from 195 scenario templates shows small net differences. Frozen replays expose viable agent-written replacements interrupted by later revision in two failed file-organization runs. An offline source-trajectory midpoint comparison shows later reviews completing an insufficient repair. Five-call protection saves 19.4% of logged model output and loses one success across 20 fresh source runs. An argument-only shortcut shows that the broader sampled policy can overlook a cheaper successful edit available in both operation sets. These outcomes ti",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "研究agent工作流中应修改多少代码的问题，提出嵌套权限控制，对生产agent的可靠性和安全控制有直接参考",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "47da0e0d1a578d56",
+    "source": "hf-daily-papers",
+    "title": "Learning to Learn from Context: Synthetic Training from Perturbed Public Documents",
+    "url": "https://huggingface.co/papers/2609.33642",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "Real-world tasks often require large language models (LLMs) to learn from complex task-specific context rather than pretrained parametric knowledge. This capability remains a weakness of LLMs, while human annotation for such task contexts is expensive and difficult to scale. Public high-quality documents are an abundant alternative, but much of the public web has already been consumed during pretraining: training on such documents naively would reward memorization rather than context learning. In this work, we attempt to make use of high-quality public documents with small perturbations and empirically find that LLMs can successfully generate context-dependent reasoning traces and answers, which are then used to train a student model. Specifically, we construct a synthesis pipeline that (i) rewrites source documents to reduce memorization risk, (ii) generates questions and rubrics that require reasoning over the document, (iii) answers the questions with the document as context, and (iv) admits only samples that genuinely depend on the document. Without any human annotators, our pipeline generates about 10k samples from 3.5k documents, and the resulting student model substantially improves the performance on CL-bench. SFT raises a Qwen3.6-35B-A3B student from 13.7% to 22.8%, and a subsequent rubric-reward RL stage reaches 24.6%, on CL-bench comparable with a frontier model of over a trillion parameters, Qwen3.8-2.4T (23.9%). We also observe a broad transfer of improvements to",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "解决LLM从上下文学习而非参数知识的问题，对RAG和上下文工程有直接启发",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "eb24ed696876cc8d",
+    "source": "hf-daily-papers",
+    "title": "Adaptive Consistency Graph for Long-Horizon Agents",
+    "url": "https://huggingface.co/papers/2609.32754",
+    "published_at": "2026-09-26T00:00:00Z",
+    "summary": "Large language model agents can often make reasonable local decisions on short tasks, yet their performance degrades when success requires long sequences of dependent actions and tool calls. During execution, task requirements, historical evidence, and the current execution state may gradually become disconnected, so later decisions can drift from the original objective. We study this problem by introducing the Adaptive Consistency Graph (ACG) for long-horizon execution. ACG incrementally organizes execution evidence and its provenance in a persistent graph, then constructs a temporary requirement-centered view for each decision under a bounded context budget. Rather than replacing the base agent's planner or tool executor, ACG provides a structured and traceable context view for each decision. In the matched evaluation, ACG improves GPT-5.6-luna's average success from 44.5\\% with ReAct to 50.2\\%, with the largest gain on BrowseComp-Plus (73.5\\% versus 62.4\\%). We further analyze trajectory structure and inference cost to characterize this improvement.",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "研究长程agent中任务目标漂移问题并提出自适应一致性图，直接命中长程agent生产部署的核心难题",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "115416a6a9d113ab",
+    "source": "hf-daily-papers",
+    "title": "Rethinking Training-Inference Mismatch in LLM Reinforcement Learning: Where It Arises and How to Correct It",
+    "url": "https://huggingface.co/papers/2609.32444",
+    "published_at": "2026-09-26T00:00:00Z",
+    "summary": "We study training-inference mismatch in reinforcement learning with verifiable rewards (RLVR) for large language models, where rollouts are sampled by an inference engine while gradients are computed by a training engine, and the two engines assign different probabilities to the same tokens. To account for this discrepancy in policy updates, we introduce calibrated importance sampling (CIS). CIS is motivated by an empirically supported logit-displacement characterization that expresses the mismatch as an additive displacement varepsilon_t in log-odds, determined by the per-logit perturbation before the softmax, whose distribution is approximately invariant to token confidence. This characterization motivates a confidence-aware truncation: large positive displacements are truncated at a single constant threshold, which maps back to an importance-ratio cap that tightens as token confidence increases. Theoretically, we show that CIS replaces the unbounded second moment that governs the error of exact importance sampling with a term bounded by a constant, at the cost of a bias controlled by the truncated excess. In evaluation across three mixture-of-experts models and five mathematical reasoning benchmarks, CIS achieves the highest five-benchmark average on all three models among the evaluated baselines. Diagnostic analyses show that CIS places less truncation bias on low-confidence tokens than truncated importance sampling, while upward clipping of small importance weights reduc",
+    "category": "paper",
+    "score": 7,
+    "score_reason": "揭示RLVR训练-推理概率不匹配问题并提出校准重要性采样，对LLM强化学习部署有直接工程意义",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 6
+    }
+   },
+   {
+    "id": "680fedf2bc2a613a",
+    "source": "hf-daily-papers",
+    "title": "Surprising Success, Repeated Failure: Entropy-Guided Credit Assignment for Exploration in LLM Reasoning",
+    "url": "https://huggingface.co/papers/2609.33781",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) enhances reasoning in large language models (LLMs) through outcome-level feedback, yet recent approaches to finer-grained credit assignment often require auxiliary models, additional sampling, or privileged information. Although policy entropy provides a readily available signal, prioritizing uncertain positions under both reinforcement and penalization concentrates penalties where failed responses still retain alternatives for recovery, which can suppress opportunities for exploration. To address this, we introduce Entropic Advantage Policy Optimization (EAPO), an entropy-guided credit assignment method that treats success and failure asymmetrically. Specifically, motivated by the observation that success under uncertainty is less repeatable while confident failures tend to recur, EAPO couples normalized policy entropy with the sign of the response advantage to reinforce surprising success and correct repeated failure. It assigns stronger reinforcement to high-entropy decisions in successful responses and stronger penalties to low-entropy decisions in failed responses, while attenuating penalties at uncertain positions to preserve opportunities for recovery. By redistributing the response advantage across tokens, EAPO derives token-level credit directly from existing rollout signals without additional supervision. We validate EAPO on a range of reasoning tasks across both base and reasoning backbones, demonstrating that i",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "用熵指导RLVR中信用分配，对LLM推理训练有参考价值但偏训练侧",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 0
+    }
+   },
+   {
+    "id": "ad87067596994ca8",
+    "source": "hf-daily-papers",
+    "title": "Skill2Env: Capability-Oriented Environment Synthesis from Skills for General Agents",
+    "url": "https://huggingface.co/papers/2609.33772",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "Executable environments are critical for post-training agents on tasks that require tool use and multi-step interaction, but constructing executable tasks together with their environments remains difficult to scale. Skills provide reusable domain knowledge, operational procedures, and tool-use instructions, but a substantial gap remains between the information contained in a skill and a concrete, challenging task with a complete executable environment. To address this gap, we introduce Skill2Env, a capability-oriented framework that starts from a skill and uses agent capability demands to guide task and environment synthesis. Skill2Env represents these demands through reusable difficulty patterns and instantiates them into task blueprints that specify objectives, challenges, environment facts, information boundaries, and acceptance criteria. These blueprints guide the joint construction of task instructions, execution substrates, workspaces, and rubric-based evaluators around source skills. We further propose Iterative Task Hardening, which uses solver execution evidence to identify insufficiently challenging task designs, strengthen or extend their difficulty-pattern instantiations, and revise the corresponding blueprints and environments. Using 1.5K high-scoring trajectories generated from Skill2Env environments for supervised fine-tuning, we observe consistent improvements across a broad range of agent benchmarks, demonstrating the effectiveness of capability-oriented envi",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "面向Agent的环境合成方法，对Agent训练和评估有参考价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 5
+    }
+   },
+   {
+    "id": "4d21c87ac1f5cc58",
+    "source": "hf-daily-papers",
+    "title": "Beyond Timestamps: Decision-Aligned On-Policy Distillation for Long-Horizon Agents",
+    "url": "https://huggingface.co/papers/2609.33391",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) often relies on sparse outcome rewards, providing coarse supervision for long-horizon agents. On-policy self-distillation (OPSD) complements this signal with dense privileged feedback. However, we identify Decision--Timestamp Mismatch: privileged guidance may be misaligned with the student's functional decision because the corresponding decision can occur at a different timestep, while the student's decision itself may span multiple timesteps rather than being tied to a single timestamp. Thus, timestamp-local supervision can misalign both the context and the temporal scope of credit. To address this mismatch, we introduce AlignOPSD, following the principle of aligning supervision before assigning credit. Decision-Aligned Supervision Rectification re-scores the same student-sampled response in functionally matched contexts across sibling rollouts to calibrate local teacher evidence. Semi-Markov Hierarchical Credit Assignment then derives variable-duration decision spans from correspondence changes and uses rectified evidence to allocate outcome-grounded credit across spans and their constituent turns. We evaluate AlignOPSD with Qwen2.5-3B and Qwen2.5-7B on ALFWorld, WebShop, and Search-QA against representative baselines. AlignOPSD outperforms both GRPO and StepOPSD across all eight backbone--aggregate-metric comparisons, improving on GRPO by 5.5--8.7 \\% and ranking first in six. Additional analyzes examine the two alignmen",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "提出决策-时间戳错配问题及OPSD方法，对长程agent训练有参考价值，但方法偏理论，工程可复现性待验证",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "20d45c9f5cddce15",
+    "source": "hf-daily-papers",
+    "title": "CompoWorld: Compositional Environment Scaling for General Agents",
+    "url": "https://huggingface.co/papers/2609.33665",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "Automatically generated environments provide a scalable source of interaction data for training general agents. However, existing approaches mainly generate tasks within a single environment, while real-world workflows require agents to connect information and actions across multiple services. We introduce Compositional Environment Scaling (CompoWorld), which expands the task space by composing a finite library of reusable services. Coding agents turn tool specifications into verified services with typed states and shared interfaces, while a world model handles tools that cannot be reliably implemented. A random-walk procedure connects services through dependency graphs, enabling the generation and verification of tasks that require information to flow across services. Verified trajectories support supervised fine-tuning (SFT), while our Completion-Focused Rubric Reward guides reinforcement learning (RL) toward full task completion by emphasizing criteria with lower pass rates within each rollout group. We construct 448 services exposing 10,130 tools and use 3K SFT trajectories and 1K RL tasks to train Qwen3.6-35B-A3B. Experimental results show that CompoWorld improves on its backbone by 9.17 points on average across eight benchmarks. On AutomationBench, it surpasses frontier models such as Claude Opus 4.6 and leads all compared agent-specialized 35B-A3B models.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "提出跨服务组合环境扩展方法训练通用agent，对多工具编排场景有参考价值，但偏向训练数据生成而非工程实践",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 7
+    }
+   },
+   {
+    "id": "0b4ff01d39a340da",
+    "source": "hf-daily-papers",
+    "title": "CoWindow Attention: Full Causal Coverage Is a Collective Property",
+    "url": "https://huggingface.co/papers/2609.32704",
+    "published_at": "2026-09-26T00:00:00Z",
+    "summary": "FullAttn repeatedly exposes the complete causal history to every attention head, creating substantial redundant computation and memory traffic even with IO-efficient dense kernels. We introduce CoWA, a structured attention architecture that distributes access to the causal history across KV heads. All heads share near-diagonal and prefix-sink windows, while complementary long-range windows partition the remaining history. Their union provides full causal coverage although each head attends sparsely to distant tokens. This position-defined attention pattern requires no learned router or indexer, is used consistently during training and inference, and aligns with KV-head tensor parallelism. A window-matched ablation at 8K isolates the effect of complementary long-range allocation: CoWA with 100% collective coverage reaches 89.73% accuracy, compared with 89.97% for FullAttn, while duplicated long-range windows perform substantially worse. Across a broader controlled associative-recall comparison with matched token budgets, CoWA closely tracks FullAttn as the context grows, whereas other sparse patterns lose a substantial fraction of the associations. In an attention-operator benchmark at 128K tokens with tensor parallelism, CoWA reduces forward and backward latency during training by 7.4x and 8.6x and decoding latency during inference by 3.0x over FullAttn. Its per-rank peak operator memory matches FullAttn during training and is 7.6x lower during decoding. Across scaling-law tr",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "CoWA注意力架构减少冗余计算，对长上下文推理效率有参考价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "ca0efa0e1e8cfef8",
+    "source": "hf-daily-papers",
+    "title": "Fewer Tokens, More Self-Teaching: On-Policy Self-Distillation for Extreme Visual Token Reduction",
+    "url": "https://huggingface.co/papers/2609.32353",
+    "published_at": "2026-09-26T00:00:00Z",
+    "summary": "Visual token reduction is an effective way to accelerate multimodal large language models (MLLMs), but performance deteriorates rapidly under extremely low token budgets. Existing work has explored both visual-token selection and training-based adaptation to reduced visual inputs. We take a step further by asking how a heavily compressed MLLM should learn from the states induced by its own generations. This setting naturally calls for on-policy self-distillation: a heavily compressed model is supervised on the states induced by its own generations, while its full-token counterpart serves as an information-rich teacher. Based on this insight, we propose LT-OPD, a training framework for extreme visual-token reduction. The student rolls out responses with only a small fraction of visual tokens, and a frozen full-token copy of the same MLLM provides distributional supervision along these student-generated trajectories. To stabilize on-policy learning when visual evidence is severely limited, we further introduce a budget-level curriculum that progressively decreases the token budget during training. Across nine benchmarks on Qwen3.5-4B, LT-OPD raises average retained performance under 5% visual-token retention from 68.6% to 82.3%, outperforming training-free, training-based, and reinforcement-learning baselines at the same budget. The gains transfer consistently to Qwen3.5-9B, GLM-4.6V-9B, and LLaVA-OV-1.5-4B. LT-OPD also reduces KV-cache usage by 85.2% and prefill FLOPs by 85.4%",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "研究极端视觉token压缩下的自蒸馏方法，对降低MLLM推理成本有直接帮助，但方法复杂度较高",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 6
+    }
+   },
+   {
+    "id": "ed09ef37156cbf5d",
+    "source": "hf-daily-papers",
+    "title": "SAGE: Mitigating Long-Horizon Reasoning Biases via Topological Guidance",
+    "url": "https://huggingface.co/papers/2609.30192",
+    "published_at": "2026-09-24T00:00:00Z",
+    "summary": "Long-horizon reasoning remains a central challenge for large language models (LLMs) under sparse-reward regimes. We argue that this brittleness arises from two biases induced by complex reasoning spaces: an exploration bias, where models are drawn toward locally plausible but structurally unstable branches, and a compounding bias, where small local deviations accumulate across depth and suppress rare rewards. We introduce Symbolic Closure Analysis (SCA) as a theoretical lens characterizing how branching structures and sparse rewards induce these biases in long-horizon reasoning with local admissibility, and as a design principle for structural priors in less formal reasoning tasks. Motivated by this analysis, we propose SAGE (Structural Admissibility-Guided Exploration), a unified framework that injects structural guidance to alleviate exploration bias and compounding bias in long-horizon reasoning. SAGE combines two complementary structural guidance: algebraic sparsification, which projects locally admissible candidates onto operator-indexed algebraic subspaces to suppress spurious branching and mitigate exploration bias, and hyperbolic structural guidance, which embeds reasoning states into a negatively curved space to provide dense depth-wise signals and mitigate compounding bias. Across 12 benchmarks and 7 model families, SAGE outperforms competitive baselines. In particular, SAGE achieves up to an 8-fold improvement on the Andrews-Curtis problem, an open real-world long-",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "提出拓扑引导缓解长程推理中的探索偏差和复合偏差，对提升 LLM agent 多步推理可靠性有参考价值，但方法偏理论，工程复现门槛较高。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 6
+    }
+   },
+   {
+    "id": "46a7baf93d7efc0b",
+    "source": "hf-daily-papers",
+    "title": "EmbodiedMemory-Bench: Benchmarking Embodied Memory for Long-Horizon Embodied Tasks",
+    "url": "https://huggingface.co/papers/2609.28236",
+    "published_at": "2026-09-23T00:00:00Z",
+    "summary": "Long-horizon embodied interaction requires agents to retain and continually update information about the environment as they observe, act, and encounter change. Yet current agents struggle to maintain such memory reliably. Our analysis traces this limitation to four key deficiencies: weak fine-grained visual memory, unreliable dynamic world-state tracking, failing to record world state revealed by interaction outcomes, and limited generalization from prior experience. However, existing benchmarks do not directly assess these memory capabilities during long-horizon embodied interaction. To address this gap, we introduce EmbodiedMemory-Bench (EMem-Bench), comprising 2,554 interactive episodes across four task families. EMem-Bench requires agents to build and update memory from interaction history, then use it to complete a later task by acting in the environment. We further present Embodied-Memorizer (EMem), an external memory system that organizes embodied experience into spatial, event, and scene memories. We also train EMem-8B, an 8B policy that manages and uses these memories. We evaluate a diverse range of open-source and proprietary MLLMs and representative multimodal memory systems. Results show that current models remain weak and uneven across the four challenges. Under matched backbones, EMem achieves the best overall performance among the evaluated memory systems and improves both open-source and proprietary models, while EMem-8B further improves over its backbone. Pr",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "系统分析长程具身任务中记忆缺陷并提出基准，对agent记忆系统设计有诊断参考价值",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 16
+    }
+   },
+   {
+    "id": "ac15a6463279f666",
+    "source": "hf-daily-papers",
+    "title": "LastOPD: Taming Collapse in Latent On-Policy Distillation",
+    "url": "https://huggingface.co/papers/2609.28845",
+    "published_at": "2026-09-23T00:00:00Z",
+    "summary": "On-policy distillation (OPD) corrects a student on the responses it writes, but its signal is the teacher's next-token distribution: it tells the student what the teacher says but misses how it thinks. Latent supervision promises the missing part by aligning the student's latent states to the teacher's. Recent methods such as OPRD bring this signal into on-policy distillation. However, we observe two failures of this recipe when distilling Qwen3-4B and Qwen3-8B into Qwen3-1.7B-Base. Early gain, late collapse: latent supervision alone lifts MATH-500 accuracy from 25 to 46 in 10 steps, but subsequent training degrades performance down to 11 with no recovery. Better alignment, worse behavior: although the alignment metric steadily improves throughout this collapse, the most aligned model turns out to be the worst performing. Further analysis suggests a mismatch in how the latent signal is applied: layers paired by depth play different roles in the two models, so continued alignment may pull the student toward teacher states it cannot understand. To address this, we propose LastOPD, which applies the latent signal only at the last-layer state, the common interface both LM heads read, and only during a 10-step crossfade into token-level OPD. This keeps the useful part of the latent signal and hands the student to token-level supervision before the collapse sets in. Extensive experiments show that LastOPD improves MATH-500 over token-only OPD by 5.55 and 4.02 points with the 4B and",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "研究潜在状态蒸馏中的崩溃问题，对知识蒸馏方法有改进价值，但偏理论训练方法",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 10
+    }
+   },
+   {
+    "id": "31b80745ea25c829",
+    "source": "hf-daily-papers",
+    "title": "TimeEvo: Failure-Driven Self-Evolution of a Time Series Agent",
+    "url": "https://huggingface.co/papers/2609.27277",
+    "published_at": "2026-09-23T00:00:00Z",
+    "summary": "Time series agents answer analytical questions by calling external tools, and which tools they carry is decided by people before the agent runs. However, we identify two failures in this setup. Human-Agent Tool Misalignment: a library of 21 expert-curated tools helps on some tasks and hurts on others, dropping anomaly accuracy under every backbone we test. Silent Harm: one round of generic self-revision changes 147 answers and breaks 56 of them, while the final score moves by less than a point. Both follow from the same gap: whether a tool helps is decided question by question at runtime, while tools are supplied in advance and judged by a single average. To address this, we propose TimeEvo, which clusters an agent's diagnosed failures into capability gaps, plans a measurement for each, synthesizes evidence-only tools that fill them, and admits the candidate library only through a paired admission gate. Experiments on ten time series QA tasks and three backbones show that TimeEvo, starting from an empty library, improves accuracy on every task and every backbone, and that a library grown on a cheap model still gains when it is installed into stronger ones. Code is available at https://github.com/Muyiiiii/TimeEvo.",
+    "category": "paper",
+    "score": 6,
+    "score_reason": "提出 TimeEvo 让 time series agent 自演化工具集，解决人设工具与任务不匹配问题，方法有代码可复现，但 time series agent 在通用 AI 应用工程中受众较窄。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 11
+    }
+   },
+   {
+    "id": "db104bd22e248089",
+    "source": "hf-daily-papers",
+    "title": "SpatialSpeak: QA-Native Reconstruction with Local and Global Context for Spatial Chain-of-Thought Reasoning",
+    "url": "https://huggingface.co/papers/2609.33616",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "Vision-language models (VLMs) can benefit from geometric priors for multi-view spatial reasoning, yet answer-only training does not directly supervise the intermediate geometric estimates and their use in deriving quantitative spatial answers. We hypothesize that spatial chain-of-thought (CoT) supervision becomes more effective when the VLM first jointly learns complementary local geometry and global scene context through multi-view reconstruction. We introduce SpatialSpeak, a two-stage framework that connects QA-native reconstruction pretraining with spatial CoT learning. In Stage I, QA-Native Reconstruction Pretraining (QA-RP) combines marked-point 3D queries for fine-grained local geometry with object-center queries for global scene context across views. Both tasks are formulated as text-based question answering, allowing geometric estimation and subsequent reasoning to share the same autoregressive output interface. In Stage II, spatial CoT with Visual Compensation (CoT-VC) trains the model to express question-relevant geometric estimates and use them to derive answers, with reliability assessment and visual compensation supporting answer refinement when needed. On ReVSI, QA-RP increases the gain from CoT-VC from 2.6 to 6.9 points, and ablations show that both local and global reconstruction supervision are beneficial. SpatialSpeak achieves state-of-the-art results on ReVSI, VSI-Bench, and SPAR-Bench, with a ReVSI score of 62.8 that exceeds the strongest compared baseline",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "探索VLM空间链式推理的局部+全局几何先验，对多模态agent空间推理有启发，但场景较窄",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 8
+    }
+   },
+   {
+    "id": "05fd742a33a60837",
+    "source": "hf-daily-papers",
+    "title": "Program-Verified Self-Evolution for Vision-Language Models",
+    "url": "https://huggingface.co/papers/2609.33855",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "Self-evolving vision-language models train on questions they generate from unlabeled images. Since these questions have no gold answers, prior methods label them by majority vote over sampled answers or by a model judge. In a human evaluation, we find that 24\\% of majority-vote labels and 18\\% of model-judge labels produced during self-evolution are wrong. To address this problem, we present Verifiable QA Generation for Self-Evolving Models (VQS), which changes how the model judges answers. Instead of voting on an answer, the model parses each image into a structured record, such as a scene graph, a chart table, or a diagram graph. Fixed programs then write a question from the record and compute its answer. The model still acts as a visual checker, but it only confirms the individual facts the program reads, one short claim at a time. These claim-level checks select the parser's training targets, so the parser also improves without labels. Human raters find 94\\% of VQS answers correct, against 76\\% for majority voting. Across ten benchmarks, VQS improves Qwen3-VL by up to 3.18 points at the 2B, 4B, and 8B scales and outperforms the strongest self-evolving baseline at each. Gains keep growing over three training rounds, reaching 3.84 points at 2B. Code is released at https://github.com/ahmedheakl/VQS",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "提出程序验证自进化方法解决VLM自训练标签错误问题，方法新颖但针对VLM特定场景",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 7
+    }
+   },
+   {
+    "id": "1883ab58d52edc63",
+    "source": "hf-daily-papers",
+    "title": "Diffusion Reward Models",
+    "url": "https://huggingface.co/papers/2609.33803",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "Reward models underpin the alignment of large language models, yet the dominant designs reduce each prompt--response pair to a point estimate or to a distribution from a fixed parametric family. This is at odds with human preference, which is inherently multimodal: the same response can be reasonably judged in many ways, and no single family covers all of them. To better fit this structure, we introduce DRM, a Diffusion Reward Model that recasts reward modeling as conditional density estimation over p(rmid x,y). Conditioned on a frozen LLM encoder, a lightweight Diffusion Transformer denoises Gaussian noise into a reward vector, placing no parametric assumption on the output distribution and naturally representing its multimodal structure. A single architecture handles both multi-attribute regression and pairwise preference data, and at inference N samples form an empirical reward distribution that can be aggregated into a scalar, a variance, or quantiles. Across five benchmarks, DRM matches or surpasses baselines under matched data and backbone, stays competitive with much larger discriminative, distributional, and generative RMs despite its modest training scale, and recovers multimodal reward structure where conventional heads collapse to a point. Uncertainty-aware rejection and lower-confidence-bound (LCB) aggregation further demonstrate that DRM can exploit distributional information beyond a scalar reward to improve reward-model decisions. Downstream RLHF experiments ad",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "提出扩散奖励模型拟合人类偏好多模态性，对RLHF对齐有理论价值，但离应用工程较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 11
+    }
+   },
+   {
+    "id": "0140d81ab8051a53",
+    "source": "hf-daily-papers",
+    "title": "RoboFoundry: System-as-Policy Evolution for Self-Learning Embodied Agents",
+    "url": "https://huggingface.co/papers/2609.32862",
+    "published_at": "2026-09-26T00:00:00Z",
+    "summary": "A foundation model should not act in isolation as an embodied agent. Yet, existing methods often optimize individual components of the agent stack, such as memory, context, skills, or action interfaces, rather than treating the supporting system itself as a unified policy. Moreover, interaction alone does not yield self-improvement unless execution experience is converted into persistent, validated system changes. We therefore propose RoboFoundry, the first embodied agentic framework that formulates this process as Self-Evolving System-as-Policy. RoboFoundry diagnoses capability gaps in decision-making and memory management, converts execution traces into validated task-specific system updates, and promotes recurring improvements to the general system. Evolution operates over two complementary surfaces: a context system that manages active internal context and persistent file-system memory, and a hierarchical skill system that organizes atomic skills, reusable compositions, and failure-conditioned recovery. A shared semantic interface separates embodiment-invariant decisions from embodiment-specific execution, allowing evolved system capabilities to transfer across heterogeneous robots. On EmbodiedBench, RoboFoundry achieves state-of-the-art performance, notably improving GPT-5.5 by 27.8%. It also brings Qwen3.7-Plus to near parity with GPT-5.5 (70.3% vs. 72.7%), showing consistent gains from system-as-policy evolution across foundation models. For long-horizon memory, RoboFo",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "将Agent系统视为统一策略进行自学习，思路有参考价值但偏机器人",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 7
+    }
+   },
+   {
+    "id": "f674be6970c33cf5",
+    "source": "hf-daily-papers",
+    "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+    "url": "https://huggingface.co/papers/2609.32712",
+    "published_at": "2026-09-26T00:00:00Z",
+    "summary": "FullAttn often assigns negligible normalized mass to much of the causal score space, yet dense kernels execute the complete post-score path after forming each QK tile. We introduce MALA, a fused attention primitive that preserves score access to every legal causal interaction and uses normalized contribution to allocate post-score computation. Forward uses its evolving online-softmax normalizer, while backward reuses the finalized normalizer to derive nested retained support using only standard attention state. A common tolerance governs training and inference, allowing for adaptive retention of the work. MALA reduces low-contribution post-score computation. A matched-work study at 8K isolates the benefit of distribution-adaptive allocation: under exactly matched total post-score work, MALA approaches a per-instance reference-mass oracle, with mean omitted mass of 0.0188% versus 0.0182%. Across context lengths from 1K to 32K tokens, the same tolerance maintains low output and gradient errors relative to the reference. Across a broader controlled associative-recall comparison, MALA closely tracks FullAttn as context grows, reaching 89.67% accuracy at 8K compared with 89.97% for FullAttn. In an attention-operator benchmark at 128K tokens with tensor parallelism, MALA reduces forward and backward latency during training by 2.2x and 3.0x and decoding latency during inference by 1.6x relative to FullAttn. Across scaling-law training from 0.6B to 14B parameters, MALA closely tracks",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "提出MALA注意力融合原语优化计算分配，对推理加速有潜在价值，但偏向底层算子优化，应用层直接可用性有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 3
+    }
+   },
+   {
+    "id": "c8b597e05e5db0e4",
+    "source": "hf-daily-papers",
+    "title": "Not All Ranks Are Equal: Budget-Aware LoRA Merging Across Tasks",
+    "url": "https://huggingface.co/papers/2609.22237",
+    "published_at": "2026-09-03T00:00:00Z",
+    "summary": "Merging low-rank adapters (LoRAs) promises to eliminate the overhead of swapping task-specific weights at inference time. However, existing merging methods assume every layer needs the same rank budget. Further, some methods assume that rank budget needs to be split equally among the tasks too. We show this uniform-budget assumption is a major source of the performance gap between merged and per-task LoRAs. However, rank selection is an NP hard problem. To this end, we introduce Net Utility, a data free metric that first decomposes every task LoRA by its Singular Value Decomposition (SVD) and scores each of those singular directions by its task utility and its interference with other tasks directions. Next, we globally pool these scores to select singular directions with the highest values with a constraint on the total number of directions selected. The proposed Net Utility metric is applied on top of five different merging methods across three different merging spaces. The merging is done over two sets of tasks, vision and language tasks. Net utility based rank allocation outperforms its counterparts without that allocation. On average, over vision tasks it achieves +2.1% improvement in performance, and +2.2% improvement over the language tasks.",
+    "category": "paper",
+    "score": 5,
+    "score_reason": "提出预算感知的 LoRA 合并方法，解决推理时多任务权重切换开销，但 upvotes 低且方法增量改进，对生产部署有参考价值但非突破。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "97e2b7f0082fbbd6",
+    "source": "hf-daily-papers",
+    "title": "Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence",
+    "url": "https://huggingface.co/papers/2609.35432",
+    "published_at": "2026-09-28T00:00:00Z",
+    "summary": "Vision-language-action (VLA) and world-action (WAM) models map observations and instructions directly to robot actions. This directness ties a policy to training: minor layout or viewpoint changes cause failure, and instructions generalize poorly. The root cause lies in representation: task requirements, conditions, progress, and failure recovery are implicitly encoded in action sequences, making them difficult to inspect or revise. Digital coding agents offer a precedent: LLMs call tools, verify results, and revise from feedback as executable code. The same working pattern of explicit state, manageable execution, and revisable procedures underlies generalization and long-horizon execution in the physical world, letting physical experience return as reusable programs, memory, or evidence. We propose Physical Coding, representing task state and execution as code. Code as World records objects, relations, constraints, and progress; Code as Policy organizes planning, verification, recovery, and execution. We build HexaAnything, which calls perception, planning, and control tools, including VLA/WAM policies, and makes in-the-loop decisions from external feedback. Verified traces become data and memory, enabling evolution from tools and Harness to model weights, architectures, and ultimately hardware and task design. On RoboCasa365, HexaAnything improves Composite-Unseen and overall success over XR-1 VLA, and its Harness-trained HexaModel beats the base on every split, indicating ",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "自进化编码Agent，偏机器人领域，与通用AI应用工程关联弱",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 5
+    }
+   },
+   {
+    "id": "d9bad10ffddb2595",
+    "source": "hf-daily-papers",
+    "title": "YuE2: Unifying Symbolic and Audio Music Generation at Frontier Quality",
+    "url": "https://huggingface.co/papers/2609.33757",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "Symbolic models make melody, harmony, rhythm, and form explicit but typically stop before a finished recording; audio models produce complete songs while leaving composition implicit. We introduce YuE2, which unifies symbolic and audio music generation at frontier quality through symbolic planning. A single AR-NAR Mixture-of-Transformers (MoT) first writes a readable score specifying melody and harmony, expands it into semantic music tokens, and realizes it as full-song audio. In comparisons using the same checkpoint, experts prefer symbolic planning for overall quality and musicality, with 49.3% of overall preferences versus 34.6% without planning. Experts also favor the unified model over a separate language model and diffusion Transformer. On WildSongBench, YuE2 scores 6.73 on SongBench Global Avg, exceeding all evaluated public baselines. Selecting from eight candidates (best-of-8), YuE2 reaches 6.96, the highest observed mean among all evaluated systems. Expert listening further establishes its competitiveness with proprietary song generators, favoring best-of-8 over Suno v4.5 and yielding nearly balanced preferences against Suno v5. To learn this generation process from recordings without aligned scores, we introduce MERT2 and SheetSage2 to supply semantic and symbolic supervision. MERT2 sets a new state of the art in music representation learning, surpassing previous best results on 14 of 15 MARBLE metrics; SheetSage2 leads 12 of 15 benchmark-metric pairs in our lead-s",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "音乐生成模型统一符号与音频，领域较窄，对通用AI应用工程参考价值有限",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 26
+    }
+   },
+   {
+    "id": "a656b205117891f6",
+    "source": "hf-daily-papers",
+    "title": "Rolling-WAM: World Action Models with Rolling Imagination",
+    "url": "https://huggingface.co/papers/2609.30247",
+    "published_at": "2026-09-24T00:00:00Z",
+    "summary": "World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. We present Rolling-WAM, a formulation that distributes joint denoising across successive replanning cycles. Our method maintains a sliding window of video-action chunks at staggered noise levels. At each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. As the window advances with new camera observations, the retained future chunks continue their denoising process. This distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. Evaluations on LIBERO, RoboTwin, and a real-world Unitree G1 humanoid show that Rolling-WAM achieves competitive manipulation performance. By removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint WAMs.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "机器人操作中的World Action Model优化，与应用工程距离远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "548e289f77d30ce9",
+    "source": "hf-daily-papers",
+    "title": "D-JEPA: A Decision-Aligned Latent World Model",
+    "url": "https://huggingface.co/papers/2609.24749",
+    "published_at": "2026-09-21T15:17:32Z",
+    "summary": "Latent world models predict the consequences of actions, but accurate prediction does not guarantee that latent distance reflects which candidate will execute successfully. We identify a decision-local prediction gap: among the few futures competing for execution, a candidate predicted closer to the goal can produce a worse realized outcome than an available alternative. We introduce D-JEPA, a decision-aligned latent world model that learns decision-relevant relations among candidate futures from executed outcomes. A bounded, permutation-equivariant operator jointly reasons over goal-relative predictive features and ordinal evidence, refining pretrained predictive geometry where action choices are most consequential. Restricted predictor adaptation and a shared ordinal interface extend this alignment across complementary predictive geometries. D-JEPA further realizes the learned decision structure in JEPA-compatible future representations, enabling deployment through native latent-distance planning. Evaluations across latent control, manipulation, pretrained action-producing models, physical robots and autonomous driving demonstrate improved action selection, including 87.89% success on PushT, a 15.04-point average gain on RoboTwin, and a 17-point gain on physical robot tasks. These results establish decision-relevant relational structure as a direct bridge between predictive world modeling and effective control.",
+    "category": "paper",
+    "score": 4,
+    "score_reason": "提出决策对齐的潜在世界模型 D-JEPA，偏强化学习/决策领域，与应用工程中 LLM agent 的落地距离较远。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   },
+   {
+    "id": "7f80fe95aebfcd85",
+    "source": "hf-daily-papers",
+    "title": "VGGT-Diff: Visual Geometry Meets Diffusion for Sparse-View Novel View Synthesis",
+    "url": "https://huggingface.co/papers/2609.33253",
+    "published_at": "2026-09-27T00:00:00Z",
+    "summary": "We present VGGT-Diff, a geometry-routed multi-view diffusion model for sparse-view novel view synthesis. Existing novel view synthesis (NVS) methods face a fundamental trade-off: reconstruction-based approaches preserve observed geometry but struggle to synthesize unseen regions, while diffusion-based methods provide strong generative priors yet rely on implicit source-to-query correspondence. VGGT-Diff bridges these regimes by routing visual geometry latents from VGGT-Ω into a pretrained video diffusion model. Each visual token is associated with a 3D point and confidence, then transformed into query-aligned latent conditions through a confidence-aware Visual Geometry Router (VGR) that preserves front and back surface evidence. These conditions guide joint target-view denoising, while Point-Track Residual Consistency (PTRC) regularizes predicted-clean residuals along reliable 3D tracks, improving multi-view stability. We further introduce robust geometry conditioning, combining training-time regularization with inference-time guidance for improved robustness. Experiments show competitive or state-of-the-art performance across interpolation and extrapolation under different viewpoint difficulties. Our code is available at https://github.com/chenkangjie1123/VGGT-Diff.",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "计算机视觉新视角合成，与AI应用工程距离较远",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 1
+    }
+   },
+   {
+    "id": "a64480caaaea3bb1",
+    "source": "hf-daily-papers",
+    "title": "LightMIS: Ultra-Lightweight Medical Image Segmentation Without a Stage-Wise Decoder",
+    "url": "https://huggingface.co/papers/2609.28327",
+    "published_at": "2026-09-24T00:00:00Z",
+    "summary": "We present LightMIS, a scalable family of ultra-lightweight convolutional networks for 2D binary medical image segmentation without a learned stage-wise decoder. LightMIS aligns the outputs of a five-level encoder to a common resolution using Scale-Aligned Projection blocks, aggregates them once, and refines the fused representation with an Adaptive Fusion Cascade. The cascade combines Adaptive Kernel Fusion with the proposed Progressive Receptive Fusion module, which uses temporary channel expansion, complementary depthwise receptive fields, and progressive cross-branch information transfer. We evaluate LightMIS-T, LightMIS-S, and LightMIS using five-fold cross-validation under a common nnU-Net v2.3.1 protocol on DRIVE, Kvasir-SEG, DSB18, BUSI, ISIC-2017, and ISIC-2018. Full LightMIS contains 0.131 M parameters and requires 0.575 GFLOPs for a 3times256times256 input, achieving modality-macro Dice and IoU scores of 86.71% and 78.99%, respectively. Mobile U-ViT obtains 86.75% Dice and 79.07% IoU, so the observed differences are 0.04 and 0.08 percentage points. Relative to Mobile U-ViT, nnWNet, and nnU-Net, LightMIS reduces parameter count by 90.58-99.61% and GFLOPs by 82.54-96.14%. On an Arm Mali-G52 MC2 GPU, all LightMIS variants achieve full GPU delegation, with median delegated latency ranging from 53.31 ms for LightMIS-T to 138.31 ms for LightMIS. These results demonstrate a favorable accuracy-complexity trade-off and on-device execution feasibility for the evaluated tasks",
+    "category": "paper",
+    "score": 3,
+    "score_reason": "医学图像分割的轻量化方法，领域特定且 2D 二值分割，与 LLM/agent/RAG 等 AI 应用工程核心方向无关。",
+    "entities": [],
+    "analysis": "",
+    "images": [],
+    "low_confidence": false,
+    "extra": {
+     "upvotes": 2
+    }
+   }
+  ]
+ },
+ "unscored": []
+}

@@ -35,6 +35,15 @@
    "url": "https://openai.com/index/previewing-ultrafast",
    "score": 6,
    "summary": "OpenAI 推出了名为 Ultrafast 的新 API 服务层级，预览阶段运行 GPT-5.6 Sol 模型，速度最高可提升 14 倍。该服务由 Cerebras 提供算力支持，每秒可输出高达 750 个 token。这一变化值得关注，因为它显著降低了高吞吐量应用场景的延迟，为实时交互类 AI 产品提供了更强的性能基础。"
+  },
+  {
+   "id": "eb674100bb687fff",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+   "url": "https://openai.com/index/basis-tax-workbook-with-astra",
+   "score": 8,
+   "summary": "Basis 是一家专业税务软件公司，他们用 OpenAI 最新发布的 GPT-6 Astra 模型完成了一份包含 50 个工作表标签页的税务工作簿，速度比上一代 GPT-5.6 Sol 快了一倍。这不是一次简单的模型升级测试，而是直接在生产环境中对比两个模型处理同一复杂税务文档的表现。\n\n税务工作簿的自动化处理一直是个棘手问题。传统上，这类文档结构极其复杂，一个工作簿里往往嵌套着几十个互相关联的标"
   }
  ],
  "OpenAI": [
@@ -163,6 +172,15 @@
    "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
    "score": 9,
    "summary": "GPT-6 Sol 和 Luna 是 OpenAI 推出的两款新模型，旨在将前沿智能融入日常工作场景。它们的核心变化在于提供了能力与成本的不同平衡组合，让用户可以根据任务需求进行选择。这一发布值得关注，因为它标志着大模型开始走向更精细化的产品分层，以适配多样化的商业应用。"
+  },
+  {
+   "id": "9de028fbe46cac8b",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+   "url": "https://openai.com/index/proaction",
+   "score": 5,
+   "summary": "Proaction 利用 Codex、GPT-Live-1 和 GPT-6 Astra 构建并运营现代车队管理系统，实现了销售额提升 60% 并节省超过 75 小时的工作量。其核心方法是将多款 OpenAI 模型集成到业务流程中，以加速开发、运营和销售环节。这一案例值得关注，因为它展示了 AI 应用在垂直行业中直接驱动商业增长和效率提升的显著成效。"
   }
  ],
  "安全栈": [
@@ -866,6 +884,15 @@
    "url": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
    "score": 7,
    "summary": "这是 LangChain 官方博客发布的一篇工程实践案例，介绍了数字医疗公司 Included Health 如何利用 Deep Agents、LangGraph 和 LangSmith 构建一个名为 Dot 的联邦式医疗导航智能体，并在其中实现了人工接管与临床监督机制。\n\n在医疗领域，患者常常面临信息碎片化的困境：保险条款、预约排期、临床建议分散在不同系统中，传统的单一智能体架构难以同时处理这些"
+  },
+  {
+   "id": "86cb38b172aa5768",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Building Production Agents with Jev and LangGraph",
+   "url": "https://www.langchain.com/blog/building-prod-with-jev-and-langgraph",
+   "score": 5,
+   "summary": "这是LangChain博客介绍的一篇技术实践文章，展示了如何将LangGraph与TypeSafe AI的决策模型Jev相结合，用于构建生产级AI智能体。其核心方法是利用LangGraph进行工作流编排，并集成Jev模型来优化决策环节，从而实现更快速、成本更低的智能体运行。这一组合值得关注，因为它为开发者提供了一条在保证生产环境稳定性的同时，显著提升智能体效率和经济性的可行路径。"
   }
  ],
  "Gemini 3.6 Flash": [
@@ -1753,6 +1780,15 @@
    "url": "https://huggingface.co/papers/2607.21557",
    "score": 8,
    "summary": "OpenForgeRL 是一个开源框架，专门用来端到端地训练那些运行在复杂推理脚手架（inference harness）上的 AI 智能体。所谓推理脚手架，就是像 Claude Code、Codex 或 OpenClaw 这类系统，它们负责驱动智能体的多轮推理、工具调用以及与外部环境的交互。OpenForgeRL 的核心价值在于，它让研究人员能够直接在这些真实部署环境中训练和优化智能体，而不需要"
+  },
+  {
+   "id": "9de028fbe46cac8b",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+   "url": "https://openai.com/index/proaction",
+   "score": 5,
+   "summary": "Proaction 利用 Codex、GPT-Live-1 和 GPT-6 Astra 构建并运营现代车队管理系统，实现了销售额提升 60% 并节省超过 75 小时的工作量。其核心方法是将多款 OpenAI 模型集成到业务流程中，以加速开发、运营和销售环节。这一案例值得关注，因为它展示了 AI 应用在垂直行业中直接驱动商业增长和效率提升的显著成效。"
   }
  ],
  "OpenClaw": [
@@ -4642,6 +4678,15 @@
    "url": "https://www.langchain.com/blog/rebuilding-chat-langchain",
    "score": 8,
    "summary": "去年 LangChain 团队彻底重写了自家的文档问答聊天机器人，从早期基于简单 RAG 的版本升级为基于 Deep Agents 和子图架构的新系统。这次重构的核心目标很明确：把端到端响应时间压到 15 秒以内，同时保证回答中引用的文档片段精确可追溯。\n\n此前他们面临的主要痛点是传统 RAG 模式在复杂查询下的表现不稳定。旧版聊天机器人采用“检索-生成”的线性流程，但用户提问往往不是一步就能解决"
+  },
+  {
+   "id": "81200c4858b45293",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "AdaTutoRank: Learning to Rerank Document Sets via Adaptive Tutoring Optimization for RAG and Deep Research",
+   "url": "https://huggingface.co/papers/2609.32472",
+   "score": 8,
+   "summary": "AdaTutoRank 是一种面向 RAG 与深度研究的文档集重排序方法，其核心变化在于将优化目标从单文档相关性匹配转向构建完整、互补且非冗余的文档集合。该方法提出自适应辅导优化，利用三层九维评分标准，为强化学习提供奖励并为蒸馏提供差异化提示，从而解决传统集合评分中监督信号稀疏、贡献难以区分的问题。其关键创新是根据生成结果的质量动态匹配三种不同具体程度的提示形式，使强结果获得更抽象的引导、弱结果获"
   }
  ],
  "PILOT": [
@@ -5083,6 +5128,24 @@
    "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
    "score": 5,
    "summary": "Higgsfield AI 借助 GPT-6 Astra 模型，大幅提升了视频广告创作工具的交付速度，能在一天内上线新视频功能。其核心变化在于利用新一代模型的能力，让小型企业更轻松地制作视频广告，并加速创意工具的市场化进程。这值得关注，因为它展示了前沿大模型如何直接赋能中小企业，并显著压缩了产品迭代周期。"
+  },
+  {
+   "id": "eb674100bb687fff",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+   "url": "https://openai.com/index/basis-tax-workbook-with-astra",
+   "score": 8,
+   "summary": "Basis 是一家专业税务软件公司，他们用 OpenAI 最新发布的 GPT-6 Astra 模型完成了一份包含 50 个工作表标签页的税务工作簿，速度比上一代 GPT-5.6 Sol 快了一倍。这不是一次简单的模型升级测试，而是直接在生产环境中对比两个模型处理同一复杂税务文档的表现。\n\n税务工作簿的自动化处理一直是个棘手问题。传统上，这类文档结构极其复杂，一个工作簿里往往嵌套着几十个互相关联的标"
+  },
+  {
+   "id": "9de028fbe46cac8b",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+   "url": "https://openai.com/index/proaction",
+   "score": 5,
+   "summary": "Proaction 利用 Codex、GPT-Live-1 和 GPT-6 Astra 构建并运营现代车队管理系统，实现了销售额提升 60% 并节省超过 75 小时的工作量。其核心方法是将多款 OpenAI 模型集成到业务流程中，以加速开发、运营和销售环节。这一案例值得关注，因为它展示了 AI 应用在垂直行业中直接驱动商业增长和效率提升的显著成效。"
   }
  ],
  "预备框架": [
@@ -6663,6 +6726,15 @@
    "url": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
    "score": 7,
    "summary": "Jev 是一种被探索用作智能体评估器的新型方法，它属于“系统一”模型，与传统的基于大语言模型的评判器形成对比。这项测试从准确性、可重复性、延迟和成本四个维度，评估了 Jev 作为评判器的表现。其值得关注之处在于，它可能为智能体评估提供一种在效率和一致性上不同于现有大模型方案的新路径。"
+  },
+  {
+   "id": "86cb38b172aa5768",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Building Production Agents with Jev and LangGraph",
+   "url": "https://www.langchain.com/blog/building-prod-with-jev-and-langgraph",
+   "score": 5,
+   "summary": "这是LangChain博客介绍的一篇技术实践文章，展示了如何将LangGraph与TypeSafe AI的决策模型Jev相结合，用于构建生产级AI智能体。其核心方法是利用LangGraph进行工作流编排，并集成Jev模型来优化决策环节，从而实现更快速、成本更低的智能体运行。这一组合值得关注，因为它为开发者提供了一条在保证生产环境稳定性的同时，显著提升智能体效率和经济性的可行路径。"
   }
  ],
  "智能体评估器": [
@@ -7015,6 +7087,149 @@
    "url": "https://arxiv.org/abs/2609.29913v1",
    "score": 7,
    "summary": "MILO 是一种面向多示例上下文学习场景的 KV 缓存压缩框架，核心方法是对 KV 缓存进行分块低秩压缩，并根据各块的信息熵动态分配秩预算，以保留关键块的高保真度。该技术针对的是在输入数千个示例时 KV 缓存线性增长带来的内存瓶颈，旨在提升推理效率。实验表明，在 Qwen2.5 模型上，MILO 可将 KV 缓存内存减少最高 50%、吞吐量提升 1.8 倍，且分类与推理基准上的性能退化可忽略不计，"
+  }
+ ],
+ "Basis": [
+  {
+   "id": "eb674100bb687fff",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+   "url": "https://openai.com/index/basis-tax-workbook-with-astra",
+   "score": 8,
+   "summary": "Basis 是一家专业税务软件公司，他们用 OpenAI 最新发布的 GPT-6 Astra 模型完成了一份包含 50 个工作表标签页的税务工作簿，速度比上一代 GPT-5.6 Sol 快了一倍。这不是一次简单的模型升级测试，而是直接在生产环境中对比两个模型处理同一复杂税务文档的表现。\n\n税务工作簿的自动化处理一直是个棘手问题。传统上，这类文档结构极其复杂，一个工作簿里往往嵌套着几十个互相关联的标"
+  }
+ ],
+ "TraceDance": [
+  {
+   "id": "e04069610c4d9251",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+   "url": "https://huggingface.co/papers/2609.33295",
+   "score": 8,
+   "summary": "TraceDance 是一个自动化系统，能从真实 Agent 部署的运行轨迹中，针对用户指定的不良行为，自动构建出有针对性的评测基准。简单说，它把线上 Agent 实际“翻车”的瞬间，变成可复现、可评分的测试用例，让开发者能持续检验模型是否改掉了特定坏毛病。\n\n此前，Agent 行为评测主要依赖固定的基准套件，这些套件覆盖的场景有限，难以捕捉部署中实际暴露的、五花八门的不良行为。开发者即使观察到 "
+  }
+ ],
+ "Anchor-and-Confirm": [
+  {
+   "id": "e04069610c4d9251",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+   "url": "https://huggingface.co/papers/2609.33295",
+   "score": 8,
+   "summary": "TraceDance 是一个自动化系统，能从真实 Agent 部署的运行轨迹中，针对用户指定的不良行为，自动构建出有针对性的评测基准。简单说，它把线上 Agent 实际“翻车”的瞬间，变成可复现、可评分的测试用例，让开发者能持续检验模型是否改掉了特定坏毛病。\n\n此前，Agent 行为评测主要依赖固定的基准套件，这些套件覆盖的场景有限，难以捕捉部署中实际暴露的、五花八门的不良行为。开发者即使观察到 "
+  }
+ ],
+ "Anchor Synthesis Loop": [
+  {
+   "id": "e04069610c4d9251",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+   "url": "https://huggingface.co/papers/2609.33295",
+   "score": 8,
+   "summary": "TraceDance 是一个自动化系统，能从真实 Agent 部署的运行轨迹中，针对用户指定的不良行为，自动构建出有针对性的评测基准。简单说，它把线上 Agent 实际“翻车”的瞬间，变成可复现、可评分的测试用例，让开发者能持续检验模型是否改掉了特定坏毛病。\n\n此前，Agent 行为评测主要依赖固定的基准套件，这些套件覆盖的场景有限，难以捕捉部署中实际暴露的、五花八门的不良行为。开发者即使观察到 "
+  }
+ ],
+ "决策点续写": [
+  {
+   "id": "e04069610c4d9251",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+   "url": "https://huggingface.co/papers/2609.33295",
+   "score": 8,
+   "summary": "TraceDance 是一个自动化系统，能从真实 Agent 部署的运行轨迹中，针对用户指定的不良行为，自动构建出有针对性的评测基准。简单说，它把线上 Agent 实际“翻车”的瞬间，变成可复现、可评分的测试用例，让开发者能持续检验模型是否改掉了特定坏毛病。\n\n此前，Agent 行为评测主要依赖固定的基准套件，这些套件覆盖的场景有限，难以捕捉部署中实际暴露的、五花八门的不良行为。开发者即使观察到 "
+  }
+ ],
+ "Flash 大语言模型": [
+  {
+   "id": "e04069610c4d9251",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+   "url": "https://huggingface.co/papers/2609.33295",
+   "score": 8,
+   "summary": "TraceDance 是一个自动化系统，能从真实 Agent 部署的运行轨迹中，针对用户指定的不良行为，自动构建出有针对性的评测基准。简单说，它把线上 Agent 实际“翻车”的瞬间，变成可复现、可评分的测试用例，让开发者能持续检验模型是否改掉了特定坏毛病。\n\n此前，Agent 行为评测主要依赖固定的基准套件，这些套件覆盖的场景有限，难以捕捉部署中实际暴露的、五花八门的不良行为。开发者即使观察到 "
+  }
+ ],
+ "GPT-Live-1": [
+  {
+   "id": "9de028fbe46cac8b",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+   "url": "https://openai.com/index/proaction",
+   "score": 5,
+   "summary": "Proaction 利用 Codex、GPT-Live-1 和 GPT-6 Astra 构建并运营现代车队管理系统，实现了销售额提升 60% 并节省超过 75 小时的工作量。其核心方法是将多款 OpenAI 模型集成到业务流程中，以加速开发、运营和销售环节。这一案例值得关注，因为它展示了 AI 应用在垂直行业中直接驱动商业增长和效率提升的显著成效。"
+  }
+ ],
+ "TypeSafe AI": [
+  {
+   "id": "86cb38b172aa5768",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "Building Production Agents with Jev and LangGraph",
+   "url": "https://www.langchain.com/blog/building-prod-with-jev-and-langgraph",
+   "score": 5,
+   "summary": "这是LangChain博客介绍的一篇技术实践文章，展示了如何将LangGraph与TypeSafe AI的决策模型Jev相结合，用于构建生产级AI智能体。其核心方法是利用LangGraph进行工作流编排，并集成Jev模型来优化决策环节，从而实现更快速、成本更低的智能体运行。这一组合值得关注，因为它为开发者提供了一条在保证生产环境稳定性的同时，显著提升智能体效率和经济性的可行路径。"
+  }
+ ],
+ "AdaTutoRank": [
+  {
+   "id": "81200c4858b45293",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "AdaTutoRank: Learning to Rerank Document Sets via Adaptive Tutoring Optimization for RAG and Deep Research",
+   "url": "https://huggingface.co/papers/2609.32472",
+   "score": 8,
+   "summary": "AdaTutoRank 是一种面向 RAG 与深度研究的文档集重排序方法，其核心变化在于将优化目标从单文档相关性匹配转向构建完整、互补且非冗余的文档集合。该方法提出自适应辅导优化，利用三层九维评分标准，为强化学习提供奖励并为蒸馏提供差异化提示，从而解决传统集合评分中监督信号稀疏、贡献难以区分的问题。其关键创新是根据生成结果的质量动态匹配三种不同具体程度的提示形式，使强结果获得更抽象的引导、弱结果获"
+  }
+ ],
+ "深度研究": [
+  {
+   "id": "81200c4858b45293",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "AdaTutoRank: Learning to Rerank Document Sets via Adaptive Tutoring Optimization for RAG and Deep Research",
+   "url": "https://huggingface.co/papers/2609.32472",
+   "score": 8,
+   "summary": "AdaTutoRank 是一种面向 RAG 与深度研究的文档集重排序方法，其核心变化在于将优化目标从单文档相关性匹配转向构建完整、互补且非冗余的文档集合。该方法提出自适应辅导优化，利用三层九维评分标准，为强化学习提供奖励并为蒸馏提供差异化提示，从而解决传统集合评分中监督信号稀疏、贡献难以区分的问题。其关键创新是根据生成结果的质量动态匹配三种不同具体程度的提示形式，使强结果获得更抽象的引导、弱结果获"
+  }
+ ],
+ "文档集重排序": [
+  {
+   "id": "81200c4858b45293",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "AdaTutoRank: Learning to Rerank Document Sets via Adaptive Tutoring Optimization for RAG and Deep Research",
+   "url": "https://huggingface.co/papers/2609.32472",
+   "score": 8,
+   "summary": "AdaTutoRank 是一种面向 RAG 与深度研究的文档集重排序方法，其核心变化在于将优化目标从单文档相关性匹配转向构建完整、互补且非冗余的文档集合。该方法提出自适应辅导优化，利用三层九维评分标准，为强化学习提供奖励并为蒸馏提供差异化提示，从而解决传统集合评分中监督信号稀疏、贡献难以区分的问题。其关键创新是根据生成结果的质量动态匹配三种不同具体程度的提示形式，使强结果获得更抽象的引导、弱结果获"
+  }
+ ],
+ "自适应辅导优化": [
+  {
+   "id": "81200c4858b45293",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "AdaTutoRank: Learning to Rerank Document Sets via Adaptive Tutoring Optimization for RAG and Deep Research",
+   "url": "https://huggingface.co/papers/2609.32472",
+   "score": 8,
+   "summary": "AdaTutoRank 是一种面向 RAG 与深度研究的文档集重排序方法，其核心变化在于将优化目标从单文档相关性匹配转向构建完整、互补且非冗余的文档集合。该方法提出自适应辅导优化，利用三层九维评分标准，为强化学习提供奖励并为蒸馏提供差异化提示，从而解决传统集合评分中监督信号稀疏、贡献难以区分的问题。其关键创新是根据生成结果的质量动态匹配三种不同具体程度的提示形式，使强结果获得更抽象的引导、弱结果获"
+  }
+ ],
+ "三层九维评分标准": [
+  {
+   "id": "81200c4858b45293",
+   "date": "2026-09-29",
+   "run_type": "midweek",
+   "title": "AdaTutoRank: Learning to Rerank Document Sets via Adaptive Tutoring Optimization for RAG and Deep Research",
+   "url": "https://huggingface.co/papers/2609.32472",
+   "score": 8,
+   "summary": "AdaTutoRank 是一种面向 RAG 与深度研究的文档集重排序方法，其核心变化在于将优化目标从单文档相关性匹配转向构建完整、互补且非冗余的文档集合。该方法提出自适应辅导优化，利用三层九维评分标准，为强化学习提供奖励并为蒸馏提供差异化提示，从而解决传统集合评分中监督信号稀疏、贡献难以区分的问题。其关键创新是根据生成结果的质量动态匹配三种不同具体程度的提示形式，使强结果获得更抽象的引导、弱结果获"
   }
  ]
 }
