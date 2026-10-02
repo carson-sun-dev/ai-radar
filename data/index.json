@@ -955,6 +955,15 @@
    "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
    "score": 9,
    "summary": "这是 Google DeepMind 在 2026 年 9 月发布的 Gemini 3.8 Live 版本，核心亮点是引入了“Live Avatar”——一个能实时生成面部表情、唇形同步、头部姿态和手势的虚拟形象，与 Gemini 的语音对话能力深度耦合，形成完整的“听得见、看得着”的交互体验。\n\n此前，大模型的语音交互虽然已经做到低延迟、可打断，但用户面对的始终是一个“黑盒声音”。在客服、教育、"
+  },
+  {
+   "id": "b49099cde7e97e60",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Gemini 4 Argon: our next era of frontier intelligence",
+   "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 发布的下一代前沿模型 Gemini 4 Argon 的官方公告，标志着 Gemini 系列进入了一个新的能力阶段。\n\n此前，大模型在复杂推理、长上下文理解和多模态融合上存在明显短板。具体表现为：面对需要多步逻辑推导的数学或编程问题，模型容易在中间步骤出错；处理超长文档时，关键信息会随着上下文增长而被“遗忘”；视觉与语言信息的结合也常常停留在表面描述，难以进行深"
   }
  ],
  "token 效率": [
@@ -2120,6 +2129,15 @@
    "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
    "score": 7,
    "summary": "这是一条来自 OpenAI 官方的产品更新公告，核心信息是 GPT-5.6 系列模型中的 Luna 和 Terra 两个版本迎来了新一轮降价，同时整体模型效率的提升使得企业能够以更低的成本大规模部署 AI 工作流。\n\n此前，企业在将大语言模型集成到生产环境时面临的核心痛点，是性能与成本之间的尖锐矛盾。最强大的模型往往推理成本极高，导致在需要高吞吐量、低延迟的客服系统、内容审核流水线或大规模数据分析"
+  },
+  {
+   "id": "b49099cde7e97e60",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Gemini 4 Argon: our next era of frontier intelligence",
+   "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 发布的下一代前沿模型 Gemini 4 Argon 的官方公告，标志着 Gemini 系列进入了一个新的能力阶段。\n\n此前，大模型在复杂推理、长上下文理解和多模态融合上存在明显短板。具体表现为：面对需要多步逻辑推导的数学或编程问题，模型容易在中间步骤出错；处理超长文档时，关键信息会随着上下文增长而被“遗忘”；视觉与语言信息的结合也常常停留在表面描述，难以进行深"
   }
  ],
  "量化压缩": [
@@ -3974,6 +3992,15 @@
    "url": "https://huggingface.co/papers/2608.13667",
    "score": 7,
    "summary": "这是一篇关于 LLM Agent 推理框架优化的论文，提出了名为 Second Thought 的方法。它的核心思想是在 ReAct 范式（一种让大模型交替进行“思考-行动-观察”的智能体工作模式）中，利用 Agent 执行动作并等待环境返回观察结果的空闲时间，并行地进行额外的推理，从而在不增加主流程串行解码时间的前提下，提升推理质量和任务效率。\n\n此前，ReAct 范式下的 LLM Agent "
+  },
+  {
+   "id": "93b8ad54d70e3af3",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization",
+   "url": "https://huggingface.co/papers/2610.00906",
+   "score": 8,
+   "summary": "这是一篇关于如何让 AI Agent 的“装备”自动进化的研究，核心思想是：不仅优化 Agent 的提示词和工具，还要同步优化用来训练它的“考题”顺序。\n\n它解决的是当前 Agent 优化方法中的一个盲点。现有工作在迭代更新 Agent 的提示词、工具接口和控制逻辑时，往往使用一套固定的训练场景来产生反馈。这就像让一个学生反复刷同一套卷子，即使他的能力在变化，考题的难度和类型却一成不变。随着 Ag"
   }
  ],
  "State of Open Models: Summer 2026 Observations": [
@@ -7230,6 +7257,270 @@
    "url": "https://huggingface.co/papers/2609.32472",
    "score": 8,
    "summary": "AdaTutoRank 是一种面向 RAG 与深度研究的文档集重排序方法，其核心变化在于将优化目标从单文档相关性匹配转向构建完整、互补且非冗余的文档集合。该方法提出自适应辅导优化，利用三层九维评分标准，为强化学习提供奖励并为蒸馏提供差异化提示，从而解决传统集合评分中监督信号稀疏、贡献难以区分的问题。其关键创新是根据生成结果的质量动态匹配三种不同具体程度的提示形式，使强结果获得更抽象的引导、弱结果获"
+  }
+ ],
+ "Gemini 4 Argon": [
+  {
+   "id": "b49099cde7e97e60",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Gemini 4 Argon: our next era of frontier intelligence",
+   "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 发布的下一代前沿模型 Gemini 4 Argon 的官方公告，标志着 Gemini 系列进入了一个新的能力阶段。\n\n此前，大模型在复杂推理、长上下文理解和多模态融合上存在明显短板。具体表现为：面对需要多步逻辑推导的数学或编程问题，模型容易在中间步骤出错；处理超长文档时，关键信息会随着上下文增长而被“遗忘”；视觉与语言信息的结合也常常停留在表面描述，难以进行深"
+  }
+ ],
+ "原生多模态训练": [
+  {
+   "id": "b49099cde7e97e60",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Gemini 4 Argon: our next era of frontier intelligence",
+   "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 发布的下一代前沿模型 Gemini 4 Argon 的官方公告，标志着 Gemini 系列进入了一个新的能力阶段。\n\n此前，大模型在复杂推理、长上下文理解和多模态融合上存在明显短板。具体表现为：面对需要多步逻辑推导的数学或编程问题，模型容易在中间步骤出错；处理超长文档时，关键信息会随着上下文增长而被“遗忘”；视觉与语言信息的结合也常常停留在表面描述，难以进行深"
+  }
+ ],
+ "测试时计算扩展": [
+  {
+   "id": "b49099cde7e97e60",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Gemini 4 Argon: our next era of frontier intelligence",
+   "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+   "score": 9,
+   "summary": "这是 Google DeepMind 发布的下一代前沿模型 Gemini 4 Argon 的官方公告，标志着 Gemini 系列进入了一个新的能力阶段。\n\n此前，大模型在复杂推理、长上下文理解和多模态融合上存在明显短板。具体表现为：面对需要多步逻辑推导的数学或编程问题，模型容易在中间步骤出错；处理超长文档时，关键信息会随着上下文增长而被“遗忘”；视觉与语言信息的结合也常常停留在表面描述，难以进行深"
+  }
+ ],
+ "Open SWE": [
+  {
+   "id": "378de5b0a4ef1ffb",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "How to Build a Model Router in the Harness",
+   "url": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+   "score": 8,
+   "summary": "在 Open SWE（一个开源软件工程智能体项目）的评估框架中，团队构建了一个模型路由器，能在不降低任务完成质量的前提下，将每个编码任务的中位成本降低 64%。简单说，这是一个根据任务难度自动选择不同模型的调度层，让简单任务用便宜模型、复杂任务才调用昂贵模型。\n\n此前，这类 SWE-Bench 风格评测的痛点在于成本与性能的权衡。如果全用顶尖模型（如 Claude Opus），成本极高；全用廉价模"
+  }
+ ],
+ "SWE-Bench": [
+  {
+   "id": "378de5b0a4ef1ffb",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "How to Build a Model Router in the Harness",
+   "url": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+   "score": 8,
+   "summary": "在 Open SWE（一个开源软件工程智能体项目）的评估框架中，团队构建了一个模型路由器，能在不降低任务完成质量的前提下，将每个编码任务的中位成本降低 64%。简单说，这是一个根据任务难度自动选择不同模型的调度层，让简单任务用便宜模型、复杂任务才调用昂贵模型。\n\n此前，这类 SWE-Bench 风格评测的痛点在于成本与性能的权衡。如果全用顶尖模型（如 Claude Opus），成本极高；全用廉价模"
+  }
+ ],
+ "Claude Opus": [
+  {
+   "id": "378de5b0a4ef1ffb",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "How to Build a Model Router in the Harness",
+   "url": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+   "score": 8,
+   "summary": "在 Open SWE（一个开源软件工程智能体项目）的评估框架中，团队构建了一个模型路由器，能在不降低任务完成质量的前提下，将每个编码任务的中位成本降低 64%。简单说，这是一个根据任务难度自动选择不同模型的调度层，让简单任务用便宜模型、复杂任务才调用昂贵模型。\n\n此前，这类 SWE-Bench 风格评测的痛点在于成本与性能的权衡。如果全用顶尖模型（如 Claude Opus），成本极高；全用廉价模"
+  }
+ ],
+ "模型路由器": [
+  {
+   "id": "378de5b0a4ef1ffb",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "How to Build a Model Router in the Harness",
+   "url": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+   "score": 8,
+   "summary": "在 Open SWE（一个开源软件工程智能体项目）的评估框架中，团队构建了一个模型路由器，能在不降低任务完成质量的前提下，将每个编码任务的中位成本降低 64%。简单说，这是一个根据任务难度自动选择不同模型的调度层，让简单任务用便宜模型、复杂任务才调用昂贵模型。\n\n此前，这类 SWE-Bench 风格评测的痛点在于成本与性能的权衡。如果全用顶尖模型（如 Claude Opus），成本极高；全用廉价模"
+  }
+ ],
+ "难度分类器": [
+  {
+   "id": "378de5b0a4ef1ffb",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "How to Build a Model Router in the Harness",
+   "url": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+   "score": 8,
+   "summary": "在 Open SWE（一个开源软件工程智能体项目）的评估框架中，团队构建了一个模型路由器，能在不降低任务完成质量的前提下，将每个编码任务的中位成本降低 64%。简单说，这是一个根据任务难度自动选择不同模型的调度层，让简单任务用便宜模型、复杂任务才调用昂贵模型。\n\n此前，这类 SWE-Bench 风格评测的痛点在于成本与性能的权衡。如果全用顶尖模型（如 Claude Opus），成本极高；全用廉价模"
+  }
+ ],
+ "Harness": [
+  {
+   "id": "378de5b0a4ef1ffb",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "How to Build a Model Router in the Harness",
+   "url": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+   "score": 8,
+   "summary": "在 Open SWE（一个开源软件工程智能体项目）的评估框架中，团队构建了一个模型路由器，能在不降低任务完成质量的前提下，将每个编码任务的中位成本降低 64%。简单说，这是一个根据任务难度自动选择不同模型的调度层，让简单任务用便宜模型、复杂任务才调用昂贵模型。\n\n此前，这类 SWE-Bench 风格评测的痛点在于成本与性能的权衡。如果全用顶尖模型（如 Claude Opus），成本极高；全用廉价模"
+  }
+ ],
+ "ActiveSaddler": [
+  {
+   "id": "93b8ad54d70e3af3",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization",
+   "url": "https://huggingface.co/papers/2610.00906",
+   "score": 8,
+   "summary": "这是一篇关于如何让 AI Agent 的“装备”自动进化的研究，核心思想是：不仅优化 Agent 的提示词和工具，还要同步优化用来训练它的“考题”顺序。\n\n它解决的是当前 Agent 优化方法中的一个盲点。现有工作在迭代更新 Agent 的提示词、工具接口和控制逻辑时，往往使用一套固定的训练场景来产生反馈。这就像让一个学生反复刷同一套卷子，即使他的能力在变化，考题的难度和类型却一成不变。随着 Ag"
+  }
+ ],
+ "非平稳老虎机": [
+  {
+   "id": "93b8ad54d70e3af3",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization",
+   "url": "https://huggingface.co/papers/2610.00906",
+   "score": 8,
+   "summary": "这是一篇关于如何让 AI Agent 的“装备”自动进化的研究，核心思想是：不仅优化 Agent 的提示词和工具，还要同步优化用来训练它的“考题”顺序。\n\n它解决的是当前 Agent 优化方法中的一个盲点。现有工作在迭代更新 Agent 的提示词、工具接口和控制逻辑时，往往使用一套固定的训练场景来产生反馈。这就像让一个学生反复刷同一套卷子，即使他的能力在变化，考题的难度和类型却一成不变。随着 Ag"
+  }
+ ],
+ "课程学习": [
+  {
+   "id": "93b8ad54d70e3af3",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization",
+   "url": "https://huggingface.co/papers/2610.00906",
+   "score": 8,
+   "summary": "这是一篇关于如何让 AI Agent 的“装备”自动进化的研究，核心思想是：不仅优化 Agent 的提示词和工具，还要同步优化用来训练它的“考题”顺序。\n\n它解决的是当前 Agent 优化方法中的一个盲点。现有工作在迭代更新 Agent 的提示词、工具接口和控制逻辑时，往往使用一套固定的训练场景来产生反馈。这就像让一个学生反复刷同一套卷子，即使他的能力在变化，考题的难度和类型却一成不变。随着 Ag"
+  }
+ ],
+ "Agent 优化": [
+  {
+   "id": "93b8ad54d70e3af3",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization",
+   "url": "https://huggingface.co/papers/2610.00906",
+   "score": 8,
+   "summary": "这是一篇关于如何让 AI Agent 的“装备”自动进化的研究，核心思想是：不仅优化 Agent 的提示词和工具，还要同步优化用来训练它的“考题”顺序。\n\n它解决的是当前 Agent 优化方法中的一个盲点。现有工作在迭代更新 Agent 的提示词、工具接口和控制逻辑时，往往使用一套固定的训练场景来产生反馈。这就像让一个学生反复刷同一套卷子，即使他的能力在变化，考题的难度和类型却一成不变。随着 Ag"
+  }
+ ],
+ "GAIA2": [
+  {
+   "id": "93b8ad54d70e3af3",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization",
+   "url": "https://huggingface.co/papers/2610.00906",
+   "score": 8,
+   "summary": "这是一篇关于如何让 AI Agent 的“装备”自动进化的研究，核心思想是：不仅优化 Agent 的提示词和工具，还要同步优化用来训练它的“考题”顺序。\n\n它解决的是当前 Agent 优化方法中的一个盲点。现有工作在迭代更新 Agent 的提示词、工具接口和控制逻辑时，往往使用一套固定的训练场景来产生反馈。这就像让一个学生反复刷同一套卷子，即使他的能力在变化，考题的难度和类型却一成不变。随着 Ag"
+  }
+ ],
+ "Terminal-Bench 2.0": [
+  {
+   "id": "93b8ad54d70e3af3",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization",
+   "url": "https://huggingface.co/papers/2610.00906",
+   "score": 8,
+   "summary": "这是一篇关于如何让 AI Agent 的“装备”自动进化的研究，核心思想是：不仅优化 Agent 的提示词和工具，还要同步优化用来训练它的“考题”顺序。\n\n它解决的是当前 Agent 优化方法中的一个盲点。现有工作在迭代更新 Agent 的提示词、工具接口和控制逻辑时，往往使用一套固定的训练场景来产生反馈。这就像让一个学生反复刷同一套卷子，即使他的能力在变化，考题的难度和类型却一成不变。随着 Ag"
+  }
+ ],
+ "GPT-6.1 Sol": [
+  {
+   "id": "d6b9f5e651b1891e",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Introducing GPT-6.1 Sol",
+   "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+   "score": 8,
+   "summary": "GPT-6.1 Sol 是 OpenAI 推出的新模型，在编程、计算机操作和专业工作场景中提供接近 Astra 级别的智能表现。其核心变化在于大幅降低使用成本，API 输入与输出 token 价格仅为 Astra 标准价的五分之一。这一变化值得关注，因为它让高性能 AI 能力变得更加经济可及，有望推动相关应用在更广泛场景中落地。"
+  }
+ ],
+ "Astra": [
+  {
+   "id": "d6b9f5e651b1891e",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Introducing GPT-6.1 Sol",
+   "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+   "score": 8,
+   "summary": "GPT-6.1 Sol 是 OpenAI 推出的新模型，在编程、计算机操作和专业工作场景中提供接近 Astra 级别的智能表现。其核心变化在于大幅降低使用成本，API 输入与输出 token 价格仅为 Astra 标准价的五分之一。这一变化值得关注，因为它让高性能 AI 能力变得更加经济可及，有望推动相关应用在更广泛场景中落地。"
+  }
+ ],
+ "MCP 智能体": [
+  {
+   "id": "afa8c33f8eb7996a",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+   "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+   "score": 8,
+   "summary": "这篇博客介绍了为 MCP 智能体设计的“源感知验证”方法，核心变化是从仅验证事实转向同时验证信息来源的可靠性与上下文。该方法通过评估信息源的权威性和适用性，减少智能体因引用错误或不可靠来源而产生的误导。这值得关注，因为它直接提升了大模型应用在复杂任务中的可信度与安全性。"
+  }
+ ],
+ "源感知验证": [
+  {
+   "id": "afa8c33f8eb7996a",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+   "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+   "score": 8,
+   "summary": "这篇博客介绍了为 MCP 智能体设计的“源感知验证”方法，核心变化是从仅验证事实转向同时验证信息来源的可靠性与上下文。该方法通过评估信息源的权威性和适用性，减少智能体因引用错误或不可靠来源而产生的误导。这值得关注，因为它直接提升了大模型应用在复杂任务中的可信度与安全性。"
+  }
+ ],
+ "Source-Aware Verification": [
+  {
+   "id": "afa8c33f8eb7996a",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+   "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+   "score": 8,
+   "summary": "这篇博客介绍了为 MCP 智能体设计的“源感知验证”方法，核心变化是从仅验证事实转向同时验证信息来源的可靠性与上下文。该方法通过评估信息源的权威性和适用性，减少智能体因引用错误或不可靠来源而产生的误导。这值得关注，因为它直接提升了大模型应用在复杂任务中的可信度与安全性。"
+  }
+ ],
+ "RPTune": [
+  {
+   "id": "0c4a28efe0512b24",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "RPTune: Learned Context Curation for LLM Catalog Search",
+   "url": "https://huggingface.co/papers/2610.00964",
+   "score": 8,
+   "summary": "RPTune 是一个面向中小商家商品目录搜索的端到端框架，它通过“学习式上下文策展”与“大模型后训练”协同工作，解决将完整目录放入长上下文窗口后模型仍无法有效利用信息的问题。其核心方法包括一个编码器-重排策展器，依据下游大模型反馈对商品进行排序和剪枝，并利用自动生成的目录监督信号进行后训练，形成策展与模型能力相互增强的闭环。在七个真实商家、每商家一百个复杂对话查询的评估中，该方法在闭源和开源大模型"
+  }
+ ],
+ "学习式上下文策展": [
+  {
+   "id": "0c4a28efe0512b24",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "RPTune: Learned Context Curation for LLM Catalog Search",
+   "url": "https://huggingface.co/papers/2610.00964",
+   "score": 8,
+   "summary": "RPTune 是一个面向中小商家商品目录搜索的端到端框架，它通过“学习式上下文策展”与“大模型后训练”协同工作，解决将完整目录放入长上下文窗口后模型仍无法有效利用信息的问题。其核心方法包括一个编码器-重排策展器，依据下游大模型反馈对商品进行排序和剪枝，并利用自动生成的目录监督信号进行后训练，形成策展与模型能力相互增强的闭环。在七个真实商家、每商家一百个复杂对话查询的评估中，该方法在闭源和开源大模型"
+  }
+ ],
+ "大模型后训练": [
+  {
+   "id": "0c4a28efe0512b24",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "RPTune: Learned Context Curation for LLM Catalog Search",
+   "url": "https://huggingface.co/papers/2610.00964",
+   "score": 8,
+   "summary": "RPTune 是一个面向中小商家商品目录搜索的端到端框架，它通过“学习式上下文策展”与“大模型后训练”协同工作，解决将完整目录放入长上下文窗口后模型仍无法有效利用信息的问题。其核心方法包括一个编码器-重排策展器，依据下游大模型反馈对商品进行排序和剪枝，并利用自动生成的目录监督信号进行后训练，形成策展与模型能力相互增强的闭环。在七个真实商家、每商家一百个复杂对话查询的评估中，该方法在闭源和开源大模型"
+  }
+ ],
+ "编码器-重排策展器": [
+  {
+   "id": "0c4a28efe0512b24",
+   "date": "2026-10-02",
+   "run_type": "midweek",
+   "title": "RPTune: Learned Context Curation for LLM Catalog Search",
+   "url": "https://huggingface.co/papers/2610.00964",
+   "score": 8,
+   "summary": "RPTune 是一个面向中小商家商品目录搜索的端到端框架，它通过“学习式上下文策展”与“大模型后训练”协同工作，解决将完整目录放入长上下文窗口后模型仍无法有效利用信息的问题。其核心方法包括一个编码器-重排策展器，依据下游大模型反馈对商品进行排序和剪枝，并利用自动生成的目录监督信号进行后训练，形成策展与模型能力相互增强的闭环。在七个真实商家、每商家一百个复杂对话查询的评估中，该方法在闭源和开源大模型"
   }
  ]
 }
