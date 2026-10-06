@@ -214,6 +214,15 @@
    "url": "https://openai.com/index/previewing-gpt-5-6-sol",
    "score": 9,
    "summary": "GPT-5.6 Sol 是 OpenAI 最新预览的下一代大模型，在编程、科学推理和网络安全三个方向上显著增强了能力，并搭配了该公司迄今最先进的安全防护体系。\n\n此前的大模型虽然通用能力不断提升，但在需要严谨逻辑和长链推理的专业场景中仍容易出现幻觉或浅层回答。编程任务中复杂架构设计、科学问题里的多步推导、以及网络安全领域对漏洞的精准识别，都对模型的深层理解和可靠性提出了更高要求。同时，随着模型能力"
+  },
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
   }
  ],
  "强化学习": [
@@ -234,6 +243,15 @@
    "url": "https://huggingface.co/papers/2609.11042",
    "score": 8,
    "summary": "T1 是一个 122B 参数的混合专家模型，通过强化学习在真实云沙箱中执行终端任务，单次任务最多支持 300 多轮工具调用。其核心方法包括用密集过程奖励稳定训练、通过 TITO 构造消除 token 漂移，以及使用完全隔离的合成任务数据防止基准过拟合。在 Terminal-Bench 2.1 上，T1 将基础模型的解决率从 43.8% 提升至 64.0%，并在长程终端基准上超越 GPT-5.4 和"
+  },
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
   }
  ],
  "对齐技术": [
@@ -684,6 +702,15 @@
    "url": "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent",
    "score": 8,
    "summary": "这是一篇来自 LangChain 官方博客的工程实践复盘，详细拆解了他们如何为自身市场推广（GTM，Go-To-Market）团队构建一个 AI Agent，最终实现了线索转化率提升 250%、每位销售代表每月节省 40 小时的效果。\n\n此前，LangChain 的销售团队面临一个典型的规模化困境：大量入站线索需要人工筛选、研究和个性化外联，这个过程高度重复且耗时。销售代表每天要花数小时查阅潜在客"
+  },
+  {
+   "id": "7963eace5d088283",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "langchain-ai/langgraph langgraph==1.2.13",
+   "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.13",
+   "score": 7,
+   "summary": "这是 LangGraph 框架的 1.2.13 补丁版本发布，LangGraph 是 LangChain 生态中用于构建有状态、多步骤 AI Agent 的图编排库。本次更新集中修复了检查点（checkpoint）和增量通道（DeltaChannel）机制在复杂分支场景下的多个边界问题。\n\n此前，LangGraph 在长时间运行的 Agent 工作流中，当用户通过 update_state 手动修"
   }
  ],
  "AI 智能体 (Agent)": [
@@ -893,6 +920,15 @@
    "url": "https://www.langchain.com/blog/building-prod-with-jev-and-langgraph",
    "score": 5,
    "summary": "这是LangChain博客介绍的一篇技术实践文章，展示了如何将LangGraph与TypeSafe AI的决策模型Jev相结合，用于构建生产级AI智能体。其核心方法是利用LangGraph进行工作流编排，并集成Jev模型来优化决策环节，从而实现更快速、成本更低的智能体运行。这一组合值得关注，因为它为开发者提供了一条在保证生产环境稳定性的同时，显著提升智能体效率和经济性的可行路径。"
+  },
+  {
+   "id": "7963eace5d088283",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "langchain-ai/langgraph langgraph==1.2.13",
+   "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.13",
+   "score": 7,
+   "summary": "这是 LangGraph 框架的 1.2.13 补丁版本发布，LangGraph 是 LangChain 生态中用于构建有状态、多步骤 AI Agent 的图编排库。本次更新集中修复了检查点（checkpoint）和增量通道（DeltaChannel）机制在复杂分支场景下的多个边界问题。\n\n此前，LangGraph 在长时间运行的 Agent 工作流中，当用户通过 update_state 手动修"
   }
  ],
  "Gemini 3.6 Flash": [
@@ -4617,6 +4653,15 @@
    "url": "https://huggingface.co/papers/2607.21596",
    "score": 8,
    "summary": "FlowEvo 是一个无需额外训练的智能体框架，让工作流与可执行技能在推理时协同进化。它把成功执行的工作流编译为可调用的技能存入持久化技能库，后续可通过直接执行或作为上下文来构建新工作流，并追踪技能的下游效用以抑制负迁移。在共享 GPT-4o-mini 基座下，FlowEvo 在 ALFWorld、HumanEval、MBPP、GSM8K 和 MATH-500 五个标准评测集上取得最高准确率，其中"
+  },
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
   }
  ],
  "ExpeL": [
@@ -6916,6 +6961,15 @@
    "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
    "score": 8,
    "summary": "在 OpenAI 最新发布的 GPT-6 技术更新中，一项名为“更好的提示缓存”的功能被正式推出。简单来说，提示缓存是一种让模型记住之前处理过的提示前缀（即对话或请求中重复出现的开头部分）的技术，从而避免对相同内容重复计算，直接复用之前的结果。GPT-6 对这一机制进行了系统性升级，带来了更高的缓存命中率、全新的诊断工具、显式断点以及更精细的控制手段，最终目标是降低延迟和成本。\n\n此前，大语言模型"
+  },
+  {
+   "id": "c38af6e5cae43e23",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "A model guide for the GPT-6 family",
+   "url": "https://openai.com/index/practical-guide-building-gpt-6",
+   "score": 8,
+   "summary": "这是一份来自 OpenAI 官方的 GPT-6 系列模型使用指南，面向初创公司和开发者，系统性地介绍了如何根据任务需求选择模型、调节推理强度、优化提示词与技能、协调工具调用，以及为生产环境准备可靠的工作流。\n\n此前，开发者在使用大模型时面临的核心痛点是“一刀切”的模型选择与固定的推理深度。一个模型往往被要求同时处理简单分类和复杂数学证明，导致要么在简单任务上浪费算力和延迟，要么在复杂任务上推理不足"
   }
  ],
  "更好的提示缓存": [
@@ -7521,6 +7575,303 @@
    "url": "https://huggingface.co/papers/2610.00964",
    "score": 8,
    "summary": "RPTune 是一个面向中小商家商品目录搜索的端到端框架，它通过“学习式上下文策展”与“大模型后训练”协同工作，解决将完整目录放入长上下文窗口后模型仍无法有效利用信息的问题。其核心方法包括一个编码器-重排策展器，依据下游大模型反馈对商品进行排序和剪枝，并利用自动生成的目录监督信号进行后训练，形成策展与模型能力相互增强的闭环。在七个真实商家、每商家一百个复杂对话查询的评估中，该方法在闭源和开源大模型"
+  }
+ ],
+ "GPT-6 Mini": [
+  {
+   "id": "c38af6e5cae43e23",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "A model guide for the GPT-6 family",
+   "url": "https://openai.com/index/practical-guide-building-gpt-6",
+   "score": 8,
+   "summary": "这是一份来自 OpenAI 官方的 GPT-6 系列模型使用指南，面向初创公司和开发者，系统性地介绍了如何根据任务需求选择模型、调节推理强度、优化提示词与技能、协调工具调用，以及为生产环境准备可靠的工作流。\n\n此前，开发者在使用大模型时面临的核心痛点是“一刀切”的模型选择与固定的推理深度。一个模型往往被要求同时处理简单分类和复杂数学证明，导致要么在简单任务上浪费算力和延迟，要么在复杂任务上推理不足"
+  }
+ ],
+ "GPT-6 Nano": [
+  {
+   "id": "c38af6e5cae43e23",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "A model guide for the GPT-6 family",
+   "url": "https://openai.com/index/practical-guide-building-gpt-6",
+   "score": 8,
+   "summary": "这是一份来自 OpenAI 官方的 GPT-6 系列模型使用指南，面向初创公司和开发者，系统性地介绍了如何根据任务需求选择模型、调节推理强度、优化提示词与技能、协调工具调用，以及为生产环境准备可靠的工作流。\n\n此前，开发者在使用大模型时面临的核心痛点是“一刀切”的模型选择与固定的推理深度。一个模型往往被要求同时处理简单分类和复杂数学证明，导致要么在简单任务上浪费算力和延迟，要么在复杂任务上推理不足"
+  }
+ ],
+ "推理努力程度": [
+  {
+   "id": "c38af6e5cae43e23",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "A model guide for the GPT-6 family",
+   "url": "https://openai.com/index/practical-guide-building-gpt-6",
+   "score": 8,
+   "summary": "这是一份来自 OpenAI 官方的 GPT-6 系列模型使用指南，面向初创公司和开发者，系统性地介绍了如何根据任务需求选择模型、调节推理强度、优化提示词与技能、协调工具调用，以及为生产环境准备可靠的工作流。\n\n此前，开发者在使用大模型时面临的核心痛点是“一刀切”的模型选择与固定的推理深度。一个模型往往被要求同时处理简单分类和复杂数学证明，导致要么在简单任务上浪费算力和延迟，要么在复杂任务上推理不足"
+  }
+ ],
+ "推理预算": [
+  {
+   "id": "c38af6e5cae43e23",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "A model guide for the GPT-6 family",
+   "url": "https://openai.com/index/practical-guide-building-gpt-6",
+   "score": 8,
+   "summary": "这是一份来自 OpenAI 官方的 GPT-6 系列模型使用指南，面向初创公司和开发者，系统性地介绍了如何根据任务需求选择模型、调节推理强度、优化提示词与技能、协调工具调用，以及为生产环境准备可靠的工作流。\n\n此前，开发者在使用大模型时面临的核心痛点是“一刀切”的模型选择与固定的推理深度。一个模型往往被要求同时处理简单分类和复杂数学证明，导致要么在简单任务上浪费算力和延迟，要么在复杂任务上推理不足"
+  }
+ ],
+ "提示词工程": [
+  {
+   "id": "c38af6e5cae43e23",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "A model guide for the GPT-6 family",
+   "url": "https://openai.com/index/practical-guide-building-gpt-6",
+   "score": 8,
+   "summary": "这是一份来自 OpenAI 官方的 GPT-6 系列模型使用指南，面向初创公司和开发者，系统性地介绍了如何根据任务需求选择模型、调节推理强度、优化提示词与技能、协调工具调用，以及为生产环境准备可靠的工作流。\n\n此前，开发者在使用大模型时面临的核心痛点是“一刀切”的模型选择与固定的推理深度。一个模型往往被要求同时处理简单分类和复杂数学证明，导致要么在简单任务上浪费算力和延迟，要么在复杂任务上推理不足"
+  }
+ ],
+ "LangGraph 1.2.13": [
+  {
+   "id": "7963eace5d088283",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "langchain-ai/langgraph langgraph==1.2.13",
+   "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.13",
+   "score": 7,
+   "summary": "这是 LangGraph 框架的 1.2.13 补丁版本发布，LangGraph 是 LangChain 生态中用于构建有状态、多步骤 AI Agent 的图编排库。本次更新集中修复了检查点（checkpoint）和增量通道（DeltaChannel）机制在复杂分支场景下的多个边界问题。\n\n此前，LangGraph 在长时间运行的 Agent 工作流中，当用户通过 update_state 手动修"
+  }
+ ],
+ "checkpoint": [
+  {
+   "id": "7963eace5d088283",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "langchain-ai/langgraph langgraph==1.2.13",
+   "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.13",
+   "score": 7,
+   "summary": "这是 LangGraph 框架的 1.2.13 补丁版本发布，LangGraph 是 LangChain 生态中用于构建有状态、多步骤 AI Agent 的图编排库。本次更新集中修复了检查点（checkpoint）和增量通道（DeltaChannel）机制在复杂分支场景下的多个边界问题。\n\n此前，LangGraph 在长时间运行的 Agent 工作流中，当用户通过 update_state 手动修"
+  }
+ ],
+ "DeltaChannel": [
+  {
+   "id": "7963eace5d088283",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "langchain-ai/langgraph langgraph==1.2.13",
+   "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.13",
+   "score": 7,
+   "summary": "这是 LangGraph 框架的 1.2.13 补丁版本发布，LangGraph 是 LangChain 生态中用于构建有状态、多步骤 AI Agent 的图编排库。本次更新集中修复了检查点（checkpoint）和增量通道（DeltaChannel）机制在复杂分支场景下的多个边界问题。\n\n此前，LangGraph 在长时间运行的 Agent 工作流中，当用户通过 update_state 手动修"
+  }
+ ],
+ "update_state": [
+  {
+   "id": "7963eace5d088283",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "langchain-ai/langgraph langgraph==1.2.13",
+   "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.13",
+   "score": 7,
+   "summary": "这是 LangGraph 框架的 1.2.13 补丁版本发布，LangGraph 是 LangChain 生态中用于构建有状态、多步骤 AI Agent 的图编排库。本次更新集中修复了检查点（checkpoint）和增量通道（DeltaChannel）机制在复杂分支场景下的多个边界问题。\n\n此前，LangGraph 在长时间运行的 Agent 工作流中，当用户通过 update_state 手动修"
+  }
+ ],
+ "CRDT": [
+  {
+   "id": "7963eace5d088283",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "langchain-ai/langgraph langgraph==1.2.13",
+   "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.13",
+   "score": 7,
+   "summary": "这是 LangGraph 框架的 1.2.13 补丁版本发布，LangGraph 是 LangChain 生态中用于构建有状态、多步骤 AI Agent 的图编排库。本次更新集中修复了检查点（checkpoint）和增量通道（DeltaChannel）机制在复杂分支场景下的多个边界问题。\n\n此前，LangGraph 在长时间运行的 Agent 工作流中，当用户通过 update_state 手动修"
+  }
+ ],
+ "Olmo-3-7B": [
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
+  }
+ ],
+ "Qwen3-14B": [
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
+  }
+ ],
+ "基础模型推理能力触发机制": [
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
+  }
+ ],
+ "起始 token 提示词": [
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
+  }
+ ],
+ "因果数据干预": [
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
+  }
+ ],
+ "Think step by step": [
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
+  }
+ ],
+ "Think duck duck goose": [
+  {
+   "id": "d52d160802593956",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "Base Models Can Reason By Taking a Cue From Training Data",
+   "url": "https://huggingface.co/papers/2610.06851",
+   "score": 7,
+   "summary": "这是一篇关于基础模型推理能力触发机制的研究，核心发现是：训练数据在模型响应的起始 token 与后续推理行为之间建立了关联，通过固定特定的起始 token 提示词，就能让基础模型展现出与强化学习训练后模型相当的推理能力。\n\n此前，业界普遍认为要让基础模型具备强大的推理能力，必须经过强化学习或指令微调等后训练阶段。基础模型虽然拥有推理潜能，但在直接使用时往往表现不佳，这种能力差距的根源一直未被清晰解"
+  }
+ ],
+ "AI代理": [
+  {
+   "id": "bd1136d0fcfd6f13",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "The Agent Said It Was Done. The Database Disagreed.",
+   "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+   "score": 7,
+   "summary": "这篇文章探讨了AI代理与数据库之间状态不一致的问题，即代理声称任务已完成但数据库记录却显示未完成。其核心变化在于揭示了当前AI系统在事务性操作中缺乏可靠的确认与同步机制，这可能导致数据错误或流程中断。该问题值得关注，因为它直指企业级AI应用落地的可靠性瓶颈，是构建可信自主代理必须解决的关键挑战。"
+  }
+ ],
+ "数据库": [
+  {
+   "id": "bd1136d0fcfd6f13",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "The Agent Said It Was Done. The Database Disagreed.",
+   "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+   "score": 7,
+   "summary": "这篇文章探讨了AI代理与数据库之间状态不一致的问题，即代理声称任务已完成但数据库记录却显示未完成。其核心变化在于揭示了当前AI系统在事务性操作中缺乏可靠的确认与同步机制，这可能导致数据错误或流程中断。该问题值得关注，因为它直指企业级AI应用落地的可靠性瓶颈，是构建可信自主代理必须解决的关键挑战。"
+  }
+ ],
+ "状态不一致": [
+  {
+   "id": "bd1136d0fcfd6f13",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "The Agent Said It Was Done. The Database Disagreed.",
+   "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+   "score": 7,
+   "summary": "这篇文章探讨了AI代理与数据库之间状态不一致的问题，即代理声称任务已完成但数据库记录却显示未完成。其核心变化在于揭示了当前AI系统在事务性操作中缺乏可靠的确认与同步机制，这可能导致数据错误或流程中断。该问题值得关注，因为它直指企业级AI应用落地的可靠性瓶颈，是构建可信自主代理必须解决的关键挑战。"
+  }
+ ],
+ "事务性操作": [
+  {
+   "id": "bd1136d0fcfd6f13",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "The Agent Said It Was Done. The Database Disagreed.",
+   "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+   "score": 7,
+   "summary": "这篇文章探讨了AI代理与数据库之间状态不一致的问题，即代理声称任务已完成但数据库记录却显示未完成。其核心变化在于揭示了当前AI系统在事务性操作中缺乏可靠的确认与同步机制，这可能导致数据错误或流程中断。该问题值得关注，因为它直指企业级AI应用落地的可靠性瓶颈，是构建可信自主代理必须解决的关键挑战。"
+  }
+ ],
+ "确认与同步机制": [
+  {
+   "id": "bd1136d0fcfd6f13",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "The Agent Said It Was Done. The Database Disagreed.",
+   "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+   "score": 7,
+   "summary": "这篇文章探讨了AI代理与数据库之间状态不一致的问题，即代理声称任务已完成但数据库记录却显示未完成。其核心变化在于揭示了当前AI系统在事务性操作中缺乏可靠的确认与同步机制，这可能导致数据错误或流程中断。该问题值得关注，因为它直指企业级AI应用落地的可靠性瓶颈，是构建可信自主代理必须解决的关键挑战。"
+  }
+ ],
+ "ASCENT": [
+  {
+   "id": "38e885b137766d72",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "ASCENT: Online Test-Time Training of Long-Horizon Agents via Self-Distillation of Verified Experience",
+   "url": "https://huggingface.co/papers/2610.05303",
+   "score": 7,
+   "summary": "ASCENT 是一种在线测试时训练方法，让大语言模型智能体在部署过程中利用自身执行轨迹进行持续权重更新，而非依赖文本形式的经验检索。其核心变化在于通过自蒸馏机制，将冻结的初始模型副本作为稳定教师，以验证后的轨迹为特权信息生成目标分布，再蒸馏到持久化 LoRA 快速权重中，从而避免直接模仿或强化单次尝试带来的策略不稳定。该方法还通过移除无效动作回合来增强特权经验，提升执行效率。这项工作值得关注，因为"
+  }
+ ],
+ "在线测试时训练": [
+  {
+   "id": "38e885b137766d72",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "ASCENT: Online Test-Time Training of Long-Horizon Agents via Self-Distillation of Verified Experience",
+   "url": "https://huggingface.co/papers/2610.05303",
+   "score": 7,
+   "summary": "ASCENT 是一种在线测试时训练方法，让大语言模型智能体在部署过程中利用自身执行轨迹进行持续权重更新，而非依赖文本形式的经验检索。其核心变化在于通过自蒸馏机制，将冻结的初始模型副本作为稳定教师，以验证后的轨迹为特权信息生成目标分布，再蒸馏到持久化 LoRA 快速权重中，从而避免直接模仿或强化单次尝试带来的策略不稳定。该方法还通过移除无效动作回合来增强特权经验，提升执行效率。这项工作值得关注，因为"
+  }
+ ],
+ "自蒸馏": [
+  {
+   "id": "38e885b137766d72",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "ASCENT: Online Test-Time Training of Long-Horizon Agents via Self-Distillation of Verified Experience",
+   "url": "https://huggingface.co/papers/2610.05303",
+   "score": 7,
+   "summary": "ASCENT 是一种在线测试时训练方法，让大语言模型智能体在部署过程中利用自身执行轨迹进行持续权重更新，而非依赖文本形式的经验检索。其核心变化在于通过自蒸馏机制，将冻结的初始模型副本作为稳定教师，以验证后的轨迹为特权信息生成目标分布，再蒸馏到持久化 LoRA 快速权重中，从而避免直接模仿或强化单次尝试带来的策略不稳定。该方法还通过移除无效动作回合来增强特权经验，提升执行效率。这项工作值得关注，因为"
+  }
+ ],
+ "LoRA": [
+  {
+   "id": "38e885b137766d72",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "ASCENT: Online Test-Time Training of Long-Horizon Agents via Self-Distillation of Verified Experience",
+   "url": "https://huggingface.co/papers/2610.05303",
+   "score": 7,
+   "summary": "ASCENT 是一种在线测试时训练方法，让大语言模型智能体在部署过程中利用自身执行轨迹进行持续权重更新，而非依赖文本形式的经验检索。其核心变化在于通过自蒸馏机制，将冻结的初始模型副本作为稳定教师，以验证后的轨迹为特权信息生成目标分布，再蒸馏到持久化 LoRA 快速权重中，从而避免直接模仿或强化单次尝试带来的策略不稳定。该方法还通过移除无效动作回合来增强特权经验，提升执行效率。这项工作值得关注，因为"
+  }
+ ],
+ "长周期智能体": [
+  {
+   "id": "38e885b137766d72",
+   "date": "2026-10-06",
+   "run_type": "midweek",
+   "title": "ASCENT: Online Test-Time Training of Long-Horizon Agents via Self-Distillation of Verified Experience",
+   "url": "https://huggingface.co/papers/2610.05303",
+   "score": 7,
+   "summary": "ASCENT 是一种在线测试时训练方法，让大语言模型智能体在部署过程中利用自身执行轨迹进行持续权重更新，而非依赖文本形式的经验检索。其核心变化在于通过自蒸馏机制，将冻结的初始模型副本作为稳定教师，以验证后的轨迹为特权信息生成目标分布，再蒸馏到持久化 LoRA 快速权重中，从而避免直接模仿或强化单次尝试带来的策略不稳定。该方法还通过移除无效动作回合来增强特权经验，提升执行效率。这项工作值得关注，因为"
   }
  ]
 }
